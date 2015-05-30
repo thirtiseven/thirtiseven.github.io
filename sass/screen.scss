@@ -8,3 +8,7 @@
 @import "partials";
 @import "plugins/**/*";
 @import "custom/styles";
+
+@import "custom/coderay-github";
+$fontAwesomePath: 'fontawesome-webfont';
+@import "font-awesome/font-awesome";

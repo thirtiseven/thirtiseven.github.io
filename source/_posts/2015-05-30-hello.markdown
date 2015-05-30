@@ -4,5 +4,6 @@ title: "Hello"
 date: 2015-05-30 13:01:58 +0800
 comments: true
 categories: 
+featured: 
 ---
 test the octopress.
