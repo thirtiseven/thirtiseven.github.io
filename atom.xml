@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[一个奇特青年的拓扑学结构]]></title>
+  <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://thirtiseven.github.io/atom.xml" rel="self"/>
   <link href="http://thirtiseven.github.io/"/>
-  <updated>2015-05-30T15:53:09+08:00</updated>
+  <updated>2015-05-30T16:03:18+08:00</updated>
   <id>http://thirtiseven.github.io/</id>
   <author>
-    <name><![CDATA[李三七]]></name>
+    <name><![CDATA[Your Name]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -200,6 +200,33 @@
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;不过，那时我一点也不需要一次别离。而现在就更不需要了。</p>
 
 <p>Thu May 17</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[知乎长回答--村上春树]]></title>
+    <link href="http://thirtiseven.github.io/blog/2015/05/13/zhi-hu-chang-hui-da-cun-shang-chun-shu/"/>
+    <updated>2015-05-13T16:01:37+08:00</updated>
+    <id>http://thirtiseven.github.io/blog/2015/05/13/zhi-hu-chang-hui-da-cun-shang-chun-shu</id>
+    <content type="html"><![CDATA[<p>如何理解村上春树所说的，“所谓理解，通常不过是误解的总和”？</p>
+
+<p>谢邀.</p>
+
+<p>首先,这句话出自&lt;斯普特尼克恋人>,主人公堇在写完两篇文章后离奇消失,这句话即出自其中的一篇.
+堇是一个怎样的形象?她是一个陷入迷茫的青年作者,一个文艺,敏感且古怪的女人,一个陷入一场突如其来的爱情的同性恋者.她这句话是代表着堇本人说的,而非一定是村上春树本人的看法.这一点请题主注意.</p>
+
+<p>这句话在文章中的意思是,每一个事物背后都有无穷无尽的意义,作者在写作时,把握的往往是其中少数几个侧面,对于相同的东西,存在着无限可供书写&mdash;-或是理解的空间.我们所说的"理解",不过是一种盲人摸象式的理解.
+而将这种个人的理解扩展,我们也不可能完整把握事物,再完善的所谓"理解",都或多或少有着局限和错误.将某种事物的概念分离开来看,它的构成总是片面的,而从整体来看,这种误解的总和永远达不到完美解释事物的"实质".
+而恰恰是这种哲学上的不可知给了艺术家无限的发挥空间,他们在创作的时候,不敢宣称自己可以很好的理解他们创作的对象.可以说,这种敬畏在她的理解中成了她文学创作的无尽源泉.</p>
+
+<p>自己看了一下,觉得写得太扯了&hellip;把原文附在下面,防止题主是从不知道哪里来的地方看到这句貌似很文艺的话&hellip;</p>
+
+<p>回想起来，即使自己知道（以为知道）的事，也是姑且作为不知道的事处理成文章这一形式的——这是我写东西的最初规则。一旦开始认为“啊，此事我知道，用不着特意花时间去写”，那可就寿终正寝了。我大概哪里也去不成。具体说来，假如我认为自己对身边某个人了如指掌、无须一一思考，因而放下心来，我（或者你）就可能被彻底出卖。我们自以为知之甚多的事物的背后，无不潜伏着等量的未知因素。
+所谓理解，通常不过是误解的总和。
+这是我认识世界的一个小小的方法（请勿外传）。
+以上</p>
+
+<p>传送门:<a href="http://www.zhihu.com/question/28756733/answer/47690132">http://www.zhihu.com/question/28756733/answer/47690132</a></p>
 ]]></content>
   </entry>
   
