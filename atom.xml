@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[My Octopress Blog]]></title>
+  <link href="http://thirtiseven.github.io/atom.xml" rel="self"/>
+  <link href="http://thirtiseven.github.io/"/>
+  <updated>2015-05-30T16:03:18+08:00</updated>
+  <id>http://thirtiseven.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[五月总结]]></title>
+    <link href="http://thirtiseven.github.io/blog/2015/05/30/wu-yue-zong-jie/"/>
+    <updated>2015-05-30T14:58:23+08:00</updated>
+    <id>http://thirtiseven.github.io/blog/2015/05/30/wu-yue-zong-jie</id>
+    <content type="html"><![CDATA[<h4>学习：</h4>
+
+<ul>
+<li><p>在Towords上背完了四级核心词，开始在“易呗背单词”上背六级大纲词汇，进程过半。</p></li>
+<li><p>看完了《托马斯微积分》前15章后看不下去了，二刷已经开始，二刷时会做单数题号的习题。目前已进行到第2章。</p></li>
+<li><p>从5月24号开始练字。正在抄写《古文观止》，兼以学习文言文。</p></li>
+<li><p>上数学补习班4次，并做了整理。</p></li>
+<li><p>数学填空题5套。</p></li>
+</ul>
+
+
+<h5>学习小结</h5>
+
+<ul>
+<li>学习接近停滞。</li>
+</ul>
+
+
+<h5>六月学习展望</h5>
+
+<ul>
+<li>突破数学填空题7~10题，保持96.875%以上正确率。</li>
+<li>突破数学圆锥曲线题，正确率须达到90%。</li>
+<li>巩固数学三角大题。</li>
+<li>背完六级词汇。开始背雅思词汇。_</li>
+<li>《托马斯微积分》继续缓慢进行。</li>
+<li>坚持练字。</li>
+</ul>
+
+
+<h4>阅读：</h4>
+
+<ul>
+<li>读完《小于一》</li>
+<li>读完《社会工程 : 安全体系中的人性漏洞》</li>
+<li>读完《美丽失败者》</li>
+<li>读完《人间失格·斜阳》</li>
+<li>原版《S.》进行到第二章。</li>
+<li>《社会心理学》读到第五章。</li>
+<li>《沟通的艺术》读到第七章。</li>
+<li>《洛丽塔》重读。</li>
+<li>《斯普特尼克恋人》重读。</li>
+<li>《Harry Potter and the Deathly Hallows》重读。</li>
+<li>开始阅读《圣经（启导本）》</li>
+<li>开始阅读《古典时代疯狂史》</li>
+</ul>
+
+
+<h5>阅读小结</h5>
+
+<ul>
+<li>读的书太少。</li>
+</ul>
+
+
+<h5>六月阅读展望</h5>
+
+<ul>
+<li>读完家中未读完的书。读完手头难啃的书。</li>
+<li>为七月图书馆开始营业做准备。</li>
+<li>可能会出掉一些小说。</li>
+<li>10号左右买一小批书。</li>
+</ul>
+
+
+<h4>技术：</h4>
+
+<ul>
+<li><p>看完了《Learning Perl》并做了习题，其中，涉及到*nix系统的部分和【高级技巧】的习题没做。项目地址在 <a href="https://github.com/thirtiseven/PerlLearningT.S./">https://github.com/thirtiseven/PerlLearningT.S./</a></p></li>
+<li><p>用K&amp;R过了一遍C语言语法，六月准备刷完K&amp;R的习题。把两个书本上的实例抄到了github上去，其中，轻微扩展了“逆波兰计算器”。以上两个实例以及K&amp;R的习题，在<a href="https://github.com/thirtiseven/ThirtisevenCLanguageLearning/">https://github.com/thirtiseven/ThirtisevenCLanguageLearning/</a> 可以看到。</p></li>
+<li><p>看完了《数据结构和算法分析》前六章。此书准备迅速看完然后磕算导。</p></li>
+<li><p>开始刷《计算机程序的构造和解释》（SICP）的习题。</p></li>
+<li><p>用github + octopress 搭好了个人网站.</p></li>
+</ul>
+
+
+<h5>技术小结</h5>
+
+<ul>
+<li>Perl大法好！Perl是世界上最好的语言！</li>
+</ul>
+
+
+<h5>六月技术展望</h5>
+
+<ul>
+<li>继续刷SICP(或TSPL)</li>
+<li>刷完K&amp;R习题。</li>
+<li>继续看《数据结构与算法分析》</li>
+<li>尝试阅读原文Perl《草泥马书》</li>
+<li>复习PS。</li>
+<li>完善个人网站</li>
+</ul>
+
+
+<h4>生活：</h4>
+
+<ul>
+<li>买了一个手机：lumia 830。</li>
+<li>买了一副墨镜：Ray-Ban 3025 58.</li>
+<li>买了三张碟：Radiohead《OK Computer》《Bends》以及Dire Straits 《the best of dire straits》</li>
+<li>注册了LinkedIn账号<a href="https://www.linkedin.com/profile/view?id=403963993/">https://www.linkedin.com/profile/view?id=403963993/</a></li>
+<li>注册了微信（thirtiseven)和微信公众平台(ThirtisevenPublic)</li>
+<li>写文章两篇半，一篇都没发出来。</li>
+<li>去了： 狼山 1次；园博园 1次；能达公园 1次；学田公园 9次</li>
+<li>每天早上7点：跑步（或体能训练，取决于天气情况）坚持下来了。</li>
+<li>弹琴几乎停滞，仅学会了Radiohead《Iron Lung》和Nirvana《Rape me》</li>
+<li>看了每一场NBA季后赛的第一节和第四节。人都认识了。（。。。）</li>
+<li>开始看美剧《广告狂人》。</li>
+<li>5月13号 一个人去看妇联二，单身狗受到500点暴击。</li>
+<li>5月16号 过生日 全家前往文峰饭店就餐。</li>
+<li>5月24号 理头一次。</li>
+<li>5月26号 爸爸买到了一只濠河里的小乌龟。开始养。</li>
+</ul>
+
+
+<h5>生活小结</h5>
+
+<ul>
+<li>生活十分无聊。</li>
+</ul>
+
+
+<h5>六月生活展望</h5>
+
+<ul>
+<li>坚持跑步（或者约人打球！耶！）</li>
+<li>提高练琴的频率。</li>
+<li>写一些文章。</li>
+<li>理了个圆寸感觉良好，六月保持发型</li>
+<li>小伙伴们高考考完啦！  约约约！</li>
+</ul>
+
+
+<h3>本月情况评估</h3>
+
+<p>-技术得分：B+<br/>
+-学习得分：D<br/>
+-阅读得分：C++<br/>
+-无聊程度：MAX <br/>
+-身体状态：B+<br/>
+-执行能力：D<br/>
+-总体评价：C</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hello]]></title>
+    <link href="http://thirtiseven.github.io/blog/2015/05/30/hello/"/>
+    <updated>2015-05-30T13:01:58+08:00</updated>
+    <id>http://thirtiseven.github.io/blog/2015/05/30/hello</id>
+    <content type="html"><![CDATA[<p>test the octopress.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[myTitle]]></title>
+    <link href="http://thirtiseven.github.io/blog/2015/05/30/mytitle/"/>
+    <updated>2015-05-30T12:52:20+08:00</updated>
+    <id>http://thirtiseven.github.io/blog/2015/05/30/mytitle</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[最后三个记忆]]></title>
+    <link href="http://thirtiseven.github.io/blog/2015/05/17/zui-hou-san-ge-ji-yi/"/>
+    <updated>2015-05-17T21:36:09+08:00</updated>
+    <id>http://thirtiseven.github.io/blog/2015/05/17/zui-hou-san-ge-ji-yi</id>
+    <content type="html"><![CDATA[<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;关于高三九班的倒数第三个记忆，是在龙王桥东路上，张钱鑫等我去体检。我们一起去找小胖子。小胖子家楼下没有人，我们一起去招办。他把他没做完的物理作业放在书包里，我把我没做完的化学作业留在家里。到了那边，我问每一个人为什么他们带了书包。小胖子一个人骑车来，我假装没看见，转而和沈超聊天。<br/>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;我至今没有做完那张化学卷子，因为没有对手可供竞争，没有组长来收取，没有老师评讲试卷，也没有台下昏昏欲睡的同学强忍着哈欠。<br/>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;不，那些都是有的。少的只是我而已。</p>
+
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;关于高三九班的倒数第二个记忆，是在市招办的门口，我们刚刚体检完。我一个人去拿车，刻意慢慢慢慢走出门。看到唐悦推着她的自行车走到外面。我心血来潮对她笑了一下，她也放下高冷学霸的身段回以微笑。<br/>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;回去的路上，我想如果这是我对你们的最后一个回忆，这样也不错。<br/>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;那之后，我再也没有见过班里的女生，记忆逐渐消失，空闲的时候有时在书桌前一个个想她们的名字，数到九个，然后再减去一个。</p>
+
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;关于高三九班的最后一个记忆，是在崇文的楼梯口。班里上晚上第一节课的一群人和孤零零一个人去上第二节课的三七偶然遇见。我像平时一样点了个头，他们也用各自惯常的打招呼方式问候我。<br/>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;我觉得仿佛，他们太过适应我属于这个集体，也仿佛，他们已然适应了没有我的生活。走在后面的V扑上来，一路被我裹挟到电梯口，我猜他并没有适应，也许无论哪一种都没有适应。<br/>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;不过，那时我一点也不需要一次别离。而现在就更不需要了。</p>
+
+<p>Thu May 17</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[知乎长回答--村上春树]]></title>
+    <link href="http://thirtiseven.github.io/blog/2015/05/13/zhi-hu-chang-hui-da-cun-shang-chun-shu/"/>
+    <updated>2015-05-13T16:01:37+08:00</updated>
+    <id>http://thirtiseven.github.io/blog/2015/05/13/zhi-hu-chang-hui-da-cun-shang-chun-shu</id>
+    <content type="html"><![CDATA[<p>如何理解村上春树所说的，“所谓理解，通常不过是误解的总和”？</p>
+
+<p>谢邀.</p>
+
+<p>首先,这句话出自&lt;斯普特尼克恋人>,主人公堇在写完两篇文章后离奇消失,这句话即出自其中的一篇.
+堇是一个怎样的形象?她是一个陷入迷茫的青年作者,一个文艺,敏感且古怪的女人,一个陷入一场突如其来的爱情的同性恋者.她这句话是代表着堇本人说的,而非一定是村上春树本人的看法.这一点请题主注意.</p>
+
+<p>这句话在文章中的意思是,每一个事物背后都有无穷无尽的意义,作者在写作时,把握的往往是其中少数几个侧面,对于相同的东西,存在着无限可供书写&mdash;-或是理解的空间.我们所说的"理解",不过是一种盲人摸象式的理解.
+而将这种个人的理解扩展,我们也不可能完整把握事物,再完善的所谓"理解",都或多或少有着局限和错误.将某种事物的概念分离开来看,它的构成总是片面的,而从整体来看,这种误解的总和永远达不到完美解释事物的"实质".
+而恰恰是这种哲学上的不可知给了艺术家无限的发挥空间,他们在创作的时候,不敢宣称自己可以很好的理解他们创作的对象.可以说,这种敬畏在她的理解中成了她文学创作的无尽源泉.</p>
+
+<p>自己看了一下,觉得写得太扯了&hellip;把原文附在下面,防止题主是从不知道哪里来的地方看到这句貌似很文艺的话&hellip;</p>
+
+<p>回想起来，即使自己知道（以为知道）的事，也是姑且作为不知道的事处理成文章这一形式的——这是我写东西的最初规则。一旦开始认为“啊，此事我知道，用不着特意花时间去写”，那可就寿终正寝了。我大概哪里也去不成。具体说来，假如我认为自己对身边某个人了如指掌、无须一一思考，因而放下心来，我（或者你）就可能被彻底出卖。我们自以为知之甚多的事物的背后，无不潜伏着等量的未知因素。
+所谓理解，通常不过是误解的总和。
+这是我认识世界的一个小小的方法（请勿外传）。
+以上</p>
+
+<p>传送门:<a href="http://www.zhihu.com/question/28756733/answer/47690132">http://www.zhihu.com/question/28756733/answer/47690132</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[疾病的隐喻——读《失明症漫记》]]></title>
+    <link href="http://thirtiseven.github.io/blog/2015/04/28/ji-bing-de-yin-yu-du-%3C%3Cshi-ming-zheng-man-ji-%3E%3E/"/>
+    <updated>2015-04-28T15:37:23+08:00</updated>
+    <id>http://thirtiseven.github.io/blog/2015/04/28/ji-bing-de-yin-yu-du-<<shi-ming-zheng-man-ji->></id>
+    <content type="html"><![CDATA[<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;你们也许看到过这个梗：在听说若泽•萨拉马戈获得诺贝尔奖后，和萨拉马戈所在党派互相敌视的葡萄牙执政党宣布：“我们要放下政治上的分歧，共同来庆祝葡萄牙语的胜利。”咦谁来告诉我【梗】这个字能不能在这里这么用。。。<br/>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Anyway，今天我在家里读完了他的杰作《失明症漫记》。这本书的设置对于一篇科幻小说来讲是老套的:失明疾病传染，（在故事中）只有一个人看得见。但这本书是一部杰出的艺术作品。我们不会意识到，《罪与罚》是一部侦探小说，《蝇王》是一步反乌托邦小说，《冷血》是一本犯罪小说。真正杰出的作品是拒绝被归类的。关于疾病，这本书很容易让人联想到加缪的《鼠疫》。不同之处在于，加缪想要通过意外的灾难揭示世界的荒诞，而萨拉马戈想要揭示的，是读者回到自己的内心：我会如何选择？<br/>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;以前我说描写这类可怕的事物的小说只有两种：人性不断消失或是人性尚未泯灭。我错了。萨拉马戈的这本小说告诉我们：灾难面前，人性会从隐藏，到展现出来，它是我们生存的方式，也是我们生存的底线。<br/>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;《银河系搭车客指南》认为，文明的发展可以分为三个阶段：生存，探索，适应（大雾）。这本书即是这种理论的一个极好例证：从在隔离病院中艰苦的生存，到后来回到“文明社会”发现物是人非的探索，到整个进程中的适应，这本书最大的隐喻便是一个基于突发事件而形成的更低层次的“文明”，以及由此我们可以类比推理得到的我们这个文明的发展过程。我们很难想象四维以上的空间，但是对于更低的维度，我们可以有很好的理解。比一群进化的人类更能带给我们其实的，肯定是一群退化的人类。所以伟大的小说是不需要被分类的，因为没什么其他小说可以和它分到一类。<br/>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;五感并不是感官的极限，在我们感受范围之外的存在，是否也存在着巨大的丑恶，这些事物对于我们产生了怎样的影响，这是这个小说的主题之一。从一个更为宏大的视角观察，人类是否是荒诞的，人性是否会因为我们的感受而扩展，或是人性的好坏比较（从这层意义上说）是没有意义的，这些都引起了我们自我的审视。<br/>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;而提供这种视角的是唯一一个有视力的人，即医生的妻子。她在本书中的隐喻，我认为是一个弱小的神，或者说，是一个有着上帝视角的普通人。对于他人发现不了的丑恶，她看在心里，又无能为力，而即使无能为力也要进行尝试。她是一个“全知而不全能”的人，这也正是有些先觉者的可悲之处。我们甚至可以进一步假设，医生的妻子中，萨拉马戈寄托了他自己的形象，她是作者的化身。萨拉马戈终其一生没有改变什么实际上的东西，只能做“一个愤怒的人”。他只能通过写小说来倾诉自己的愤懑。但是，与其他发泄情感和输出观点的书，比方说《沉沦》和《1984》，相比，《失明症漫记》也是一部艺术上的杰作。<br/>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;我们刚刚说医生的妻子是一个无能为力的神，那么那些无知而有权力的人——盲人暴徒们，明显指的是一个无知而残暴的政府，那些人类以外的生物指的是乱世之下恃强凌弱的人，那些同与医生妻子在一起的人便是无辜而弱小的底层民众。人际关系从彼此都是盲人就能成为朋友到后来盲人们越来越大分歧反映出人们人际关系的漠化。而乱世之中各个人不同的选择和战队似乎也在拷问着我们——你会如何选择？<br/>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;无奈与选择之后，小说的最后几页却给我们了一个巨大的逆转——复明。我想起了《肖申克的救赎》中的话：“一旦你适应了这个大粪坑之后，他们就把你从这儿扔出去。”这似乎是命运的一个巨大玩笑：给你一场灾难，看你如何表现，然后在你适应之后停下来。疾病停止了，而生活还要继续，人们感受到了人性的坚强或是人性的脆弱，他们感受到了世界的丑恶，他们感到了一丝灾难中才会体会到的美好，他们的生活会有怎样的变化呢？<br/>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;不会。什么变化也没有。萨拉马戈愤怒地回答。有人也许还记得《香水》的那个狂欢的场景之后的事：我们意识到了我们自己的可怕之处，却又道貌岸然地遗忘他，将事情迅速解决，迅速回到原来有条不紊的生活。这正是萨拉马戈（以及聚斯金德）想要告诉我们的：我们故意的去遗忘让我们超越的东西，因为那超越同时也意味着伤痛。<br/>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;P.S.感谢苏珊•桑塔格的题目。<br/>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;P.S.P.S.我要戒掉写一篇文章总是写不完的拖延症。好多好多书评都是写了400字扔电脑里，最近要把它们一篇一篇写完。<br/>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;P.S.P.S.P.S.关于生存和无奈的选择，推荐一款游戏（漫天大雾）This War Of Mine，与别的战争游戏不同，这个游戏中我们需要扮演平民。凭经验讲这是一个好游戏，凭良心讲我真的玩不下去。。。。。。已删。。。。。。我不玩游戏真的不是我喜欢装逼什么的。。。。。这么多年我都在不屈不挠的尝试。。。。。。但是都失败了。。。。。。（逃</p>
+]]></content>
+  </entry>
+  
+</feed>
