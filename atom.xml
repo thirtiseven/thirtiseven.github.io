@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[一个奇特青年的拓扑学结构]]></title>
   <link href="http://thirtiseven.github.io/atom.xml" rel="self"/>
   <link href="http://thirtiseven.github.io/"/>
-  <updated>2015-05-30T13:55:08+08:00</updated>
+  <updated>2015-05-30T14:34:27+08:00</updated>
   <id>http://thirtiseven.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[李三七]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,18 +15,18 @@
   
   <entry>
     <title type="html"><![CDATA[Hello]]></title>
-    <link href="http://thirtiseven.github.io/blog/2015/05/30/hello/"/>
+    <link href="http://thirtiseven.github.io/blog/hello.html/"/>
     <updated>2015-05-30T13:01:58+08:00</updated>
-    <id>http://thirtiseven.github.io/blog/2015/05/30/hello</id>
+    <id>http://thirtiseven.github.io/blog/hello</id>
     <content type="html"><![CDATA[<p>test the octopress.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[myTitle]]></title>
-    <link href="http://thirtiseven.github.io/blog/2015/05/30/mytitle/"/>
+    <link href="http://thirtiseven.github.io/blog/mytitle.html/"/>
     <updated>2015-05-30T12:52:20+08:00</updated>
-    <id>http://thirtiseven.github.io/blog/2015/05/30/mytitle</id>
+    <id>http://thirtiseven.github.io/blog/mytitle</id>
     <content type="html"><![CDATA[
 ]]></content>
   </entry>
