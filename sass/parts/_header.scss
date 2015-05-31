@@ -3,45 +3,63 @@ $header-height: 30px;
 #header{
 	height: $header-height;
 	padding: 30px 0;
-	border-bottom: 1px solid $color-gray04;
+	margin-bottom: 100px;
+	
 	line-height: $header-height;
-	@media screen and (max-width: 900px){
+	@media screen and (max-width: 1040px){
+		margin-bottom: 50px;
 		height: auto;
 		position: relative;
 		padding-bottom: 10px;
+	}
+	@media screen and (max-width: 600px){
+	margin-bottom:40px;
 	}
 	a{
 		color: $color-gray01;
 		@include transition(color 0.3s);
 		&:hover{
 			color: $color-main;
+			border-bottom:none;
 		}
 	}
 	h1{
-		float: left;
-		font-weight: 300;
-		font-size: 30px;
-		@media screen and (max-width: 900px){
+		margin-top:15px;
+		text-align:center;
+		font-weight: bold;
+		font-size: 48px;
+		@media screen and (max-width: 1040px){
+			float: none;
+		}
+		}
+	h4{
+		margin-top:10px;
+		text-align:center;
+		font-weight: 100;
+		font-size: 32px;
+		@media screen and (max-width: 1040px){
 			float: none;
 		}
 	}
 }
 #main-nav{
-	float: left;
-	margin-left: 30px;
-	@media screen and (max-width: 900px){
+	margin-bottom: 0px;
+	float: center;
+	text-align:center;
+	margin-top: 15px;
+	@media screen and (max-width: 1040px){
 		float: none;
 		margin-left: 0;
 		margin-top: 15px;
 	}
 	>ul{
-		@media screen and (max-width: 900px){
+		@media screen and (max-width: 600px){
 			display: none;
 		}
 		>li{
 			margin-left: 50px;
 			@include inline-block;
-			@media screen and (max-width: 900px){
+			@media screen and (max-width: 1040px){
 				margin-left: 0;
 				margin-right: 50px;
 				&:last-of-type{
@@ -51,6 +69,7 @@ $header-height: 30px;
 			&:hover{
 				>a{
 					color: $color-main;
+					border-bottom:none;
 				}
 			}
 			>a{
@@ -67,7 +86,7 @@ $header-height: 30px;
 						content: "";
 					}
 				}
-				@media screen and (max-width: 900px){
+				@media screen and (max-width: 1040px){
 					padding: 18px 0;
 				}
 			}
@@ -82,7 +101,7 @@ $header-height: 30px;
 			border: 1px solid $color-gray03;
 			list-style: none;
 			display: none;
-			@media screen and (max-width: 900px){
+			@media screen and (max-width: 1040px){
 				top: 40px;
 			}
 			@include box-shadow(0 4px 8px rgba(0,0,0,0.1));
@@ -140,7 +159,7 @@ $header-height: 30px;
 	select{
 		display: none;
 		margin-bottom: 10px;
-		@media screen and (max-width: 900px){
+		@media screen and (max-width: 600px){
 			display: block;
 		}
 	}
@@ -149,7 +168,7 @@ $header-height: 30px;
 	display: none;
 	height: 37px;
 	position: relative;
-	@media screen and (max-width: 900px){
+	@media screen and (max-width: 600px){
 		display: block;
 	}
 	a{
@@ -257,19 +276,19 @@ $header-height: 30px;
 	}
 }
 #sub-nav{
-	@media screen and (max-width: 900px){
+	@media screen and (max-width: 1040px){
 		position: absolute;
 		top: 30px;
 		right: 0;
 	}
-	@media screen and (max-width: 900px){
+	@media screen and (max-width: 600px){
 		display: none;
 	}
 	.search{
 		float: left;
 		margin-top: 1px;
 		position: relative;
-		@media screen and (max-width: 900px){
+		@media screen and (max-width: 1040px){
 			float: none;
 			margin-top: 15px;
 		}
@@ -302,7 +321,7 @@ $header-height: 30px;
 	.social{
 		float: left;
 		margin-right: 15px;
-		@media screen and (max-width: 900px){
+		@media screen and (max-width: 1040px){
 			float: none;
 			margin-right: 0;
 			a:last-of-type{
@@ -349,12 +368,19 @@ $header-height: 30px;
 				}
 			}
 			&.coderwall{
-				background: image-url('social/coderwall.png') center no-repeat #3E8DCC;
-				border: 1px solid #3E8DCC;
+				background: image-url('social/coderwall.png') center no-repeat rgb(58,114,159);
+				border: 1px solid rgb(58,114,159);
 				&:hover{
-					border: 1px solid darken(#3E8DCC, 10%);
+					border: 1px solid darken(rgb(58,114,159), 10%);
 				}
 			}
+      &.pinboard{
+        background: image-url('social/pinboard.png') center no-repeat rgb(0,102,200);
+        border: 1px solid rgb(58,114,159);
+        &:hover{
+          border: 1px solid darken(rgb(0,102,255), 10%);
+        }
+      }
 			&.linkedin{
 				background: image-url('social/linkedin.png') center no-repeat #005A87;
 				border: 1px solid #005A87;
@@ -375,13 +401,6 @@ $header-height: 30px;
 				&:hover{
 					border: 1px solid darken(rgb(50,113,203), 10%);
 				}
-			}
-			&.pinboard{
-			  background: image-url('social/pinboard.png') center no-repeat rgb(0,102,200);
-			  border: 1px solid rgb(58,114,159);
-			  &:hover{
-			    border: 1px solid darken(rgb(0,102,255), 10%);
-			  }
 			}
 			&.rss{
 				background: image-url('social/rss.png') center no-repeat #EF7522;
