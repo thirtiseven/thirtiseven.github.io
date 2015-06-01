@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://thirtiseven.github.io/sitemap.xml 
+Sitemap: http://http://www.thirtiseven.com/sitemap.xml 
