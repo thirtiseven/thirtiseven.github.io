@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[一个奇特青年的拓扑学结构]]></title>
-  <link href="http://http://www.thirtiseven.com/atom.xml" rel="self"/>
-  <link href="http://http://www.thirtiseven.com/"/>
-  <updated>2015-06-01T20:41:11+08:00</updated>
-  <id>http://http://www.thirtiseven.com/</id>
+  <title><![CDATA[语言漩涡]]></title>
+  <link href="http://thirtiseven.com/atom.xml" rel="self"/>
+  <link href="http://thirtiseven.com/"/>
+  <updated>2015-06-02T15:03:45+08:00</updated>
+  <id>http://thirtiseven.com/</id>
   <author>
     <name><![CDATA[李三七]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[五月总结]]></title>
-    <link href="http://http://www.thirtiseven.com/blog/2015/05/30/wu-yue-zong-jie/"/>
+    <link href="http://thirtiseven.com/blog/wu-yue-zong-jie.html/"/>
     <updated>2015-05-30T14:58:23+08:00</updated>
-    <id>http://http://www.thirtiseven.com/blog/2015/05/30/wu-yue-zong-jie</id>
+    <id>http://thirtiseven.com/blog/wu-yue-zong-jie</id>
     <content type="html"><![CDATA[<h4>学习：</h4>
 
 <ul>
@@ -166,18 +166,18 @@
   
   <entry>
     <title type="html"><![CDATA[Hello]]></title>
-    <link href="http://http://www.thirtiseven.com/blog/2015/05/30/hello/"/>
+    <link href="http://thirtiseven.com/blog/hello.html/"/>
     <updated>2015-05-30T13:01:58+08:00</updated>
-    <id>http://http://www.thirtiseven.com/blog/2015/05/30/hello</id>
+    <id>http://thirtiseven.com/blog/hello</id>
     <content type="html"><![CDATA[<p>test the octopress.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[最后三个记忆]]></title>
-    <link href="http://http://www.thirtiseven.com/blog/2015/05/17/zui-hou-san-ge-ji-yi/"/>
+    <link href="http://thirtiseven.com/blog/zui-hou-san-ge-ji-yi.html/"/>
     <updated>2015-05-17T21:36:09+08:00</updated>
-    <id>http://http://www.thirtiseven.com/blog/2015/05/17/zui-hou-san-ge-ji-yi</id>
+    <id>http://thirtiseven.com/blog/zui-hou-san-ge-ji-yi</id>
     <content type="html"><![CDATA[<p>&emsp;&emsp;关于高三九班的倒数第三个记忆，是在龙王桥东路上，张钱鑫等我去体检。我们一起去找小胖子。小胖子家楼下没有人，我们一起去招办。他把他没做完的物理作业放在书包里，我把我没做完的化学作业留在家里。到了那边，我问每一个人为什么他们带了书包。小胖子一个人骑车来，我假装没看见，转而和沈超聊天。<br/>
 &emsp;&emsp;我至今没有做完那张化学卷子，因为没有对手可供竞争，没有组长来收取，没有老师评讲试卷，也没有台下昏昏欲睡的同学强忍着哈欠。<br/>
 &emsp;&emsp;不，那些都是有的。少的只是我而已。</p>
@@ -196,9 +196,9 @@
   
   <entry>
     <title type="html"><![CDATA[知乎长回答--村上春树]]></title>
-    <link href="http://http://www.thirtiseven.com/blog/2015/05/13/zhi-hu-chang-hui-da-cun-shang-chun-shu/"/>
+    <link href="http://thirtiseven.com/blog/zhi-hu-chang-hui-da-cun-shang-chun-shu.html/"/>
     <updated>2015-05-13T16:01:37+08:00</updated>
-    <id>http://http://www.thirtiseven.com/blog/2015/05/13/zhi-hu-chang-hui-da-cun-shang-chun-shu</id>
+    <id>http://thirtiseven.com/blog/zhi-hu-chang-hui-da-cun-shang-chun-shu</id>
     <content type="html"><![CDATA[<p>如何理解村上春树所说的，“所谓理解，通常不过是误解的总和”？</p>
 
 <p>谢邀.</p>
@@ -223,9 +223,9 @@
   
   <entry>
     <title type="html"><![CDATA[疾病的隐喻——读《失明症漫记》]]></title>
-    <link href="http://http://www.thirtiseven.com/blog/2015/04/28/ji-bing-de-yin-yu-du-%3C%3Cshi-ming-zheng-man-ji-%3E%3E/"/>
+    <link href="http://thirtiseven.com/blog/ji-bing-de-yin-yu-du-%3C%3Cshi-ming-zheng-man-ji-%3E%3E.html/"/>
     <updated>2015-04-28T15:37:23+08:00</updated>
-    <id>http://http://www.thirtiseven.com/blog/2015/04/28/ji-bing-de-yin-yu-du-<<shi-ming-zheng-man-ji->></id>
+    <id>http://thirtiseven.com/blog/ji-bing-de-yin-yu-du-<<shi-ming-zheng-man-ji->></id>
     <content type="html"><![CDATA[<p>&emsp;&emsp;你们也许看到过这个梗：在听说若泽•萨拉马戈获得诺贝尔奖后，和萨拉马戈所在党派互相敌视的葡萄牙执政党宣布：“我们要放下政治上的分歧，共同来庆祝葡萄牙语的胜利。”咦谁来告诉我【梗】这个字能不能在这里这么用。。。<br/>
 &emsp;&emsp;Anyway，今天我在家里读完了他的杰作《失明症漫记》。这本书的设置对于一篇科幻小说来讲是老套的:失明疾病传染，（在故事中）只有一个人看得见。但这本书是一部杰出的艺术作品。我们不会意识到，《罪与罚》是一部侦探小说，《蝇王》是一步反乌托邦小说，《冷血》是一本犯罪小说。真正杰出的作品是拒绝被归类的。关于疾病，这本书很容易让人联想到加缪的《鼠疫》。不同之处在于，加缪想要通过意外的灾难揭示世界的荒诞，而萨拉马戈想要揭示的，是读者回到自己的内心：我会如何选择？<br/>
 &emsp;&emsp;以前我说描写这类可怕的事物的小说只有两种：人性不断消失或是人性尚未泯灭。我错了。萨拉马戈的这本小说告诉我们：灾难面前，人性会从隐藏，到展现出来，它是我们生存的方式，也是我们生存的底线。<br/>
