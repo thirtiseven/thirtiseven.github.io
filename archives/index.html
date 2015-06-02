@@ -1,119 +1,190 @@
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>Blog Archives - 一个奇特青年的拓扑学结构</title>
-  <meta name="author" content="李三七">
+	<script data-cfasync="false" type="text/javascript" src="//use.typekit.net/axj3cfp.js"></script>
+	<script data-cfasync="false" type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<meta charset="utf-8">
+	<title>Blog Archives  | 一个奇特青年的拓扑学结构</title>
 
-  
-  <meta name="description" content=" 五月总结
-May 30 2015 Hello
-May 30 2015 myTitle
-May 30 2015 最后三个记忆
-May 17 2015 知乎长回答--村上春树
-May 13 2015 疾病的隐喻——读《失明症漫记》
-Apr 28 2015 ">
-  
+<meta name="author" content="李三七"> 
 
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="一个奇特青年的拓扑学结构|三七李的博客——由octopress强力驱动"> <meta name="keywords" content="">
 
-  
-  <link rel="canonical" href="http://thirtiseven.com/archives">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="一个奇特青年的拓扑学结构" type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="//fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin" rel="stylesheet" type="text/css" />
-<link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,700' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+	<link href="/atom.xml" rel="alternate" title="一个奇特青年的拓扑学结构" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="/javascripts/jquery.fancybox.pack.js"></script>
 
+<script language="Javascript" type="text/javascript">
+$(document).ready(
+  function() {
+    (function($) {
+      $(".fancybox[data-content-id]").each(function() {
+        this.href = $(this).data('content-id');
+      });
+      $(".fancybox").fancybox({
+        beforeLoad: function() {
+          var el, 
+              id = $(this.element).data('title-id');
 
-  
+          if (id) {
+            el = $('#' + id);
 
+            if (el.length) {
+              this.title = el.html();
+            }
+          }
+          if ($(this).data('content')) {
+            this.content = $(this).data('content');
+          }
+        },
+        helpers: {
+          title: {
+            type: 'inside'
+          }
+        }
+      });
+    })(jQuery);
+  }
+);
+</script>
+
+	
 </head>
 
-<body   >
-  <nav id="main-nav" role="navigation">
-<ul class="main-navigation">
-  <li><a href="/" class="nav-link">Blog</a></li>
-  <li><a href="/blog/archives" class="nav-link">Archives</a></li>
-  <li><a href="/atom.xml" class="nav-link">RSS</a></li>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">一个奇特青年的拓扑学结构</a></h1>
+<h4>三七李的博客</h4>
+<nav id="main-nav"><ul>
+	<li><a href="/">Blog</a></li>
+	<li><a href="/about">About</a></li>
+	<li><a href="/portfolio">Portfolio</a></li>
+	<li><a href="/archives">Archive</a></li>
 </ul>
-
 </nav>
-  <header role="banner"><hgroup>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul>
+	<li><a href="/">Blog</a></li>
+	<li><a href="/about">About</a></li>
+	<li><a href="/portfolio">Portfolio</a></li>
+	<li><a href="/archives">Archive</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="https://www.bing.com/" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:http://www.thirtiseven.com">
+			</form>
+		</div>
+	</div>
+</nav>
+
+
+</header>
+
+	<div id="content" class="inner">
 	
-  <h1><a href="/">一个奇特青年的拓扑学结构</a></h1>
-  
-    <h2>三七李的博客</h2>
-  
-</hgroup>
-
-</header> 
-  
-  <div id="main">
-    <div id="content">
-      
-	
-<h1><a href="/blog/2015/05/30/wu-yue-zong-jie/">五月总结</a></h1>
-<time datetime="2015-05-30T14:58:23+08:00" pubdate><span class='month'>May</span> <span class='day'>30</span> <span class='year'>2015</span></time>
-
-
-
-	
-<h1><a href="/blog/2015/05/30/hello/">Hello</a></h1>
-<time datetime="2015-05-30T13:01:58+08:00" pubdate><span class='month'>May</span> <span class='day'>30</span> <span class='year'>2015</span></time>
-
-
-
-	
-<h1><a href="/blog/2015/05/30/mytitle/">myTitle</a></h1>
-<time datetime="2015-05-30T12:52:20+08:00" pubdate><span class='month'>May</span> <span class='day'>30</span> <span class='year'>2015</span></time>
-
 
 
 	
-<h1><a href="/blog/2015/05/17/zui-hou-san-ge-ji-yi/">最后三个记忆</a></h1>
-<time datetime="2015-05-17T21:36:09+08:00" pubdate><span class='month'>May</span> <span class='day'>17</span> <span class='year'>2015</span></time>
+	
+	<section class="archives"><h1 class="year">2015</h1>
+
+<article>
+	<h2 class="title"><a href="/blog/2015/05/30/wu-yue-zong-jie/">五月总结</a></h2>
+	<div class="meta">
+		<div class="date">May 30</div>
+		
 
 
+	    
+	</div>
+</article>
 
 	
-<h1><a href="/blog/2015/05/13/zhi-hu-chang-hui-da-cun-shang-chun-shu/">知乎长回答--村上春树</a></h1>
-<time datetime="2015-05-13T16:01:37+08:00" pubdate><span class='month'>May</span> <span class='day'>13</span> <span class='year'>2015</span></time>
 
 
+<article>
+	<h2 class="title"><a href="/blog/2015/05/30/hello/">Hello</a></h2>
+	<div class="meta">
+		<div class="date">May 30</div>
+		
+
+
+	    
+	</div>
+</article>
 
 	
-<h1><a href="/blog/2015/04/28/ji-bing-de-yin-yu-du-%3C%3Cshi-ming-zheng-man-ji-%3E%3E/">疾病的隐喻——读《失明症漫记》</a></h1>
-<time datetime="2015-04-28T15:37:23+08:00" pubdate><span class='month'>Apr</span> <span class='day'>28</span> <span class='year'>2015</span></time>
 
 
+<article>
+	<h2 class="title"><a href="/blog/2015/05/17/zui-hou-san-ge-ji-yi/">最后三个记忆</a></h2>
+	<div class="meta">
+		<div class="date">May 17</div>
+		
 
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2015 - 李三七 -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
 
+	    
+	</div>
+</article>
+
+	
+
+
+<article>
+	<h2 class="title"><a href="/blog/2015/05/13/zhi-hu-chang-hui-da-cun-shang-chun-shu/">知乎长回答--村上春树</a></h2>
+	<div class="meta">
+		<div class="date">May 13</div>
+		
+
+
+	    
+	</div>
+</article>
+
+	
+
+
+<article>
+	<h2 class="title"><a href="/blog/2015/04/28/ji-bing-de-yin-yu-du-%3C%3Cshi-ming-zheng-man-ji-%3E%3E/">疾病的隐喻——读《失明症漫记》</a></h2>
+	<div class="meta">
+		<div class="date">Apr 28</div>
+		
+
+
+	    
+	</div>
+</article>
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2015
+
+    李三七
+
+<br>
+Powered by Octopress.
 </footer>
-  
-
-
-
-
-
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
 
 
 
