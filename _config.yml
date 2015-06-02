@@ -34,18 +34,19 @@ plugins: plugins
 code_dir: downloads/code
 category_dir: blog/categories
 category_title_prefix: "分类："
-markdown: rdiscount
-rdiscount:
-  extensions:
-    - autolink
-    - footnotes
-    - smart
+markdown: kramdown
+# markdown: rdiscount
+# rdiscount:
+  #extensions:
+  #  - autolink
+  #  - footnotes
+  #  - smart
 highlighter: pygments # default python pygments have been replaced by pygments.rb
 
 paginate: 10          # Posts per page on the blog index
 paginate_path: "posts/:num"  # Directory base for pagination URLs eg. /posts/2/
 recent_posts: 5       # Posts in the sidebar Recent Posts section
-excerpt_link: "查看全文 &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
+excerpt_link: "查看全文"  # "Continue reading" link text at the bottom of excerpted articles
 excerpt_separator: "<!--more-->"
 
 titlecase: true       # Converts page and post titles to titlecase

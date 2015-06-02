@@ -23,8 +23,8 @@ deploy_dir      = "_deploy"   # deploy directory (for Github pages deployment)
 stash_dir       = "_stash"    # directory to stash posts for speedy generation
 posts_dir       = "_posts"    # directory for blog files
 themes_dir      = ".themes"   # directory for blog files
-new_post_ext    =  "markdown" # default new post file extension when using the new_post task
-new_page_ext    =  "markdown"   # default new page file extension when using the new_page task
+new_post_ext    = "md"  # 默认新日志文件后缀
+new_page_ext    = "md"  # 默认新页面文件后缀
 server_port     = "4000"      # port for preview server eg. localhost:4000
 
 if (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) != nil
