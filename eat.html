@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="jquery.js">
+		</script>
+		<title></title>
+	</head>
+	<body>
+		<img id="picts" src="box.gif" alt="">
+		<p hidden>红油抄手</p>
+		<p hidden>酸辣粉</p>
+		<p hidden>汤面</p>
+		<p hidden>拉面</p>
+		<p hidden>冷面</p>
+		<p hidden>温泉蛋牛丼</p>
+		<p hidden>旋转小火锅</p>
+		<p hidden>吉祥馄饨</p>
+		<p hidden>黄焖鸡米饭</p>
+		<p hidden>瓦罐鸡汤</p>
+		<p hidden>鹅肝炒饭</p>
+		<p hidden>小馄饨</p>
+		<p hidden>米线</p>
+		<p hidden>一食</p>
+		<p hidden>东城水蒸蛋</p>
+		<p hidden>火山石爆鱼</p>
+		<br>
+		<button onclick="change_pic()" id=xxx>猫咪今天吃什么</button>
+		<script>
+		function change_pic(){
+			var button = document.getElementById("xxx");
+			var picts = document.getElementById("picts");
+			button.onclick = function() {
+				if (picts.getAttribute("src",2) == "box.gif"){
+					picts.setAttribute("src","maomi.png");
+					var ps = document.getElementsByTagName('p'); //获取个段落对象
+					var random = Math.floor(Math.random() * 16);  //获取一个0-3之间的随机数
+					for(var i in ps){							//便利隐藏左右的段落 设置css display 属性为 none
+						if(ps[i].style)
+						ps[i].style.display = 'none';
+					}			
+					ps[random].style.display = "block";			//将随机选取的段落显示 设置css display 属性为 block
+				} else {
+					picts.setAttribute("src","box.gif");
+				};
+			}
+		}
+		change_pic();
+	</script>
+	</body>
+</html>
