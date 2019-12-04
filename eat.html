@@ -5,47 +5,72 @@
 		<script src="jquery.js">
 		</script>
 		<title></title>
+		<style>
+		.mytest{
+		width:200px;
+		height:100px;
+		}
+		</style>
+		<script>
+		$(document).ready(function(){
+		$(window).resize(function(){
+		$(".mytest").css({position:'absolute',left:($(window).width() - $(".mytest").outerWidth())/2,
+			top:($(window).height() - $(".mytest").outerHeight())/10 + $(document).scrollTop()
+		});
+		});
+		$(window).resize();
+		})
+		</script>
 	</head>
 	<body>
-		<img id="picts" src="box.gif" alt="">
-		<p hidden>红油抄手</p>
-		<p hidden>酸辣粉</p>
-		<p hidden>汤面</p>
-		<p hidden>拉面</p>
-		<p hidden>冷面</p>
-		<p hidden>温泉蛋牛丼</p>
-		<p hidden>旋转小火锅</p>
-		<p hidden>吉祥馄饨</p>
-		<p hidden>黄焖鸡米饭</p>
-		<p hidden>瓦罐鸡汤</p>
-		<p hidden>鹅肝炒饭</p>
-		<p hidden>小馄饨</p>
-		<p hidden>米线</p>
-		<p hidden>一食</p>
-		<p hidden>东城水蒸蛋</p>
-		<p hidden>火山石爆鱼</p>
-		<br>
-		<button onclick="change_pic()" id=xxx>猫咪今天吃什么</button>
-		<script>
-		function change_pic(){
-			var button = document.getElementById("xxx");
-			var picts = document.getElementById("picts");
-			button.onclick = function() {
-				if (picts.getAttribute("src",2) == "box.gif"){
-					picts.setAttribute("src","maomi.png");
-					var ps = document.getElementsByTagName('p'); //获取个段落对象
-					var random = Math.floor(Math.random() * 16);  //获取一个0-3之间的随机数
-					for(var i in ps){							//便利隐藏左右的段落 设置css display 属性为 none
-						if(ps[i].style)
-						ps[i].style.display = 'none';
-					}			
-					ps[random].style.display = "block";			//将随机选取的段落显示 设置css display 属性为 block
-				} else {
-					picts.setAttribute("src","box.gif");
-				};
+		<div class="mytest">
+			<img id="picts" src="box.gif" alt="">
+			<p hidden>红油抄手</p>
+			<p hidden>酸辣粉</p>
+			<p hidden>汤面</p>
+			<p hidden>拉面</p>
+			<p hidden>冷面</p>
+			<p hidden>温泉蛋牛丼</p>
+			<p hidden>旋转小火锅</p>
+			<p hidden>吉祥馄饨</p>
+			<p hidden>黄焖鸡米饭</p>
+			<p hidden>瓦罐鸡汤</p>
+			<p hidden>鹅肝炒饭</p>
+			<p hidden>小馄饨</p>
+			<p hidden>米线</p>
+			<p hidden>一食</p>
+			<p hidden>东城水蒸蛋</p>
+			<p hidden>火山石爆鱼</p>
+			<br><br>
+			<button onclick="change_pic()" id=xxx>猫咪今天吃什么</button>
+			<script>
+			function change_pic(){
+				var button = document.getElementById("xxx");
+				var picts = document.getElementById("picts");
+				var imga = ["cat/maomi1.jpg", "cat/maomi2.jpg", "cat/maomi3.jpg", "cat/maomi4.jpg", "cat/maomi5.jpg", "cat/maomi6.jpg", "cat/maomi7.jpg", "cat/maomi8.jpg", "cat/maomi9.jpg", "cat/maomi10.jpg", "cat/maomi11.jpg", "cat/maomi12.jpg", "cat/maomi13.jpg", "cat/maomi14.jpg", "cat/maomi7.jpg", "cat/maomi5.jpg"];
+				button.onclick = function() {
+					if (picts.getAttribute("src", 2) == "box.gif"){
+						var ps = document.getElementsByTagName('p'); 
+						var random = Math.floor(Math.random() * 16); 
+						picts.setAttribute("src", imga[random]);
+						for(var i in ps){							
+							if(ps[i].style)
+							ps[i].style.display = 'none';
+						}			
+						ps[random].style.display = "block";	
+					} else {
+						picts.setAttribute("src","box.gif");
+						var ps = document.getElementsByTagName('p'); 
+						for(var i in ps){							
+							if(ps[i].style)
+							ps[i].style.display = 'none';
+						}
+					};
+				}
 			}
-		}
-		change_pic();
-	</script>
+			change_pic();
+			</script>
+		</div>
+	</body>
 	</body>
 </html>
