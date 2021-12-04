@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"thirtiseven.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="17 不太常用的时频分解方法自回归模型自回归模型是一种根据信号的先前值预测信号值的模型。自回归模型的一个优点是，与FFT不同，其频率分辨率不受时间段中数据点数量的限制。自回归模型很少被使用，常常被小波卷积替代。 Hilbert-Huang 经验模式分解Hilbert-Huang 方法被用于检测非稳定数据中的时频事件。它通过使用称为经验模式分解的数据缩减技术将原始EEG信号分解为一系列基本成分而充当">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基线归一化和相位锁定分析">
+<meta property="og:url" content="http://thirtiseven.github.io/2021/03/23/%E5%9F%BA%E7%BA%BF%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E7%9B%B8%E4%BD%8D%E9%94%81%E5%AE%9A%E5%88%86%E6%9E%90/index.html">
+<meta property="og:site_name" content="语言漩涡">
+<meta property="og:description" content="17 不太常用的时频分解方法自回归模型自回归模型是一种根据信号的先前值预测信号值的模型。自回归模型的一个优点是，与FFT不同，其频率分辨率不受时间段中数据点数量的限制。自回归模型很少被使用，常常被小波卷积替代。 Hilbert-Huang 经验模式分解Hilbert-Huang 方法被用于检测非稳定数据中的时频事件。它通过使用称为经验模式分解的数据缩减技术将原始EEG信号分解为一系列基本成分而充当">
+<meta property="og:locale">
+<meta property="og:image" content="http://thirtiseven.github.io/images/18%E5%9F%BA%E7%BA%BF%E5%8A%9F%E7%8E%87%E8%B0%B1.png">
+<meta property="og:image" content="http://thirtiseven.github.io/images/19%E7%9B%B8%E4%BD%8D%E8%81%9A%E7%B1%BB.png">
+<meta property="og:image" content="http://thirtiseven.github.io/images/19.png">
+<meta property="article:published_time" content="2021-03-23T04:12:49.000Z">
+<meta property="article:modified_time" content="2021-12-04T04:16:42.439Z">
+<meta property="article:author" content="Thirtiseven Lee">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://thirtiseven.github.io/images/18%E5%9F%BA%E7%BA%BF%E5%8A%9F%E7%8E%87%E8%B0%B1.png">
+
+<link rel="canonical" href="http://thirtiseven.github.io/2021/03/23/%E5%9F%BA%E7%BA%BF%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E7%9B%B8%E4%BD%8D%E9%94%81%E5%AE%9A%E5%88%86%E6%9E%90/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>基线归一化和相位锁定分析 | 语言漩涡</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">语言漩涡</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">李三七的博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://thirtiseven.github.io/2021/03/23/%E5%9F%BA%E7%BA%BF%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E7%9B%B8%E4%BD%8D%E9%94%81%E5%AE%9A%E5%88%86%E6%9E%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Thirtiseven Lee">
+      <meta itemprop="description" content="和光同尘">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="语言漩涡">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          基线归一化和相位锁定分析
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-03-23 12:12:49" itemprop="dateCreated datePublished" datetime="2021-03-23T12:12:49+08:00">2021-03-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-12-04 12:16:42" itemprop="dateModified" datetime="2021-12-04T12:16:42+08:00">2021-12-04</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="17-不太常用的时频分解方法"><a href="#17-不太常用的时频分解方法" class="headerlink" title="17 不太常用的时频分解方法"></a>17 不太常用的时频分解方法</h2><h3 id="自回归模型"><a href="#自回归模型" class="headerlink" title="自回归模型"></a>自回归模型</h3><p>自回归模型是一种根据信号的先前值预测信号值的模型。自回归模型的一个优点是，与FFT不同，其频率分辨率不受时间段中数据点数量的限制。自回归模型很少被使用，常常被小波卷积替代。</p>
+<h3 id="Hilbert-Huang-经验模式分解"><a href="#Hilbert-Huang-经验模式分解" class="headerlink" title="Hilbert-Huang 经验模式分解"></a>Hilbert-Huang 经验模式分解</h3><p>Hilbert-Huang 方法被用于检测非稳定数据中的时频事件。它通过使用称为经验模式分解的数据缩减技术将原始EEG信号分解为一系列基本成分而充当自适应滤波器。简而言之，经验模式分解涉及识别时间序列的局部最小值和最大值，通过在局部最小值和最大值之间进行插值并从原始信号中减去均值来创建新的时间序列。减去均值的信号称为本征模式函数。 减去之后，从固有模式函数中识别出局部最小值和最大值，然后重复该过程，直到信号中只剩下几个最小值和最大值为止。本征模式函数可以概念化为基本时间序列，可以对其应用希尔伯特变换，并且可以从中提取相位，功率和频率信息。在认知脑电图分解中不太常用。</p>
+<span id="more"></span>
+
+<h3 id="匹配追踪算法"><a href="#匹配追踪算法" class="headerlink" title="匹配追踪算法"></a>匹配追踪算法</h3><p>匹配追踪是一种自适应算法，与Hilbert-Huang方法一样，它是基于将信号分解为更多基本分量而组成的。 匹配追踪不是将所有小波与数据卷积，而是从“字典”中找到哪个模板与那个时间窗口的数据最匹配，并计算数据和所有模板之间的残差。 模板也称为原子，通常是Morlet小波或类似类型的特定于锥形频带的信号。 与经验模式分解相似，它在预期频率快速变化的实验中可能最有用。</p>
+<h3 id="P-Episode"><a href="#P-Episode" class="headerlink" title="P-Episode"></a>P-Episode</h3><p>P-episode技术的思想是检测振荡事件的发生和持续时间。 这是通过将数据过滤到频带中（使用小波卷积或希尔伯特滤波器），并在逐次试验的基础上检测功率波动是否超过幅度阈值来完成的。p-episode方法的主要优点是它可以检测特定频段功率增加的持续时间。 该技术有三个局限性。 首先，因为它基于超阈值事件的检测，所以阈值的选择将影响结果。 其次，由于噪声会产生瞬时的功率增加，因此对于p片段技术而言，过多的噪声数据可能不合适。 第三，p-episode技术可能无法检测到振幅适中但在整个试验中一致的功率增加。</p>
+<h3 id="S变换"><a href="#S变换" class="headerlink" title="S变换"></a>S变换</h3><p>S变换是短时FFT的改编，特别是为了解决以下局限性：短时FFT对检测比FFT长度短的瞬态事件的灵敏度有限。   S变换的工作方式与小波卷积相同，但使用的内核略有不同。  S变换的核心是锥形正弦波，类似于Morlet小波。 尽管S变换的锥度与方程12.1定义的形式高斯略有不同，但它具有类似高斯的形状。 通过选择特定数量的小波周期，本书所述的Morlet小波和S变换将提供几乎相同的小波，从而将提供几乎相同的结果。 因此，它适合用于时频分解。 用于EEG时频分析的S变换的主要缺点是它不包含根据频率改变小波宽度的参数。</p>
+<h2 id="18-时频功率和基线归一化"><a href="#18-时频功率和基线归一化" class="headerlink" title="18 时频功率和基线归一化"></a>18 时频功率和基线归一化</h2><p>本章的目的是讨论将时频功率数据转换为适合定性视觉检查和定量统计分析的标度的方法。</p>
+<h3 id="1-f-功率缩放"><a href="#1-f-功率缩放" class="headerlink" title="1/f 功率缩放"></a>1/f 功率缩放</h3><p>前几章中的时频功率图之所以难以解释，是因为对于一个频段看起来不错的色彩缩放比例对于越来越高的频段来说效果并不理想。 这是因为数据的频谱趋向于在增加的频率下显示出降低的功率。功率随频率增加而降低的情况遵循“ 1/f” 形状，如下图所示。</p>
+<p>![Screen Shot 2021-03-15 at 9.43.54 AM 1](/images/Screen Shot 2021-03-15 at 9.43.54 AM 1.png)</p>
+<p>EEG时频功率服从1/ f 现象，较高频率下的功率比较低频率下的功率小得多。这就是为什么很难同时从大范围的频段可视化活动。1 / f 现象在解释和处理时频功率数据方面有五个重要限制。但是某些基准线归一化方法可以克服所有这些限制。<br> 第一个限制是很难在大范围的频率范围内可视化功率。 第二个限制是很难对整个频段的功率进行定量比较。第三个限制是，使用原始功率值可能难以在各个受试上进行汇总效果。第四个限制是与任务相关的功率变化可能很难与背景活动区分开。 最后，第五个限制是原始功率值不是正态分布的。 这限制了将参数统计分析应用于时频功率数据的能力。</p>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>幸运的是，有一种解决方案可以解决上述确定的原始功率值的全部五个限制。 解决方案是使用几种基线归一化方法之一，下面对此进行讨论。 它们都具有四个优点：1.它们将所有功率数据转换为相同的比例。 这使您可以在视觉上和统计上比较不同频段，电极，条件和主题的结果。<br>2.因为归一化是相对于（通常是预审）基线计算的，所以与任务相关的时频动态与背景或与任务无关的动态变得混乱。<br>3.基准线归一化将所有幂结果放入一个通用且易于数字解释的度量。<br>4.由于基准线归一化的功率数据通常呈正态分布，因此可能需要使用参数统计分析。 </p>
+<h3 id="分贝转换"><a href="#分贝转换" class="headerlink" title="分贝转换"></a>分贝转换</h3><p>分贝（dB）是一个信号的强度（特定于频段的功率）与另一信号的强度（该相同频段中的功率的基线水平）之间的比率。 分贝刻度很方便，因为它对原始功率的许多限制都具有鲁棒性，例如1 / f功率缩放以及特定于对象和特定于电极的特质特性。<br>$$<br>dB_{tf}=10\log 10(\frac{activity_{tf}}{baseline_{f}})<br>$$<br>什么是“基线”？ 基线是一段时间，通常是在开始试验之前几百毫秒，此时几乎没有或根本没有与任务相关的处理。 基准期的选择很重要，并且会影响您对结果的解释。</p>
+<p>对于真实数据分析，分贝转换应基于试验平均功效进行。 也就是说，先将平均试验放在一起，然后转换为分贝。 不要将每个试验分别转换为分贝，然后取平均值。</p>
+<h3 id="百分比变化和基线分割"><a href="#百分比变化和基线分割" class="headerlink" title="百分比变化和基线分割"></a>百分比变化和基线分割</h3><p>百分比变化是基线归一化的另一种选择。 与分贝类似，百分比变化后t，结果必须解释为基准期内功率相对于功率的变化。<br>$$<br>prctchange_{tf}=100\frac{activity_{tf}-\overline{baseline}_f}{\overline{baseline}_f}<br>$$</p>
+<h3 id="Z变换"><a href="#Z变换" class="headerlink" title="Z变换"></a>Z变换</h3><p>Z变换的工作原理与分贝或百分率变化略有不同，但仍保留了相同的优势，即它可以校正1 / f功率定律缩放，并且可以将功率数据变换为在频率，电极，条件和对象之间具有可比性。 使用Z变换，功率数据在基准周期内被缩放为相对于功率数据的标准偏差单位。 单位是正常的Z值，因此可以轻松解释并转换为p值（例如Z = 1.96对应于两尾p = 0.05）<br>$$<br>Z_{t f}=\frac{\text { activity }<em>{t f}-\overline{\text { baseline }</em>{f}}}{\sqrt{n^{-1} \sum_{i=1}^{n}\left(\text { baseline }<em>{i f}-\overline{b a s e l i n e</em>{f}}\right)^{2}}}<br>$$</p>
+<p>其中n是基准时间段中的时间点数。 公式中的分母是标准偏差的公式。  Z变换不同于分贝和百分比变化，因为后两种方法仅基于平均基准功率，而Z变换既基于平均基准功率，又基于基准功率随时间的标准偏差 。 因此，在基线期间，高度可变的数据可能会对与刺激相关的功率的估计产生不利影响。</p>
+<h3 id="不是所有变换都是相同的"><a href="#不是所有变换都是相同的" class="headerlink" title="不是所有变换都是相同的"></a>不是所有变换都是相同的</h3><p>不同的基线转换应产生相似但不一定相同的结果。 例如，分贝和百分比变化之间的重要区别是，分贝提供对数刻度，而百分比变化是线性刻度。 在分贝和百分比变化值接近零的情况下，这两个变换将给出高度相似的结果，因为在这种小规模下，分贝接近线性函数。 但是，随着这些值越来越远离零，标度开始有所不同。 与百分比变化值相比，分贝值在负值增加时变得更陡峭。但是，Z变换与分贝和百分比变化的关系更为复杂，由于它取决于数据的特征，因此无法进行分析得出（图18.6B）。 这是因为在基线期间，Z变换受功率数据的标准偏差的影响。</p>
+<p>下图是几种不同变换的时频功率图。 时频功率动态的主要特征在所有图中均可见，但是在不同的基线归一化所突出显示的特征方面也存在一些差异。 通过使用不对称比例，可以使显示分贝变化，百分变化和基线划分的图在视觉上可以相互比较。  在图D中，可以看到最低的两个频率对于Z变换具有非常大的负值。 这可能是由于噪声或离群值引起的。 尽管更多的试验会减弱噪声的影响（这些结果基于一个试验），但这突出显示了Z变换的潜在缺点，尤其是在数据嘈杂或试验较少的情况下。</p>
+<p><img src="/images/18%E5%9F%BA%E7%BA%BF%E5%8A%9F%E7%8E%87%E8%B0%B1.png" alt="18基线功率谱"></p>
+<h3 id="均值-vs-中位数"><a href="#均值-vs-中位数" class="headerlink" title="均值 vs 中位数"></a>均值 vs 中位数</h3><p>对于某些非高斯分布或偏态分布，计算中值是平均值的一种可接受的替代方法，尤其是在离群值可能影响平均值的情况下。 中位数也很容易解释，因为它是约一半值较高而约一半较低值的数字。在很少有试验和嘈杂数据的情况下，中位数可能会优于均值或除均值以外的一种情况。 在某些特殊人群（例如临床人群或儿童）中可能会出现这种情况，因为这些人群无法获得大量试验和/或难以获得您可以从自愿本科生获得的干净数据水平。 或者对于某些实验设计可能是这种情况，即使对于患者和训练有素的受试者，也只能针对该病症进行少量试验，因为例如，该设计要求这些病症很少出现。 在这些情况下，使用中值将有助于保护结果免受噪声或非代表性数据的影响。</p>
+<h3 id="单试验基线归一化"><a href="#单试验基线归一化" class="headerlink" title="单试验基线归一化"></a>单试验基线归一化</h3><p>通常，将所有试验的功率数据取平均值，然后应用基线标准化。 在平均之前对单个试验进行基线归一化有助于最大程度地减少离群试验的影响，但不能完全减轻其影响，尤其是对于较大的离群值。</p>
+<h3 id="时间窗的选择"><a href="#时间窗的选择" class="headerlink" title="时间窗的选择"></a>时间窗的选择</h3><p>由于基线标准化意味着活动被重新调整为相对于基线期间的活动，因此基线时间段的选择是一个重要的选择，可能会对结果产生影响。试验开始前的几百毫秒的基准时间段是最常见的时间段。</p>
+<h3 id="对结果下采样"><a href="#对结果下采样" class="headerlink" title="对结果下采样"></a>对结果下采样</h3><p>精度和分辨率之间存在区别。 脑电的高时间分辨率是应用时频分解方法所必需的。 但是在时频分解之后，时间精度会降低，因为每个时间点的功率估计是时间上周围时间点的加权组合。 这意味着来自相邻时间点的活动是自相关的，因此提供了冗余信息。 换句话说，在时频分解之后，时间分辨率大于时间精度。 因此，您经常可以在时间-频率分解之后对结果进行下采样，而几乎不会丢失信息。 在许多情况下，可以将结果下采样到40或50 Hz（即，每20或25 ms进行一次活动估计）。</p>
+<h2 id="19-试次间的相位聚类"><a href="#19-试次间的相位聚类" class="headerlink" title="19 试次间的相位聚类"></a>19 试次间的相位聚类</h2><p>计算时域中 EEG 信号的一致性只需要讲试验中每个时间点的活动平均，形成事件相关电位ERP即可。对于功率的一致性，也只需要对每个时间点的特定频段的功率进行平均。但是计算香味的一致性没有那么简单，因为相位不能像这样简单地被平均，因为相位角是圆形的，所以角度的数字无法像正数一样被平均。</p>
+<p>所以，我们可以如下图这样对相位角做聚类。它被称为试次间相位聚类（inter-trial phase clustering）。在文献中，它的名字还有“相位锁定值”“相位锁定因子”“相位重置”“相位同步“。</p>
+<p><img src="/images/19%E7%9B%B8%E4%BD%8D%E8%81%9A%E7%B1%BB.png" alt="19相位聚类"></p>
+<p>ITPC的范围是0～1，0表示相角完全均匀，1表示相角完全相同，它的公式如下：<br>$$<br>ITPC_{tf}=|n^{-1}\sum^n_{r=1}e^{ik_{tfr}}|<br>$$<br>试次的次数会影响ITPC的值，噪声和采样误差更有可能增加而不是减小ITPC。一般来说，大约45次试验后，ITPC的值才有统计意义，但是在大约20次试验后，它的值也可以达到稳定。如下图所示。</p>
+<p><img src="/images/19.png" alt="19"></p>
+<h3 id="试次较少或试次不同时ITPC的比较"><a href="#试次较少或试次不同时ITPC的比较" class="headerlink" title="试次较少或试次不同时ITPC的比较"></a>试次较少或试次不同时ITPC的比较</h3><p>如果可能的话，对每个试次进行30次以上试验，并且在比较的时候让他们的值相同。一个方法是将ITPC转化为$ITPC_z$ ，它的公式如下：<br>$$<br>ITPC_z=n*ITPC^2<br>$$</p>
+<h3 id="ITPC和功率"><a href="#ITPC和功率" class="headerlink" title="ITPC和功率"></a>ITPC和功率</h3><p>在本书中多次提到，相角与功率无关，除非功率非常低。问题在于，随着功率低降低，相位变得更加难以估计。</p>
+<p>一般来说，ITPC和功率不一定是耦合的，可以互相独立地解释，但是，也不应该忽略功率和ITPC的关系。</p>
+<h3 id="带权ITPC"><a href="#带权ITPC" class="headerlink" title="带权ITPC"></a>带权ITPC</h3><p>带权ITPC是ITPC的扩展，它在相角与试验变化行为或实验参数之间提供了更直接的联系。  wITPC解决了在认知过程方面解释ITPC的两个限制。 第一个局限性是ITPC可能是由于某些与任务相关但与条件无关的因素而产生的，包括刺激诱发的反应和一般性定向或注意反应。  ITPC的第二个局限性在于，它无法发现与任务相关但未在整个试验的同一范围内聚类的相位动态。 也就是说，如果相位值与试验变化行为或实验属性有关，但与刺激发作无关，则可能没有显著的ITPC。</p>
+<p>在wITPC中，每个矢量的大小都根据该试验中的行为或实验变量（例如反应时间，刺激亮度，预期奖励值或瞳孔反应）进行缩放。 wITPC的公式如下:<br>$$<br>wITPC_{tf}=|n^{-1}\sum^n_{r=1}b_re^{ik_{tfr}}|<br>$$<br>它的问题是由于权重 b 向量的引入，wITPC 没有上限，而是随着数据的大小而变化。一个解决方案是使用非参数检验，将权重归一化，并将 wITPC 转化为 wITPCz。</p>
+<h2 id="20-总功率、锁相和非锁相功率的区别，以及试次间能量一致性"><a href="#20-总功率、锁相和非锁相功率的区别，以及试次间能量一致性" class="headerlink" title="20 总功率、锁相和非锁相功率的区别，以及试次间能量一致性"></a>20 总功率、锁相和非锁相功率的区别，以及试次间能量一致性</h2><p>总功率是进行每次试验的时频功率分解，然后对所有试次的时频功率求平均后得到的结果。</p>
+<p>非锁相功率时在去除EEG信号的锁相分量后的数据的时频表示。一个方法是从每个试验中减去ERP，然后对单个试次进行时频分解。出于这个原因，非锁相功率的ITPC接近于0。</p>
+<p>锁相功率有时被称为诱发功率。从总功率中减去非锁相功率即为锁相功率。</p>
+<h3 id="ERP时频功率"><a href="#ERP时频功率" class="headerlink" title="ERP时频功率"></a>ERP时频功率</h3><p>要获得ERP的时频表示，首先要通过任何方法来计算ERP，然后计算其时频表示。ERP时频功率分析的原始功率值（即基线归一化之前的值）可能比总功率或非锁相功率的原始功率值至少小一个数量级。</p>
+<p>有令人信服的神经生理学证据表明，在锁相和非锁相活动之间的生物学过程之间存在明显的分离，这将有助于解释锁相和非锁相活动之间的差异。减去ERP可能有用的第二种情况是，对于某些分析，有助于使单次试验EEG数据更有可能保持平稳。 如第28章所述，该策略有时是成功的，但不能保证在单次EEG数据中提供平稳性。</p>
+<h2 id="21-时频功率和ITPC分析的解释和局限性"><a href="#21-时频功率和ITPC分析的解释和局限性" class="headerlink" title="21 时频功率和ITPC分析的解释和局限性"></a>21 时频功率和ITPC分析的解释和局限性</h2><h3 id="什么时候用什么时频分解技术"><a href="#什么时候用什么时频分解技术" class="headerlink" title="什么时候用什么时频分解技术"></a>什么时候用什么时频分解技术</h3><p>时频分解的各种方法在质量上几乎没什么区别。下面简单列举各个方法的优缺点：</p>
+<p>复莫莱小波不需要matlab工具箱，所以可以轻松地在非matlab平台运行。小波卷积往往会产生平滑的外观，抑郁在视觉上解释时频图。小波卷积的运行速度也很快。</p>
+<p>滤波-希尔伯特方法需要幸好处理工具箱。滤波-希尔伯特方法提供了功率和相位角时间序列信息。与小波卷积相比，带通滤波可以更好地控制滤波器的特性。这种灵活性有利有弊。与小波卷积相比，滤波-希尔伯特方法可能更适合频带分析。</p>
+<p>短时FFT产生的功率估计可能与小波卷积或滤波-希尔伯特方法产生的功率估计非常相似。 可以将短时FFT调整为具有随频率变化的时频精度折衷方案。 与相位角时间序列值相比，短时FFT的相位值需要不同的解释，但这并不妨碍在许多基于相位的分析（例如ITPC）中使用它们。</p>
+<p>multitaper方法需要Matlab信号处理工具箱。 它是本文研究的时频分解方法中最慢且计算量最大的方法。但是，对于快速计算机或分布式计算解决方案，这不应成为限制因素。fieldtrip工具箱中multitaper方法的实现为突出高频活动提供了最大的灵活性和灵敏度。</p>
+<p>除非有合理的理由，否则最好选择上述四种中的一种方法。</p>
+<h3 id="可解释性"><a href="#可解释性" class="headerlink" title="可解释性"></a>可解释性</h3><p>神经元之间没有一致的相位关系，在介观水平上，当从头皮测量时，它们的电场将抵消并且将具有非常低的功率。 另一方面，这些神经元之间的同步将导致同步的场电势振荡，这将产生足以被头皮电极检测到的场电势。显然，需要局部神经元同步以具有可测量的EEG信号。 另一方面，功率的增加也可能不反映局部同步强度的变化，而是反映了同步神经元数量的变化。<br>功率的增加和减少是特定于频带的，并且不同的频带似乎具有不同的神经生物学机制。 例如，伽玛经常被解释为反映空间局部处理，而较低的频带（例如δ和θ）通常被解释为反映大规模网络的协调。 这些应被视为有用的准则，但不应作为限制性的解释。 例如，在人类和非人类灵长类动物中都有远距离伽马带同步的报道。 人们认为Alpha与皮层激活呈负相关，这表明Alpha反映了主动和选择性抑制。 运动区域的β-带活动性与运动反应相关。 前额叶区域的θ带活动与工作记忆和自上而下的认知控制过程有关。 这只是将特定大脑区域中特定大脑节律与认知联系起来的现有文献的一小部分。 </p>
+<h3 id="时频试次间聚类"><a href="#时频试次间聚类" class="headerlink" title="时频试次间聚类"></a>时频试次间聚类</h3><p>ITPC是特定带宽的活动在试次中的聚集。给予相位的结果大部分与功率无关，所以可以将它的解释和功率的解释分开。相位，反应了大规模活动的时间特征，所以也可以被看作是“功能配置”或“功能状态”。</p>
+<h3 id="时频功率和相位锁定分析的局限"><a href="#时频功率和相位锁定分析的局限" class="headerlink" title="时频功率和相位锁定分析的局限"></a>时频功率和相位锁定分析的局限</h3><p>时频功率和相位锁定分析有六种限制。其中一些也适用于ERP和fMRI。</p>
+<ul>
+<li>分析参数的选择会影响时间和频率精度之间的平衡。</li>
+<li>时频分解导致脑电图的时间精度下降。</li>
+<li>ITPC的值在低频比高频效果好</li>
+<li>脑电的空间精度低。</li>
+<li>时频分析的结果增加了多重比较的问题。</li>
+<li>是否可以将时频特征解释为神经震荡（在下一节讨论）</li>
+</ul>
+<h3 id="时频分析揭示了真正的神经震荡吗？"><a href="#时频分析揭示了真正的神经震荡吗？" class="headerlink" title="时频分析揭示了真正的神经震荡吗？"></a>时频分析揭示了真正的神经震荡吗？</h3><p>这实际上是两个问题：对大量EEG数据进行时频分析的数据分析方法是否实用；以及这种时频分析是否真正体现了神经震荡。</p>
+<p>对于第一点，答案是很明确的：脑电数据中有大量可用信息，而ERP仅仅捕获了该信息的一小部分。时频分析不能揭示出脑电数据中的所有信息，但是它们将以ERP无法实现的方式帮助将大脑动力学和行为动力学联系起来。在文献中不难发现时频动力学可以预测试验条件或行为，这是ERP不能做到的。因此，从EEG信号和认知之间的联系角度出发，除了ERP之外或代替ERP来进行认知电生理学研究，应使用基于时频的方法。</p>
+<p>至于第二点，时频空间中的特征是否可以解释为反映了已知的震荡神经生理机制，该问题和进行认知电生理研究几乎没有实际意义。解决这个问题的一种方法是考虑存在一个潜在变量（神经振荡）和一个明显变量（特定与频段的EEG活动）。将EEG活动模式称为震荡意味着您正在基于显变量推断隐变量的存在。这是一个解释性问题，尽管很重要，但仍应与将基于时频的分析应用于升级时间序列数据的有效性和有用性脱钩。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/03/12/%E5%B9%B3%E9%9D%A2%E5%9B%BE%E6%9C%80%E5%B0%8F%E9%93%BE%E8%A6%86%E7%9B%96-POI2002-Skiers/" rel="prev" title="平面图最小链覆盖 POI2002 Skiers">
+      <i class="fa fa-chevron-left"></i> 平面图最小链覆盖 POI2002 Skiers
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/11/05/%E8%84%91%E7%94%B5%E5%9B%BE%E5%88%A4%E8%AF%BB/" rel="next" title="感性理解脑电图判读">
+      感性理解脑电图判读 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#17-%E4%B8%8D%E5%A4%AA%E5%B8%B8%E7%94%A8%E7%9A%84%E6%97%B6%E9%A2%91%E5%88%86%E8%A7%A3%E6%96%B9%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">17 不太常用的时频分解方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%9B%9E%E5%BD%92%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.1.</span> <span class="nav-text">自回归模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hilbert-Huang-%E7%BB%8F%E9%AA%8C%E6%A8%A1%E5%BC%8F%E5%88%86%E8%A7%A3"><span class="nav-number">1.2.</span> <span class="nav-text">Hilbert-Huang 经验模式分解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%B9%E9%85%8D%E8%BF%BD%E8%B8%AA%E7%AE%97%E6%B3%95"><span class="nav-number">1.3.</span> <span class="nav-text">匹配追踪算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#P-Episode"><span class="nav-number">1.4.</span> <span class="nav-text">P-Episode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S%E5%8F%98%E6%8D%A2"><span class="nav-number">1.5.</span> <span class="nav-text">S变换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#18-%E6%97%B6%E9%A2%91%E5%8A%9F%E7%8E%87%E5%92%8C%E5%9F%BA%E7%BA%BF%E5%BD%92%E4%B8%80%E5%8C%96"><span class="nav-number">2.</span> <span class="nav-text">18 时频功率和基线归一化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-f-%E5%8A%9F%E7%8E%87%E7%BC%A9%E6%94%BE"><span class="nav-number">2.1.</span> <span class="nav-text">1&#x2F;f 功率缩放</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="nav-number">2.2.</span> <span class="nav-text">解决方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E8%B4%9D%E8%BD%AC%E6%8D%A2"><span class="nav-number">2.3.</span> <span class="nav-text">分贝转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BE%E5%88%86%E6%AF%94%E5%8F%98%E5%8C%96%E5%92%8C%E5%9F%BA%E7%BA%BF%E5%88%86%E5%89%B2"><span class="nav-number">2.4.</span> <span class="nav-text">百分比变化和基线分割</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Z%E5%8F%98%E6%8D%A2"><span class="nav-number">2.5.</span> <span class="nav-text">Z变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E6%98%AF%E6%89%80%E6%9C%89%E5%8F%98%E6%8D%A2%E9%83%BD%E6%98%AF%E7%9B%B8%E5%90%8C%E7%9A%84"><span class="nav-number">2.6.</span> <span class="nav-text">不是所有变换都是相同的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9D%87%E5%80%BC-vs-%E4%B8%AD%E4%BD%8D%E6%95%B0"><span class="nav-number">2.7.</span> <span class="nav-text">均值 vs 中位数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E8%AF%95%E9%AA%8C%E5%9F%BA%E7%BA%BF%E5%BD%92%E4%B8%80%E5%8C%96"><span class="nav-number">2.8.</span> <span class="nav-text">单试验基线归一化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E7%AA%97%E7%9A%84%E9%80%89%E6%8B%A9"><span class="nav-number">2.9.</span> <span class="nav-text">时间窗的选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E7%BB%93%E6%9E%9C%E4%B8%8B%E9%87%87%E6%A0%B7"><span class="nav-number">2.10.</span> <span class="nav-text">对结果下采样</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#19-%E8%AF%95%E6%AC%A1%E9%97%B4%E7%9A%84%E7%9B%B8%E4%BD%8D%E8%81%9A%E7%B1%BB"><span class="nav-number">3.</span> <span class="nav-text">19 试次间的相位聚类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%95%E6%AC%A1%E8%BE%83%E5%B0%91%E6%88%96%E8%AF%95%E6%AC%A1%E4%B8%8D%E5%90%8C%E6%97%B6ITPC%E7%9A%84%E6%AF%94%E8%BE%83"><span class="nav-number">3.1.</span> <span class="nav-text">试次较少或试次不同时ITPC的比较</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ITPC%E5%92%8C%E5%8A%9F%E7%8E%87"><span class="nav-number">3.2.</span> <span class="nav-text">ITPC和功率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%A6%E6%9D%83ITPC"><span class="nav-number">3.3.</span> <span class="nav-text">带权ITPC</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20-%E6%80%BB%E5%8A%9F%E7%8E%87%E3%80%81%E9%94%81%E7%9B%B8%E5%92%8C%E9%9D%9E%E9%94%81%E7%9B%B8%E5%8A%9F%E7%8E%87%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%8C%E4%BB%A5%E5%8F%8A%E8%AF%95%E6%AC%A1%E9%97%B4%E8%83%BD%E9%87%8F%E4%B8%80%E8%87%B4%E6%80%A7"><span class="nav-number">4.</span> <span class="nav-text">20 总功率、锁相和非锁相功率的区别，以及试次间能量一致性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ERP%E6%97%B6%E9%A2%91%E5%8A%9F%E7%8E%87"><span class="nav-number">4.1.</span> <span class="nav-text">ERP时频功率</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#21-%E6%97%B6%E9%A2%91%E5%8A%9F%E7%8E%87%E5%92%8CITPC%E5%88%86%E6%9E%90%E7%9A%84%E8%A7%A3%E9%87%8A%E5%92%8C%E5%B1%80%E9%99%90%E6%80%A7"><span class="nav-number">5.</span> <span class="nav-text">21 时频功率和ITPC分析的解释和局限性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E7%94%A8%E4%BB%80%E4%B9%88%E6%97%B6%E9%A2%91%E5%88%86%E8%A7%A3%E6%8A%80%E6%9C%AF"><span class="nav-number">5.1.</span> <span class="nav-text">什么时候用什么时频分解技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E8%A7%A3%E9%87%8A%E6%80%A7"><span class="nav-number">5.2.</span> <span class="nav-text">可解释性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%B6%E9%A2%91%E8%AF%95%E6%AC%A1%E9%97%B4%E8%81%9A%E7%B1%BB"><span class="nav-number">5.3.</span> <span class="nav-text">时频试次间聚类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%B6%E9%A2%91%E5%8A%9F%E7%8E%87%E5%92%8C%E7%9B%B8%E4%BD%8D%E9%94%81%E5%AE%9A%E5%88%86%E6%9E%90%E7%9A%84%E5%B1%80%E9%99%90"><span class="nav-number">5.4.</span> <span class="nav-text">时频功率和相位锁定分析的局限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%B6%E9%A2%91%E5%88%86%E6%9E%90%E6%8F%AD%E7%A4%BA%E4%BA%86%E7%9C%9F%E6%AD%A3%E7%9A%84%E7%A5%9E%E7%BB%8F%E9%9C%87%E8%8D%A1%E5%90%97%EF%BC%9F"><span class="nav-number">5.5.</span> <span class="nav-text">时频分析揭示了真正的神经震荡吗？</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Thirtiseven Lee</p>
+  <div class="site-description" itemprop="description">和光同尘</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">51</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Thirtiseven Lee</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

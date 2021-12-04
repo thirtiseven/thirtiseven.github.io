@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"thirtiseven.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Ants题意有一棵树，从0时刻开始，有两只蚂蚁分别从树的左右两侧出发遍历这棵树。左蚂蚁从一条边的下方爬到上方需要2秒，从上方爬到下方需要1秒，右蚂蚁的爬行速度是左蚂蚁的两倍。蚂蚁如果碰到对方就会立刻调头继续爬行，蚂蚁如果返回地面也会调头继续爬行。计算两只蚂蚁第二次相遇的时间。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AMPPZ 2011 Ants">
+<meta property="og:url" content="http://thirtiseven.github.io/2020/12/15/AMPPZ-2011-Ants/index.html">
+<meta property="og:site_name" content="语言漩涡">
+<meta property="og:description" content="Ants题意有一棵树，从0时刻开始，有两只蚂蚁分别从树的左右两侧出发遍历这棵树。左蚂蚁从一条边的下方爬到上方需要2秒，从上方爬到下方需要1秒，右蚂蚁的爬行速度是左蚂蚁的两倍。蚂蚁如果碰到对方就会立刻调头继续爬行，蚂蚁如果返回地面也会调头继续爬行。计算两只蚂蚁第二次相遇的时间。">
+<meta property="og:locale">
+<meta property="og:image" content="http://thirtiseven.github.io/images/Ants.png">
+<meta property="article:published_time" content="2020-12-15T13:40:36.000Z">
+<meta property="article:modified_time" content="2021-02-10T13:46:20.959Z">
+<meta property="article:author" content="Thirtiseven Lee">
+<meta property="article:tag" content="算法">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://thirtiseven.github.io/images/Ants.png">
+
+<link rel="canonical" href="http://thirtiseven.github.io/2020/12/15/AMPPZ-2011-Ants/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>AMPPZ 2011 Ants | 语言漩涡</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">语言漩涡</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">李三七的博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://thirtiseven.github.io/2020/12/15/AMPPZ-2011-Ants/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Thirtiseven Lee">
+      <meta itemprop="description" content="和光同尘">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="语言漩涡">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          AMPPZ 2011 Ants
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-12-15 21:40:36" itemprop="dateCreated datePublished" datetime="2020-12-15T21:40:36+08:00">2020-12-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-02-10 21:46:20" itemprop="dateModified" datetime="2021-02-10T21:46:20+08:00">2021-02-10</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Ants"><a href="#Ants" class="headerlink" title="Ants"></a>Ants</h1><h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>有一棵树，从0时刻开始，有两只蚂蚁分别从树的左右两侧出发遍历这棵树。左蚂蚁从一条边的下方爬到上方需要2秒，从上方爬到下方需要1秒，右蚂蚁的爬行速度是左蚂蚁的两倍。蚂蚁如果碰到对方就会立刻调头继续爬行，蚂蚁如果返回地面也会调头继续爬行。计算两只蚂蚁第二次相遇的时间。</p>
+<span id="more"></span>
+
+<p><img src="/images/Ants.png" alt="Ants"></p>
+<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><p>t 组数据，每组数据包含一个整数 n 代表边数和一个 n/2 个字符的字符串。这个字符串本质上是一个大十六进制数，如果转化为二进制数就可以表示这棵树的信息，具体表示方法为假设右蚂蚁不动的情况下左蚂蚁的运动轨迹，当当前位置为1时表示蚂蚁向上爬，否则表示蚂蚁向下爬。</p>
+<p>$1 \le t \le 1000,\ 2 \le n \le 100,000,000$ 输入数据量不超过 50 MB。注意空间限制为 6 MB，远远小于输入数据量。</p>
+<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><p>输出一个最简分式 p/q ，表示答案。如果答案为整数，q = 1</p>
+<h2 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h2><blockquote>
+<p>1<br>28<br>fb1da30d1b7230</p>
+</blockquote>
+<blockquote>
+<p>282/5</p>
+</blockquote>
+<h2 id="样例解释"><a href="#样例解释" class="headerlink" title="样例解释"></a>样例解释</h2><p>转化为二进制即为上图的树。</p>
+<blockquote>
+<p>1111 1011 0001 1101 1010 0011 0000 1101 0001 1011 0111 0010 0011 0000</p>
+</blockquote>
+<h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><p>首先我们观察到，显然，左边的蚂蚁将在第一次相遇后首先回到地面，因为右蚂蚁需要向上爬的比率总是较高。</p>
+<p>于是就可以轻松嘴出算法的大概流程：</p>
+<ol>
+<li>读入树的大小。于是我们就知道了有n条上升的边和n条下降的边。</li>
+<li>当读入树的信息时，我们就可以计算出左蚂蚁的行动轨迹和需要的时间。由于上升和下降边的个数是已知的，所以右蚂蚁走到当前位置的时间也是可以算出来的。所以当两只蚂蚁第一次相遇的时候，我们就可以知道。</li>
+<li>当两只蚂蚁第一次相遇后，按照右蚂蚁的行动轨迹继续模拟，直到左蚂蚁回到地面。左蚂蚁回到地面的时间是可以计算出来的，而根据我们先前的观察，此时右蚂蚁还没有回到地面。</li>
+<li>然后继续模拟右蚂蚁的运动，直到两只蚂蚁在此相遇。</li>
+</ol>
+<p>听上去真的非常轻松啊？现在来形式化地描述一下这个流程。</p>
+<p>用实数 $a$ 表示左蚂蚁目前经过了多少条边，用实数 $k$ 表示左蚂蚁目前的高度，用 $t_g$ 表示左蚂蚁向上爬需要的时间， $t_d$ 表示左蚂蚁向下爬需要的时间。于是有到达某个点的总时间的公式：<br>$$<br>[a,k,t_g,t_d] = \frac{a+k}{2}t_g+\frac{a-k}{2}t_d<br>$$<br>于是就可以列出两只蚂蚁第一次相遇的方程<br>$$<br>[a_1,k_1,2,1]=[2n-a_1,k,1,\frac{1}{2}]<br>$$<br>如前所述，我们可以在读入的时候判断相遇点是否会发生在当前这条边上。当蚂蚁处在节点 $(a,k)$ 的时候，令 $b=1$ 表示这是一条上升边， $b=-1$ 表示这是一条下降边，于是上式就满足：<br>$$<br>a_1=a+\varepsilon,k_1=k+b\varepsilon,\<br>\varepsilon = \frac{6n-9a-k}{9+b}<br>$$<br>如果 $0 \le \varepsilon &lt; 1$, 我们就找到了第一个相遇的位置。于是就可以求出相遇的时间：<br>$$<br>t_1=[a_1,k_1,2,1]=\frac{3a_1+k_1}{2}<br>$$<br>然后，我们让左蚂蚁回头，它将在 $[a_1,-k_1,2,1]=t_1-k_1$ 秒回到树根。此时，右蚂蚁的位置为：<br>$$<br>[2n-a_1,-k_1.1.\frac{1}{2}]=t_1-\frac{k_1}{2}<br>$$<br>于是我们可以知道，左蚂蚁的确会比右蚂蚁回到树根。</p>
+<p>我们继续模拟右蚂蚁的运动，右蚂蚁从 $(a’,k’)$ 开始，到 $(a_2,k_2)$ 的运动满足：<br>$$<br>a_2=a’+\varepsilon’, k_2=k’+b’\varepsilon’.\<br>[a_1,-k_1,2,1]+[2n-a_2,k_2,2,1]=[a_2-a_1,k_2-k_1,1,\frac{1}{2}],\<br>\varepsilon’=\frac{12n-9(a’-a_1)+(k’-k_1)}{9-b’}<br>$$<br>如果 $0\le \varepsilon’ \le 1$, 那么我们就找到了第二个相遇点。这个时间就是<br>$$<br>t_2=[a_2-a_1,k_2-k_1,1,\frac{1}{2}]=\frac{3(a_2-a_1)+(k_2-k_1)}{4}<br>$$<br>所以，从0秒开始到第二次相遇的总时间为：<br>$$<br>t_1+t_2=\frac{3(a_1+a_2)+(k_1+k_2)}{4}<br>$$<br>注意到 $\varepsilon$ 总是 $\frac{1}{9+b’}$ 的倍数。于是 $\varepsilon’$ 是 $\frac{9-b}{(9+b)(9-b’)}$ 。所以 $a_1,a_2,k_1,k_2$ 都是 $\frac{1}{800}$ 的倍数。于是，所有数字都可以用实际数值的 800 倍在 64 位整数的限制下表示。</p>
+<p>算法的时间复杂度为 $O(n)$ ，空间复杂度为 $O(1)$ 。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> ll = <span class="keyword">long</span> <span class="keyword">long</span>;</span><br><span class="line"></span><br><span class="line">ll T, n, x;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">hextooct</span><span class="params">(<span class="keyword">char</span> a)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (a &lt;= <span class="string">&#x27;9&#x27;</span> &amp;&amp; a &gt;= <span class="string">&#x27;0&#x27;</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="built_in">ll</span>(a-<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">10</span>+<span class="built_in">ll</span>(a-<span class="string">&#x27;a&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">gcd</span><span class="params">(ll a, ll b)</span> </span>&#123; </span><br><span class="line">	ll t;</span><br><span class="line">	<span class="keyword">while</span>(b != <span class="number">0</span>) &#123; </span><br><span class="line">		t = a%b;</span><br><span class="line">		a = b;</span><br><span class="line">		b = t; </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> a; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>&#123;  </span><br><span class="line">	std::ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">	std::cin.<span class="built_in">tie</span>(<span class="number">0</span>); </span><br><span class="line">	std::cin &gt;&gt; T;</span><br><span class="line">	<span class="keyword">while</span> (T--) &#123;</span><br><span class="line">		std::cin &gt;&gt; n;</span><br><span class="line">		ll nn = n * <span class="number">800</span>;</span><br><span class="line">		ll k = <span class="number">0</span>, a = <span class="number">0</span>, eps, eps2, a1, k1, a2, k2;</span><br><span class="line">		ll t1 = <span class="number">-1</span>, t2 = <span class="number">-1</span>, t;</span><br><span class="line">		std::cin.<span class="built_in">get</span>();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n/<span class="number">2</span>; i++) &#123;</span><br><span class="line">			x = <span class="built_in">hextooct</span>(std::cin.<span class="built_in">get</span>());</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">4</span>; j++) &#123;</span><br><span class="line">				ll b = ((x &gt;&gt;(<span class="number">3</span>-j) &amp; <span class="number">1ll</span>)?<span class="number">1</span>:(<span class="number">-1</span>));</span><br><span class="line">				<span class="keyword">if</span> (t1 &lt; <span class="number">0</span>) &#123;</span><br><span class="line">					eps = (<span class="number">6</span>*nn<span class="number">-9</span>*a-k)/(<span class="number">9</span>+b);</span><br><span class="line">					<span class="keyword">if</span> (eps &lt; <span class="number">800</span> &amp;&amp; eps &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">						a1 = a+eps, k1 = k+eps*b;</span><br><span class="line">						t1 = (<span class="number">3</span>*a1+k1)/(<span class="number">2</span>);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span>(t2 &lt; <span class="number">0</span>) &#123;</span><br><span class="line">					eps2 = (<span class="number">12</span>*nn<span class="number">-9</span>*(a-a1)+(k-k1))/(<span class="number">9</span>-b);</span><br><span class="line">					<span class="keyword">if</span> (eps2 &lt; <span class="number">800</span> &amp;&amp; eps2 &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">						a2 = a+eps2, k2 = k+eps2*b;</span><br><span class="line">						t2 = (<span class="number">3</span>*(a2-a1)+(k2-k1))/(<span class="number">4</span>);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				k += <span class="number">800</span> * b;</span><br><span class="line">				a += <span class="number">800</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		t = t1 + t2;</span><br><span class="line">		ll divisor = <span class="built_in">gcd</span>(t, <span class="number">800</span>);</span><br><span class="line">		std::cout &lt;&lt; t/divisor &lt;&lt; <span class="string">&#x27;/&#x27;</span> &lt;&lt; <span class="number">800</span>/divisor &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="吐槽"><a href="#吐槽" class="headerlink" title="吐槽"></a>吐槽</h2><p>打算开个新栏目整点有趣的算法题！</p>
+<p>感觉自己还是需要写一点算法题获得一点虚假的成就感… 但是老年选手 codeforces 手速跟不上，project euler 又做不动，leetcode 又觉得无聊… 有点… 尴尬啊</p>
+<p>然后最近找到了清晰版本的 <em>Looking for a challenge?</em> 的拍照pdf，打算做一做… 因为这个题解质量和题目质量好像很高… 而且基本都是思维题（真的吗），适合我这种数据结构废物</p>
+<p>其实 AGC 也不错，但是 AGC 太多了，做不动…</p>
+<p>以及图书馆的荐购功能是真的牛逼…</p>
+<p>![Screen Shot 2020-12-15 at 9.44.29 PM](/Users/lihaoyang/thirtiseven_blog/source/_posts/Screen Shot 2020-12-15 at 9.44.29 PM.png)</p>
+<p>我现在在 szkopul 上的题均 dirt 数肯定超过 20 了…</p>
+<p>代码细节还挺多的…</p>
+<p>不会一个字符一个字符读入错了一万遍</p>
+<p>不会位运算又错了一万遍（读入16进制数之后我竟然从后往前用2模它 真的老了</p>
+<p>这个 k 和 a 应该在算 eps 之后更新，又错了一发</p>
+<p>最后一共交了 14 发才过…</p>
+<p>这个东西在 cf 叫 <strong>2014-2015 CT S02E07: Codeforces Trainings Season 2 Episode 7</strong> ，找了一年</p>
+<p>后来牛逼网友教了我怎么在 gym 按题目名字搜题 然后我发现我笔记里其实有这个链接（</p>
+<p>我搜 amppz 题解，搜到一篇英文博客，我一看怎么这么眼熟，结果是我今年一月自己写的，可能是什么垃圾站自动翻译成英文了…</p>
+<p>写这种东西比写 Leetcode 快乐多了…</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"># 算法</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/11/23/ANTS-part1/" rel="prev" title="Analyzing Neural Time Series Data Part I&II 笔记">
+      <i class="fa fa-chevron-left"></i> Analyzing Neural Time Series Data Part I&II 笔记
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/12/24/ONTAK-2007-Hyperclock/" rel="next" title="ONTAK 2007 Hyperclock">
+      ONTAK 2007 Hyperclock <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Ants"><span class="nav-number">1.</span> <span class="nav-text">Ants</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E6%84%8F"><span class="nav-number">1.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5"><span class="nav-number">1.2.</span> <span class="nav-text">输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%87%BA"><span class="nav-number">1.3.</span> <span class="nav-text">输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B"><span class="nav-number">1.4.</span> <span class="nav-text">样例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B%E8%A7%A3%E9%87%8A"><span class="nav-number">1.5.</span> <span class="nav-text">样例解释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%B3%95"><span class="nav-number">1.6.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">1.7.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%90%E6%A7%BD"><span class="nav-number">1.8.</span> <span class="nav-text">吐槽</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Thirtiseven Lee</p>
+  <div class="site-description" itemprop="description">和光同尘</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">51</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Thirtiseven Lee</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

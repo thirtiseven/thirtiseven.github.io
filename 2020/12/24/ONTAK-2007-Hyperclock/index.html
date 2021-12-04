@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"thirtiseven.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Hyperclock题意$n$ 个时钟构成了一个超时钟，其中第 $i$ 个时钟的钟面上写着 从 1 到 $k_i$ 共计 $k_i$ 个数字，每个时钟有一个指针，一开始，所有的指针都指向数字 1。你可以进行若干次操作，每次操作你可以选择一个时钟将它的指针往顺时针或逆时针移动一格。在执行完最后一次操作后，超时钟的每一种外形都应当被显示正好一次，并且每个指针回到初始位置。求一种合法的操作方案。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ONTAK 2007 Hyperclock">
+<meta property="og:url" content="http://thirtiseven.github.io/2020/12/24/ONTAK-2007-Hyperclock/index.html">
+<meta property="og:site_name" content="语言漩涡">
+<meta property="og:description" content="Hyperclock题意$n$ 个时钟构成了一个超时钟，其中第 $i$ 个时钟的钟面上写着 从 1 到 $k_i$ 共计 $k_i$ 个数字，每个时钟有一个指针，一开始，所有的指针都指向数字 1。你可以进行若干次操作，每次操作你可以选择一个时钟将它的指针往顺时针或逆时针移动一格。在执行完最后一次操作后，超时钟的每一种外形都应当被显示正好一次，并且每个指针回到初始位置。求一种合法的操作方案。">
+<meta property="og:locale">
+<meta property="og:image" content="http://thirtiseven.github.io/images/Hyperclock_s.png">
+<meta property="article:published_time" content="2020-12-24T13:42:09.000Z">
+<meta property="article:modified_time" content="2021-02-10T13:46:36.948Z">
+<meta property="article:author" content="Thirtiseven Lee">
+<meta property="article:tag" content="算法">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://thirtiseven.github.io/images/Hyperclock_s.png">
+
+<link rel="canonical" href="http://thirtiseven.github.io/2020/12/24/ONTAK-2007-Hyperclock/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>ONTAK 2007 Hyperclock | 语言漩涡</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">语言漩涡</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">李三七的博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://thirtiseven.github.io/2020/12/24/ONTAK-2007-Hyperclock/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Thirtiseven Lee">
+      <meta itemprop="description" content="和光同尘">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="语言漩涡">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          ONTAK 2007 Hyperclock
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-12-24 21:42:09" itemprop="dateCreated datePublished" datetime="2020-12-24T21:42:09+08:00">2020-12-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-02-10 21:46:36" itemprop="dateModified" datetime="2021-02-10T21:46:36+08:00">2021-02-10</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Hyperclock"><a href="#Hyperclock" class="headerlink" title="Hyperclock"></a>Hyperclock</h1><h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>$n$ 个时钟构成了一个超时钟，其中第 $i$ 个时钟的钟面上写着 从 1 到 $k_i$ 共计 $k_i$ 个数字，每个时钟有一个指针，一开始，所有的指针都指向数字 1。你可以进行若干次操作，每次操作你可以选择一个时钟将它的指针往顺时针或逆时针移动一格。在执行完最后一次操作后，超时钟的每一种外形都应当被显示正好一次，并且每个指针回到初始位置。求一种合法的操作方案。</p>
+<span id="more"></span>
+
+<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><p>第一行为 $n$，第二行包含 $n$ 个数字 $k_1, k_2 … k_n$ .</p>
+<p>超时钟所有的形状  $k_1k_2…k_n$ 的大小不超过 $10^6$</p>
+<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><p>如果没有合法的操作方案，输出 NIE。</p>
+<p>否则，输出 $k_1k_2…k_n$ 行。每行包含两个数字：第一个数字表示当前操作的时钟，第二个数字为旋转指针的方向（1表示顺时针，-1表示逆时针）</p>
+<h2 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">2</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1 1</span><br><span class="line">2 1</span><br><span class="line">1 -1</span><br><span class="line">3 1</span><br><span class="line">1 1</span><br><span class="line">2 -1</span><br><span class="line">3 1</span><br><span class="line">2 1</span><br><span class="line">1 -1</span><br><span class="line">2 -1</span><br><span class="line">3 -1</span><br><span class="line">3 -1</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><p>一个超时钟的形状可以形式化地表示为 $x_1,x_2,…x_N$ 表示当前每个时钟的指针当前直线的方向。于是我们可以很自然地用图来表示这个问题。每个节点是一个超时钟的状态而如果两种状态可以在一步之内互相转化，就连一条边。问题转化为一个哈密顿回路问题，它是一个 NP 完全问题。显然这样的复杂度不能被接受。但是其实这个问题的图有一个特殊的结构，使得我们可以在线性时间内完成求解。</p>
+<p>考虑如果这个超时钟是由两个小时钟组成的，那么我们可以将它们的状态填进一个 $k_1\times k_2$ 的方格中。根据边的奇偶性分类讨论，我们可以得到如下的解决方案：</p>
+<p><img src="/images/Hyperclock_s.png" alt="Hyperclock_s"></p>
+<p>然后我们就可以很容易地将问题扩展到一般情况。如果两个时钟版本的问题可以解决，那么就可以将这两个时钟看成一个有 $k_1k_2$ 种状态的大时钟，进而与第三个时钟结合解决三个时钟的问题。由于两个时钟的版本总是可以解决，所以 n 个时钟的版本也总是可以解决。</p>
+<p>为了实现这种想法，首先要决定的是如果存储这些时钟。我们其实并不真的需要每一个钟面上的数字，只需要知道哪一步应该移动它的指针。所以可以每个时钟可以表示为一个长度为 k 的数组，每个元素是一个 pair (a, b) ，表示这一步第 a 个时钟顺时针旋转 b 格 $(a&lt;n,b\in{-1, 1})$。</p>
+<p>由于我们可以在线性时间对两个时钟进行合并，那么总的复杂度就为(设 $M=k_1k_2…k_N$)<br>$$<br>k_1k_2+k_1k_2k_3+…+M &lt; 2M<br>$$<br>时间复杂度为 $O(M)$，空间复杂度为 $O(M)$ </p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> fastIO&#123;</span><br><span class="line">	<span class="meta">#<span class="meta-keyword">define</span> BUF_SIZE 100000</span></span><br><span class="line">	<span class="meta">#<span class="meta-keyword">define</span> OUT_SIZE 100000</span></span><br><span class="line">	<span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line">	<span class="comment">//fread-&gt;read</span></span><br><span class="line">	<span class="keyword">bool</span> IOerror=<span class="number">0</span>;</span><br><span class="line"><span class="comment">//	inline char nc()&#123;char ch=getchar();if(ch==-1)IOerror=1;return ch;&#125; </span></span><br><span class="line">	<span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">nc</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">static</span> <span class="keyword">char</span> buf[BUF_SIZE],*p1=buf+BUF_SIZE,*pend=buf+BUF_SIZE;</span><br><span class="line">		<span class="keyword">if</span>(p1==pend)&#123;</span><br><span class="line">			p1=buf;pend=buf+<span class="built_in">fread</span>(buf,<span class="number">1</span>,BUF_SIZE,stdin);</span><br><span class="line">			<span class="keyword">if</span>(pend==p1)&#123;IOerror=<span class="number">1</span>;<span class="keyword">return</span> <span class="number">-1</span>;&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> *p1++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">blank</span><span class="params">(<span class="keyword">char</span> ch)</span></span>&#123;<span class="keyword">return</span> ch==<span class="string">&#x27; &#x27;</span>||ch==<span class="string">&#x27;\n&#x27;</span>||ch==<span class="string">&#x27;\r&#x27;</span>||ch==<span class="string">&#x27;\t&#x27;</span>;&#125;</span><br><span class="line">	<span class="function"><span class="keyword">template</span>&lt;class T&gt; <span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">read</span><span class="params">(T &amp;x)</span></span>&#123;</span><br><span class="line">		<span class="keyword">bool</span> sign=<span class="number">0</span>;<span class="keyword">char</span> ch=<span class="built_in">nc</span>();x=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(;<span class="built_in">blank</span>(ch);ch=<span class="built_in">nc</span>());</span><br><span class="line">		<span class="keyword">if</span>(IOerror)<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">if</span>(ch==<span class="string">&#x27;-&#x27;</span>)sign=<span class="number">1</span>,ch=<span class="built_in">nc</span>();</span><br><span class="line">		<span class="keyword">for</span>(;ch&gt;=<span class="string">&#x27;0&#x27;</span>&amp;&amp;ch&lt;=<span class="string">&#x27;9&#x27;</span>;ch=<span class="built_in">nc</span>())x=x*<span class="number">10</span>+ch-<span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">		<span class="keyword">if</span>(sign)x=-x;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">read</span><span class="params">(<span class="keyword">double</span> &amp;x)</span></span>&#123;</span><br><span class="line">		<span class="keyword">bool</span> sign=<span class="number">0</span>;<span class="keyword">char</span> ch=<span class="built_in">nc</span>();x=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(;<span class="built_in">blank</span>(ch);ch=<span class="built_in">nc</span>());</span><br><span class="line">		<span class="keyword">if</span>(IOerror)<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">if</span>(ch==<span class="string">&#x27;-&#x27;</span>)sign=<span class="number">1</span>,ch=<span class="built_in">nc</span>();</span><br><span class="line">		<span class="keyword">for</span>(;ch&gt;=<span class="string">&#x27;0&#x27;</span>&amp;&amp;ch&lt;=<span class="string">&#x27;9&#x27;</span>;ch=<span class="built_in">nc</span>())x=x*<span class="number">10</span>+ch-<span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">		<span class="keyword">if</span>(ch==<span class="string">&#x27;.&#x27;</span>)&#123;</span><br><span class="line">			<span class="keyword">double</span> tmp=<span class="number">1</span>; ch=<span class="built_in">nc</span>();</span><br><span class="line">			<span class="keyword">for</span>(;ch&gt;=<span class="string">&#x27;0&#x27;</span>&amp;&amp;ch&lt;=<span class="string">&#x27;9&#x27;</span>;ch=<span class="built_in">nc</span>())tmp/=<span class="number">10.0</span>,x+=tmp*(ch-<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(sign)x=-x;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">read</span><span class="params">(<span class="keyword">char</span> *s)</span></span>&#123;</span><br><span class="line">		<span class="keyword">char</span> ch=<span class="built_in">nc</span>();</span><br><span class="line">		<span class="keyword">for</span>(;<span class="built_in">blank</span>(ch);ch=<span class="built_in">nc</span>());</span><br><span class="line">		<span class="keyword">if</span>(IOerror)<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">for</span>(;!<span class="built_in">blank</span>(ch)&amp;&amp;!IOerror;ch=<span class="built_in">nc</span>())*s++=ch;</span><br><span class="line">		*s=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">read</span><span class="params">(<span class="keyword">char</span> &amp;c)</span></span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(c=<span class="built_in">nc</span>();<span class="built_in">blank</span>(c);c=<span class="built_in">nc</span>());</span><br><span class="line">		<span class="keyword">if</span>(IOerror)&#123;c=<span class="number">-1</span>;<span class="keyword">return</span> <span class="literal">false</span>;&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>; </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>,<span class="title">class</span>... <span class="title">U</span>&gt;</span><span class="function"><span class="keyword">bool</span> <span class="title">read</span><span class="params">(T&amp; h,U&amp;... t)</span></span>&#123;<span class="keyword">return</span> <span class="built_in">read</span>(h)&amp;&amp;<span class="built_in">read</span>(t...);&#125;</span><br><span class="line">	<span class="comment">//fwrite-&gt;print</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">Ostream_fwrite</span>&#123;</span></span><br><span class="line">		<span class="keyword">char</span> *buf,*p1,*pend;</span><br><span class="line">		<span class="built_in">Ostream_fwrite</span>()&#123;buf=<span class="keyword">new</span> <span class="keyword">char</span>[BUF_SIZE];p1=buf;pend=buf+BUF_SIZE;&#125;</span><br><span class="line"><span class="comment">//		void out(char ch)&#123;putchar(ch);&#125;</span></span><br><span class="line">		<span class="function"><span class="keyword">void</span> <span class="title">out</span><span class="params">(<span class="keyword">char</span> ch)</span></span>&#123;<span class="keyword">if</span>(p1==pend)&#123;<span class="built_in">fwrite</span>(buf,<span class="number">1</span>,BUF_SIZE,stdout);p1=buf;&#125;*p1++=ch;&#125;</span><br><span class="line">		<span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(T x)</span></span>&#123;</span><br><span class="line">			<span class="keyword">static</span> <span class="keyword">char</span> s[<span class="number">33</span>],*s1;s1=s;</span><br><span class="line">			<span class="keyword">if</span>(!x)*s1++=<span class="string">&#x27;0&#x27;</span>;<span class="keyword">if</span>(x&lt;<span class="number">0</span>)<span class="built_in">out</span>(<span class="string">&#x27;-&#x27;</span>),x=-x;</span><br><span class="line">			<span class="keyword">while</span>(x)*s1++=x%<span class="number">10</span>+<span class="string">&#x27;0&#x27;</span>,x/=<span class="number">10</span>;</span><br><span class="line">			<span class="keyword">while</span>(s1--!=s)<span class="built_in">out</span>(*s1);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">double</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">			<span class="keyword">static</span> ll mul[]=</span><br><span class="line">			&#123;<span class="number">1</span>,<span class="number">10</span>,<span class="number">100</span>,<span class="number">1000</span>,<span class="number">10000</span>,<span class="number">100000</span>,<span class="number">1000000</span>,<span class="number">10000000</span>,<span class="number">100000000</span>,<span class="number">1000000000</span>,</span><br><span class="line">			<span class="number">10000000000LL</span>,<span class="number">100000000000LL</span>,<span class="number">1000000000000LL</span>,<span class="number">10000000000000LL</span>,</span><br><span class="line">			<span class="number">100000000000000LL</span>,<span class="number">1000000000000000LL</span>,<span class="number">10000000000000000LL</span>,<span class="number">100000000000000000LL</span>&#125;;</span><br><span class="line">			<span class="keyword">if</span>(x&lt;<span class="number">-1e-12</span>)<span class="built_in">out</span>(<span class="string">&#x27;-&#x27;</span>),x=-x;</span><br><span class="line">			ll x2=(ll)<span class="built_in">floor</span>(x);<span class="keyword">if</span>(!y&amp;&amp;x-x2&gt;=<span class="number">0.5</span>)++x2;x-=x2;x*=mul[y];</span><br><span class="line">			ll x3=(ll)<span class="built_in">floor</span>(x);<span class="keyword">if</span>(y&amp;&amp;x-x3&gt;=<span class="number">0.5</span>)++x3;<span class="built_in">print</span>(x2);</span><br><span class="line">			<span class="keyword">if</span>(y&gt;<span class="number">0</span>)&#123;<span class="built_in">out</span>(<span class="string">&#x27;.&#x27;</span>);<span class="keyword">for</span>(<span class="keyword">size_t</span> i=<span class="number">1</span>;i&lt;y&amp;&amp;x3*mul[i]&lt;mul[y];<span class="built_in">out</span>(<span class="string">&#x27;0&#x27;</span>),++i);<span class="built_in">print</span>(x3);&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">char</span> *s)</span></span>&#123;<span class="keyword">while</span>(*s)<span class="built_in">out</span>(*s++);&#125;</span><br><span class="line">		<span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *s)</span></span>&#123;<span class="keyword">while</span>(*s)<span class="built_in">out</span>(*s++);&#125;</span><br><span class="line">		<span class="function"><span class="keyword">void</span> <span class="title">flush</span><span class="params">()</span></span>&#123;<span class="keyword">if</span>(p1!=buf)&#123;<span class="built_in">fwrite</span>(buf,<span class="number">1</span>,p1-buf,stdout);p1=buf;&#125;&#125;</span><br><span class="line">		~<span class="built_in">Ostream_fwrite</span>()&#123;<span class="built_in">flush</span>();&#125;</span><br><span class="line">	&#125;Ostream;</span><br><span class="line">	<span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(T x)</span></span>&#123;Ostream.<span class="built_in">print</span>(x);&#125;</span><br><span class="line">	<span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">char</span> x)</span></span>&#123;Ostream.<span class="built_in">out</span>(x);&#125;</span><br><span class="line">	<span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">char</span> *s)</span></span>&#123;Ostream.<span class="built_in">print</span>(s);&#125;</span><br><span class="line">	<span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">(std::string s)</span></span>&#123;Ostream.<span class="built_in">print</span>(s.<span class="built_in">c_str</span>());&#125;</span><br><span class="line">	<span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *s)</span></span>&#123;Ostream.<span class="built_in">print</span>(s);&#125;</span><br><span class="line">	<span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">double</span> x,<span class="keyword">int</span> y)</span></span>&#123;Ostream.<span class="built_in">print</span>(x,y);&#125;</span><br><span class="line">	<span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>,<span class="title">class</span>... <span class="title">U</span>&gt;</span><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">const</span> T&amp; h,<span class="keyword">const</span> U&amp;... t)</span></span>&#123;<span class="built_in">print</span>(h);<span class="built_in">print</span>(t...);&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">println</span><span class="params">()</span></span>&#123;<span class="built_in">print</span>(<span class="string">&#x27;\n&#x27;</span>);&#125;</span><br><span class="line">	<span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>,<span class="title">class</span>... <span class="title">U</span>&gt;</span><span class="function"><span class="keyword">void</span> <span class="title">println</span><span class="params">(<span class="keyword">const</span> T&amp; h,<span class="keyword">const</span> U&amp;... t)</span></span>&#123;<span class="built_in">print</span>(h);<span class="built_in">println</span>(t...);&#125;</span><br><span class="line">	<span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">flush</span><span class="params">()</span></span>&#123;Ostream.<span class="built_in">flush</span>();&#125;</span><br><span class="line">	<span class="meta">#<span class="meta-keyword">undef</span> ll</span></span><br><span class="line">	<span class="meta">#<span class="meta-keyword">undef</span> OUT_SIZE</span></span><br><span class="line">	<span class="meta">#<span class="meta-keyword">undef</span> BUF_SIZE</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> fastIO;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">int</span> k[<span class="number">100</span>];</span><br><span class="line">std::pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; ans[<span class="number">1000007</span>], tmp[<span class="number">1000007</span>];</span><br><span class="line"><span class="keyword">int</span> ans_siz = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge_odd</span><span class="params">(<span class="keyword">int</span> idx)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> cur = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k[idx]<span class="number">-1</span>; i+=<span class="number">2</span>) &#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; ans_siz<span class="number">-2</span>; i++) &#123;</span><br><span class="line">			tmp[cur++] = ans[i];</span><br><span class="line">		&#125;</span><br><span class="line">		tmp[cur++] = std::<span class="built_in">make_pair</span>(idx,<span class="number">1</span>);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = ans_siz<span class="number">-3</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">			tmp[cur++] = std::<span class="built_in">make_pair</span>(ans[i].first,-ans[i].second);</span><br><span class="line">		&#125;</span><br><span class="line">		tmp[cur++] = std::<span class="built_in">make_pair</span>(idx,<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; ans_siz<span class="number">-1</span>; i++) &#123;</span><br><span class="line">		tmp[cur++] = ans[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k[idx]<span class="number">-1</span>; i++) &#123;</span><br><span class="line">		tmp[cur++] = std::<span class="built_in">make_pair</span>(idx,<span class="number">-1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	tmp[cur++] = ans[ans_siz<span class="number">-1</span>];</span><br><span class="line">	ans_siz *= k[idx];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; ans_siz; i++) &#123;</span><br><span class="line">		ans[i] = tmp[i];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge_eve</span><span class="params">(<span class="keyword">int</span> idx)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> cur = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k[idx]; i+=<span class="number">2</span>) &#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; ans_siz<span class="number">-1</span>; i++) &#123;</span><br><span class="line">			tmp[cur++] = ans[i];</span><br><span class="line">		&#125;</span><br><span class="line">		tmp[cur++] = std::<span class="built_in">make_pair</span>(idx,<span class="number">1</span>);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = ans_siz<span class="number">-2</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">			tmp[cur++] = std::<span class="built_in">make_pair</span>(ans[i].first,-ans[i].second);</span><br><span class="line">		&#125;</span><br><span class="line">		tmp[cur++] = std::<span class="built_in">make_pair</span>(idx,<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	ans_siz *= k[idx];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; ans_siz; i++) &#123;</span><br><span class="line">		ans[i] = tmp[i];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>&#123;  </span><br><span class="line">	std::ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">	std::cin.<span class="built_in">tie</span>(<span class="number">0</span>); </span><br><span class="line">	<span class="built_in">read</span>(n);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">		<span class="built_in">read</span>(k[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k[<span class="number">0</span>]; i++) &#123;</span><br><span class="line">		ans[ans_siz++] = std::<span class="built_in">make_pair</span>(<span class="number">0</span>, <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (k[i] % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="built_in">merge_eve</span>(i);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="built_in">merge_odd</span>(i);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; ans_siz; i++) &#123;</span><br><span class="line">		<span class="built_in">print</span>(ans[i].first+<span class="number">1</span>);</span><br><span class="line">		<span class="built_in">print</span>(<span class="string">&#x27; &#x27;</span>);</span><br><span class="line">		<span class="built_in">print</span>(ans[i].second);</span><br><span class="line">		<span class="built_in">print</span>(<span class="string">&#x27;\n&#x27;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="吐槽"><a href="#吐槽" class="headerlink" title="吐槽"></a>吐槽</h2><p>一个显然错误的直觉是可以把超时钟看成一个每位进制都不同的数字然后+1+1+1，但是我拿到这个题竟然就直接按照这种幻觉想开始写代码..</p>
+<p>然后正常人一旦从这个错误中跳出来是不是都会想着推出一个类似格雷码形式的、看上去非常优雅的东西… 然后一下子推不出来，就感觉人生无望，自己好菜，这个东西怎么这么难（（（</p>
+<p>这个题想法确实很妙吧，而且也不是很难写，是那种“如果我再聪明一点就能做出来了”的题目。</p>
+<p>有一个笑话，找不到了，大意是说为了防止大家数学学不下去跳楼，数学系楼顶上立了一块牌子：“你考虑二维的情况了吗？”，非常好，我要把这句话打印出来贴在墙上。</p>
+<p>就是卡了我输入输出…</p>
+<p>我一开始一堆 vector 一堆 resize 就往上交，真是勇气可嘉（</p>
+<p>贴了个丑陋的一百行快读上去就过了</p>
+<p>感觉自己与其学新语言不如去重修 cpp 啊？</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"># 算法</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/12/15/AMPPZ-2011-Ants/" rel="prev" title="AMPPZ 2011 Ants">
+      <i class="fa fa-chevron-left"></i> AMPPZ 2011 Ants
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/12/27/%E5%BC%A0%E6%9E%A3%E3%80%8A%E6%98%A5%E7%A7%8B%E6%9D%A5%E4%BF%A1%E3%80%8B/" rel="next" title="张枣《春秋来信》">
+      张枣《春秋来信》 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hyperclock"><span class="nav-number">1.</span> <span class="nav-text">Hyperclock</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E6%84%8F"><span class="nav-number">1.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5"><span class="nav-number">1.2.</span> <span class="nav-text">输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%87%BA"><span class="nav-number">1.3.</span> <span class="nav-text">输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B"><span class="nav-number">1.4.</span> <span class="nav-text">样例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%B3%95"><span class="nav-number">1.5.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">1.6.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%90%E6%A7%BD"><span class="nav-number">1.7.</span> <span class="nav-text">吐槽</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Thirtiseven Lee</p>
+  <div class="site-description" itemprop="description">和光同尘</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">51</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Thirtiseven Lee</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

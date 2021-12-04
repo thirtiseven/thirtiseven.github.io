@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"thirtiseven.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="A A+B ProblemGiven N integers in the range [−50000,50000], how many ways are there to pick three integers ai, aj, ak, such that i, j, k are pairwise distinct and ai+aj&#x3D;ak? Two ways are different if th">
+<meta property="og:type" content="article">
+<meta property="og:title" content="acm 香港网络赛 2016 部分题解">
+<meta property="og:url" content="http://thirtiseven.github.io/2017/05/16/%E9%A6%99%E6%B8%AF%E7%BD%91%E7%BB%9C%E8%B5%9B2016A-A-B-Problem/index.html">
+<meta property="og:site_name" content="语言漩涡">
+<meta property="og:description" content="A A+B ProblemGiven N integers in the range [−50000,50000], how many ways are there to pick three integers ai, aj, ak, such that i, j, k are pairwise distinct and ai+aj&#x3D;ak? Two ways are different if th">
+<meta property="og:locale">
+<meta property="article:published_time" content="2017-05-16T12:58:02.000Z">
+<meta property="article:modified_time" content="2021-02-10T13:13:14.277Z">
+<meta property="article:author" content="Thirtiseven Lee">
+<meta property="article:tag" content="算法">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://thirtiseven.github.io/2017/05/16/%E9%A6%99%E6%B8%AF%E7%BD%91%E7%BB%9C%E8%B5%9B2016A-A-B-Problem/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>acm 香港网络赛 2016 部分题解 | 语言漩涡</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">语言漩涡</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">李三七的博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://thirtiseven.github.io/2017/05/16/%E9%A6%99%E6%B8%AF%E7%BD%91%E7%BB%9C%E8%B5%9B2016A-A-B-Problem/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Thirtiseven Lee">
+      <meta itemprop="description" content="和光同尘">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="语言漩涡">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          acm 香港网络赛 2016 部分题解
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-05-16 20:58:02" itemprop="dateCreated datePublished" datetime="2017-05-16T20:58:02+08:00">2017-05-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-02-10 21:13:14" itemprop="dateModified" datetime="2021-02-10T21:13:14+08:00">2021-02-10</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="A-A-B-Problem"><a href="#A-A-B-Problem" class="headerlink" title="A A+B Problem"></a>A A+B Problem</h2><p>Given N integers in the range [−50000,50000], how many ways are there to pick three integers ai, aj, ak, such that i, j, k are pairwise distinct and ai+aj=ak? Two ways are different if their ordered triple (i,j,k) of indices are different.</p>
+<h3 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h3><p>The first line of input consists of a single integer N (1≤N≤200000). The next line consists of N space-separated integers a1,a2,…,aN.</p>
+<span id="more"></span>
+
+<h3 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h3><p>Output an integer representing the number of ways.</p>
+<h4 id="Sample-Input-1"><a href="#Sample-Input-1" class="headerlink" title="Sample Input 1"></a>Sample Input 1</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">1 2 3 4</span><br></pre></td></tr></table></figure>
+
+<h4 id="Sample-Output-1"><a href="#Sample-Output-1" class="headerlink" title="Sample Output 1"></a>Sample Output 1</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure>
+
+<h4 id="Sample-Input-2"><a href="#Sample-Input-2" class="headerlink" title="Sample Input 2"></a>Sample Input 2</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">6</span><br><span class="line">1 1 3 3 4 6</span><br></pre></td></tr></table></figure>
+
+<h4 id="Sample-Output-2"><a href="#Sample-Output-2" class="headerlink" title="Sample Output 2"></a>Sample Output 2</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10</span><br></pre></td></tr></table></figure>
+
+<h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>  从输入数据中找这样的组合 ( i , j , k ) , 使$a_i$+$a_j$=$a_k$。输出组数。</p>
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>num[k]表示（ai,aj）= k的个数。然后将ai = aj的那种重复的去掉。</p>
+<p>然后计算当a[i] = k时的（i,j,k）有多少种，很明显就是 num[ a[i]]种,</p>
+<p>注意有一种情况是有0的时候,因为有可能会自己加了0也等于ai 。所以要统计一下0有多少个,减了0就可以了,注意(i,j)也是有顺序要求的,（i,j）和(j,i)是2个不同的,所以还要处理有0的时候要乘以2倍。<br>然后是因为有负数,我们要全部都加上50000变成正数就好了。</p>
+<p>（HDU4609的变形）</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><ol>
+<li>输入数据，保存在数组a中，输入时记录0的个数（zero）。</li>
+<li>将每个数字出现的个数保存在num数组中，因为有负数，保存的时候+50000。</li>
+<li>将数组a排序，a的最大值+50000就是num数组卷积之前的长度。</li>
+<li>卷积num数组时，长度要增长为一个大于卷积之前长度*2-1的2的整数次幂。</li>
+<li>由于涉及到复数，将num数组转化为复数数组F，num数组输入到a的最大值处（len1），增长的长度（len1到len）置为0.</li>
+<li>计算卷积：先用FFT法求加长序列的DFT频谱（执行fft函数后的F数组），再将此时的F数组各项平方，再用IFFT求DFT频谱乘积的逆变换，便得两序列的离散线卷积。</li>
+<li>将计算卷积之后的F数组的实部返回到num数组中。此时num[k+100000]的值为i+j=k的组数。公式是这样的 $\sum_{i+j=k}^{i,j&lt;n}a_ib_j,k=0,1,…,2n-1$ 。</li>
+<li>由于i和j不能相同，把数组a中所有元素*2对应位置的num数组卷积-1.</li>
+<li>用数组a中的元素搜索num数组，将num数组的元素累加，并减去0个数的两倍。如果a中的元素本身是0，减去zero-1的两倍。</li>
+<li>输出结果。</li>
+</ol>
+<h3 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span>   </span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span>   </span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;  </span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">2e5</span>+<span class="number">10</span>;  </span><br><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> pi = <span class="built_in">acos</span>(<span class="number">-1.0</span>);  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Complex</span>&#123;</span>  </span><br><span class="line">	<span class="keyword">double</span> r,i;  </span><br><span class="line">	<span class="built_in">Complex</span>(<span class="keyword">double</span> r=<span class="number">0</span>,<span class="keyword">double</span> i=<span class="number">0</span>):<span class="built_in">r</span>(r),<span class="built_in">i</span>(i)&#123;</span><br><span class="line">		<span class="comment">//声明复数：Complex XXX(XX,XX);</span></span><br><span class="line">	&#125;;  </span><br><span class="line">	<span class="comment">//定义复数的加减乘运算</span></span><br><span class="line">	Complex <span class="keyword">operator</span>+(<span class="keyword">const</span> Complex &amp;rhs)&#123;  </span><br><span class="line">		<span class="keyword">return</span> <span class="built_in">Complex</span>(r + rhs.r,i + rhs.i);  </span><br><span class="line">	&#125;  </span><br><span class="line">	Complex <span class="keyword">operator</span>-(<span class="keyword">const</span> Complex &amp;rhs)&#123;  </span><br><span class="line">		<span class="keyword">return</span> <span class="built_in">Complex</span>(r - rhs.r,i - rhs.i);  </span><br><span class="line">	&#125; </span><br><span class="line"></span><br><span class="line">	Complex <span class="keyword">operator</span>*(<span class="keyword">const</span> Complex &amp;rhs)&#123;  </span><br><span class="line">		<span class="keyword">return</span> <span class="built_in">Complex</span>(r*rhs.r - i*rhs.i,i*rhs.r + r*rhs.i);  </span><br><span class="line">	&#125; </span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> len;</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> a[<span class="number">4</span>*N];    </span><br><span class="line">Complex F[<span class="number">4</span>*N];    </span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> num[<span class="number">4</span>*N];  <span class="comment">//每个数字出现的个数</span></span><br><span class="line"><span class="keyword">int</span> n;  </span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> zero = <span class="number">0</span>;   <span class="comment">//输入值中0的个数</span></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">rader</span><span class="params">(Complex F[],<span class="keyword">int</span> len)</span></span>&#123; <span class="comment">//len = 2^M,reverse F[i] with  F[j] j为i二进制反转   </span></span><br><span class="line">	<span class="keyword">int</span> j = len &gt;&gt; <span class="number">1</span>;  </span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt; len - <span class="number">1</span>;++i)&#123;  </span><br><span class="line">		<span class="keyword">if</span>(i &lt; j) <span class="built_in">swap</span>(F[i],F[j]);  <span class="comment">// reverse  </span></span><br><span class="line">		<span class="keyword">int</span> k = len&gt;&gt;<span class="number">1</span>;  </span><br><span class="line">		<span class="keyword">while</span>(j&gt;=k)&#123;  </span><br><span class="line">			j -= k;  </span><br><span class="line">			k &gt;&gt;= <span class="number">1</span>;  </span><br><span class="line">		&#125;  </span><br><span class="line">		<span class="keyword">if</span>(j &lt; k) j += k;  </span><br><span class="line">	&#125;  </span><br><span class="line">&#125; </span><br><span class="line"><span class="comment">//FFT  </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">FFT</span><span class="params">(Complex F[],<span class="keyword">int</span> len,<span class="keyword">int</span> t)</span></span>&#123;   </span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> h = <span class="number">2</span>;h &lt;= len; h &lt;&lt;= <span class="number">1</span>)&#123; <span class="comment">//分治后计算长度为h的DFT   </span></span><br><span class="line">		<span class="function">Complex <span class="title">wn</span><span class="params">(cos(-t * <span class="number">2</span> * pi / h) , sin( -t * <span class="number">2</span> * pi / h))</span></span>; <span class="comment">//单位复根e^(2*PI/m)用欧拉公式展开  </span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; len;j += h)&#123;</span><br><span class="line">			<span class="function">Complex <span class="title">E</span><span class="params">(<span class="number">1</span>,<span class="number">0</span>)</span></span>; <span class="comment">//旋转因子  </span></span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> k = j;k &lt; j + h / <span class="number">2</span>; ++k)&#123;  </span><br><span class="line">				Complex u = F[k];  </span><br><span class="line">				Complex v = E * F[k + h / <span class="number">2</span>];  </span><br><span class="line">				F[k] = u + v; <span class="comment">//蝴蝶合并操作  </span></span><br><span class="line">				F[k + h / <span class="number">2</span>] = u - v;  </span><br><span class="line">				E = E * wn; <span class="comment">//更新旋转因子  </span></span><br><span class="line">			&#125;  </span><br><span class="line">		&#125;  </span><br><span class="line">	&#125;  </span><br><span class="line">	<span class="keyword">if</span>(t == <span class="number">-1</span>)&#123;   <span class="comment">//IDFT  离散傅利叶逆变换</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; len; ++i)&#123;</span><br><span class="line">			F[i].r /= len;  </span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="comment">//卷积   </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Conv</span><span class="params">(Complex F[],<span class="keyword">int</span> len)</span></span>&#123;  </span><br><span class="line">	<span class="comment">//用FFT法求加长序列的DFT频谱</span></span><br><span class="line">	<span class="built_in">FFT</span>(F,len,<span class="number">1</span>);  </span><br><span class="line">	<span class="comment">//计算DFT频谱的平方</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">long</span> <span class="keyword">long</span> i = <span class="number">0</span>; i &lt; len; ++i)&#123;</span><br><span class="line">		F[i] = F[i] * F[i];  </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//用IFFT求DFT频谱乘积的逆变换，便得两序列的离散线卷积</span></span><br><span class="line">	<span class="built_in">FFT</span>(F,len,<span class="number">-1</span>);  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span>&#123;  </span><br><span class="line">	<span class="comment">//初始化 输入数据</span></span><br><span class="line">  	cin &gt;&gt; n;</span><br><span class="line">	<span class="built_in">memset</span>(num,<span class="number">0</span>,<span class="built_in"><span class="keyword">sizeof</span></span>(num));             </span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;    </span><br><span class="line">		cin &gt;&gt; a[i];  </span><br><span class="line">		<span class="keyword">if</span>(a[i] == <span class="number">0</span>)&#123;</span><br><span class="line">			zero++; </span><br><span class="line">		&#125; </span><br><span class="line">		num[a[i] + <span class="number">50000</span>]++;    </span><br><span class="line">	&#125;      </span><br><span class="line">	<span class="built_in">sort</span>(a, a + n);    </span><br><span class="line">	<span class="keyword">int</span> len1 = a[n<span class="number">-1</span>] + <span class="number">50000</span> + <span class="number">1</span>; <span class="comment">// 输入最大值+50001 </span></span><br><span class="line">	len = <span class="number">1</span>; </span><br><span class="line">	<span class="comment">//计算卷积后F数组长度 使len为2的整数次幂 并且 len &gt;= 2 * len1 - 1  </span></span><br><span class="line">	<span class="keyword">while</span>(len &lt; len1 * <span class="number">2</span>)&#123;</span><br><span class="line">		len &lt;&lt;= <span class="number">1</span>;  </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//num数组变为复数形式</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len1; i++)&#123;    </span><br><span class="line">		F[i] = <span class="built_in">Complex</span>(num[i],<span class="number">0</span>);    </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//初始化F数组</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = len1; i &lt; len; i++)&#123;   </span><br><span class="line">		F[i] = <span class="built_in">Complex</span>(<span class="number">0</span>,<span class="number">0</span>);    </span><br><span class="line">	&#125; </span><br><span class="line">	<span class="comment">//计算卷积 </span></span><br><span class="line">	<span class="built_in">Conv</span>(F,len);  </span><br><span class="line">	<span class="comment">//num数组现在是卷积后的结果，num[k+100000]的值为i+j=k的组数    </span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++)&#123;    </span><br><span class="line">		num[i] = (<span class="keyword">long</span> <span class="keyword">long</span>)(F[i].r + <span class="number">0.5</span>); <span class="comment">//四舍五入   </span></span><br><span class="line">	&#125; 	  </span><br><span class="line">	<span class="comment">//本身和本身组合是不行的,减掉取两个相同的组合  </span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;    </span><br><span class="line">		num[a[i] + a[i] + <span class="number">2</span> * <span class="number">50000</span>]--;   </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> cnt = <span class="number">0</span>; <span class="comment">//组数</span></span><br><span class="line">	<span class="comment">//找到输入在num数组中对应的位置 计算cnt 对0进行特殊处理 </span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;    </span><br><span class="line">	   <span class="keyword">if</span>(a[i] != <span class="number">0</span>)&#123;  </span><br><span class="line">		 cnt += num[a[i] + <span class="number">2</span> * <span class="number">50000</span>];  </span><br><span class="line">		 cnt -= zero * <span class="number">2</span>;  </span><br><span class="line">	   &#125;<span class="keyword">else</span>&#123;  </span><br><span class="line">			cnt += num[a[i] + <span class="number">2</span> * <span class="number">50000</span>];  </span><br><span class="line">			cnt -= (zero - <span class="number">1</span>) * <span class="number">2</span>;  </span><br><span class="line">	   &#125;  </span><br><span class="line">	&#125;    </span><br><span class="line">	cout &lt;&lt; cnt &lt;&lt; endl;   </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="PROBLEM-C"><a href="#PROBLEM-C" class="headerlink" title="PROBLEM C"></a>PROBLEM C</h2><h2 id="CLASSROOMS"><a href="#CLASSROOMS" class="headerlink" title="CLASSROOMS"></a>CLASSROOMS</h2><p>The new semester is about to begin, and finding classrooms for orientation activities is always a headache.</p>
+<p>There are k classrooms on campus and n proposed activities that need to be assigned a venue. Every proposed activity has specfic starting time si and ending time fi. Any such an activity should take place at one of the classrooms. Any of the k classrooms is big enough to hold any of the proposed activities, and each classroom can hold at most one activity at any time. No two proposed activities can take place at the same classroom at the same time. Even if two proposed activities overlap momentarily (the ending time of one activity equals the starting time another activity), they cannot be assigned to the same classroom.</p>
+<p>There are so many proposed activities that there may not be enough classrooms to hold all the activities. It is desirable to have as many activities as possible. At most how many proposed activities can be assigned to the classrooms?</p>
+<h3 id="Input-1"><a href="#Input-1" class="headerlink" title="Input"></a>Input</h3><ul>
+<li>The first line contains two positive integers n and k (1≤k≤n≤200000 ), representing the number of proposed activities and number of classrooms, respectively.</li>
+<li>The following n lines each contains two positive integers: the ith line among these n lines contains si and fi (1≤si≤fi≤109), indicating the starting time and ending time of proposed activity i</li>
+</ul>
+<h3 id="Output-1"><a href="#Output-1" class="headerlink" title="Output"></a>Output</h3><p>Output an integer indicating the maximum number proposed activities that can be scheduled.</p>
+<h4 id="Sample-Input-1-1"><a href="#Sample-Input-1-1" class="headerlink" title="Sample Input 1"></a>Sample Input 1</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">4 2</span><br><span class="line">1 4</span><br><span class="line">2 9</span><br><span class="line">4 7</span><br><span class="line">5 8</span><br></pre></td></tr></table></figure>
+
+<h4 id="Sample-Output-1-1"><a href="#Sample-Output-1-1" class="headerlink" title="Sample Output 1"></a>Sample Output 1</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
+
+<h3 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h3><p>  题意，n个活动，k个教室，给定每个活动开始和结束时间，在同一个教室举行的连续两个活动结束时间和开始时间之间必须有间隔。问最多能举办多少个活动。</p>
+<p>  贪心，把每个活动按结束时间排序，然后从头到尾扫一遍。</p>
+<p>  multiset里存放每个教室正在进行的活动的结束时间。</p>
+<p>  如果multiset里有某个教室的活动在活动i开始之前就结束的，活动i就可以举办，把原来的结束时间删掉，再把活动i的结束时间存进去。</p>
+<p>  如果multiset里没有比a[i].begin小的结束时间，即当前有活动的教室在活动i开始之前都结束不了活动，此时multiset里元素的数量表示有多少个教室在同时进行活动，如果还有空教室，活动i就可以在这个教室进行，把活动i的结束时间存入multiset。</p>
+<p>  注：实际存入multiset的是 (-a[i].ed-1),而查找时用的是（-a[i].begin）。因为要使用lower_bound函数，而lower_bound（start,end,k）返回的是集合里大于等于k的第一个数的下标，而题目里面要查找的是 比 开始时间 小的 第一个 结束时间，加个负号就刚好。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 200005</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n , k;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> bg,ed;</span><br><span class="line">&#125;a[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(node a , node b)</span></span>&#123;        <span class="comment">//sort-cmp</span></span><br><span class="line">	<span class="keyword">if</span>(a.ed== b.ed) <span class="keyword">return</span> a.bg &lt; b.bg;</span><br><span class="line">	<span class="keyword">return</span> a.ed&lt; b.ed;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	cin &gt;&gt; n &gt;&gt; k;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; n ; ++i)</span><br><span class="line">		cin &gt;&gt; a[i].bg &gt;&gt; a[i].ed;</span><br><span class="line">		<span class="built_in">sort</span>(a,a+n,cmp);			<span class="comment">//按照结束时间排序</span></span><br><span class="line">		multiset&lt;<span class="keyword">int</span>&gt; endtime;</span><br><span class="line">        <span class="comment">//multiset存放每个教室正在进行的活动的结束时间</span></span><br><span class="line">		endtime.<span class="built_in">clear</span>();</span><br><span class="line">		<span class="keyword">int</span> ans = <span class="number">0</span>;			<span class="comment">//活动个数</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; n ; i++)&#123;     <span class="comment">//遍历每个活动</span></span><br><span class="line">			multiset&lt;<span class="keyword">int</span>&gt; :: iterator iter;   </span><br><span class="line">			iter = endtime.<span class="built_in">lower_bound</span>(-a[i].bg);  </span><br><span class="line">          	<span class="comment">//是否存在某个教室的活动在i开始时间前前就结束了</span></span><br><span class="line">			<span class="keyword">if</span> (iter == endtime.<span class="built_in">end</span>())&#123;            </span><br><span class="line">       		<span class="comment">//如果没有在活动i开始前就结束活动的教室，就另找一个教室</span></span><br><span class="line">				<span class="keyword">if</span> (endtime.<span class="built_in">size</span>() &lt; k)&#123;</span><br><span class="line">					endtime.<span class="built_in">insert</span>(-a[i].ed- <span class="number">1</span>);</span><br><span class="line">					ans++;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			endtime.<span class="built_in">erase</span>(iter);                    </span><br><span class="line">    		<span class="comment">//找到了某个教室活动已经结束了，活动i在这个教室进行</span></span><br><span class="line">			endtime.<span class="built_in">insert</span>( - a[i].ed - <span class="number">1</span>);      </span><br><span class="line">      		<span class="comment">//更新活动的结束时间</span></span><br><span class="line">			ans++;</span><br><span class="line">		&#125;</span><br><span class="line">	cout &lt;&lt; ans &lt;&lt; endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Problem-D"><a href="#Problem-D" class="headerlink" title="Problem D"></a>Problem D</h2><h2 id="Curious-Cupid"><a href="#Curious-Cupid" class="headerlink" title="Curious Cupid"></a>Curious Cupid</h2><p>There are <em>K</em> different languages in the world. Each person speaks one and only one language. There are exactly <em>N</em> single men and N single women.</p>
+<p>Cupid, the god of love, wants to match every single man to a single woman, and vice versa. Everybody wants to find a partner who speaks the same language as s/he does. Communication between the couple is very important! Cupid asks these <em>N</em> men to stand in a line, and likewise for the <em>N</em> women. Cupid knows that the ith man speaks language <em>ai</em> and the ith woman speaks language <em>bi</em>.</p>
+<p>It is too hard for Cupid to match all people at the same time. What Cupid does is to repeatedly look at some specific interval in these two lines, pick the men and women in that interval and find the maximum number of man-woman pairs who speak the same language and can be matched.</p>
+<h3 id="Input-2"><a href="#Input-2" class="headerlink" title="Input"></a>Input</h3><ul>
+<li>The first line contains three integers <em>N</em>, <em>M</em> and <em>K</em> (1≤<em>N</em>≤50000,1≤<em>M</em>≤50000,1≤<em>K</em>≤1000000).</li>
+<li>The second line contains <em>N</em> integers a0,a1,a2,…,aN−1, where ai (0≤ai&lt;K) is the language spoken by the ith man.</li>
+<li>The third line contains <em>N</em> integers b0,b1,b2,…,bN−1, where bi (0≤bi&lt;K) is the language spoken by the ith woman.</li>
+<li>In the next M lines, each line contains two integers L and R (0≤L≤R&lt;<em>N</em>), representing the starting and ending index of the interval. That is, Cupid is looking at men L,L+1,…,R and women L,L+1,…,R.</li>
+</ul>
+<h3 id="Output-2"><a href="#Output-2" class="headerlink" title="Output"></a>Output</h3><p>For each interval, print the maximum number of couples Cupid could match.</p>
+<h4 id="Sample-Input-1-2"><a href="#Sample-Input-1-2" class="headerlink" title="Sample Input 1"></a>Sample Input 1</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">3 4 2</span><br><span class="line">0 0 1</span><br><span class="line">0 0 0</span><br><span class="line">0 0</span><br><span class="line">2 2</span><br><span class="line">0 1</span><br><span class="line">1 2</span><br></pre></td></tr></table></figure>
+
+<h4 id="Sample-output-1"><a href="#Sample-output-1" class="headerlink" title="Sample output 1"></a>Sample output 1</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">0</span><br><span class="line">2</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+
+<h3 id="莫队算法描述"><a href="#莫队算法描述" class="headerlink" title="莫队算法描述"></a>莫队算法描述</h3><p><a target="_blank" rel="noopener" href="http://blog.csdn.net/bossup/article/details/39236275">这里</a>和<a target="_blank" rel="noopener" href="https://wenku.baidu.com/view/18b86cdc763231126fdb114f.html">这里</a>还有<a target="_blank" rel="noopener" href="http://blog.csdn.net/hzj1054689699/article/details/51866615">这里</a>是一些资料。我个人的理解是这样的，给你一堆查询区间，如果q(l,r)可以用q(l+/-n)(r+/-m)以O(n)复杂度推出来，就可以用莫队算法，所以实际上求的是每个(l,r)点的最小曼哈顿距离树，莫队算法的处理是将这些点分块排序，改变了查询的顺序，从而降低算法复杂度。具体见上面的链接和代码注释。</p>
+<h3 id="题意-2"><a href="#题意-2" class="headerlink" title="题意"></a>题意</h3><p>给你两串数，一串代表男的，一串代表女的，每个数代表这个人说的语言，现在要给一个区间[L,R]里面的人配对，只有语言相同的才能配一对，问对于每个区间，最多能配成几对。莫队算法处理。</p>
+<p>N：男人和女人的个数</p>
+<p>M：查询次数</p>
+<p>K：语言总数</p>
+<h3 id="AC代码-1"><a href="#AC代码-1" class="headerlink" title="AC代码"></a>AC代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 51000</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> K 1000100</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m, k;</span><br><span class="line"><span class="keyword">int</span> a[N], b[N], pos[N], c[<span class="number">2</span>][K], ans[N], cnt;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">	<span class="keyword">int</span> l, r, id;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">sc</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;l, &amp;r);</span><br><span class="line">		id = i;    						<span class="comment">//id 查询的顺序编号</span></span><br><span class="line">	&#125;									</span><br><span class="line">&#125;p[N];   								<span class="comment">// p数组存储查询</span></span><br><span class="line">										</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(node a, node b)</span> </span>&#123;   			<span class="comment">// 排序 块的顺序为第一关键字，r为第二关键字</span></span><br><span class="line">	<span class="keyword">if</span>(pos[a.l] == pos[b.l]) </span><br><span class="line">		<span class="keyword">return</span> a.r &lt; b.r;</span><br><span class="line">	<span class="keyword">return</span> pos[a.l] &lt; pos[b.l];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;  </span><br><span class="line">  <span class="comment">//每次update的时候更新某种语言人数，取男女中的较小值更新到答案中</span></span><br><span class="line">	<span class="keyword">if</span>(a[x] != b[x])     </span><br><span class="line">  <span class="comment">//男人女人语言不一样 cnt减去男人和女人说a[x]语言的最小值和男人和女人说b[x]语言的最小值</span></span><br><span class="line">		cnt -= <span class="built_in">min</span>(c[<span class="number">0</span>][a[x]], c[<span class="number">1</span>][a[x]]) + <span class="built_in">min</span>(c[<span class="number">0</span>][b[x]], c[<span class="number">1</span>][b[x]]); </span><br><span class="line">	<span class="keyword">else</span> 				 <span class="comment">//男人女人语言一样 cnt减去男人和女人说a[x]语言的最小值</span></span><br><span class="line">		cnt -= <span class="built_in">min</span>(c[<span class="number">0</span>][a[x]], c[<span class="number">1</span>][a[x]]);</span><br><span class="line">	c[<span class="number">0</span>][a[x]] += y;	<span class="comment">//更新语言数量</span></span><br><span class="line">	c[<span class="number">1</span>][b[x]] += y;</span><br><span class="line">	<span class="keyword">if</span>(a[x] != b[x]) 	<span class="comment">//然后再加回去</span></span><br><span class="line">		cnt += <span class="built_in">min</span>(c[<span class="number">0</span>][a[x]], c[<span class="number">1</span>][a[x]]) + <span class="built_in">min</span>(c[<span class="number">0</span>][b[x]], c[<span class="number">1</span>][b[x]]);</span><br><span class="line">	<span class="keyword">else</span> </span><br><span class="line">		cnt += <span class="built_in">min</span>(c[<span class="number">0</span>][a[x]], c[<span class="number">1</span>][a[x]]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">void pri() &#123;  //输出数组c 测试用函数</span></span><br><span class="line"><span class="comment">	for(int j = 0;j &lt; 2;j++)</span></span><br><span class="line"><span class="comment">		for(int i = 0;i &lt; n;i++)</span></span><br><span class="line"><span class="comment">			printf(&quot;%d%c&quot;, c[j][i], &quot; \n&quot;[i==n-1]);</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">memset</span>(c, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(c));<span class="comment">//c数组 0男人 1女人 c[0/1][x]为该性别说x语言的人的数量</span></span><br><span class="line">	<span class="keyword">int</span> pl = <span class="number">0</span>, pr = <span class="number">0</span>;									</span><br><span class="line">	cnt = a[<span class="number">0</span>] == b[<span class="number">0</span>] ? <span class="number">1</span> : <span class="number">0</span>;	</span><br><span class="line">  <span class="comment">//cnt 计数变量 如果第0个男人和第0个女人说的语言相同 cnt为1 否则为0</span></span><br><span class="line">	c[<span class="number">0</span>][a[<span class="number">0</span>]]++; 						<span class="comment">//说a[0] b[0]语言的男人和女人数量 + 1</span></span><br><span class="line">	c[<span class="number">1</span>][b[<span class="number">0</span>]]++;										</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; m;i++) &#123;							<span class="comment">//对查询次数遍历</span></span><br><span class="line">		<span class="keyword">int</span> id = p[i].id, l = p[i].l, r = p[i].r;		</span><br><span class="line">      <span class="comment">//第i次查询的id l r（此时p数组已经排序，排序方法见cmp</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j = pr + <span class="number">1</span>;j &lt;= r;j++)		<span class="comment">//从pr和pl开始O(1)的推到r和l的查询次数</span></span><br><span class="line">			<span class="built_in">update</span>(j, <span class="number">1</span>);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j = pr;j &gt; r;j--)</span><br><span class="line">			<span class="built_in">update</span>(j, <span class="number">-1</span>);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j = pl;j &lt; l;j++)</span><br><span class="line">			<span class="built_in">update</span>(j, <span class="number">-1</span>);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j = pl<span class="number">-1</span>; j &gt;= l;j--)</span><br><span class="line">			<span class="built_in">update</span>(j, <span class="number">1</span>);</span><br><span class="line">		pr = r; pl = l;						<span class="comment">//然后把开始的那个点更新为这个点</span></span><br><span class="line">		ans[id] = cnt;						<span class="comment">//记录ans的cnt</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; m;i++)				<span class="comment">//以输入的顺序输出答案</span></span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, ans[i]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(~<span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d&quot;</span>, &amp;n, &amp;m, &amp;k)) &#123;  	</span><br><span class="line">      <span class="comment">//输入n 男人和女人的个数 m 查询次数 k 语言总数</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; n;i++)			<span class="comment">//数组a[i] 第i个男人说的语言</span></span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;a[i]);				</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; n;i++)   			<span class="comment">//数组b[i] 第i个女人说的语言</span></span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;b[i]);				</span><br><span class="line">		<span class="keyword">int</span> bk = <span class="built_in">sqrt</span>(n + <span class="number">1.0</span>);				<span class="comment">// bk 分块的块数</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; n;i++)			</span><br><span class="line">			pos[i] = i / bk;				<span class="comment">// pos[i] 第i组 ？？ 被分到第pos[i]块</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; m;i++)			</span><br><span class="line">			p[i].<span class="built_in">sc</span>(i);						<span class="comment">//输入查询 保存在node数组 p[i] 中</span></span><br><span class="line">		<span class="built_in">sort</span>(p, p+m, cmp);					<span class="comment">//为p排序</span></span><br><span class="line">		<span class="built_in">solve</span>();							</span><br><span class="line">	&#125;										</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;								</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Problem-F"><a href="#Problem-F" class="headerlink" title="Problem F"></a>Problem F</h2><h2 id="Crazy-Driver"><a href="#Crazy-Driver" class="headerlink" title="Crazy Driver"></a>Crazy Driver</h2><p>In the Linear City, there are N gates arranged in a straight line. The gates are labelled from 1 to N. Between adjacent gates, there is a bidirectional road. Each road takes one hour to travel and has a toll fee. Since the roads are narrow, you can only travel from gates to gates but cannot U-turn between gates.</p>
+<p>Crazy driver Gary starts at Gate 1 at time 0 and he wants to drive through Gate N while minimizing the cost of travelling. However, Gate i only allows a car to pass through after a certain time Ti. As Gary is crazy, his car will always be traveling on any one of the roads, i.e., it will not stop at a gate. What is the minimum cost for him to drive through Gate N ?</p>
+<p>As an example, consider the sample input below. An optimal solution is the following:</p>
+<ul>
+<li>Gate 1 to Gate 2 (cost 5)</li>
+<li>Gate 2 to Gate 1 (cost 5)</li>
+<li>Gate 1 to Gate 2 to Gate 3 (cost 9)</li>
+<li>Go between Gate 3 and Gate 4 until 7-th hour (cost 6)</li>
+<li>Go to and pass through Gate 5(cost 8)</li>
+</ul>
+<h3 id="Input-3"><a href="#Input-3" class="headerlink" title="Input"></a>Input</h3><p>The first line contains an integer, N(2≤N≤105), the number of gates. The second line has N−1 integers, C1,…,CN−1. Ci (1≤Ci≤106) represents the toll fee of the road between Gate i and Gate i+1. The third line has N integers, T1,…,TN. Ti (0≤Ti≤106) represents the opening time (in hour) for each gate. T1 will always be 0.</p>
+<h3 id="Output-3"><a href="#Output-3" class="headerlink" title="Output"></a>Output</h3><p>Output an integer representing the minimum cost of traveling.</p>
+<h4 id="Sample-Input-1-3"><a href="#Sample-Input-1-3" class="headerlink" title="Sample Input 1"></a>Sample Input 1</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">5 4 2 8</span><br><span class="line">0 2 4 4 8</span><br></pre></td></tr></table></figure>
+
+<h4 id="Sample-output-1-1"><a href="#Sample-output-1-1" class="headerlink" title="Sample output 1"></a>Sample output 1</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">33</span><br></pre></td></tr></table></figure>
+
+<h3 id="题意-3"><a href="#题意-3" class="headerlink" title="题意"></a>题意</h3><p>题意：n个门编号1~n,从门i到i+1有一条双向通路，每条路花费的时间都是1小时，每条路花的路费分别是Ci, 每个门开的时刻分别是Ti，一个司机从门1开到门n，中间不停车，即如果到达门i的时候门没开就必须往返于前面的路上直到门开的时刻，问到门n最少花多少路费。</p>
+<p>记录每扇门之前的路的最小路费，通过每个站点，不足的时间在之前花费最少的路上跑来回，答案就出来了。</p>
+<h3 id="AC代码-2"><a href="#AC代码-2" class="headerlink" title="AC代码"></a>AC代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;list&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;utility&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LL long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 100005</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INF 0x3ffffff</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">int</span> c[N];               <span class="comment">//门i-1到门i的路费是Ci</span></span><br><span class="line"><span class="keyword">int</span> m[N];             <span class="comment">//门i之前的路的路费最小值</span></span><br><span class="line"><span class="keyword">int</span> t[N];               <span class="comment">//每个门开的时刻</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n<span class="number">-1</span>;i++) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;c[i]);</span><br><span class="line">        <span class="keyword">if</span>(i==<span class="number">1</span>) m[i]=c[i];</span><br><span class="line">        <span class="keyword">else</span> m[i]=<span class="built_in">min</span>(m[i<span class="number">-1</span>],c[i]);</span><br><span class="line">    &#125;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++) &#123;</span><br><span class="line">          <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;t[i]);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> tt=<span class="number">0</span>;           <span class="comment">//当前时刻</span></span><br><span class="line">    <span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> ret=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(i&lt;n)</span><br><span class="line">        &#123;</span><br><span class="line">            i++;</span><br><span class="line">            tt++;</span><br><span class="line">            ret+=(<span class="keyword">long</span> <span class="keyword">long</span>)(c[i]);</span><br><span class="line">            <span class="keyword">int</span> tmp=t[i]-tt;                   <span class="comment">//离门开还有多久</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span>(tmp&gt;<span class="number">0</span>)&#123;</span><br><span class="line">                tmp-=<span class="number">2</span>;</span><br><span class="line">                ret+=(<span class="keyword">long</span> <span class="keyword">long</span>)(m[i]*<span class="number">2</span>);</span><br><span class="line">                tt+=<span class="number">2</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;ret&lt;&lt;endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Problem-G"><a href="#Problem-G" class="headerlink" title="Problem G"></a>Problem G</h2><h2 id="k-Colouring-of-a-Graph"><a href="#k-Colouring-of-a-Graph" class="headerlink" title="k-Colouring of a Graph"></a>k-Colouring of a Graph</h2><p>You are given a simple graph with N nodes and M edges. The graph has the special property that any connected component of size s contains no more than s+2 edges. You are also given two integers k and P. Find the number of k-colourings of the graph, modulo P.</p>
+<p>Recall that a simple graph is an undirected graph with no self loops and no repeated edges. A k-colouring of a graph is a way to assign to each node of the graph exactly one of k colours, such that if edge (u,v) is present in the graph, then u and v receive different colors.</p>
+<h3 id="Input-4"><a href="#Input-4" class="headerlink" title="Input"></a>Input</h3><p>The first line of input consists of four integers, N,M,k, and P (1≤N≤50000, 0≤M≤1.5N, 1≤k≤109, 1≤P≤2⋅109). The next M lines of input each contains a pair of integers A and B (1≤A≤N, 1≤B≤N), describing an edge in the graph connecting nodes A and B.</p>
+<h3 id="Output-4"><a href="#Output-4" class="headerlink" title="Output"></a>Output</h3><p>Output the number of k-colourings of the given graph, modulo P.</p>
+<h4 id="Sample-Input-1-4"><a href="#Sample-Input-1-4" class="headerlink" title="Sample Input 1"></a>Sample Input 1</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3 3 2 10000</span><br><span class="line">1 2</span><br><span class="line">2 3</span><br><span class="line">3 1</span><br></pre></td></tr></table></figure>
+
+<h4 id="Sample-output-1-2"><a href="#Sample-output-1-2" class="headerlink" title="Sample output 1"></a>Sample output 1</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0</span><br></pre></td></tr></table></figure>
+
+<h4 id="Sample-Input-2-1"><a href="#Sample-Input-2-1" class="headerlink" title="Sample Input 2"></a>Sample Input 2</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3 3 4 13</span><br><span class="line">1 2</span><br><span class="line">2 3</span><br><span class="line">3 1</span><br></pre></td></tr></table></figure>
+
+<h4 id="Sample-output-2"><a href="#Sample-output-2" class="headerlink" title="Sample output 2"></a>Sample output 2</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">11</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="题意-4"><a href="#题意-4" class="headerlink" title="题意"></a>题意</h3><p>N个节点M条边的图着k种颜色（其中M&lt;=N+2),使得每条边连接的两个点是不同的颜色，求着色方案的数量。</p>
+<p>这个问题本身是一个NP问题，应该用回溯法来解决。但是网上的这个模板改出来之后TLE，关了输入输出流同步之后还是TLE。我猜应该是这种方法写的…只是需要再优化。不然就是某个鬼畜的数学方法。</p>
+<p>下面的超时代码：用邻接表c来表示一个无向连通图G=(V,E)。用整数1,2,…,m来表示m种不同的颜色。x[i]表示顶点i所着的颜色来，则问题的解向量可以表示为n元组x[1:n]。问题的解空间可表示一棵高度为n+1的完全m叉树。解空间树的第i层中每一结点都有m个儿子，每个儿子相应于x[i]的m个可能的着色之一，第n+1层结点均为叶结点。</p>
+<p>在回溯算法中，当i&gt;n时，表示算法已搜索至一个叶结点，得到一个新的m着色方案，因此当前已找到的可m着色方案数sum增1。当i≤n时，当前扩展结点Z是解空间树中的一个内部结点。该结点有x[i]=1,2,…,m。对当前扩展结点Z的每一个儿子结点,由函数Ok检查其可行性，并以深度优先的方式递归地对可行子树进行搜索，或剪去不可行子树。</p>
+<h3 id="TLE代码"><a href="#TLE代码" class="headerlink" title="TLE代码"></a>TLE代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"></span><br><span class="line">std::vector &lt;<span class="keyword">int</span>&gt; c[<span class="number">50010</span>];</span><br><span class="line"></span><br><span class="line">ll point_color[<span class="number">5010</span>];</span><br><span class="line">ll cnt = <span class="number">0</span>;</span><br><span class="line">ll n, m, u, v, g, p;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">ok</span><span class="params">(<span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; k; i++)&#123;</span><br><span class="line">		std::vector&lt;<span class="keyword">int</span>&gt;::iterator result = <span class="built_in">find</span>(c[k].<span class="built_in">begin</span>( ), c[k].<span class="built_in">end</span>( ), i); </span><br><span class="line">		<span class="keyword">if</span>(!(result == c[k].<span class="built_in">end</span>()) &amp;&amp; point_color[i] == point_color[k]) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">graphcolor</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">		point_color[i] = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> k = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(k &gt;= <span class="number">1</span>) &#123;</span><br><span class="line">		point_color[k] = point_color[k] + <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span>(point_color[k] &lt;= m)&#123;</span><br><span class="line">			<span class="keyword">if</span> (<span class="built_in">ok</span>(k)) &#123;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				point_color[k]=point_color[k]+<span class="number">1</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(point_color[k] &lt;= m &amp;&amp; k == n) &#123;			</span><br><span class="line">			cnt++;</span><br><span class="line">			cnt %= p;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(point_color[k] &lt;= m &amp;&amp; k &lt; n) &#123;</span><br><span class="line">			k = k + <span class="number">1</span>;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			point_color[k] = <span class="number">0</span>;</span><br><span class="line">			k = k - <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>&#123;</span><br><span class="line">	std::ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>); </span><br><span class="line">	std::cin &gt;&gt; n &gt;&gt; g &gt;&gt; m &gt;&gt; p;</span><br><span class="line">	<span class="keyword">int</span> s, t;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i &lt;= g ; i++) &#123;</span><br><span class="line">		std::cin &gt;&gt; s &gt;&gt; t;</span><br><span class="line">		c[s].<span class="built_in">push_back</span>(t);</span><br><span class="line">		c[t].<span class="built_in">push_back</span>(s);</span><br><span class="line">	&#125; </span><br><span class="line">	<span class="built_in">graphcolor</span>(n, m);</span><br><span class="line">	std::cout &lt;&lt; cnt &lt;&lt; std::endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>##UPDATE<br>时隔一年之后群里问了这题，qls说是bell（6）暴力枚举三条非树边六个节点的颜色，然后树DP。<br>复习阶段 好像搞不动 先鸽着。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"># 算法</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2017/03/25/2016read/" rel="prev" title="2016阅读总结">
+      <i class="fa fa-chevron-left"></i> 2016阅读总结
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2017/07/23/POJ-%E5%BE%88%E5%A5%BD%E5%BE%88%E6%9C%89%E5%B1%82%E6%AC%A1%E6%84%9F-%E9%A2%98%E5%8D%95-%E9%83%A8%E5%88%86%E9%A2%98%E8%A7%A3/" rel="next" title="POJ 很好很有层次感 题单 部分题解">
+      POJ 很好很有层次感 题单 部分题解 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#A-A-B-Problem"><span class="nav-number">1.</span> <span class="nav-text">A A+B Problem</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Input"><span class="nav-number">1.1.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Output"><span class="nav-number">1.2.</span> <span class="nav-text">Output</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-Input-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">Sample Input 1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-Output-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">Sample Output 1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-Input-2"><span class="nav-number">1.2.3.</span> <span class="nav-text">Sample Input 2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-Output-2"><span class="nav-number">1.2.4.</span> <span class="nav-text">Sample Output 2</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F"><span class="nav-number">1.3.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3"><span class="nav-number">1.4.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">1.5.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AC%E4%BB%A3%E7%A0%81"><span class="nav-number">1.6.</span> <span class="nav-text">AC代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PROBLEM-C"><span class="nav-number">2.</span> <span class="nav-text">PROBLEM C</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CLASSROOMS"><span class="nav-number">3.</span> <span class="nav-text">CLASSROOMS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Input-1"><span class="nav-number">3.1.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Output-1"><span class="nav-number">3.2.</span> <span class="nav-text">Output</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-Input-1-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">Sample Input 1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-Output-1-1"><span class="nav-number">3.2.2.</span> <span class="nav-text">Sample Output 1</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-1"><span class="nav-number">3.3.</span> <span class="nav-text">题意</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem-D"><span class="nav-number">4.</span> <span class="nav-text">Problem D</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Curious-Cupid"><span class="nav-number">5.</span> <span class="nav-text">Curious Cupid</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Input-2"><span class="nav-number">5.1.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Output-2"><span class="nav-number">5.2.</span> <span class="nav-text">Output</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-Input-1-2"><span class="nav-number">5.2.1.</span> <span class="nav-text">Sample Input 1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-output-1"><span class="nav-number">5.2.2.</span> <span class="nav-text">Sample output 1</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8E%AB%E9%98%9F%E7%AE%97%E6%B3%95%E6%8F%8F%E8%BF%B0"><span class="nav-number">5.3.</span> <span class="nav-text">莫队算法描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-2"><span class="nav-number">5.4.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AC%E4%BB%A3%E7%A0%81-1"><span class="nav-number">5.5.</span> <span class="nav-text">AC代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem-F"><span class="nav-number">6.</span> <span class="nav-text">Problem F</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Crazy-Driver"><span class="nav-number">7.</span> <span class="nav-text">Crazy Driver</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Input-3"><span class="nav-number">7.1.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Output-3"><span class="nav-number">7.2.</span> <span class="nav-text">Output</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-Input-1-3"><span class="nav-number">7.2.1.</span> <span class="nav-text">Sample Input 1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-output-1-1"><span class="nav-number">7.2.2.</span> <span class="nav-text">Sample output 1</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-3"><span class="nav-number">7.3.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AC%E4%BB%A3%E7%A0%81-2"><span class="nav-number">7.4.</span> <span class="nav-text">AC代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem-G"><span class="nav-number">8.</span> <span class="nav-text">Problem G</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#k-Colouring-of-a-Graph"><span class="nav-number">9.</span> <span class="nav-text">k-Colouring of a Graph</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Input-4"><span class="nav-number">9.1.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Output-4"><span class="nav-number">9.2.</span> <span class="nav-text">Output</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-Input-1-4"><span class="nav-number">9.2.1.</span> <span class="nav-text">Sample Input 1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-output-1-2"><span class="nav-number">9.2.2.</span> <span class="nav-text">Sample output 1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-Input-2-1"><span class="nav-number">9.2.3.</span> <span class="nav-text">Sample Input 2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-output-2"><span class="nav-number">9.2.4.</span> <span class="nav-text">Sample output 2</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-4"><span class="nav-number">9.3.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TLE%E4%BB%A3%E7%A0%81"><span class="nav-number">9.4.</span> <span class="nav-text">TLE代码</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Thirtiseven Lee</p>
+  <div class="site-description" itemprop="description">和光同尘</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">51</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Thirtiseven Lee</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

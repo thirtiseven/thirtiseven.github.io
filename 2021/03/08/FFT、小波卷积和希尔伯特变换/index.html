@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"thirtiseven.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="10 点积和卷积点积：两个等长向量按维度相乘然后加起来。点积是卷积的基本步骤。它可以被认为是一个向量中的元素经另一个向量的元素加权后的总和（一种信号处理的解释），也可以被认为是两个向量之间的协方差或相似性（一种统计学的解释），或者是向量之间的映射（两个向量的大小乘以它们之间角度的余弦，一种几何学的解释）。$$dotproduct_{ab}&#x3D;\sum^n_{i-1}a_ib_i$$">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FFT、小波卷积和希尔伯特变换">
+<meta property="og:url" content="http://thirtiseven.github.io/2021/03/08/FFT%E3%80%81%E5%B0%8F%E6%B3%A2%E5%8D%B7%E7%A7%AF%E5%92%8C%E5%B8%8C%E5%B0%94%E4%BC%AF%E7%89%B9%E5%8F%98%E6%8D%A2/index.html">
+<meta property="og:site_name" content="语言漩涡">
+<meta property="og:description" content="10 点积和卷积点积：两个等长向量按维度相乘然后加起来。点积是卷积的基本步骤。它可以被认为是一个向量中的元素经另一个向量的元素加权后的总和（一种信号处理的解释），也可以被认为是两个向量之间的协方差或相似性（一种统计学的解释），或者是向量之间的映射（两个向量的大小乘以它们之间角度的余弦，一种几何学的解释）。$$dotproduct_{ab}&#x3D;\sum^n_{i-1}a_ib_i$$">
+<meta property="og:locale">
+<meta property="og:image" content="http://thirtiseven.github.io/images/12%E9%AB%98%E6%96%AF%E6%BB%A4%E6%B3%A2%E5%99%A8.png">
+<meta property="og:image" content="http://thirtiseven.github.io/images/12%E8%8E%AB%E8%8E%B1%E5%B0%8F%E6%B3%A2.png">
+<meta property="og:image" content="http://thirtiseven.github.io/images/%E5%A4%8D%E8%8E%AB%E8%8E%B1%E5%B0%8F%E6%B3%A2.png">
+<meta property="og:image" content="http://thirtiseven.github.io/images/13_1.png">
+<meta property="og:image" content="http://thirtiseven.github.io/images/14_1.png">
+<meta property="og:image" content="http://thirtiseven.github.io/images/14_firls.png">
+<meta property="og:image" content="http://thirtiseven.github.io/images/14_butterworsh.png">
+<meta property="og:image" content="http://thirtiseven.github.io/images/15_%E7%9F%AD%E6%97%B6fft.png">
+<meta property="article:published_time" content="2021-03-08T04:07:29.000Z">
+<meta property="article:modified_time" content="2021-12-04T04:12:11.005Z">
+<meta property="article:author" content="Thirtiseven Lee">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://thirtiseven.github.io/images/12%E9%AB%98%E6%96%AF%E6%BB%A4%E6%B3%A2%E5%99%A8.png">
+
+<link rel="canonical" href="http://thirtiseven.github.io/2021/03/08/FFT%E3%80%81%E5%B0%8F%E6%B3%A2%E5%8D%B7%E7%A7%AF%E5%92%8C%E5%B8%8C%E5%B0%94%E4%BC%AF%E7%89%B9%E5%8F%98%E6%8D%A2/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>FFT、小波卷积和希尔伯特变换 | 语言漩涡</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">语言漩涡</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">李三七的博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://thirtiseven.github.io/2021/03/08/FFT%E3%80%81%E5%B0%8F%E6%B3%A2%E5%8D%B7%E7%A7%AF%E5%92%8C%E5%B8%8C%E5%B0%94%E4%BC%AF%E7%89%B9%E5%8F%98%E6%8D%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Thirtiseven Lee">
+      <meta itemprop="description" content="和光同尘">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="语言漩涡">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          FFT、小波卷积和希尔伯特变换
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-03-08 12:07:29" itemprop="dateCreated datePublished" datetime="2021-03-08T12:07:29+08:00">2021-03-08</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-12-04 12:12:11" itemprop="dateModified" datetime="2021-12-04T12:12:11+08:00">2021-12-04</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="10-点积和卷积"><a href="#10-点积和卷积" class="headerlink" title="10 点积和卷积"></a>10 点积和卷积</h2><p>点积：两个等长向量按维度相乘然后加起来。点积是卷积的基本步骤。它可以被认为是一个向量中的元素经另一个向量的元素加权后的总和（一种信号处理的解释），也可以被认为是两个向量之间的协方差或相似性（一种统计学的解释），或者是向量之间的映射（两个向量的大小乘以它们之间角度的余弦，一种几何学的解释）。<br>$$<br>dotproduct_{ab}=\sum^n_{i-1}a_ib_i<br>$$</p>
+<span id="more"></span>
+
+<p>从几何学上讲，点积是一个向量到另一个向量的映射。一些频率和时频分解方法涉及计算两个高维向量之间的映射，如一个特定频率的正弦波和一个脑电图时间序列。</p>
+<p>时域的卷积是点积的扩展，其中点积随时间反复计算。与点积类似，卷积可以有几种解释：你可以把卷积看作是一个信号经另一个信号加权后沿第一个信号滑动的时间序列（一种信号处理的解释），或者看作是一种交叉协方差（两个向量之间随时间的相似性；一种统计学的解释），看作是两个向量之间映射的时间序列（一种地理度量的解释），或者看作是一种频率滤波器。</p>
+<p>在卷积中，一个向量被认为是信号，另一个向量被认为是内核。在实际应用中，无论哪个向量被标为信号，哪个向量被标为内核，都有可能得到同样的结果。因此，这种区分主要是为了方便。在本书中，脑电图数据被称为信号，小波或正弦波被称为内核。<br>$$<br>(a*b)<em>k=\sum^n</em>{i=1}a_ib_{k-i}<br>$$<br>卷积结果的长度为length(signal)+length(kernel)-1，因此，在你运行卷积之后，你需要对结果进行修剪，从开头去掉内核长度的二分之一，从结尾去掉内核长度的二分之一加1。</p>
+<p>卷积和交叉协方差（或交叉相关，交叉相关是简单地将交叉协方差按方差缩放）在概念上相似，但在算法上略有不同。两者都是计算向量之间的时变映射的方法，但卷积的核是反转的，而交叉方差的核是保持原来的方向。</p>
+<p>在脑电图数据分析中，卷积被用来隔离频段特定的活动，并在时间上定位该频段特定的活动。这是通过卷积小波与EEG数据一起完成的。当小波（卷积核）沿着EEG数据（卷积信号）拖动时，它揭示了EEG数据何时以及在多大程度上包含了看起来像小波的特征。当使用不同频率的小波对相同的EEG数据重复卷积时，可以形成时频表示。</p>
+<h2 id="11-离散时间傅立叶变换、fft和卷积定理"><a href="#11-离散时间傅立叶变换、fft和卷积定理" class="headerlink" title="11 离散时间傅立叶变换、fft和卷积定理"></a>11 离散时间傅立叶变换、fft和卷积定理</h2><p>傅里叶变换的工作原理是计算信号（如EEG数据）和不同频率的正弦波（核）之间的点积。因此，傅里叶变换的结果是时间序列数据的三维（3-D）表示，其中三个维度是频率、功率和相位。这个三维傅里叶表示法包含了时间序列数据中的所有信息，时间序列数据可以从其傅里叶变换的结果中完美地重建。</p>
+<h3 id="生成正弦波"><a href="#生成正弦波" class="headerlink" title="生成正弦波"></a>生成正弦波</h3><p>$$<br>A\sin (2\pi ft+\theta)<br>$$</p>
+<p>A 是振幅，f 是正弦波的频率，$\theta$ 是相位偏移。任何波形都可以被多个正弦波相加得到的结果表示。可以使用快速傅立叶变换将波形分解为正弦波。</p>
+<h3 id="离散时间傅里叶变换"><a href="#离散时间傅里叶变换" class="headerlink" title="离散时间傅里叶变换"></a>离散时间傅里叶变换</h3><p>首先要介绍的是离散时间傅立叶变换：<br>$$<br>X_f=\sum^n_{k=1}x_ke^{-i2\pi f(k-1)n^{-1}}<br>$$</p>
+<p>每个离散时间傅立叶变换的值是一个特定的正弦波和数据的点积。不同正弦波的频率是由求和指标决定的。</p>
+<h3 id="傅立叶逆变换"><a href="#傅立叶逆变换" class="headerlink" title="傅立叶逆变换"></a>傅立叶逆变换</h3><p>有了离散傅立叶变换，那么它的逆变换也很容易求解：<br>$$<br>x_k=\sum^n_{k=1}X_ke^{i2\pi f(k-1)n^{-1}}<br>$$</p>
+<h3 id="快速傅立叶变换"><a href="#快速傅立叶变换" class="headerlink" title="快速傅立叶变换"></a>快速傅立叶变换</h3><p>离散时间傅立叶变换和傅立叶逆变换的时间复杂度都是$O(n^2)$，看起来跑得都挺慢的。快速傅立叶变换跑得非常快，因为它的时间复杂度是 $O(nlogn)$ 。在matlab里有相应的函数fft和ifft，会调库就行了（</p>
+<p>傅立叶变换的一个假设是，数据是静止的。也就是说数据的统计量不会随着时间的变化而变化。但是在脑电数据中，这个假设常常被违反。违反这个性质会降低傅立叶变换结果的峰值。因为非稳态时间序列具有更复杂的结构，因此需要在更多的频率上获得能量，以便在频域中表示时间序列。</p>
+<p>所以我们可以使用一些其他方法，例如小波卷积、希尔伯特滤波或短时fft等时间局部频率分解方法等的主要原因。另一个原因是，傅立叶变换不能显示动态如何随时间变化。</p>
+<h3 id="增加或减少fft中的频率"><a href="#增加或减少fft中的频率" class="headerlink" title="增加或减少fft中的频率"></a>增加或减少fft中的频率</h3><p>我们已经知道，从fft中可以得到的频率数量是 N/2+1，其中N是数据点的数量。如果想要更多的频率，那就多取一些数据点。如果没有更多的数据可以取，那在时间序列结束之后添加0也是可以的。但是hi零填充不能增加数据中的信息量，只是增加了时间分辨率。在matlab里，可以通过参数指定fft函数提取的频率数量。</p>
+<h3 id="卷积定理"><a href="#卷积定理" class="headerlink" title="卷积定理"></a>卷积定理</h3><p>傅立叶变换的工作原理很重要，其中一个原因是有了它我们就可以快速优雅地算卷积。这是因为卷积定理，卷积定理说：时域的卷积等价于频域的乘法。</p>
+<p>所以我们算卷积就有了一种新方法：对着信号和卷积核分别做fft，然后逐点相乘。这看起来只是另一种方法，但是这种方法快很多。</p>
+<p>当你对信号和卷积核的傅立叶变换做逐点相乘的时候，你本质上是在用内核的频谱对信号的频谱进行缩放。换句话说，卷积的结果是核与信号共同的频率结构。这也是为什么卷积可以被概念化为频域的滤波器。</p>
+<p>看一下窄和宽两种高斯核分别对一个正弦波做卷积的结果。窄高斯抑制了正弦波的振幅，而宽高斯的卷积结果抹杀了正弦波。可以看到，波形的高频被严重衰减了，所以它是一个低通过滤器。</p>
+<p><img src="/images/12%E9%AB%98%E6%96%AF%E6%BB%A4%E6%B3%A2%E5%99%A8.png" alt="12高斯滤波器"></p>
+<h2 id="12-莫莱小波和小波卷积"><a href="#12-莫莱小波和小波卷积" class="headerlink" title="12 莫莱小波和小波卷积"></a>12 莫莱小波和小波卷积</h2><p>为了解决傅立叶变换的一些问题，例如静止性假设和难以描述频率结构的变化，我们可以使用一些其他方法，接下来的六章都是关于这些方法的。本章和下一章介绍的是莫莱小波。莫莱小波中间看起来像是正弦波，但是在两端渐渐归零，它对于定位频率特性随时间的变化非常有用，它长下面这个样子。</p>
+<p><img src="/images/12%E8%8E%AB%E8%8E%B1%E5%B0%8F%E6%B3%A2.png" alt="12莫莱小波"></p>
+<p>针对傅立叶变换的这些问题，一个显然的解决方法核只包含正弦波的一部分，而不是整个正弦波。但是选择哪一部分是一个问题，我们可以使用正弦波的一个周期，但是这这样使它的时间精度很好而频率精度很差。多选几个周期也不太行，因为几个周期中所有数据点点权重是一样的。一个比较好的选择是用一个高斯窗口对几个正弦波周期加权，这就是莫莱小波。要生成一个莫莱小波，我们可以创建一个正弦波和一个高斯分布，并将它们逐点相乘。</p>
+<p>和傅立叶分析类似，通过小波卷积进行时频分解涉及到使用不同频率的小波。然而与傅立叶分析不同的是这些小波的频率可以由你自己指定，而且可以使用的小波数量也是你决定的。但是在实际操作上，构建这样一组小波族有一些理论和实践的限制。</p>
+<ol>
+<li>不能使用比一个epoch慢的频率</li>
+<li>不能比采样率的一半高的频率</li>
+<li>彼此接近的频率可能会提供非常相似的结果。</li>
+</ol>
+<p>一般来说，3～60Hz之间的15到30个频率对于大多数时间足够了。</p>
+<h3 id="莫莱小波作为带通过滤器"><a href="#莫莱小波作为带通过滤器" class="headerlink" title="莫莱小波作为带通过滤器"></a>莫莱小波作为带通过滤器</h3><p>下图是一些原始EEG数据和峰值频率为6Hz的莫莱小波卷积后的效果。可以看到，用特定频率的小波卷积与在同一频率附近对数据进行带通滤波是一样的。它实际上也确实和带通过滤器等价，所以我们可以把它当作带通过滤器来使用。</p>
+<p>![12 带通滤波](/images/12 带通滤波.png)</p>
+<h3 id="目前讨论的莫莱小波的不足"><a href="#目前讨论的莫莱小波的不足" class="headerlink" title="目前讨论的莫莱小波的不足"></a>目前讨论的莫莱小波的不足</h3><p>实值莫莱小波有两个局限性。首先，莫莱小波卷积的作用是带通滤波器，但是对于时频分析，我们需要功率和相位信息，而这些数据特征在带通滤波信号中并不明显。其次，莫莱小波卷积的结果取决于小波和数据之间的相位偏移，在一些时间点上，两个向量是正交的，而另一些时间点上它们的点积为负，这导致了一部分波形会产生相位的滞后，而这不是我们想看到的。</p>
+<h2 id="13-复莫莱小波和功率相位分离"><a href="#13-复莫莱小波和功率相位分离" class="headerlink" title="13 复莫莱小波和功率相位分离"></a>13 复莫莱小波和功率相位分离</h2><p>在上一章，我们可以看到莫莱小波卷积可以作为EEG数据的带通滤波器，而如果把莫莱小波扩展到复数域，我们就可以用它提取时变频段特定功率和相位的估计值。复莫莱小波有一个实部和一个虚部，所以它占据了一个三维空间。它大概长下面这个样子：</p>
+<p><img src="/images/%E5%A4%8D%E8%8E%AB%E8%8E%B1%E5%B0%8F%E6%B3%A2.png" alt="复莫莱小波"></p>
+<p>好，假设本文读者都比我知道什么是复数。来复习一下欧拉公式：<br>$$<br>Me^{i\theta}=M[\cos(\theta)+i\sin(\theta)]<br>$$<br>于是我们就可以用 $Me^{i\theta}$ 来方便地表示复平面上的一个点。</p>
+<p>对于复莫莱小波，它的实部对应的是余弦波，而虚部对应的是正弦波，因此，复莫莱小波的实部和虚部之差就是余弦波和正弦波之差。此外，余弦和正弦的关系是在复数空间中逆时针旋转四分之一。也就是说，在复平面上，当你从实轴旋转到虚轴时，余弦就变成了正弦。这个性质也可以帮助我们理解下一章要讲到的希尔伯特变换。 </p>
+<p>然后我们就可以看一下复莫莱小波的方程了。<br>$$<br>cmw=Ae^{-t^2/2s^2}e^{i2\pi ft}\<br>A=\frac{1}{(s\sqrt{\pi})^{1/2}}<br>$$<br>上面公式的第一部分是一个高斯窗，第二部分是一个复正弦波。A是这个高斯窗的标准差。现在如果我们回头看离散傅立叶变换的公式，我们就会发现它其中包含了欧拉公式。因此，计算傅立叶变换的本质就是在时间序列数据和复正弦波之间计算一个点积。</p>
+<p>同样的，我们把复莫莱小波和信号做点积。由于引入了复数，所以现在点积过后的相位不再被小波的相位偏移，而且相位关系可以由矢量的角度来表征。</p>
+<p>如下图所示，我们可以从复小波点积中提取出三条信息。一是它在实轴上的投影表示来带通滤波后的信号。二是点积结果的向量长度。这个值和内核与信号的相似度有关。这个向量的长度被称为振幅，长度的平方称为功率。这是对小波中心相对于脑电数据所对应的时间点以及小波峰值频率下的瞬时功率的估计。三是这个向量相对于正实轴的长度，这个角度是对小波中心对应的时间点和小波峰值频率处相位角的估计。</p>
+<p><img src="/images/13_1.png" alt="13_1"></p>
+<h3 id="参数设置"><a href="#参数设置" class="headerlink" title="参数设置"></a>参数设置</h3><p>对复莫莱小波参数的设置和实莫莱小波类似。这些参数也可以被应用于其他的时频分解技术比如希尔伯特变换。频率的选择最好处在5或6Hz到60Hz之间。如果研究涉及到 $\alpha$ 波的活动，可以将最高频率放到 150Hz。当然，这个最高频率数也不能比奈奎斯特频率（采样率的一半）更高。一般来说，在这个区间里选择 20～30个频率是比较合理的。可以指定让小波的频率安线性增加或者按对数增加，这两种方法都是合理的。一般来说，频率是有对数尺度来衡量的。它不会影响最终的结果，但是会影响数据可视化的外观。关于小波的长度，建议在时间的-2到+2秒建立小波，并将它的采样率和数据采样率设置为一致的。</p>
+<p>高斯窗的参数设置也很重要。它的周期数决定了它的宽度，而宽度又决定了小波的宽度。它控制着时间精度和频率精度之间的权衡。那么该选择多少个小波的周期呢？对于活动的瞬时变化，3～4个周期会比较好。如果一个试次的时间比较长，7～10个周期将有助于识别时间上持续的活动。在选择小波周期数时要考虑的最后一个理论问题是，在小波非零的期间，数据最好是静止的。使用的周期数越多，小波的非零分量就越长，因此，数据应该静止的时间段就越长。违反静止性并不会使结果无效，但会降低频率特性估计的准确性。</p>
+<h2 id="14-带通滤波和希尔伯特变换"><a href="#14-带通滤波和希尔伯特变换" class="headerlink" title="14 带通滤波和希尔伯特变换"></a>14 带通滤波和希尔伯特变换</h2><p>带通滤波和希尔伯特变换，简称滤波-希尔伯特方法（filter-Hilberting）。它能产生与小波卷积和短时FFT类似的结果。与小波卷积相比，滤波-希尔伯特法的主要优点是滤波-希尔伯特法可以更多地控制滤波器的频率特性，而Morlet小波的频率形状总是高斯的。它的缺点是它的时间效率稍微高一些。</p>
+<p>希尔伯特变换允许你从一个实信号中提取一个复信号。首先，计算信号的傅里叶变换，并创建一个被复算子(i)相乘的傅里叶系数的副本。这就把$M\cos(2πft)$变成了$iM\cos(2πft)$。接下来，确定正频率和负频率。正频率是指在零和奈奎斯特频率之间的频率，负频率是指高于奈奎斯特频率的频率。下一步是将$iM\cos(2πft)$转换为$iM\sin(2πft)$。请记住，余弦和正弦的关系是四分之一周期；因此，要将余弦转换为正弦，需要在复数空间中将正频率系数逆时针旋转四分之一个周期。逆时针旋转正频傅里叶系数可以通过与-i相乘来实现。这意味着当旋转后的正频傅里叶系数与原正频系数相加时，效果是原正频傅里叶系数的两倍。最后一步是对调制后的傅里叶系数进行反傅里叶变换。其结果就是分析信号，它可以像使用复数Morlet小波卷积的结果一样使用。</p>
+<p>在matlab中，hilbert 函数的参数是一个矩阵，它总是会计算第一维的FFT，因此，你应该确保你的矩阵的第一维包含时间。一个快速而简单的方法可以确定希尔伯特函数的应用是否正确，那就是绘制相位角随时间的变化图；它们要么看起来和你期望的相位角一样（下图A），要么看起来很奇怪（下图B）。</p>
+<p><img src="/images/14_1.png" alt="14_1"></p>
+<p>可以简单地将希尔伯特变换应用于数据。然而，所得到的分析信号可能难以解释，因为数据中存在的所有频率都会对结果有贡献，而且与功率较小的频率相比，功率较大的频率贡献更大。因此，在应用希尔伯特变换之前，你应该将数据过滤成独立的频段。这样一来，就可以以特定频段的方式来解释结果。这就导致了滤波-希尔伯特方法相对于复小波卷积的主要优势：对滤波器的特性有更多的控制。</p>
+<h3 id="滤波器"><a href="#滤波器" class="headerlink" title="滤波器"></a>滤波器</h3><p>滤波器可分为 FIR 或 IIR（有限或无限脉冲响应）。这些术语描述了一个滤波器如何响应一个脉冲–单一输入。FIR滤波器的响应在某一时刻结束（也就是说，它的响应是有限的），而IIR滤波器的响应永远不会结束（它的响应是无限的）。对于希尔伯特变换中，FIR更受欢迎。</p>
+<p>带通滤波的工作原理：根据定义的理想频率特性构建一个核，当核与EEG数据卷积时，要求的频率被保留，而不希望的频率被衰减。在Matlab中，有几个函数可以用来构造滤波器核，其中大部分都包含在信号处理工具箱中。我们介绍 firls 和 fir1两个函数。</p>
+<p>firls 函数有三个输入参数。第一个输入是阶数参数，它定义了滤波器内核的长度。它决定了滤波器频率响应的精度。滤波器内核的长度有一个下限：如果你想解析某个特定频率的活动，滤波器内核必须足够长，至少包含该频率的一个周期。在实践中，最好是有2到5倍的低频边界（因此，对于10Hz的滤波器，在200到500毫秒之间）。</p>
+<p>第二个输入是firls的第二个输入是定义响应形状的频率向量。对于一个带通滤波器，你可以使用六个数字：零点频率、下过渡区开始的频率、带通的下界、带通的上界、上过渡区结束的频率，最后是奈奎斯特频率。这些数字是按比例排列的，因此奈奎斯特频率是1.0。</p>
+<p>第三个输入是 “理想 “滤波器响应幅度。这是一个和第二个输入一样多的数字组成的向量，其中0代表要衰减的频率，1代表要保留的频率。对于带通滤波器，可以使用[0 0 1 1 0 0]，其中1对应于带通高原的频率下限和上限，第一个和最后一个零对应于直流和奈奎斯特频率，第二个和第五个零对应于过渡区的频率边界。</p>
+<p><img src="/images/14_firls.png" alt="14_firls"></p>
+<p>firls和fir1创建的滤波核的主要区别在于过渡区：firls是构建滤波核的通用函数，允许你定义自己的过渡区；fir1会自动将过渡区设置为零，然后对生成的滤波核进行平滑处理，以最小化环形伪影。</p>
+<p>在应用之前，请仔细检查您的滤波器。滤波器的 “良好度 “可以量化为滤波器的实际频率特性与您指定的理想滤波器的频率特性之间的相似度。形式上，可以用平方误差之和来衡量。sse应当很接近0，不应该使用sse超过1的滤波器。<br>$$<br>sse=\sum^n_{i=1}(ideal_i-actual_i)^2<br>$$<br>firls和fir1会返回一个滤波核，接下来，我们要把这个滤波核应用于数据。这个操作可以使用Matlab函数filtfilt来完成。filtfilt的输出是过滤后的数据。</p>
+<h3 id="巴特沃斯滤波器"><a href="#巴特沃斯滤波器" class="headerlink" title="巴特沃斯滤波器"></a>巴特沃斯滤波器</h3><p>最常见的用于EEG的IIR滤波器是巴特沃斯滤波器（Butterworth Filter），巴特沃斯滤波器的构造与FIR滤波器的构造类似，并产生类似的结果，如下图。</p>
+<p><img src="/images/14_butterworsh.png" alt="14_butterworsh"></p>
+<h3 id="将试验合并再滤波"><a href="#将试验合并再滤波" class="headerlink" title="将试验合并再滤波"></a>将试验合并再滤波</h3><p>将所有的试验连成一个长的时间序列，对这个连成的时间序列进行过滤，然后再切出单独的试验，与单独过滤每个试验相比，速度更快。它不仅速度更快，还将有利于编写更干净的代码。试验连接的主要问题是边缘伪影。</p>
+<h3 id="在研究中描述滤波参数"><a href="#在研究中描述滤波参数" class="headerlink" title="在研究中描述滤波参数"></a>在研究中描述滤波参数</h3><p>如果您使用滤波-希尔伯特法分析数据，请确保在方法一节中包含足够的细节，以便其他人可以复制您的分析。重要的信息包括最小、最大和频段数；频率的通带宽度和带宽是否随频率变化而变化；滤波器的阶数和阶数是否随频率变化而变化；以及滤波器形状的过渡区。你还应该提到你用哪个函数来创建滤波器内核（如fir1或firls）。由于构造不良的滤波器会对滤波数据的质量产生负面影响，你应该检查滤波器是否构造良好，并在论文中注明滤波器是否与理想形状有良好的拟合，以及是否有任何参数因为滤波器构造不良而需要修改。</p>
+<h2 id="15-短时FFT"><a href="#15-短时FFT" class="headerlink" title="15 短时FFT"></a>15 短时FFT</h2><p>短时FFT是提取时频功率和相位信息的一种替代方法。短时FFT是傅里叶变换的简单扩展，它解决了第11章中指出的傅里叶变换在脑电图时频分析中的两个主要局限性：傅里叶变换掩盖了数据频率结构的时变变化，而且傅里叶变换假定数据在时间序列的持续时间内是静止的。</p>
+<p>短时FFT的基本思想是使用FFT提取数据的短暂片段（时间窗口）的频率结构，而不是整个时间序列。如下图。</p>
+<p><img src="/images/15_%E7%9F%AD%E6%97%B6fft.png" alt="15_短时fft"></p>
+<p>这种方法产生的时间-频率图类似于从复Morlet小波卷积或滤波-希尔伯特方法中得到的东西。从这个二维(2-D)结果，你可以提取出一个频率的功率的时间过程或一个时间点的功率谱。</p>
+<h3 id="数据taper"><a href="#数据taper" class="headerlink" title="数据taper"></a>数据taper</h3><p>在计算每个时间段的傅里叶变换之前，应该对该时间段的数据进行taper（渐变？）。这将减弱时间段开始和结束时的数据幅度（上图-B），这对防止边缘伪影污染时频结果很重要。三种常用的窗口为Hann，Hamming和Gaussian。汉恩窗口的优势在于它在时间段的开始和结束时将数据完全渐变为零。这就消除了任何哪怕是微小的边缘伪影的可能性。高斯窗可以使其渐变为零，但窗口变得相当窄，这可能会使数据过度渐变。汉明窗口不能将数据完全渐变为零。汉恩、汉明和高斯窗口的比较如下图所示。</p>
+<p>![15 窗口](/images/15 窗口.png)</p>
+<h3 id="时间长度和重叠"><a href="#时间长度和重叠" class="headerlink" title="时间长度和重叠"></a>时间长度和重叠</h3><p>时间段的长度提供了时间和频率精度和分辨率之间的权衡：较短的时间段以牺牲频率精度和分辨率为代价提供更好的时间精度，而较长的时间段以降低时间精度为代价提供更好的频率精度和分辨率。时间段长度的选择也与你要分析的最低频率有关。时间段必须足够长，以捕获至少一个周期的低频，最好超过一个周期以提高信噪比。因此，如果你想分析3Hz的活动，窗口必须至少333毫秒长，最好667毫秒或999毫秒，以捕获两个或三个周期（或任何长度;时间段长度不需要周期持续时间的整数倍）。短时FFT的第二个参数是连续时间段之间的重叠量。有时间重叠量是有用的，原因有三：它提高了时间精度，减轻了由于渐变造成的信号损失，平滑了时间-频率图，从而便于直观地检查活动的时间过程。虽然对于使用多少重叠没有规则或严格的准则，但段长的50%～90%之间的数值是可以接受的。</p>
+<p>与复小波卷积和滤波-希尔伯特法类似，短时FFT法提供了功率和相位的信息。尽管与小波卷积法或滤波-希尔伯特法相比，短时FFT的相位值的意义不同，但短时FFT的相位值通常可以用类似于从复小波卷积法或滤波-希尔伯特法中提取的相角时间序列的方式来使用。</p>
+<h3 id="在研究中描述参数"><a href="#在研究中描述参数" class="headerlink" title="在研究中描述参数"></a>在研究中描述参数</h3><p>相关参数包括连续时间段之间的重叠，提取了多少个频率（也就是要求的频率），时间段长度是否随着要求频率的变化而变化，相邻频率的平均值是否被平均在一起以增加信噪比，最后，使用了哪个函数来对数据进行渐变。</p>
+<h2 id="16-multitaper"><a href="#16-multitaper" class="headerlink" title="16 multitaper"></a>16 multitaper</h2><p>短时FFT在对频率结构的变化进行时间定位的能力上比FFT有优势。但是由于边缘伪影会污染频率表示，所以必须对每个时间段进行taper处理，使该段开始和结束时的信号衰减为零。虽然这带来了信号的损失，但在重叠段的移动序列上执行FFT有助于减轻信号的衰减。multitaper法是短时FFT方法的扩展，其目的是通过应用几个具有稍微不同的时间（因此是频谱）特性的taper来增加频率代表的信噪比。<br>multitaper法对于低信噪比的情况特别有用，例如较高频率的活动或功率的单次试验估计。对于低于30赫兹左右的频率，multitaper法可能不太合适，因为信噪比已经比较高，而且multitaper法程序产生的频谱平滑可能会妨碍频率隔离，这意味着来自多个频段的活动会被平均在一起。</p>
+<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>![16 1](/images/16 1.png)</p>
+<p>multitaper 的开始与短时FFT类似：从整个试验期中提取一个时间段（在本例中是一个400ms的时间段）。这个时间段如图A所示。接下来，将该时间段的数据乘以一系列的渐变（B），从而得到几个渐变的时间序列（C）。你可以看到，不同的taper将信号集中在不同的时间区域。接下来，对每个渐变时间序列做FFT（D），并将所得光谱平均在一起（E）。这个过程可以与短时FFT方法进行对比：短时FFT方法只使用一个taper和一个FFT。在这个例子中，很明显，multitaper得到的功率谱比短时FFT得到的功率谱更平滑。<br>multitaper法可以用来提取功率和相位信息。由于每个频率的相位值可能会随着每个taper的变化而变化，所以multitaper方法得到的相位值反映了taper数据时间序列的平均相位。与短时FFT方法一样，这里的相位值是指该时间段中正弦波在每个频率上的相位，而不是正在进行的相角时间序列。也和短时FFT一样，multitaper法的相位值可以用于许多基于相位的分析。</p>
+<p>multitaper法在频率轴上引入了一些平滑。平滑的程度取决于taper的数量，因此使用的taper越多，结果越平滑。multitaper法也引入了时间平滑，特别是与小波卷积或滤波-希尔伯特法相比。虽然所有的时间-频率方法都涉及到时间平滑，因为每个时间点的特定频段活动度的估计反映了周围时间点活动度的加权平均，但multitaper方法涉及到更多的时间平滑，因为在每个时间段内有不同的时间焦点的多个taper。平滑性和准确性之间有一个权衡，例如，更平滑的结果会降低数据频率特征的准确性。结果应该平滑到足以提高信噪比，但不能以失去检测时频特征的灵敏度为代价。</p>
+<p>与短时FFT方法一样，multitaper法将返回零和奈奎斯特频率之间尽可能多的频点，因为每段中都有时间点。因此，您可以选择基于单个频点或相邻频点的平均值来选择所要求的频率。然而，由于multitaper法已经涉及到了频谱平滑和平均，所以当从multitaper平均光谱中提取功率时，可能没有必要再对频谱进行平均。</p>
+<h3 id="什么时候该用multitaper"><a href="#什么时候该用multitaper" class="headerlink" title="什么时候该用multitaper"></a>什么时候该用multitaper</h3><p>在三种情况下，multitaper法可能对您的结果有利。第一种情况是，如果您有嘈杂的数据或少量的试验，并且担心噪声对结果的影响。第二种，也是相关的情况是，如果您正在进行单次试验分析，特别是如果您想分析高于30 Hz左右的频率。第三种情况是，如果您想关注高频功率，特别是高于60 Hz左右的频率。</p>
+<p>在两种情况下，multitaper体方法可能不是首选方法。第一种情况是，如果您将分析的重点放在30Hz以下的频率上。这些低频的平滑化会使离散的时频事件难以分离，特别是当有几个事件在时频空间上相互接近时。第二种情况是，如果你将进行分析，其中需要预先精确的高频活动的时间。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/02/21/POI2010-Pilots-%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/" rel="prev" title="POI2010 Pilots 单调队列">
+      <i class="fa fa-chevron-left"></i> POI2010 Pilots 单调队列
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/03/12/%E5%B9%B3%E9%9D%A2%E5%9B%BE%E6%9C%80%E5%B0%8F%E9%93%BE%E8%A6%86%E7%9B%96-POI2002-Skiers/" rel="next" title="平面图最小链覆盖 POI2002 Skiers">
+      平面图最小链覆盖 POI2002 Skiers <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#10-%E7%82%B9%E7%A7%AF%E5%92%8C%E5%8D%B7%E7%A7%AF"><span class="nav-number">1.</span> <span class="nav-text">10 点积和卷积</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-%E7%A6%BB%E6%95%A3%E6%97%B6%E9%97%B4%E5%82%85%E7%AB%8B%E5%8F%B6%E5%8F%98%E6%8D%A2%E3%80%81fft%E5%92%8C%E5%8D%B7%E7%A7%AF%E5%AE%9A%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">11 离散时间傅立叶变换、fft和卷积定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E6%AD%A3%E5%BC%A6%E6%B3%A2"><span class="nav-number">2.1.</span> <span class="nav-text">生成正弦波</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A6%BB%E6%95%A3%E6%97%B6%E9%97%B4%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2"><span class="nav-number">2.2.</span> <span class="nav-text">离散时间傅里叶变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%82%85%E7%AB%8B%E5%8F%B6%E9%80%86%E5%8F%98%E6%8D%A2"><span class="nav-number">2.3.</span> <span class="nav-text">傅立叶逆变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E5%82%85%E7%AB%8B%E5%8F%B6%E5%8F%98%E6%8D%A2"><span class="nav-number">2.4.</span> <span class="nav-text">快速傅立叶变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A2%9E%E5%8A%A0%E6%88%96%E5%87%8F%E5%B0%91fft%E4%B8%AD%E7%9A%84%E9%A2%91%E7%8E%87"><span class="nav-number">2.5.</span> <span class="nav-text">增加或减少fft中的频率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%B7%E7%A7%AF%E5%AE%9A%E7%90%86"><span class="nav-number">2.6.</span> <span class="nav-text">卷积定理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-%E8%8E%AB%E8%8E%B1%E5%B0%8F%E6%B3%A2%E5%92%8C%E5%B0%8F%E6%B3%A2%E5%8D%B7%E7%A7%AF"><span class="nav-number">3.</span> <span class="nav-text">12 莫莱小波和小波卷积</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8E%AB%E8%8E%B1%E5%B0%8F%E6%B3%A2%E4%BD%9C%E4%B8%BA%E5%B8%A6%E9%80%9A%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="nav-number">3.1.</span> <span class="nav-text">莫莱小波作为带通过滤器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E5%89%8D%E8%AE%A8%E8%AE%BA%E7%9A%84%E8%8E%AB%E8%8E%B1%E5%B0%8F%E6%B3%A2%E7%9A%84%E4%B8%8D%E8%B6%B3"><span class="nav-number">3.2.</span> <span class="nav-text">目前讨论的莫莱小波的不足</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-%E5%A4%8D%E8%8E%AB%E8%8E%B1%E5%B0%8F%E6%B3%A2%E5%92%8C%E5%8A%9F%E7%8E%87%E7%9B%B8%E4%BD%8D%E5%88%86%E7%A6%BB"><span class="nav-number">4.</span> <span class="nav-text">13 复莫莱小波和功率相位分离</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE"><span class="nav-number">4.1.</span> <span class="nav-text">参数设置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14-%E5%B8%A6%E9%80%9A%E6%BB%A4%E6%B3%A2%E5%92%8C%E5%B8%8C%E5%B0%94%E4%BC%AF%E7%89%B9%E5%8F%98%E6%8D%A2"><span class="nav-number">5.</span> <span class="nav-text">14 带通滤波和希尔伯特变换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%BB%A4%E6%B3%A2%E5%99%A8"><span class="nav-number">5.1.</span> <span class="nav-text">滤波器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%B4%E7%89%B9%E6%B2%83%E6%96%AF%E6%BB%A4%E6%B3%A2%E5%99%A8"><span class="nav-number">5.2.</span> <span class="nav-text">巴特沃斯滤波器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%86%E8%AF%95%E9%AA%8C%E5%90%88%E5%B9%B6%E5%86%8D%E6%BB%A4%E6%B3%A2"><span class="nav-number">5.3.</span> <span class="nav-text">将试验合并再滤波</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8%E7%A0%94%E7%A9%B6%E4%B8%AD%E6%8F%8F%E8%BF%B0%E6%BB%A4%E6%B3%A2%E5%8F%82%E6%95%B0"><span class="nav-number">5.4.</span> <span class="nav-text">在研究中描述滤波参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15-%E7%9F%AD%E6%97%B6FFT"><span class="nav-number">6.</span> <span class="nav-text">15 短时FFT</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AEtaper"><span class="nav-number">6.1.</span> <span class="nav-text">数据taper</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E9%95%BF%E5%BA%A6%E5%92%8C%E9%87%8D%E5%8F%A0"><span class="nav-number">6.2.</span> <span class="nav-text">时间长度和重叠</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8%E7%A0%94%E7%A9%B6%E4%B8%AD%E6%8F%8F%E8%BF%B0%E5%8F%82%E6%95%B0"><span class="nav-number">6.3.</span> <span class="nav-text">在研究中描述参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-multitaper"><span class="nav-number">7.</span> <span class="nav-text">16 multitaper</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%9F%E7%90%86"><span class="nav-number">7.1.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%AF%A5%E7%94%A8multitaper"><span class="nav-number">7.2.</span> <span class="nav-text">什么时候该用multitaper</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Thirtiseven Lee</p>
+  <div class="site-description" itemprop="description">和光同尘</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">51</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Thirtiseven Lee</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"thirtiseven.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Fishes题意在遥远的群岛上，生活着一种罕见的食肉鱼。这些鱼的生活节奏非常有规律。每条鱼每天早上在同一时间醒来，然后去打猎。傍晚，它又回到出发的地方 每天同一时间在那里睡觉，但它可能会在不同的地方醒来，因为它可能会被洋流稍微移动。在一整天中，鱼儿都会坚持以下规则：每时每刻它都要能看到前一天同一时间的位置，也就是说，正好是24小时之前。当然，鱼儿不可能看到任何岛屿对面的一个点。鱼类学家对群岛中的鱼">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Algorithmic Engagements 2009 Fishes 拓扑+最小表示法">
+<meta property="og:url" content="http://thirtiseven.github.io/2021/02/04/Algorithmic-Engagements-2009-Fishes/index.html">
+<meta property="og:site_name" content="语言漩涡">
+<meta property="og:description" content="Fishes题意在遥远的群岛上，生活着一种罕见的食肉鱼。这些鱼的生活节奏非常有规律。每条鱼每天早上在同一时间醒来，然后去打猎。傍晚，它又回到出发的地方 每天同一时间在那里睡觉，但它可能会在不同的地方醒来，因为它可能会被洋流稍微移动。在一整天中，鱼儿都会坚持以下规则：每时每刻它都要能看到前一天同一时间的位置，也就是说，正好是24小时之前。当然，鱼儿不可能看到任何岛屿对面的一个点。鱼类学家对群岛中的鱼">
+<meta property="og:locale">
+<meta property="og:image" content="http://thirtiseven.github.io/images/Fishes1.png">
+<meta property="og:image" content="http://thirtiseven.github.io/images/Fishes2.png">
+<meta property="og:image" content="http://thirtiseven.github.io/images/Fishes3.png">
+<meta property="article:published_time" content="2021-02-04T13:44:06.000Z">
+<meta property="article:modified_time" content="2021-02-10T13:47:01.986Z">
+<meta property="article:author" content="Thirtiseven Lee">
+<meta property="article:tag" content="算法">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://thirtiseven.github.io/images/Fishes1.png">
+
+<link rel="canonical" href="http://thirtiseven.github.io/2021/02/04/Algorithmic-Engagements-2009-Fishes/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>Algorithmic Engagements 2009 Fishes 拓扑+最小表示法 | 语言漩涡</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">语言漩涡</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">李三七的博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://thirtiseven.github.io/2021/02/04/Algorithmic-Engagements-2009-Fishes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Thirtiseven Lee">
+      <meta itemprop="description" content="和光同尘">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="语言漩涡">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Algorithmic Engagements 2009 Fishes 拓扑+最小表示法
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-02-04 21:44:06" itemprop="dateCreated datePublished" datetime="2021-02-04T21:44:06+08:00">2021-02-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-02-10 21:47:01" itemprop="dateModified" datetime="2021-02-10T21:47:01+08:00">2021-02-10</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Fishes"><a href="#Fishes" class="headerlink" title="Fishes"></a>Fishes</h1><h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>在遥远的群岛上，生活着一种罕见的食肉鱼。这些鱼的生活节奏非常有规律。每条鱼每天早上在同一时间醒来，然后去打猎。傍晚，它又回到出发的地方 每天同一时间在那里睡觉，但它可能会在不同的地方醒来，因为它可能会被洋流稍微移动。<br>在一整天中，鱼儿都会坚持以下规则：每时每刻它都要能看到前一天同一时间的位置，也就是说，正好是24小时之前。当然，鱼儿不可能看到任何岛屿对面的一个点。<br>鱼类学家对群岛中的鱼类进行了相当长时间的观察，每隔几天，他们就会记录一些鱼类所走的一条路线。不幸的是，在收集了大量的数据之后，发生了意外。现在有些数据已经丢失了，剩下的数据也完全乱了套。科学家甚至不知道他们记录的每条路线是哪条鱼走过的。他们向你寻求帮助。他们要给你一些乱七八糟的鱼群路线描述，并请你告诉他们在研究过程中观察到的不同鱼类的最小数量。</p>
+<span id="more"></span>
+
+<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><p>输入包括两部分：群岛描述和鱼群路线描述。群岛描述的第一行包含两个整数，w 和 h（3≤w≤1000，3≤h≤1000），用一个空格隔开。在下面的每一行 h 中都有一个 w 字符长的字符串，描述群岛的一部分。字符.代表海洋，而#代表陆地。地图边界上的所有单元格中都是水。群岛中的一个点可以从另一个点看到当且仅当它们连线的任何部分都没有与陆地内部或边界的共同点，而与鱼儿游动的方向无关。<br>在下一行中，有一个整数 n（2≤n≤1000），指定了记录的鱼群路线的数量。下面的 2n 行包含了这些路线的描述。在路线描述的第一行中，有三个整数 x、y 和 d（1≤x≤w，1≤y≤h，2≤d≤10000），用单个空格隔开。数字x和y是鱼醒的地方的坐标（列和行），d 是路线的长度。第二行是一个长度为 d 的字符串，每个字符是 N、W、S 或 E，代表鱼的运动方向。它们分别代表上、左、下、右。路线保证只穿过含水的单元，鱼儿不会离开输入中描述的群岛片段，并且每条路线的终点都是在它开始的那个单元。<br>鱼儿只能水平或垂直游动；它沿着连接沿途格子中心的连线移动。然而，我们不知道它的速度。鱼可以加速或减速，以便始终看到它 24 小时前所占据的点。<br>洋流最多可以将一条沉睡的鱼从它睡觉的地方向上、向下、向左或向右移动一格。</p>
+<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><p>第一行输出一个整数k，代表与科学家收集的数据一致的不同鱼类的最小数量。</p>
+<p>接下来 k 行，每一行都应该包含一条鱼的路线列表。鱼儿不一定需要在连续的日子里沿着这些路线游动，只需要在它生命中的任意两天这样游动就可以。一条鱼可以在连续的两天内走过两条路线，如果两条路线都是从同一个格子或相邻的格子(共用一个边缘)开始的，而且鱼可以沿着第二条路线游动，在任何时候都能看到它24小时前所处的位置。<br>根据它们在输入中的顺序，路线的编号从1到n。输出的每一行中的路线数应按递增顺序写出，各行的排序应使所有行中的第一个数字形成递增序列。</p>
+<h2 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h2><p>For the input data: </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">10 8 </span><br><span class="line">.......... </span><br><span class="line">.......#.. </span><br><span class="line">........#. </span><br><span class="line">.......... </span><br><span class="line">...#...... </span><br><span class="line">......###. </span><br><span class="line">......###. </span><br><span class="line">..........</span><br><span class="line">4</span><br><span class="line">2 7 12</span><br><span class="line">nnnEEEssswww</span><br><span class="line">2 8 24</span><br><span class="line">wnnnnnnnEEEEEssssssswwww</span><br><span class="line">1 8 46 </span><br><span class="line">nnnnnnnEEEEEsssssssEEEEnnnnnnnssssssswwwwwwwww </span><br><span class="line">1 8 32</span><br><span class="line">nnnnnnnEEEEEEEEEssssssswwwwwwwww</span><br></pre></td></tr></table></figure>
+
+
+<p> the correct result is:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">1 2 3</span><br><span class="line">4</span><br></pre></td></tr></table></figure>
+
+
+
+<p>解释：前两条路线可能是同一条鱼走过的（可以是连续两天）。几天后，该鱼可能走了第三条路线。然而，最后一条路线一定是由另一条鱼走过的。与前三条路线不同的是，它是绕着大岛走的。</p>
+<h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><p>这个题意就是说，一种鱼有基本固定捕食路线，路线的变化方式是：在捕食的任意时刻，鱼都必须要可以看到它恰好24小时前捕食的位置。看不到的意思是：鱼的目光可能会被一个岛屿挡住。给出群岛的地图和路线，求出有多少种本质不同的路线。</p>
+<p>如果两条路线是等价的，那么这两条路线就可以连续形变为另一条路线。于是我们可以非常感性地认识到，两条路线等价当且仅当它们拓扑同伦。抄维基百科：拉数学中，同伦个概念拉拓扑上描述了两个对象间个“连续变化”。 拉拓扑学中，两个定义拉拓扑空间之间个连续函数，如果其中一个能“连续地形变”为另一个，则箇两个函数叫作同伦个。（逃</p>
+<p>感性理解一下就是，如果把路线想象成一个橡皮筋，岛屿想象成钉子，那我画完路线之后松开手，等价的路线就会被钉子绷成相同的形状。（我对拓扑学的认识还处在橡皮筋和肥皂泡阶段，感觉急需学习一个）。</p>
+<p>比如说，下面这个图可以表示为一条鱼在连续几天里面的路线变化，显然它们是拓扑同伦的。</p>
+<p><img src="/images/Fishes1.png" alt="Fishes1"></p>
+<p>但是下面这个图的两个路线，虽然都绕着两个岛绕了两圈，但是它们显然并不等价。</p>
+<p><img src="/images/Fishes2.png" alt="Fishes2"></p>
+<p>下面的问题就是怎么表示路线。题解里给了一个牛逼方法，就是把地图上横着的连续线段标号，当路线上下穿过这些线段时，我们就可以记录它当前以什么方向穿过了哪条线段。如下图所示：</p>
+<p><img src="/images/Fishes3.png" alt="Fishes3"></p>
+<p>对于上图中的例子，我们将得到以下的交点序列。</p>
+<p>2s, 4s, 8s, 10s, 11s, 11n, 10n, 8n, 8s, 9n, 5n, 2n,</p>
+<p>其中n或s表示鱼分别向北或向南游动。然后，我们就可以模拟橡皮筋收缩的过程，消掉相邻且数字相同标号相反的线段。就像下面这样。在实际写代码的时候，可以用一个栈来模拟，如果当前入栈的元素和栈顶元素标号相同方向相反，那么就可以把栈顶元素弹出。最后，再判断一下栈两边的元素是不是相等，相等的话就把两头都弹出来，循环执行这个操作。然后我没用pair，用的是 $x<em>2$ 和 $x</em>2+1$ 分别代表两个方向。显然，方向是需要考虑的。</p>
+<ol>
+<li>2s, 4s, 8s, 10s, <strong>11S, 11N,</strong> 10n, 8n, 8s, 9n, 5n, 2n,</li>
+<li>2s,4s,8s**,10S,10N**,8n,8s,9n,5n,2n,</li>
+<li>2s,4s,<strong>8S,8N</strong>,8s,9n,5n,2n,</li>
+<li><strong>2S</strong>,4s,8s,9n,5n,<strong>2N</strong></li>
+<li>4s，8s，9n，5n。</li>
+</ol>
+<p>然后，要判断两条线路是否等价，只需要判断一下它们的表示是不是循环等价。一个$O(wh+n^2d^2)$ 的暴力算法是显然的，一个 $O(wh+n^2d)$ 的基于KMP的判循环等价的算法也是显然的，但是题解给了一个最小表示法判循环等价的方法，我闻所未闻。但是我猜这个东西还是 well-known in China 字符串选手的。我是字符串废物我不会。找资料的时候有网友说用 Sa-is 就是那个 O(n) 的后缀数组也是可以做的，复杂度一样，我是字符串废物我也不会。最小表示法看了一下，好像很简单啊，然后糊了一个板子上去。它大概是长着个样子的：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> k = <span class="number">0</span>, i = <span class="number">0</span>, j = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span> (k &lt; n &amp;&amp; i &lt; n &amp;&amp; j &lt; n) &#123;</span><br><span class="line">  <span class="keyword">if</span> (sec[(i + k) % n] == sec[(j + k) % n]) &#123;</span><br><span class="line">    k++;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    sec[(i + k) % n] &gt; sec[(j + k) % n] ? i = i + k + <span class="number">1</span> : j = j + k + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (i == j) i++;</span><br><span class="line">    k = <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">i = <span class="built_in">min</span>(i, j);</span><br></pre></td></tr></table></figure>
+
+<p>然后我们有了最小表示法，就可以直接把它哈希一下，把哈希值和路线标号扔进一个哈希表，然后把结果拉出来排个序，就做完了，是不是很简单呢（</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;deque&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unordered_map&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1004</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> w, h;</span><br><span class="line">std::string mp[maxn];</span><br><span class="line"><span class="keyword">int</span> label[maxn][maxn];</span><br><span class="line"><span class="keyword">int</span> n, x[maxn], y[maxn], d;</span><br><span class="line">std::string route[maxn];</span><br><span class="line">std::vector&lt;<span class="keyword">int</span>&gt; represent[maxn];</span><br><span class="line">std::unordered_map&lt;<span class="keyword">unsigned</span> <span class="keyword">int</span>, std::vector&lt;<span class="keyword">int</span>&gt;&gt; hashmap; </span><br><span class="line">std::vector&lt;std::vector&lt;<span class="keyword">int</span>&gt;&gt; ans;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">input</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	std::cin &gt;&gt; w &gt;&gt; h;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; h; i++) &#123;</span><br><span class="line">		std::cin &gt;&gt; mp[i];</span><br><span class="line">	&#125;</span><br><span class="line">	std::cin &gt;&gt; n;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">		std::cin &gt;&gt; x[i] &gt;&gt; y[i] &gt;&gt; d;</span><br><span class="line">		std::cin &gt;&gt; route[i];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">LMCE</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> k = <span class="number">0</span>, i = <span class="number">0</span>, j = <span class="number">1</span>, len = represent[x].<span class="built_in">size</span>();</span><br><span class="line">	<span class="keyword">while</span> (k &lt; len &amp;&amp; i &lt; len &amp;&amp; j &lt; len) &#123;</span><br><span class="line">		<span class="keyword">if</span> (represent[x][(i + k) % len] == represent[x][(j + k) % len]) &#123;</span><br><span class="line">			k++;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			represent[x][(i + k) % len] &gt; represent[x][(j + k) % len] ? i = i + k + <span class="number">1</span> : j = j + k + <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">if</span> (i == j) i++;</span><br><span class="line">			k = <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	i = std::<span class="built_in">min</span>(i, j);</span><br><span class="line">	<span class="function">std::vector&lt;<span class="keyword">int</span>&gt; <span class="title">temp</span><span class="params">(len)</span></span>;</span><br><span class="line">	<span class="keyword">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> ii = i; ii &lt; len; ii++) &#123;</span><br><span class="line">		temp[cnt] = represent[x][ii];</span><br><span class="line">		cnt++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> ii = <span class="number">0</span>; ii &lt; i; ii++) &#123;</span><br><span class="line">		temp[cnt] = represent[x][ii];</span><br><span class="line">		cnt++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> ii = <span class="number">0</span>; ii &lt; len; ii++) &#123;</span><br><span class="line">		represent[x][ii] = temp[ii];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">int</span> <span class="title">RSHash</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">int</span> b = <span class="number">378551</span>;</span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">int</span> a = <span class="number">63689</span>;</span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">int</span> hash = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; represent[x].<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">		hash = hash * a + represent[x][i];</span><br><span class="line">		a *= b;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> (hash &amp; <span class="number">0x7FFFFFFF</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">gao</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> cur = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; h; i++) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; w; j++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (mp[i][j] == <span class="string">&#x27;#&#x27;</span>) &#123;</span><br><span class="line">				label[i][j] = <span class="number">-1</span>;</span><br><span class="line">				cur++;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				label[i][j] = cur;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		cur++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">		<span class="keyword">int</span> nowx = x[i]<span class="number">-1</span>, nowy = y[i]<span class="number">-1</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; route[i].<span class="built_in">length</span>(); j++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (route[i][j] == <span class="string">&#x27;W&#x27;</span>) &#123;</span><br><span class="line">				nowx--;</span><br><span class="line">			&#125; <span class="keyword">else</span> <span class="keyword">if</span> (route[i][j] == <span class="string">&#x27;E&#x27;</span>) &#123;</span><br><span class="line">				nowx++;</span><br><span class="line">			&#125; <span class="keyword">else</span> <span class="keyword">if</span> (route[i][j] == <span class="string">&#x27;N&#x27;</span>) &#123;</span><br><span class="line">				nowy--;</span><br><span class="line">				<span class="keyword">if</span> (represent[i].<span class="built_in">empty</span>() || represent[i].<span class="built_in">back</span>()/<span class="number">2</span> != label[nowy][nowx]) &#123;</span><br><span class="line">					represent[i].<span class="built_in">push_back</span>(label[nowy][nowx]*<span class="number">2</span>);</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					represent[i].<span class="built_in">pop_back</span>();</span><br><span class="line">				&#125;</span><br><span class="line">			&#125; <span class="keyword">else</span> <span class="keyword">if</span> (route[i][j] == <span class="string">&#x27;S&#x27;</span>) &#123;</span><br><span class="line">				<span class="keyword">if</span> (represent[i].<span class="built_in">empty</span>() || represent[i].<span class="built_in">back</span>()/<span class="number">2</span> != label[nowy][nowx]) &#123;</span><br><span class="line">					represent[i].<span class="built_in">push_back</span>(label[nowy][nowx]*<span class="number">2</span>+<span class="number">1</span>);</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					represent[i].<span class="built_in">pop_back</span>();</span><br><span class="line">				&#125;</span><br><span class="line">				nowy++;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">while</span> (represent[i].<span class="built_in">size</span>() &gt; <span class="number">1</span> &amp;&amp; represent[i].<span class="built_in">front</span>()/<span class="number">2</span> == represent[i].<span class="built_in">back</span>()/<span class="number">2</span>) &#123;</span><br><span class="line">			represent[i].<span class="built_in">pop_back</span>();</span><br><span class="line">			represent[i].<span class="built_in">erase</span>(represent[i].<span class="built_in">begin</span>());</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (represent[i].<span class="built_in">size</span>() == <span class="number">0</span>) &#123;</span><br><span class="line">			represent[i].<span class="built_in">push_back</span>(<span class="number">0</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">LMCE</span>(i);</span><br><span class="line">		hashmap[<span class="built_in">RSHash</span>(i)].<span class="built_in">push_back</span>(i+<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">output</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">auto</span> it: hashmap) &#123;</span><br><span class="line">		ans.<span class="built_in">push_back</span>(it.second);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">auto</span> it: ans) &#123;</span><br><span class="line">		std::<span class="built_in">sort</span>(it.<span class="built_in">begin</span>(), it.<span class="built_in">end</span>());</span><br><span class="line">	&#125;</span><br><span class="line">	std::<span class="built_in">sort</span>(ans.<span class="built_in">begin</span>(), ans.<span class="built_in">end</span>());</span><br><span class="line">	std::cout &lt;&lt; ans.<span class="built_in">size</span>() &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">auto</span> it: ans) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">auto</span> it2: it) &#123;</span><br><span class="line">			std::cout &lt;&lt; it2 &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		std::cout &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>&#123;  </span><br><span class="line">	std::ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">	std::cin.<span class="built_in">tie</span>(<span class="number">0</span>); </span><br><span class="line">	<span class="built_in">input</span>();</span><br><span class="line">	<span class="built_in">gao</span>();</span><br><span class="line">	<span class="built_in">output</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="吐槽"><a href="#吐槽" class="headerlink" title="吐槽"></a>吐槽</h2><p>好题！</p>
+<p>c++好，matlab坏</p>
+<p>拓扑学怎么学啊，不会数学分析能学吗（（</p>
+<p>一开始以为方向不重要，错了几发。但是一开始交上去wa了我还以为是因为卡了哈希。建议不要用哈希以便减轻自己的心理负担，基数排序也是可以的呢（</p>
+<p>字符串怎么学啊，我在做这个题之前扪心自问：我到底会不会KMP，最后发现用不上KMP。看到最小表示法就是找字典序最小的后缀，我扪心自问，我到底会不会后缀数组，最后发现也没用上。我快乐了</p>
+<p>一开始用了 stack，然后改成 deque，然后改成 vector，没卡 vector 好评。</p>
+<p>没卡读入好评。</p>
+<p>看 Netflix 去了（</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"># 算法</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/01/01/2020%E8%AF%BB%E4%B9%A6%E6%80%BB%E7%BB%93/" rel="prev" title="2020读书总结">
+      <i class="fa fa-chevron-left"></i> 2020读书总结
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/02/18/%E5%8E%8C%E5%A5%B3/" rel="next" title="上野千鹤子《厌女》书摘">
+      上野千鹤子《厌女》书摘 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Fishes"><span class="nav-number">1.</span> <span class="nav-text">Fishes</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E6%84%8F"><span class="nav-number">1.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5"><span class="nav-number">1.2.</span> <span class="nav-text">输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%87%BA"><span class="nav-number">1.3.</span> <span class="nav-text">输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B"><span class="nav-number">1.4.</span> <span class="nav-text">样例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%B3%95"><span class="nav-number">1.5.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">1.6.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%90%E6%A7%BD"><span class="nav-number">1.7.</span> <span class="nav-text">吐槽</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Thirtiseven Lee</p>
+  <div class="site-description" itemprop="description">和光同尘</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">51</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Thirtiseven Lee</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
