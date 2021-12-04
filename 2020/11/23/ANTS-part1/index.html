@@ -20,29 +20,30 @@
     var CONFIG = {"hostname":"thirtiseven.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="2. Advantages and Limitations of Time- and Time-Frequency-Domain Analyses为啥要用脑电图（EEG）？因为它可以捕获认知活动发生时段的认知动态，因为它直接测量了神经的活动，还因为它是多维度的。这里的维度指的是时间、空间、频率、能量和相位等等。当然脑电图也有局限，它不能精确定位，也不能深入大脑深处。有一些大脑活动的时间特征因人而异">
+  <meta name="description" content="2. Advantages and Limitations of Time- and Time-Frequency-Domain Analyses 为啥要用脑电图（EEG）？因为它可以捕获认知活动发生时段的认知动态，因为它直接测量了神经的活动，还因为它是多维度的。这里的维度指的是时间、空间、频率、能量和相位等等。当然脑电图也有局限，它不能精确定位，也不能深入大脑深处。有一些大脑活动的时间特征因人而">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Analyzing Neural Time Series Data Part I&amp;II 笔记">
 <meta property="og:url" content="http://thirtiseven.github.io/2020/11/23/ANTS-part1/index.html">
 <meta property="og:site_name" content="语言漩涡">
-<meta property="og:description" content="2. Advantages and Limitations of Time- and Time-Frequency-Domain Analyses为啥要用脑电图（EEG）？因为它可以捕获认知活动发生时段的认知动态，因为它直接测量了神经的活动，还因为它是多维度的。这里的维度指的是时间、空间、频率、能量和相位等等。当然脑电图也有局限，它不能精确定位，也不能深入大脑深处。有一些大脑活动的时间特征因人而异">
+<meta property="og:description" content="2. Advantages and Limitations of Time- and Time-Frequency-Domain Analyses 为啥要用脑电图（EEG）？因为它可以捕获认知活动发生时段的认知动态，因为它直接测量了神经的活动，还因为它是多维度的。这里的维度指的是时间、空间、频率、能量和相位等等。当然脑电图也有局限，它不能精确定位，也不能深入大脑深处。有一些大脑活动的时间特征因人而">
 <meta property="og:locale">
-<meta property="og:image" content="http://thirtiseven.github.io/images/%E5%87%86%E7%A1%AE%E7%8E%87.png">
-<meta property="og:image" content="http://thirtiseven.github.io/images/%E6%97%B6%E9%A2%91%E5%9B%BE.png">
-<meta property="og:image" content="http://thirtiseven.github.io/images/%E5%80%BC%E5%BE%97%E6%80%80%E7%96%91.png">
-<meta property="og:image" content="http://thirtiseven.github.io/images/5_2%E7%9B%B8%E9%94%81%E5%92%8C%E6%97%B6%E9%94%81.png">
-<meta property="og:image" content="http://thirtiseven.github.io/images/6_1%E4%BA%8B%E4%BB%B6%E6%A0%87%E7%AD%BE.png">
-<meta property="og:image" content="http://thirtiseven.github.io/images/6_2%E9%87%87%E6%A0%B7%E7%8E%87%E7%9A%84%E9%80%89%E6%8B%A9.png">
+<meta property="og:image" content="http://thirtiseven.github.io/images/准确率.png">
+<meta property="og:image" content="http://thirtiseven.github.io/images/时频图.png">
+<meta property="og:image" content="http://thirtiseven.github.io/images/值得怀疑.png">
+<meta property="og:image" content="http://thirtiseven.github.io/images/5_2相锁和时锁.png">
+<meta property="og:image" content="http://thirtiseven.github.io/images/6_1事件标签.png">
+<meta property="og:image" content="http://thirtiseven.github.io/images/6_2采样率的选择.png">
+<meta property="og:image" content="http://thirtiseven.github.io/images/Screen%20Shot%202020-11-26%20at%209.24.07%20AM.png">
 <meta property="og:image" content="file:///Users/lihaoyang/Code/StudyIn2020/notes/ANTS/9_1ERP.png?lastModify=1612963082">
 <meta property="og:image" content="file:///Users/lihaoyang/Code/StudyIn2020/notes/ANTS/9_2ERP滤波.png?lastModify=1612963082">
 <meta property="og:image" content="file:///Users/lihaoyang/Code/StudyIn2020/notes/ANTS/9_3蝴蝶图.png?lastModify=1612963082">
 <meta property="og:image" content="file:///Users/lihaoyang/Code/StudyIn2020/notes/ANTS/9-5ERP图.png?lastModify=1612963082">
 <meta property="article:published_time" content="2020-11-23T13:17:38.000Z">
-<meta property="article:modified_time" content="2021-12-04T04:05:59.459Z">
+<meta property="article:modified_time" content="2021-12-04T06:52:23.732Z">
 <meta property="article:author" content="Thirtiseven Lee">
 <meta property="article:tag" content="脑认知">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://thirtiseven.github.io/images/%E5%87%86%E7%A1%AE%E7%8E%87.png">
+<meta name="twitter:image" content="http://thirtiseven.github.io/images/准确率.png">
 
 <link rel="canonical" href="http://thirtiseven.github.io/2020/11/23/ANTS-part1/">
 
@@ -88,7 +89,119 @@
   </style>
 </noscript>
 
-</head>
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
@@ -193,7 +306,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-12-04 12:05:59" itemprop="dateModified" datetime="2021-12-04T12:05:59+08:00">2021-12-04</time>
+                <time title="Modified: 2021-12-04 14:52:23" itemprop="dateModified" datetime="2021-12-04T14:52:23+08:00">2021-12-04</time>
               </span>
 
           
@@ -207,98 +320,127 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="2-Advantages-and-Limitations-of-Time-and-Time-Frequency-Domain-Analyses"><a href="#2-Advantages-and-Limitations-of-Time-and-Time-Frequency-Domain-Analyses" class="headerlink" title="2. Advantages and Limitations of Time- and Time-Frequency-Domain Analyses"></a>2. Advantages and Limitations of Time- and Time-Frequency-Domain Analyses</h2><p>为啥要用脑电图（EEG）？因为它可以捕获认知活动发生时段的认知动态，因为它直接测量了神经的活动，还因为它是多维度的。这里的维度指的是时间、空间、频率、能量和相位等等。当然脑电图也有局限，它不能精确定位，也不能深入大脑深处。有一些大脑活动的时间特征因人而异，也有一些的认知过程比较缓慢，这使得脑电图异常精确的时间分辨率反而成了一种劣势。</p>
+        <h2 id="advantages-and-limitations-of-time--and-time-frequency-domain-analyses">2. Advantages and Limitations of Time- and Time-Frequency-Domain Analyses</h2>
+<p>为啥要用脑电图（EEG）？因为它可以捕获认知活动发生时段的认知动态，因为它直接测量了神经的活动，还因为它是多维度的。这里的维度指的是时间、空间、频率、能量和相位等等。当然脑电图也有局限，它不能精确定位，也不能深入大脑深处。有一些大脑活动的时间特征因人而异，也有一些的认知过程比较缓慢，这使得脑电图异常精确的时间分辨率反而成了一种劣势。</p>
 <p>脑电图的计量单位是伏特（一般是微伏），脑磁图（MEG）的计量单位则是特斯拉（一般是飞特斯拉）。对于脑电图，它显示的实际上是电极和参考电极之间的差值。一些脑电研究会给出实验的电压值，但是要参考这些值往往很困难，首先因为它会根据数据处理和分析的方法而变化，比如参考值的选择和用于基线减法的时间段，此外，时间和空间滤波器也会改变微伏值。另一个原因是，微伏值对不同的被试有很大的个体差异，还可能收到脑电图电极和放大器以及内置的硬件滤波器的影响。所以，可以别太在意原始数据中的电压数据。当然，上述的原因对于所有的被试和实验条件都存在，所以同一被试的纵向比较显然是有意义的。<span id="more"></span></p>
 <p>事件相关电位（ERP）也是很有用的。首先，它很简单，而且方便计算。如果要进行两个条件的二分类实验，而且你没有什么对这两种认知活动的先验知识，那么比较它们的 ERP 是个又好又快的方法。然后，ERP 也有这很高的时间精确度和准确度。例如，ERP 就非常合适区分两个视觉类别的刺激后延迟。（需要注意，如果给 ERP 加一个低通或者高通过滤器，那么 ERP 的精度也会受到影响）。第三个优势是 ERP 有着长期和大范围的相关研究，所以它是一种相对成熟的方法。然而，对于 ERP 做时频分析的研究也相对较少。最后一个优势是，因为它简单而且方便计算，所以它还可以用于快速检查单目标数据的数据质量。</p>
 <p>ERP 的一个局限是可解释性的问题。ERP 只解释了 EEG 数据中少部分数据的特征，这使得无效的结果更难解释。另一个局限是 ERP 的结果难以与认知的生理机制联系起来。例如区域间同步和跨频率耦合这两种分析都是ERP无法实现的，而它们被认为是神经计算和区域间通信的基本机制。</p>
 <p>使用基于时频分析的方法分析和解释 EEG 数据有三个主要优势。首先是 EEG 数据可以用神经震荡的生理机制很好地解释。其次，这种震荡可以将神经科学内的多个学科和多个物种的研究结果联系起来。最后，基于时频分析的方法可以揭示 EEG 更多的空间特征。</p>
 <p>时频分析方法也有两种局限。首先，时频分解会导致时间精度的下降，损失多少时间精度取决于频段和分析中使用的参数。这使得基于时频分析的方法的时间精度总是比 ERP 差（但它也总是比 fMRI 好）。值得一提的是，虽然 ERP 方法具有更高的时间精度，但是许多研究并没有利用到 ERP 的这一优势，这在某些程度上消除了时频分析的这一局限。其次，脑电图的分析有大量的分析可能性，这使得不同分析方法的比较非常复杂。另外，将时频分析与认知过程结合起来的研究也相对较少，这也加剧了这种局限性。虽然这为探索性的数据分析提供了大量的机会，但这也意味着假设驱动的研究更加困难。</p>
 <p>下面来讨论 EEG 的分辨率（Resolution）、精度（Precision）和准确度（Accuracy）。分辨率是指单位时间内的数据样本数，精度是指每个时间点测量的确定性，准确度是指脑电信号的时间与导致脑电信号的生物物理事件的时间之间的关系。</p>
-<p><img src="/images/%E5%87%86%E7%A1%AE%E7%8E%87.png" alt="准确率"></p>
+<figure>
+<img src="/images/准确率.png" alt=""><figcaption>准确率</figcaption>
+</figure>
 <p>时间分辨率是由采集的采样率决定的，对于大多数分析来说，250-1000Hz 的时间分辨率是足够了。未滤波的 ERP 具有最高的时间精度，因为 ERP 是实时从大脑活动中采样的。而 1Hz 带通滤波活动的时间精度要低得多，因为 1Hz 活动的每一毫秒是一个加权平均多达几秒钟的时间的活动。考虑到这一点，当分析结果的时间精度降低时，往往也可以降低时间分辨率以匹配时间精度。EEG 的时间准确率也很高，因为数据就是在脑电活动瞬间从产生电场的神经元到测量这些场的电极的。</p>
 <p>与fMRI等高空间分辨率成像技术相比，EEG的空间精度、分辨率和准确性都相对较低。脑电图的空间分辨率是由电极数量决定的，大部分是32或64个电极，256个电极的设备也越来越多。脑电图的空间准确度是相当低的，但可以通过空间滤波器，如表面拉普拉斯或自适应源空间成像技术提高。脑电图的空间准确率也很低，从一个电极记录的活动并非是该电极下方的神经元的活动，而是来自靠近和远离该电极的许多脑区的复杂活动混合物。</p>
 <p>地形定位（Topographical localization）是指确定最大效应的电极的方法。脑定位（Brain localization）是指确定大脑中产生从头皮测量的活动的位置。与地形定位相比，脑定位更难确定，涉及的不确定性也更大。这两个术语之间的主要区别是，地形定位是对观察结果的描述，而大脑定位是对结果的解释。</p>
 <p>我们应该选择 EEG 还是 MEG？在测量方面，EEG 对回旋冠上的径向偶极子较为敏感，也能检测到切线源。MEG 对切线源敏感而对径向源的灵敏度低。MEG在检测高频活动（如60Hz以上）方面也比EEG更好。但是 EEG 更加便携，需要的维护成本也更低。在源重建精度方面，理论上，电极数量相同、解剖学高度精确的正向模型下，EEG和MEG的源重建精度是相似的，对于径向源，EEG可以更好。但是在实践中，往往是MEG的源重建精度更高。</p>
 <p>关于脑电图实验的成本，如果已经有了设备，并且使用32个电极的话，脑电图研究是很便宜的。但是如果你正在建立一个研究实验室并考虑设备预算，你应该关注哪种方法最适合你的研究问题，而不是什么方法最便宜，因为新采购一套 EEG 设备的成本并不比 MEG 和 fMRI 低。</p>
-<h2 id="3-Interpreting-and-Asking-Questions-about-Time-Frequency-Results"><a href="#3-Interpreting-and-Asking-Questions-about-Time-Frequency-Results" class="headerlink" title="3. Interpreting and Asking Questions about Time-Frequency Results"></a>3. Interpreting and Asking Questions about Time-Frequency Results</h2><p>EEG 包含着有节奏的活动，这种活动反映了神经的震荡。这些震荡有着不同的速度和持续时间，有些和事件有关，有些和事件无关。它由三种信息描述：频率、能量和相位。</p>
+<h2 id="interpreting-and-asking-questions-about-time-frequency-results">3. Interpreting and Asking Questions about Time-Frequency Results</h2>
+<p>EEG 包含着有节奏的活动，这种活动反映了神经的震荡。这些震荡有着不同的速度和持续时间，有些和事件有关，有些和事件无关。它由三种信息描述：频率、能量和相位。</p>
 <p>EEG波形的震荡往往是由几百上千个树突同步放电积累而来的，所以，EEG 实际上衡量的是介观尺度的大脑皮质电活动。</p>
 <p>脑波可以根据它们的频率分为delta (2–4 Hz), theta (4–8 Hz), alpha (8–12 Hz), beta (15–30 Hz), lower gamma (30–80 Hz), 和 upper gamma (80–150 Hz)。</p>
 <p>在频率和时间上同时精确定位振荡活动可能是困难的。一般来说，分析参数允许在一个域（时间或频率）中有较好的精度，而在另一个域中则有较差的精度。</p>
 <p>在实验时，脑波中会出现许多与任务无关的活动，称为背景活动。可以用基线归一化来消除存在于数据中但与任务无关的活动模式。在与任务相关的活动中，可以区分相位锁定和非相位锁定的活动。当活动在每个试验中的相位相同或非常相似时，就是锁相活动；而当活动在每个试验中的相位不同时，就是非锁相活动。</p>
 <p>许多距离较近的电极可能会记录相同来源的大脑活动，这会产生空间自相关现象（spatial autocorrelation），从而降低了空间精度。有一些空间滤波器可以降低空间自相关性，这些滤波器也可以使数据更适合于连通性分析。</p>
-<h3 id="时域空域频域时频域"><a href="#时域空域频域时频域" class="headerlink" title="时域空域频域时频域"></a>时域空域频域时频域</h3><p>关于如何观察时频分析的结果，可以通过下面的图感性理解。特殊地，在时频图中，时间在x轴上，频率在y轴上。通常情况下，频率系数的绘制方式是较高的频率朝向顶部。绘图的颜色（也称为z轴或深度）反映了时间-频率数据的一些特征，如功率、相位聚类、连接性或相关系数。</p>
-<p><img src="/images/%E6%97%B6%E9%A2%91%E5%9B%BE.png" alt="时频图"></p>
+<h3 id="时域空域频域时频域">时域空域频域时频域</h3>
+<p>关于如何观察时频分析的结果，可以通过下面的图感性理解。特殊地，在时频图中，时间在x轴上，频率在y轴上。通常情况下，频率系数的绘制方式是较高的频率朝向顶部。绘图的颜色（也称为z轴或深度）反映了时间-频率数据的一些特征，如功率、相位聚类、连接性或相关系数。</p>
+<figure>
+<img src="/images/时频图.png" alt=""><figcaption>时频图</figcaption>
+</figure>
 <p>此外，本书作者写了一个叫 tfviewerx 的 matlab 程序来帮助我们更好地理解脑电数据。</p>
-<h3 id="观察和解释时频数据"><a href="#观察和解释时频数据" class="headerlink" title="观察和解释时频数据"></a>观察和解释时频数据</h3><p>关于观察和解释时频数据，有一个简单的五步的方法。</p>
-<ol>
+<h3 id="观察和解释时频数据">观察和解释时频数据</h3>
+<p>关于观察和解释时频数据，有一个简单的五步的方法。</p>
+<ol type="1">
 <li>搞清楚图上画的是什么。</li>
 <li>观察图上数据的范围。</li>
 <li>观察结果。</li>
 <li>将结果和实验过程联系起来。</li>
 <li>理解数据处理的方法来帮助结果的解释。</li>
 </ol>
-<h3 id="一些值得怀疑的结果特征："><a href="#一些值得怀疑的结果特征：" class="headerlink" title="一些值得怀疑的结果特征："></a>一些值得怀疑的结果特征：</h3><ul>
+<h3 id="一些值得怀疑的结果特征">一些值得怀疑的结果特征：</h3>
+<ul>
 <li>时频图中的水平或垂直条纹：滤波器结构不良</li>
 <li>高频下短暂的大功率：可能由脑电图伪迹驱动，如放大器饱和或来自坏电极的噪声尖峰。</li>
 <li>宽带效应：机械噪声或下巴和颈部过度的肌肉活动</li>
 <li>颜色随时间或频率变化非常快：可能是分析中的错误</li>
 <li>奇怪的地形分布：噪声或坏电极或电极标签和物理位置之间的错误映射</li>
 </ul>
-<p><img src="/images/%E5%80%BC%E5%BE%97%E6%80%80%E7%96%91.png" alt="值得怀疑"></p>
-<h2 id="4-Introduction-to-Matlab-Programming"><a href="#4-Introduction-to-Matlab-Programming" class="headerlink" title="4 Introduction to Matlab Programming"></a>4 Introduction to Matlab Programming</h2><p>写 Matlab 代码的时候，应该写得干净而有效率。写干净代码的策略：写注释（想干什么、矩阵的长和宽、数据的维度）；将相同目的的代码放在一起，形成一个段落；使用可解释的变量名。有效率的代码跑得更快。干净有效的代码可以使思维过程清晰而去有组织。</p>
+<figure>
+<img src="/images/值得怀疑.png" alt=""><figcaption>值得怀疑</figcaption>
+</figure>
+<h2 id="introduction-to-matlab-programming">4 Introduction to Matlab Programming</h2>
+<p>写 Matlab 代码的时候，应该写得干净而有效率。写干净代码的策略：写注释（想干什么、矩阵的长和宽、数据的维度）；将相同目的的代码放在一起，形成一个段落；使用可解释的变量名。有效率的代码跑得更快。干净有效的代码可以使思维过程清晰而去有组织。</p>
 <p>一些建议：使用有意义的文件名和变量名；定期备份代码，修改之前先保存；定义变量的时候都要初始化；卡住的时候找人问问。</p>
 <p>遇到以下问题的时候怎么解决：</p>
 <ul>
 <li>你知道函数的名字但是不知道它干了啥</li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">help &lt;function name&gt;</span><br><span class="line">doc &lt;function name&gt;</span><br><span class="line">edit &lt;function name&gt;</span><br></pre></td></tr></table></figure>
-
 <ul>
-<li>你知道你想要matlab干啥，但是你不知道该怎么做<ul>
+<li>你知道你想要matlab干啥，但是你不知道该怎么做
+<ul>
 <li>查看帮助文档</li>
 <li>google</li>
 <li>问别人</li>
-</ul>
-</li>
-<li>跑代码的时候出错了<ul>
+</ul></li>
+<li>跑代码的时候出错了
+<ul>
 <li>定位错误位置、读代码</li>
 <li>函数不在 Matlab 的 PATH 中</li>
 <li>使用了与函数相同的变量名</li>
 <li>函数是为不同的操作系统编译的</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="Script-A-基本语法"><a href="#Script-A-基本语法" class="headerlink" title="Script A 基本语法"></a>Script A 基本语法</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">randperm(n)       %随机生成一个 n-排列</span><br><span class="line">mean([a, b, c])   %数组均值</span><br><span class="line">rand(4,6)         %随机的4 * 6矩阵</span><br><span class="line">[max_value max_value_index] = max( randperm( round( rand(1)*10 ) ) ); %函数嵌套 多个返回值</span><br><span class="line">length(random_number_matrix)    %最长维度的长度</span><br><span class="line">size(twinkies)</span><br><span class="line">size(twinkies,1)    %制定维度的大小</span><br><span class="line">numel(twinkies)     %元素个数</span><br><span class="line"></span><br><span class="line">for counting_variable = 1:2:10</span><br><span class="line">    %do something</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">if 4&gt;5</span><br><span class="line">    disp(&#x27;Something is still very wrong&#x27;)</span><br><span class="line">else</span><br><span class="line">    disp(&#x27;Whew! Everything&#x27;&#x27;s normal.&#x27;)</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">~(1==1)   %bool</span><br><span class="line"></span><br><span class="line">repmat(meanOverTime,1,size(mat,2));</span><br><span class="line"></span><br><span class="line">am = bsxfun(@minus,a,mean(a,2));  %快速对矩阵做一些操作</span><br></pre></td></tr></table></figure>
-
-<h3 id="Script-B-画图"><a href="#Script-B-画图" class="headerlink" title="Script B 画图"></a>Script B 画图</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">plot(x, y)</span><br><span class="line">plot3(x, y)</span><br><span class="line">hold on     %在原图上继续画</span><br><span class="line"></span><br><span class="line">figure</span><br><span class="line">subplot(1,2,1) % 1 row, 2 columns, make the first subplot active</span><br><span class="line">plot(randn(10,2))</span><br><span class="line">subplot(1,2,2) % 1 row, 2 columns, make the second subplot active</span><br><span class="line">plot(randn(10,2))</span><br><span class="line"></span><br><span class="line">imagesc(1:10:100,0:.1:1,randn(100)) %图片</span><br></pre></td></tr></table></figure>
-
-<h3 id="Script-C-文件操作、变量初始化"><a href="#Script-C-文件操作、变量初始化" class="headerlink" title="Script C    文件操作、变量初始化"></a>Script C    文件操作、变量初始化</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">clear   %清除工作区</span><br><span class="line"></span><br><span class="line">remove_me_please = 20;</span><br><span class="line">clear remove_me_please    %清除特定值</span><br><span class="line"></span><br><span class="line">data = load(&#x27;chapter04_datafile.txt&#x27;);    %加载数据</span><br><span class="line">[file_name,file_path]=uigetfile(&#x27;*.txt&#x27;); % ui = user-interface</span><br><span class="line">data = load([ file_path file_name ]);</span><br><span class="line"></span><br><span class="line">%复杂的例子</span><br><span class="line">fid = fopen(&#x27;chapter04_headache_data.txt&#x27;,&#x27;r&#x27;);</span><br><span class="line">behavioral_data=[]; </span><br><span class="line">datarow=1;</span><br><span class="line"></span><br><span class="line">while ~feof(fid) </span><br><span class="line">    dataline = fgetl(fid);</span><br><span class="line">    dataline = regexp(dataline,&#x27;\t&#x27;,&#x27;split&#x27;);</span><br><span class="line">    if ~any(strcmpi(&#x27;trial&#x27;,dataline))</span><br><span class="line">        continue</span><br><span class="line">    end</span><br><span class="line">    </span><br><span class="line">    trial_column    = find(strcmpi(&#x27;trial&#x27;,   dataline));</span><br><span class="line">    choice_column   = find(strcmpi(&#x27;choice&#x27;,  dataline));</span><br><span class="line">    rt_column       = find(strcmpi(&#x27;rt&#x27;,      dataline));</span><br><span class="line">    accuracy_column = find(strcmpi(&#x27;accuracy&#x27;,dataline));</span><br><span class="line">    </span><br><span class="line">    behavioral_data(datarow,1) = str2double(dataline&#123;trial_column+1&#125;);</span><br><span class="line">    behavioral_data(datarow,2) = str2double(dataline&#123;choice_column+1&#125;);</span><br><span class="line">    behavioral_data(datarow,3) = str2double(dataline&#123;rt_column+1&#125;);</span><br><span class="line">    behavioral_data(datarow,4) = str2double(dataline&#123;accuracy_column+1&#125;);</span><br><span class="line">    datarow=datarow+1; % increment row</span><br><span class="line">end</span><br><span class="line">fclose(fid);</span><br><span class="line"></span><br><span class="line">%保存文件</span><br><span class="line">save(&#x27;my_matlab_variables.mat&#x27;,&#x27;data&#x27;,&#x27;amsterdam&#x27;,&#x27;x&#x27;);</span><br><span class="line">dlmwrite(&#x27;data_written_from_matlab.txt&#x27;,data,&#x27;\t&#x27;);</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="5-Introduction-to-the-Phtsiological-Bases-of-EEG"><a href="#5-Introduction-to-the-Phtsiological-Bases-of-EEG" class="headerlink" title="5 Introduction to the Phtsiological Bases of EEG"></a>5 Introduction to the Phtsiological Bases of EEG</h2><p>脑电图只能测量大脑表层的电信号。一个是因为电信号会随着距离损耗，另外，不同神经元之间的电信号也有可能相互抵消。振荡是一种有节奏的状态交替，可以发生在时间或空间上。神经元的兴奋和抑制的相互交替被认为是主导EEG振荡的机制。</p>
-<h3 id="相位锁定和时间锁定"><a href="#相位锁定和时间锁定" class="headerlink" title="相位锁定和时间锁定"></a>相位锁定和时间锁定</h3><p><img src="/images/5_2%E7%9B%B8%E9%94%81%E5%92%8C%E6%97%B6%E9%94%81.png" alt="5_2相锁和时锁"></p>
+<h3 id="script-a-基本语法">Script A 基本语法</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">randperm(n)       %随机生成一个 n-排列</span><br><span class="line">mean([a, b, c])   %数组均值</span><br><span class="line">rand(4,6)         %随机的4 * 6矩阵</span><br><span class="line">[max_value max_value_index] = max( randperm( round( rand(1)*10 ) ) ); %函数嵌套 多个返回值</span><br><span class="line">length(random_number_matrix)    %最长维度的长度</span><br><span class="line">size(twinkies)</span><br><span class="line">size(twinkies,1)    %制定维度的大小</span><br><span class="line">numel(twinkies)     %元素个数</span><br><span class="line"></span><br><span class="line">for counting_variable = 1:2:10</span><br><span class="line">    %do something</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">if 4&gt;5</span><br><span class="line">    disp('Something is still very wrong')</span><br><span class="line">else</span><br><span class="line">    disp('Whew! Everything''s normal.')</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">~(1==1)   %bool</span><br><span class="line"></span><br><span class="line">repmat(meanOverTime,1,size(mat,2));</span><br><span class="line"></span><br><span class="line">am = bsxfun(@minus,a,mean(a,2));  %快速对矩阵做一些操作</span><br></pre></td></tr></table></figure>
+<h3 id="script-b-画图">Script B 画图</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">plot(x, y)</span><br><span class="line">plot3(x, y)</span><br><span class="line">hold on     %在原图上继续画</span><br><span class="line"></span><br><span class="line">figure</span><br><span class="line">subplot(1,2,1) % 1 row, 2 columns, make the first subplot active</span><br><span class="line">plot(randn(10,2))</span><br><span class="line">subplot(1,2,2) % 1 row, 2 columns, make the second subplot active</span><br><span class="line">plot(randn(10,2))</span><br><span class="line"></span><br><span class="line">imagesc(1:10:100,0:.1:1,randn(100)) %图片</span><br></pre></td></tr></table></figure>
+<h3 id="script-c-文件操作变量初始化">Script C 文件操作、变量初始化</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">clear   %清除工作区</span><br><span class="line"></span><br><span class="line">remove_me_please = 20;</span><br><span class="line">clear remove_me_please    %清除特定值</span><br><span class="line"></span><br><span class="line">data = load('chapter04_datafile.txt');    %加载数据</span><br><span class="line">[file_name,file_path]=uigetfile('*.txt'); % ui = user-interface</span><br><span class="line">data = load([ file_path file_name ]);</span><br><span class="line"></span><br><span class="line">%复杂的例子</span><br><span class="line">fid = fopen('chapter04_headache_data.txt','r');</span><br><span class="line">behavioral_data=[]; </span><br><span class="line">datarow=1;</span><br><span class="line"></span><br><span class="line">while ~feof(fid) </span><br><span class="line">    dataline = fgetl(fid);</span><br><span class="line">    dataline = regexp(dataline,'\t','split');</span><br><span class="line">    if ~any(strcmpi('trial',dataline))</span><br><span class="line">        continue</span><br><span class="line">    end</span><br><span class="line">    </span><br><span class="line">    trial_column    = find(strcmpi('trial',   dataline));</span><br><span class="line">    choice_column   = find(strcmpi('choice',  dataline));</span><br><span class="line">    rt_column       = find(strcmpi('rt',      dataline));</span><br><span class="line">    accuracy_column = find(strcmpi('accuracy',dataline));</span><br><span class="line">    </span><br><span class="line">    behavioral_data(datarow,1) = str2double(dataline{trial_column+1});</span><br><span class="line">    behavioral_data(datarow,2) = str2double(dataline{choice_column+1});</span><br><span class="line">    behavioral_data(datarow,3) = str2double(dataline{rt_column+1});</span><br><span class="line">    behavioral_data(datarow,4) = str2double(dataline{accuracy_column+1});</span><br><span class="line">    datarow=datarow+1; % increment row</span><br><span class="line">end</span><br><span class="line">fclose(fid);</span><br><span class="line"></span><br><span class="line">%保存文件</span><br><span class="line">save('my_matlab_variables.mat','data','amsterdam','x');</span><br><span class="line">dlmwrite('data_written_from_matlab.txt',data,'\t');</span><br></pre></td></tr></table></figure>
+<h2 id="introduction-to-the-phtsiological-bases-of-eeg">5 Introduction to the Phtsiological Bases of EEG</h2>
+<p>脑电图只能测量大脑表层的电信号。一个是因为电信号会随着距离损耗，另外，不同神经元之间的电信号也有可能相互抵消。振荡是一种有节奏的状态交替，可以发生在时间或空间上。神经元的兴奋和抑制的相互交替被认为是主导EEG振荡的机制。</p>
+<h3 id="相位锁定和时间锁定">相位锁定和时间锁定</h3>
+<figure>
+<img src="/images/5_2相锁和时锁.png" alt=""><figcaption>5_2相锁和时锁</figcaption>
+</figure>
 <p>图：黑线：原始时间序列、灰线：10-Hz功率的时间过程。</p>
-<p>锁相活动（有时也被称为 “诱发”）与时间=0事件的相位一致，因此将在时域平均（ERP）和时频域平均中观察到。非相位锁定的活动（有时也被称为 “诱导”）是时间锁定的。非锁相活动可以在时频域平均观察到，但不能在时域平均观察到（因此，它在ERP中没有表示）。目前还不完全清楚什么样的生理活动会导致锁相与非锁相活动，尽管在一般情况下，非锁相活动被认为是振荡存在的更有力的证据。</p>
+<p>锁相活动（有时也被称为 "诱发"）与时间=0事件的相位一致，因此将在时域平均（ERP）和时频域平均中观察到。非相位锁定的活动（有时也被称为 "诱导"）是时间锁定的。非锁相活动可以在时频域平均观察到，但不能在时域平均观察到（因此，它在ERP中没有表示）。目前还不完全清楚什么样的生理活动会导致锁相与非锁相活动，尽管在一般情况下，非锁相活动被认为是振荡存在的更有力的证据。</p>
 <p>关于ERP的生理解释的研究较少。加成型模型认为，ERP反映的信号是由外部刺激，如图片或声音，或由内部事件，如手动反应引起的，并添加到正在进行的背景振荡。相位重置模型认为，ERPs至少部分是由正在进行的振荡的相位突然对齐而产生的。</p>
 <p>电场和认知过程是否有因果关系？有很多理论认为是有的。如果它们与认知没有因果关系，而是由认知的真正基础机制所产生的现象，那么在研究大脑组织时使用场电位振荡仍然是有效的。沿着类似的脉络，人们并不普遍认为fMRI测量的血氧水平依赖性（BOLD）信号是神经信息处理的因果机制，但人们普遍认为BOLD反应是大脑功能的一个强大而有用的间接指标。缺乏因果关系并不能阻止世界各地成千上万的科学家利用BOLD信号来了解大脑功能组织。同样，对振荡在认知中的因果作用的确凿证据，也不会阻止认知电生理学家利用脑电图对认知和大脑的功能组织做出重要发现。</p>
-<h2 id="6-Practicalities-of-EEG-Measurement-and-Experiment-Design"><a href="#6-Practicalities-of-EEG-Measurement-and-Experiment-Design" class="headerlink" title="6 Practicalities of EEG Measurement and Experiment Design"></a>6 Practicalities of EEG Measurement and Experiment Design</h2><h3 id="实验设计"><a href="#实验设计" class="headerlink" title="实验设计"></a>实验设计</h3><p>实验设计非常重要。在为你的实验收集数据之前，与同事讨论你的实验设计，并让他们做任务，以给你对其设计的反馈。在继续收集大脑数据之前，先在行为上对你的实验进行试点测试，以确保你能获得预测的行为效果。然后，应该收集一两个受试者的脑电图数据，并完整地分析这些数据集。只有在分析这些试验数据集后，你才可能发现缺陷、次优设计特征、无关条件或需要额外条件。如果你对设计满意且不打算改变任何实验参数，你可以保留这些数据集用于最后的分析。如果你在尝试后改变了任务，那么至少你只需要扔掉一两个数据集，而不是20个数据集。</p>
-<h3 id="事件标签"><a href="#事件标签" class="headerlink" title="事件标签"></a>事件标签</h3><p>事件标记是重要的，因为它们用于离线锁定EEG数据的时间，它们也被用来重建不同的条件和反应。每个标记的时间持续时间（这指的是标记通道具有非零值的时间长度）至少应该是几个样本；如果采样率是500赫兹，一个0.5ms的标记可能不会被记录下来。另一方面，如果标记的持续时间为200毫秒，它们很可能与其他标记重叠。在一般情况下，5毫秒应该是一个足够的持续时间。</p>
-<p><img src="/images/6_1%E4%BA%8B%E4%BB%B6%E6%A0%87%E7%AD%BE.png" alt="6_1事件标签"></p>
+<h2 id="practicalities-of-eeg-measurement-and-experiment-design">6 Practicalities of EEG Measurement and Experiment Design</h2>
+<h3 id="实验设计">实验设计</h3>
+<p>实验设计非常重要。在为你的实验收集数据之前，与同事讨论你的实验设计，并让他们做任务，以给你对其设计的反馈。在继续收集大脑数据之前，先在行为上对你的实验进行试点测试，以确保你能获得预测的行为效果。然后，应该收集一两个受试者的脑电图数据，并完整地分析这些数据集。只有在分析这些试验数据集后，你才可能发现缺陷、次优设计特征、无关条件或需要额外条件。如果你对设计满意且不打算改变任何实验参数，你可以保留这些数据集用于最后的分析。如果你在尝试后改变了任务，那么至少你只需要扔掉一两个数据集，而不是20个数据集。</p>
+<h3 id="事件标签">事件标签</h3>
+<p>事件标记是重要的，因为它们用于离线锁定EEG数据的时间，它们也被用来重建不同的条件和反应。每个标记的时间持续时间（这指的是标记通道具有非零值的时间长度）至少应该是几个样本；如果采样率是500赫兹，一个0.5ms的标记可能不会被记录下来。另一方面，如果标记的持续时间为200毫秒，它们很可能与其他标记重叠。在一般情况下，5毫秒应该是一个足够的持续时间。</p>
+<figure>
+<img src="/images/6_1事件标签.png" alt=""><figcaption>6_1事件标签</figcaption>
+</figure>
 <p>有许多软件包，提供刺激主体和事件标记的脑电采集系统。一些软件程序是商业性的（例如，Presentation或E-Prime），和其他人是Matlab的工具箱（例如，Psychophysics工具箱或Cogent）。确保您使用的软件可以与计算机硬件集成，以最大限度地提高定时精度和刺激传递。因为时间和事件标记的值对实验非常关键，如果时间不对，或者值没有正确编码，你就无法对数据进行处理。因此，当使用新的软件或硬件时，最好确认定时和事件标记值。您可以通过发送代码1-256，标记之间有10毫秒的间隔来测试事件标记值。您应该能够从EEG数据中重建这些标记。如果不能，则是某个地方出了问题，可能是电脑输出端口或电缆出了问题。</p>
-<h3 id="事件时间长度的选择"><a href="#事件时间长度的选择" class="headerlink" title="事件时间长度的选择"></a>事件时间长度的选择</h3><p>大脑对一个事件的反应会持续多久，取决于任务的种类和认知过程。一个简单的和中性的视觉刺激，如Gabor补丁引起的时频动态，很可能在刺激偏移后迅速衰减。但是，一个贫穷国家的病童的图片所引起的时频动态可能需要更长的时间才能消退，因为对该图片的反应挥之不去。</p>
+<h3 id="事件时间长度的选择">事件时间长度的选择</h3>
+<p>大脑对一个事件的反应会持续多久，取决于任务的种类和认知过程。一个简单的和中性的视觉刺激，如Gabor补丁引起的时频动态，很可能在刺激偏移后迅速衰减。但是，一个贫穷国家的病童的图片所引起的时频动态可能需要更长的时间才能消退，因为对该图片的反应挥之不去。</p>
 <p>关于一个试验结束和下一个试验开始之间的时间长度（也称为实验间隔），仔细考虑要用多长的时间对任务相关数据进行基线归一化，以及想分析什么频率。时间-频率分解的基线时间段应该在试验开始前结束，例如-500到-200毫秒。这与ERP不同，ERP的基线期通常在时间=0事件时结束。实验间隔可以是恒定的（如每次试验1000毫秒），也可以是可变的（如每次试验从800毫秒到1200毫秒的间隔中随机选择）。这些选择各有优缺点。一方面，如果受试者可以预测即将到来的试验的时间起始，他们可以为试验做准备，这种准备可能会反映在EEG中。另一方面，随着试验间歇的变化，被试可能会试图猜测下一次试验的开始，这可能会引入时间预期、惊喜和可变的任务准备。受试者几乎总是会产生关于下一次试验何时发生的时间预期，这些预期很可能会影响EEG和行为。问题是在实验中是否要约束这些预期，还是让它们不受约束。</p>
-<h3 id="试验次数的选择"><a href="#试验次数的选择" class="headerlink" title="试验次数的选择"></a>试验次数的选择</h3><p>要进行多少次实验取决于数据的信噪比，效果好坏，以及将执行的分析类型。每个受试者至少进行50次试验是一个合理的试验次数，应该导致足够的信噪比水平。</p>
-<h3 id="电极个数的选择"><a href="#电极个数的选择" class="headerlink" title="电极个数的选择"></a>电极个数的选择</h3><p>取决于实验内容。脑源重建分析，并对大脑定位进行推断之类的任务中，100+个电极是需要的，而测量P3振幅理论上只需要三个电极。一般建议使用64电极。这将允许应用空间过滤器，进行连接分析，并检查结果的地形分布。也取决于实验条件，64个电极的电极帽一般可以由两个人在半个小时以内准备好。</p>
-<h3 id="采样率的选择"><a href="#采样率的选择" class="headerlink" title="采样率的选择"></a>采样率的选择</h3><p>理论上，需要至少对感兴趣的最高频率进行两倍的采样。这意味着，如果你想测试50Hz的活动，你需要使用至少100Hz的采样率。在实践中，500赫兹和2000赫兹之间的采样率对几乎所有分析都足够了。从分析方便的角度来看，1000 Hz是最佳的采样率。在1000赫兹时，以毫秒为单位的时间和以样本为单位的时间之间有一个一比一的转换。</p>
-<p><img src="/images/6_2%E9%87%87%E6%A0%B7%E7%8E%87%E7%9A%84%E9%80%89%E6%8B%A9.png" alt="6_2采样率的选择"></p>
-<h1 id="II-Preprocessing-and-Time-Domain-Analyses"><a href="#II-Preprocessing-and-Time-Domain-Analyses" class="headerlink" title="II Preprocessing and Time-Domain Analyses"></a>II Preprocessing and Time-Domain Analyses</h1><h2 id="7-Preprocessing-Steps-Necessary-and-Useful-for-Advanced-Data-Analysis"><a href="#7-Preprocessing-Steps-Necessary-and-Useful-for-Advanced-Data-Analysis" class="headerlink" title="7 Preprocessing Steps Necessary and Useful for Advanced Data Analysis"></a>7 Preprocessing Steps Necessary and Useful for Advanced Data Analysis</h2><p>预处理是指从收集数据到分析数据之间发生的任何转换或重组。有些预处理方法只是重新组织数据（切割，提取epoch），有些方法涉及到数据的清洗（删除坏的导联，拒绝不好的epoch），还有一些会改变原本干净的数据（时间过滤器或空间变换）。</p>
-<h3 id="噪声"><a href="#噪声" class="headerlink" title="噪声"></a>噪声</h3><p>EEG数据包含信号和噪声。适当的预处理将减弱数据中的噪声。然而信号和噪声经常混在一起，可能难以完全分离。这就导致了信号和噪声之间的权衡。脑电图数据的某个特征是被认为是噪声还是信号，取决于研究者和研究的目标。</p>
+<h3 id="试验次数的选择">试验次数的选择</h3>
+<p>要进行多少次实验取决于数据的信噪比，效果好坏，以及将执行的分析类型。每个受试者至少进行50次试验是一个合理的试验次数，应该导致足够的信噪比水平。</p>
+<h3 id="电极个数的选择">电极个数的选择</h3>
+<p>取决于实验内容。脑源重建分析，并对大脑定位进行推断之类的任务中，100+个电极是需要的，而测量P3振幅理论上只需要三个电极。一般建议使用64电极。这将允许应用空间过滤器，进行连接分析，并检查结果的地形分布。也取决于实验条件，64个电极的电极帽一般可以由两个人在半个小时以内准备好。</p>
+<h3 id="采样率的选择">采样率的选择</h3>
+<p>理论上，需要至少对感兴趣的最高频率进行两倍的采样。这意味着，如果你想测试50Hz的活动，你需要使用至少100Hz的采样率。在实践中，500赫兹和2000赫兹之间的采样率对几乎所有分析都足够了。从分析方便的角度来看，1000 Hz是最佳的采样率。在1000赫兹时，以毫秒为单位的时间和以样本为单位的时间之间有一个一比一的转换。</p>
+<figure>
+<img src="/images/6_2采样率的选择.png" alt=""><figcaption>6_2采样率的选择</figcaption>
+</figure>
+<h1 id="ii-preprocessing-and-time-domain-analyses">II Preprocessing and Time-Domain Analyses</h1>
+<h2 id="preprocessing-steps-necessary-and-useful-for-advanced-data-analysis">7 Preprocessing Steps Necessary and Useful for Advanced Data Analysis</h2>
+<p>预处理是指从收集数据到分析数据之间发生的任何转换或重组。有些预处理方法只是重新组织数据（切割，提取epoch），有些方法涉及到数据的清洗（删除坏的导联，拒绝不好的epoch），还有一些会改变原本干净的数据（时间过滤器或空间变换）。</p>
+<h3 id="噪声">噪声</h3>
+<p>EEG数据包含信号和噪声。适当的预处理将减弱数据中的噪声。然而信号和噪声经常混在一起，可能难以完全分离。这就导致了信号和噪声之间的权衡。脑电图数据的某个特征是被认为是噪声还是信号，取决于研究者和研究的目标。</p>
 <p>平衡信号和噪声之间的标准将影响后续预处理流程的每一步。在哪里设置这个标准也取决于你有多少数据，以及数据的获取难度。</p>
 <p>基于时间-频率的分析往往会增加数据的信噪比特征。</p>
-<h3 id="时期"><a href="#时期" class="headerlink" title="时期"></a>时期</h3><p>脑电图数据是连续记录的，因此被表示为二维矩阵（时间和电极）。经过 epoch 的分割，数据被表示为三维矩阵（电极，时间和试验）。在划分 epoch 时，首先要确定的是用来锁定时间的事件。然后，在时间=0事件的之前和之后应该保留一些时间间隔，在 ERP 试验中，-200毫秒到800毫秒应该就够了，但是对于时频分析，可能需要更长的时间。</p>
+<h3 id="时期">时期</h3>
+<p>脑电图数据是连续记录的，因此被表示为二维矩阵（时间和电极）。经过 epoch 的分割，数据被表示为三维矩阵（电极，时间和试验）。在划分 epoch 时，首先要确定的是用来锁定时间的事件。然后，在时间=0事件的之前和之后应该保留一些时间间隔，在 ERP 试验中，-200毫秒到800毫秒应该就够了，但是对于时频分析，可能需要更长的时间。</p>
 <p>需要注意的是，如果保留的时间间隔过长，相同的数据可能会在不同的试次中存在冗余，这对一般的分析是没问题的，但是如果要进行 ICA 分析，那这些冗余数据可能会带来偏差。</p>
-<h3 id="试验次数的影响"><a href="#试验次数的影响" class="headerlink" title="试验次数的影响"></a>试验次数的影响</h3><p>理想的情况是所有条件的试验次数相同。根据所进行的分析，试验次数的差异可能影响不大，也可能对结果有重大影响。一般来说，基于相位的分析比基于功率或ERP的分析对试验次数更敏感。</p>
+<h3 id="试验次数的影响">试验次数的影响</h3>
+<p>理想的情况是所有条件的试验次数相同。根据所进行的分析，试验次数的差异可能影响不大，也可能对结果有重大影响。一般来说，基于相位的分析比基于功率或ERP的分析对试验次数更敏感。</p>
 <p>由于时域电压值可以取负值或正值，因此ERP不会因低试验次数而产生具体的负或正偏倚。然而，低试验次数会降低信噪比，因此使ERP对离群值或非代表性数据更敏感。对于低试验次数的ERP，取时间范围内的平均振幅与峰值时间相比，对噪声更为稳健。</p>
 <p>如果各试验的试验次数不平衡，你可以考虑视情况匹配试验次数。</p>
 <ul>
@@ -306,49 +448,81 @@
 <li>随机选择。</li>
 <li>根据一些相关的行为或实验变量（如反应时间）来选择试验。选择一个试验的子集，使试验的反应时间的分布在不同条件下是相似的。</li>
 </ul>
-<h3 id="滤波"><a href="#滤波" class="headerlink" title="滤波"></a>滤波</h3><p>滤波数据可以帮助去除高频伪影和低频漂移，50 Hz或60 Hz的缺口滤波器有助于减弱电气线路噪声。大多数时频分解方法(小波卷积、FFT、滤波-希尔伯特)都涉及到对数据应用一组时空滤波器。</p>
+<h3 id="滤波">滤波</h3>
+<p>滤波数据可以帮助去除高频伪影和低频漂移，50 Hz或60 Hz的缺口滤波器有助于减弱电气线路噪声。大多数时频分解方法(小波卷积、FFT、滤波-希尔伯特)都涉及到对数据应用一组时空滤波器。</p>
 <p>但是如果要进行时频分析那么滤波可能不是必要的。例如，如果您将执行时频分析以提取2至20 Hz的功率，就没有必要对40 Hz的时域数据进行低通滤波。</p>
-<h3 id="拒绝试次"><a href="#拒绝试次" class="headerlink" title="拒绝试次"></a>拒绝试次</h3><p>可以根据先验知识拒绝一些不好的试次。有两种方法，人工和自动。但是作者认为一些自动的方法都不太行，而且会产生一些错误，所以最好还是手动。应该根据你的经验、偏好和数据来决定是使用手动还是自动剔除。</p>
-<h3 id="空间滤波"><a href="#空间滤波" class="headerlink" title="空间滤波"></a>空间滤波</h3><p>对数据进行空间滤波的原因：</p>
-<ol>
+<h3 id="拒绝试次">拒绝试次</h3>
+<p>可以根据先验知识拒绝一些不好的试次。有两种方法，人工和自动。但是作者认为一些自动的方法都不太行，而且会产生一些错误，所以最好还是手动。应该根据你的经验、偏好和数据来决定是使用手动还是自动剔除。</p>
+<h3 id="空间滤波">空间滤波</h3>
+<p>对数据进行空间滤波的原因：</p>
+<ol type="1">
 <li>帮助定位一个结果。表面拉普拉奇或拟合偶极子</li>
 <li>通过过滤掉低空间频率特征来隔离数据的地形特征。</li>
 <li>作为连接分析的预处理步骤。</li>
 </ol>
-<h3 id="参考电极"><a href="#参考电极" class="headerlink" title="参考电极"></a>参考电极</h3><p>一般选乳突或者耳垂。图为选择不同参考电位的效果。</p>
-<p>![Screen Shot 2020-11-26 at 9.24.07 AM](/images/Screen Shot 2020-11-26 at 9.24.07 AM.png)</p>
-<h3 id="坏电极插值"><a href="#坏电极插值" class="headerlink" title="坏电极插值"></a>坏电极插值</h3><p>内插是根据其他电极的活动和位置估计缺失电极的数据的过程。大多数插值算法使用加权距离度量，如最近邻，线性或花键。你的电极越多，估计就越准确。插值电极的问题是，他们不提供独特的数据，他们是一个完美的加权和其他电极的活动。这降低了数据矩阵的秩，这可能会导致在分析中的问题。插值坏电极的替代方法是简单地忽略他们从数据中删除。</p>
+<h3 id="参考电极">参考电极</h3>
+<p>一般选乳突或者耳垂。图为选择不同参考电位的效果。</p>
+<figure>
+<img src="/images/Screen%20Shot%202020-11-26%20at%209.24.07%20AM.png" alt=""><figcaption>Screen Shot 2020-11-26 at 9.24.07 AM</figcaption>
+</figure>
+<h3 id="坏电极插值">坏电极插值</h3>
+<p>内插是根据其他电极的活动和位置估计缺失电极的数据的过程。大多数插值算法使用加权距离度量，如最近邻，线性或花键。你的电极越多，估计就越准确。插值电极的问题是，他们不提供独特的数据，他们是一个完美的加权和其他电极的活动。这降低了数据矩阵的秩，这可能会导致在分析中的问题。插值坏电极的替代方法是简单地忽略他们从数据中删除。</p>
 <p>要通过观察数据考虑是否对坏电极插值。</p>
-<h3 id="干净的数据"><a href="#干净的数据" class="headerlink" title="干净的数据"></a>干净的数据</h3><p>没有任何数据分析可以替代干净的数据。如果你从糟糕的数据开始，最复杂的数据分析也会给你带来糟糕的结果。另一方面，如果你有非常干净和高信噪比的数据，即使是适度的分析也能提供令人信服和有洞察力的结果。 预处理可以帮助将好的数据变成非常好的数据，但任何数量的预处理都不会将低质量和有噪声的数据变成非常好的数据。如果你对数据质量不满意，不要急于进行记录，如果在记录过程中数据质量突然下降，而你又认为自己可以解决，不要害怕暂停实验。向受试者解释（如果他们是人并且是清醒的）收集干净数据的重要性；他们会努力帮助你提供干净的数据。</p>
-<h2 id="8-EEG-Artifacts-Their-Detection-Influence-and-Removal"><a href="#8-EEG-Artifacts-Their-Detection-Influence-and-Removal" class="headerlink" title="8 EEG Artifacts: Their Detection, Influence, and Removal"></a>8 EEG Artifacts: Their Detection, Influence, and Removal</h2><p>伪迹一般有眼动，肌肉运动，放大器饱和和线材的噪声。但是这些并不是伪迹的所有来源，还有一些认知产生的伪迹难以处理。</p>
-<h3 id="独立成分分析（ICA）"><a href="#独立成分分析（ICA）" class="headerlink" title="独立成分分析（ICA）"></a>独立成分分析（ICA）</h3><p>独立成分分析是一种源分离技术，它将脑电图时间序列数据分解成一组成分，试图识别数据中的独立方差源。在脑电图的背景下，独立成分分析为所有电极提供了一组权重，这样每个成分是所有电极活动的加权和，权重被设计成隔离脑电信号的来源。通过识别隔离伪影的成分，然后从数据中减去这些成分，独立成分分析可以用来清理脑电图数据。许多工具包，例如 EEGLAB 提供了 ICA 功能。</p>
-<h3 id="去除眨眼干扰的试次"><a href="#去除眨眼干扰的试次" class="headerlink" title="去除眨眼干扰的试次"></a>去除眨眼干扰的试次</h3><p>可以通过 ICA 或者基于回归的方法尽可能减少 EEG 中眨眼的干扰。但是尽管如此，还是需要考虑拒绝一些包含眨眼的试次。例如，ICA 可以处理时间较长的眨眼，但是较短的眨眼却很难处理；再例如，在一些视觉任务中，眨眼就意味着有一些视觉信息没有被捕捉到。</p>
+<h3 id="干净的数据">干净的数据</h3>
+<p>没有任何数据分析可以替代干净的数据。如果你从糟糕的数据开始，最复杂的数据分析也会给你带来糟糕的结果。另一方面，如果你有非常干净和高信噪比的数据，即使是适度的分析也能提供令人信服和有洞察力的结果。 预处理可以帮助将好的数据变成非常好的数据，但任何数量的预处理都不会将低质量和有噪声的数据变成非常好的数据。如果你对数据质量不满意，不要急于进行记录，如果在记录过程中数据质量突然下降，而你又认为自己可以解决，不要害怕暂停实验。向受试者解释（如果他们是人并且是清醒的）收集干净数据的重要性；他们会努力帮助你提供干净的数据。</p>
+<h2 id="eeg-artifacts-their-detection-influence-and-removal">8 EEG Artifacts: Their Detection, Influence, and Removal</h2>
+<p>伪迹一般有眼动，肌肉运动，放大器饱和和线材的噪声。但是这些并不是伪迹的所有来源，还有一些认知产生的伪迹难以处理。</p>
+<h3 id="独立成分分析ica">独立成分分析（ICA）</h3>
+<p>独立成分分析是一种源分离技术，它将脑电图时间序列数据分解成一组成分，试图识别数据中的独立方差源。在脑电图的背景下，独立成分分析为所有电极提供了一组权重，这样每个成分是所有电极活动的加权和，权重被设计成隔离脑电信号的来源。通过识别隔离伪影的成分，然后从数据中减去这些成分，独立成分分析可以用来清理脑电图数据。许多工具包，例如 EEGLAB 提供了 ICA 功能。</p>
+<h3 id="去除眨眼干扰的试次">去除眨眼干扰的试次</h3>
+<p>可以通过 ICA 或者基于回归的方法尽可能减少 EEG 中眨眼的干扰。但是尽管如此，还是需要考虑拒绝一些包含眨眼的试次。例如，ICA 可以处理时间较长的眨眼，但是较短的眨眼却很难处理；再例如，在一些视觉任务中，眨眼就意味着有一些视觉信息没有被捕捉到。</p>
 <p>另外，一些研究者特别指示受试者在试验过程中抑制眨眼，只在指定的时间或试验间歇期间眨眼。但是实际上，抑制眨眼是一件很困难的事情，依赖于皮质眼球网络，可能会在额顶叶眼动电路中引入与任务无关但刺激锁定的活动，也可能对认知能力造成干扰。最后，如果允许受试者在试验间歇期眨眼，那么这个时间段可能不适合作为时间-频率动态正常化的基线。</p>
-<h3 id="去除包含眼动的试次"><a href="#去除包含眼动的试次" class="headerlink" title="去除包含眼动的试次"></a>去除包含眼动的试次</h3><p>其他眼动的干扰可以通过实验设计最小化，通过在实验显示器上的中心位置有视觉刺激，从而最大限度地减少受试者四处寻找的需要。在显示器上始终有一个容易看到的固定点，也可以帮助被试者防止眼球运动。</p>
+<h3 id="去除包含眼动的试次">去除包含眼动的试次</h3>
+<p>其他眼动的干扰可以通过实验设计最小化，通过在实验显示器上的中心位置有视觉刺激，从而最大限度地减少受试者四处寻找的需要。在显示器上始终有一个容易看到的固定点，也可以帮助被试者防止眼球运动。</p>
 <p>此外，一些空间滤波技术也有助于防止眼球运动伪影蔓延到其他电极的活动。</p>
-<h3 id="根据-EMG-数据移除-EEG-频道上的试次"><a href="#根据-EMG-数据移除-EEG-频道上的试次" class="headerlink" title="根据 EMG 数据移除 EEG 频道上的试次"></a>根据 EMG 数据移除 EEG 频道上的试次</h3><p>可以根据肌电图轻松看出肌肉运动的情况，然后可以根据肌电图去除 EEG 中对应的数据。具体略。</p>
-<h3 id="根据任务表现去除试次"><a href="#根据任务表现去除试次" class="headerlink" title="根据任务表现去除试次"></a>根据任务表现去除试次</h3><p>如果您的任务涉及到可以准确或不准确的响应，您可能会想要删除或至少分离错误试验。根据您的任务，可能会有额外的理由来删除被怀疑包含认知噪音的试验。如果你不研究这些切换成本，你可能要从数据中排除切换试验。</p>
-<h3 id="根据手部肌肉肌电图去除试次"><a href="#根据手部肌肉肌电图去除试次" class="headerlink" title="根据手部肌肉肌电图去除试次"></a>根据手部肌肉肌电图去除试次</h3><p>如果您的实验和实验室设置允许，可以考虑从受试者用于指示响应的肌肉（例如，从用于按下按钮的手指）记录EMG。这将允许你识别数据中的部分错误试验。</p>
-<h3 id="在收集数据的时候最小化伪迹"><a href="#在收集数据的时候最小化伪迹" class="headerlink" title="在收集数据的时候最小化伪迹"></a>在收集数据的时候最小化伪迹</h3><p>没有任何预处理或分析技巧可以将低质量、有噪声的数据变成漂亮的结果。要想让你的预处理协议变成非常好的数据，最好的方法就是从好数据开始。在任务之前训练被试是确保你将拥有好数据的一部分。</p>
-<h2 id="9-Overview-of-Time-Domain-EEG-Analyses"><a href="#9-Overview-of-Time-Domain-EEG-Analyses" class="headerlink" title="9 Overview of Time-Domain EEG Analyses"></a>9 Overview of Time-Domain EEG Analyses</h2><h3 id="事件相关电位-ERP"><a href="#事件相关电位-ERP" class="headerlink" title="事件相关电位 ERP"></a>事件相关电位 ERP</h3><p>事件相关电位的想法很简单：每次试验中的信号往往是相似的，而噪声则各不相同并且随机分布在 0 附近。于是我们将事件按时间对准，计算每个时间点各次试验的均值，于是就得到了 ERP。</p>
-<p><img src="file:///Users/lihaoyang/Code/StudyIn2020/notes/ANTS/9_1ERP.png?lastModify=1612963082" alt="9_1ERP"></p>
+<h3 id="根据-emg-数据移除-eeg-频道上的试次">根据 EMG 数据移除 EEG 频道上的试次</h3>
+<p>可以根据肌电图轻松看出肌肉运动的情况，然后可以根据肌电图去除 EEG 中对应的数据。具体略。</p>
+<h3 id="根据任务表现去除试次">根据任务表现去除试次</h3>
+<p>如果您的任务涉及到可以准确或不准确的响应，您可能会想要删除或至少分离错误试验。根据您的任务，可能会有额外的理由来删除被怀疑包含认知噪音的试验。如果你不研究这些切换成本，你可能要从数据中排除切换试验。</p>
+<h3 id="根据手部肌肉肌电图去除试次">根据手部肌肉肌电图去除试次</h3>
+<p>如果您的实验和实验室设置允许，可以考虑从受试者用于指示响应的肌肉（例如，从用于按下按钮的手指）记录EMG。这将允许你识别数据中的部分错误试验。</p>
+<h3 id="在收集数据的时候最小化伪迹">在收集数据的时候最小化伪迹</h3>
+<p>没有任何预处理或分析技巧可以将低质量、有噪声的数据变成漂亮的结果。要想让你的预处理协议变成非常好的数据，最好的方法就是从好数据开始。在任务之前训练被试是确保你将拥有好数据的一部分。</p>
+<h2 id="overview-of-time-domain-eeg-analyses">9 Overview of Time-Domain EEG Analyses</h2>
+<h3 id="事件相关电位-erp">事件相关电位 ERP</h3>
+<p>事件相关电位的想法很简单：每次试验中的信号往往是相似的，而噪声则各不相同并且随机分布在 0 附近。于是我们将事件按时间对准，计算每个时间点各次试验的均值，于是就得到了 ERP。</p>
+<figure>
+<img src="file:///Users/lihaoyang/Code/StudyIn2020/notes/ANTS/9_1ERP.png?lastModify=1612963082" alt=""><figcaption>9_1ERP</figcaption>
+</figure>
 <p>更多关于 ERP 和认知相关的部分详见 Luck 的书。</p>
-<h2 id="过滤-ERPs"><a href="#过滤-ERPs" class="headerlink" title="过滤 ERPs"></a>过滤 ERPs</h2><p>首先，对于时域信号的平均本身就可以视为一个低通过滤器，它会过滤掉非相位锁定的活动。所以，对 ERP 的过滤有时并不是必要的。</p>
+<h2 id="过滤-erps">过滤 ERPs</h2>
+<p>首先，对于时域信号的平均本身就可以视为一个低通过滤器，它会过滤掉非相位锁定的活动。所以，对 ERP 的过滤有时并不是必要的。</p>
 <p>一般用20～30Hz的截止频率进行滤波，有时也会用5～10Hz的截止频率。注意，要先计算 ERPs，然后再对它们进行滤波。</p>
 <p>对 ERPs 的滤波可能会带来一些问题。首先，如果滤波器设计的不好，在结果中可能会引入一些波纹（ripples, aka ringing artifacts）。然后，一些滤波器可能会导致结果的系统性偏差。最后，应用低通滤波器会降低时间精度，因为每个时间点的电压值会变成前一个和后一个时间点的电压值的加权平均值。因此，ERPs 的主要优势之一（其高时间精度）被降低。滤波器的截止频率越低，时间精度损失越大。下图说明了滤波对 ERPs 的影响。</p>
-<p><img src="file:///Users/lihaoyang/Code/StudyIn2020/notes/ANTS/9_2ERP滤波.png?lastModify=1612963082" alt="9_2ERP滤波"></p>
-<h3 id="蝴蝶图、全局场能量和地形变化图"><a href="#蝴蝶图、全局场能量和地形变化图" class="headerlink" title="蝴蝶图、全局场能量和地形变化图"></a>蝴蝶图、全局场能量和地形变化图</h3><p>蝴蝶图（Butterfly Plots）显示了所有电极的ERP重叠在同一图中，它对于检测坏的或有噪音的电极是有用的。</p>
+<figure>
+<img src="file:///Users/lihaoyang/Code/StudyIn2020/notes/ANTS/9_2ERP滤波.png?lastModify=1612963082" alt=""><figcaption>9_2ERP滤波</figcaption>
+</figure>
+<h3 id="蝴蝶图全局场能量和地形变化图">蝴蝶图、全局场能量和地形变化图</h3>
+<p>蝴蝶图（Butterfly Plots）显示了所有电极的ERP重叠在同一图中，它对于检测坏的或有噪音的电极是有用的。</p>
 <p>全局场功率是所有电极的活动的标准偏差。地形变异突出了全局场功率，从而便于视觉检查。</p>
-<p><img src="file:///Users/lihaoyang/Code/StudyIn2020/notes/ANTS/9_3蝴蝶图.png?lastModify=1612963082" alt="9_3蝴蝶图"></p>
-<h3 id="闪烁效应（The-Flicker-Effect）"><a href="#闪烁效应（The-Flicker-Effect）" class="headerlink" title="闪烁效应（The Flicker Effect）"></a>闪烁效应（The Flicker Effect）</h3><p>闪烁效应指的是大脑活动中夹杂了一个有节奏的外在驱动因素。例如，如果你看一盏闪烁频率为20赫兹的频闪灯，你的视觉皮层将有20赫兹的节律性活动，相位锁定在频闪灯的每一束光上。闪烁效应可以说是认知电生理学中一个未被充分利用的工具。闪烁效应的主要好处是，它允许你 “标记 “特定刺激的处理。例如，通过有多个刺激，在不同的频率在屏幕上闪烁在同一时间，你可以独立地跟踪处理每个标记的刺激，在刺激频率的EEG功率的变化测量。这是一个强大的技术，因为脑电图的空间精度和准确性通常太低，检查特定刺激的表示。闪烁效应允许你 “伪造 “一个非常高的空间分辨率，就像你可以隔离对一个刺激作出反应的神经元群体。闪烁效应的一个局限性是其糟糕的时间精度：闪烁效应需要几百毫秒才能稳定下来，而较长的时间段提供了更高的信噪比。因此，这种方法对于可以在屏幕上停留几秒钟的刺激来说是理想的。</p>
+<figure>
+<img src="file:///Users/lihaoyang/Code/StudyIn2020/notes/ANTS/9_3蝴蝶图.png?lastModify=1612963082" alt=""><figcaption>9_3蝴蝶图</figcaption>
+</figure>
+<h3 id="闪烁效应the-flicker-effect">闪烁效应（The Flicker Effect）</h3>
+<p>闪烁效应指的是大脑活动中夹杂了一个有节奏的外在驱动因素。例如，如果你看一盏闪烁频率为20赫兹的频闪灯，你的视觉皮层将有20赫兹的节律性活动，相位锁定在频闪灯的每一束光上。闪烁效应可以说是认知电生理学中一个未被充分利用的工具。闪烁效应的主要好处是，它允许你 "标记 "特定刺激的处理。例如，通过有多个刺激，在不同的频率在屏幕上闪烁在同一时间，你可以独立地跟踪处理每个标记的刺激，在刺激频率的EEG功率的变化测量。这是一个强大的技术，因为脑电图的空间精度和准确性通常太低，检查特定刺激的表示。闪烁效应允许你 "伪造 "一个非常高的空间分辨率，就像你可以隔离对一个刺激作出反应的神经元群体。闪烁效应的一个局限性是其糟糕的时间精度：闪烁效应需要几百毫秒才能稳定下来，而较长的时间段提供了更高的信噪比。因此，这种方法对于可以在屏幕上停留几秒钟的刺激来说是理想的。</p>
 <p>有证据表明，刺激闪烁可以夹带大脑活动超出刺激的感觉区域。例如，θ波段视觉闪烁会增加内侧前额叶区域的血流动力学活动。EEG和MEG研究表明，空间上广泛的网络，包括额叶和旁叶区域，可以表现出闪烁效应，在某些情况下，似乎取决于闪烁频率。</p>
 <p>一般来说，在频谱图中应该很容易观察到闪烁频率的频域峰值。</p>
-<h3 id="地形图（Topographical-Maps）"><a href="#地形图（Topographical-Maps）" class="headerlink" title="地形图（Topographical Maps）"></a>地形图（Topographical Maps）</h3><p>地形图是一种优秀的、几乎无处不在的方法，用于显示脑电图结果的空间分布。在Matlab中，创建地形图可以通过在表面上定义一组网格点来完成，根据已知地形位置的数据，在其上进行数据插值。网格点越多（也就是表面网格越细），地形图就越平滑。</p>
+<h3 id="地形图topographical-maps">地形图（Topographical Maps）</h3>
+<p>地形图是一种优秀的、几乎无处不在的方法，用于显示脑电图结果的空间分布。在Matlab中，创建地形图可以通过在表面上定义一组网格点来完成，根据已知地形位置的数据，在其上进行数据插值。网格点越多（也就是表面网格越细），地形图就越平滑。</p>
 <p>对每个对象检查地形图的ERPs是个好主意，ERPs的地形图提供了极好的和快速的数据检查的可能性。地形图允许你确认任务事件的时间和检测坏或噪音电极。</p>
-<h3 id="微状态（microstates）"><a href="#微状态（microstates）" class="headerlink" title="微状态（microstates）"></a>微状态（microstates）</h3><p>在脑电图以及ERP地图系列中，在短暂的亚秒级时间段内，地图景观通常保持准稳定，然后很快变化成不同的景观。为了识别微观状态，考虑到当存在时间上稳定的地形分布时，t和t+1时间的地形图之间的差异很小。例如，在电压在连续两个时间点上没有变化的情况下，时间差为零。与此相反，在拓扑分布的活动（电生理活动的皮层景观）从一个时间点到下一个快速变化将导致一个大的时间差。因此，当时间差（也称为全局地图异同）保持低的几十到几百毫秒的时间，然后突然变得相对较大，这种急剧增加被认为是从一个状态到另一个状态的过渡。然后将稳定的地图用于分层聚类分析，以确定少数最能描述稳定期地形图特征的地形分布。这些称为聚类图。最后，根据每个时间点的地形图与其最相似的聚类图进行标注。软件包<a href="sites.google.com/site/fbmlab/cartool">cartool</a>是为研究微观状态而设计的。</p>
-<h3 id="ERP-图-ERP-Images"><a href="#ERP-图-ERP-Images" class="headerlink" title="ERP 图 (ERP Images)"></a>ERP 图 (ERP Images)</h3><p>ERP 图没有将所有试验平均起来，而是把单次的ERP数据堆叠起来，用颜色编码，来反映振幅的变化。他们也是作为单主体数据检查工具使用，因为试验与大振幅数据（可能包含伪影）可以很容易地看到。ERP图像也可以用来链接试验变化的任务参数或行为的时域EEG信号。</p>
+<h3 id="微状态microstates">微状态（microstates）</h3>
+<p>在脑电图以及ERP地图系列中，在短暂的亚秒级时间段内，地图景观通常保持准稳定，然后很快变化成不同的景观。为了识别微观状态，考虑到当存在时间上稳定的地形分布时，t和t+1时间的地形图之间的差异很小。例如，在电压在连续两个时间点上没有变化的情况下，时间差为零。与此相反，在拓扑分布的活动（电生理活动的皮层景观）从一个时间点到下一个快速变化将导致一个大的时间差。因此，当时间差（也称为全局地图异同）保持低的几十到几百毫秒的时间，然后突然变得相对较大，这种急剧增加被认为是从一个状态到另一个状态的过渡。然后将稳定的地图用于分层聚类分析，以确定少数最能描述稳定期地形图特征的地形分布。这些称为聚类图。最后，根据每个时间点的地形图与其最相似的聚类图进行标注。软件包<a href="sites.google.com/site/fbmlab/cartool">cartool</a>是为研究微观状态而设计的。</p>
+<h3 id="erp-图-erp-images">ERP 图 (ERP Images)</h3>
+<p>ERP 图没有将所有试验平均起来，而是把单次的ERP数据堆叠起来，用颜色编码，来反映振幅的变化。他们也是作为单主体数据检查工具使用，因为试验与大振幅数据（可能包含伪影）可以很容易地看到。ERP图像也可以用来链接试验变化的任务参数或行为的时域EEG信号。</p>
 <p>ERP图像并不限于时域脑电图数据，他们也可以从频段特定的活动，如过滤信号，功率或相位。ERP图像有时可能看起来像时间-频率图，因为时间是在x轴上，数据是彩色的。然而，ERP图像的Y轴不包含频率信息。</p>
-<p><img src="file:///Users/lihaoyang/Code/StudyIn2020/notes/ANTS/9-5ERP图.png?lastModify=1612963082" alt="9-5ERP图"></p>
+<figure>
+<img src="file:///Users/lihaoyang/Code/StudyIn2020/notes/ANTS/9-5ERP图.png?lastModify=1612963082" alt=""><figcaption>9-5ERP图</figcaption>
+</figure>
 
     </div>
 
@@ -432,7 +606,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Advantages-and-Limitations-of-Time-and-Time-Frequency-Domain-Analyses"><span class="nav-number">1.</span> <span class="nav-text">2. Advantages and Limitations of Time- and Time-Frequency-Domain Analyses</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Interpreting-and-Asking-Questions-about-Time-Frequency-Results"><span class="nav-number">2.</span> <span class="nav-text">3. Interpreting and Asking Questions about Time-Frequency Results</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%B6%E5%9F%9F%E7%A9%BA%E5%9F%9F%E9%A2%91%E5%9F%9F%E6%97%B6%E9%A2%91%E5%9F%9F"><span class="nav-number">2.1.</span> <span class="nav-text">时域空域频域时频域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%82%E5%AF%9F%E5%92%8C%E8%A7%A3%E9%87%8A%E6%97%B6%E9%A2%91%E6%95%B0%E6%8D%AE"><span class="nav-number">2.2.</span> <span class="nav-text">观察和解释时频数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E5%80%BC%E5%BE%97%E6%80%80%E7%96%91%E7%9A%84%E7%BB%93%E6%9E%9C%E7%89%B9%E5%BE%81%EF%BC%9A"><span class="nav-number">2.3.</span> <span class="nav-text">一些值得怀疑的结果特征：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Introduction-to-Matlab-Programming"><span class="nav-number">3.</span> <span class="nav-text">4 Introduction to Matlab Programming</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Script-A-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="nav-number">3.1.</span> <span class="nav-text">Script A 基本语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Script-B-%E7%94%BB%E5%9B%BE"><span class="nav-number">3.2.</span> <span class="nav-text">Script B 画图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Script-C-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E3%80%81%E5%8F%98%E9%87%8F%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">3.3.</span> <span class="nav-text">Script C    文件操作、变量初始化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Introduction-to-the-Phtsiological-Bases-of-EEG"><span class="nav-number">4.</span> <span class="nav-text">5 Introduction to the Phtsiological Bases of EEG</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E4%BD%8D%E9%94%81%E5%AE%9A%E5%92%8C%E6%97%B6%E9%97%B4%E9%94%81%E5%AE%9A"><span class="nav-number">4.1.</span> <span class="nav-text">相位锁定和时间锁定</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-Practicalities-of-EEG-Measurement-and-Experiment-Design"><span class="nav-number">5.</span> <span class="nav-text">6 Practicalities of EEG Measurement and Experiment Design</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E8%AE%BE%E8%AE%A1"><span class="nav-number">5.1.</span> <span class="nav-text">实验设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E6%A0%87%E7%AD%BE"><span class="nav-number">5.2.</span> <span class="nav-text">事件标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E6%97%B6%E9%97%B4%E9%95%BF%E5%BA%A6%E7%9A%84%E9%80%89%E6%8B%A9"><span class="nav-number">5.3.</span> <span class="nav-text">事件时间长度的选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%95%E9%AA%8C%E6%AC%A1%E6%95%B0%E7%9A%84%E9%80%89%E6%8B%A9"><span class="nav-number">5.4.</span> <span class="nav-text">试验次数的选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B5%E6%9E%81%E4%B8%AA%E6%95%B0%E7%9A%84%E9%80%89%E6%8B%A9"><span class="nav-number">5.5.</span> <span class="nav-text">电极个数的选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%87%E6%A0%B7%E7%8E%87%E7%9A%84%E9%80%89%E6%8B%A9"><span class="nav-number">5.6.</span> <span class="nav-text">采样率的选择</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#II-Preprocessing-and-Time-Domain-Analyses"><span class="nav-number"></span> <span class="nav-text">II Preprocessing and Time-Domain Analyses</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#7-Preprocessing-Steps-Necessary-and-Useful-for-Advanced-Data-Analysis"><span class="nav-number">1.</span> <span class="nav-text">7 Preprocessing Steps Necessary and Useful for Advanced Data Analysis</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%99%AA%E5%A3%B0"><span class="nav-number">1.1.</span> <span class="nav-text">噪声</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%B6%E6%9C%9F"><span class="nav-number">1.2.</span> <span class="nav-text">时期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%95%E9%AA%8C%E6%AC%A1%E6%95%B0%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="nav-number">1.3.</span> <span class="nav-text">试验次数的影响</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%BB%A4%E6%B3%A2"><span class="nav-number">1.4.</span> <span class="nav-text">滤波</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%92%E7%BB%9D%E8%AF%95%E6%AC%A1"><span class="nav-number">1.5.</span> <span class="nav-text">拒绝试次</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4%E6%BB%A4%E6%B3%A2"><span class="nav-number">1.6.</span> <span class="nav-text">空间滤波</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%94%B5%E6%9E%81"><span class="nav-number">1.7.</span> <span class="nav-text">参考电极</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9D%8F%E7%94%B5%E6%9E%81%E6%8F%92%E5%80%BC"><span class="nav-number">1.8.</span> <span class="nav-text">坏电极插值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%B2%E5%87%80%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="nav-number">1.9.</span> <span class="nav-text">干净的数据</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-EEG-Artifacts-Their-Detection-Influence-and-Removal"><span class="nav-number">2.</span> <span class="nav-text">8 EEG Artifacts: Their Detection, Influence, and Removal</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8B%AC%E7%AB%8B%E6%88%90%E5%88%86%E5%88%86%E6%9E%90%EF%BC%88ICA%EF%BC%89"><span class="nav-number">2.1.</span> <span class="nav-text">独立成分分析（ICA）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%BB%E9%99%A4%E7%9C%A8%E7%9C%BC%E5%B9%B2%E6%89%B0%E7%9A%84%E8%AF%95%E6%AC%A1"><span class="nav-number">2.2.</span> <span class="nav-text">去除眨眼干扰的试次</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%BB%E9%99%A4%E5%8C%85%E5%90%AB%E7%9C%BC%E5%8A%A8%E7%9A%84%E8%AF%95%E6%AC%A1"><span class="nav-number">2.3.</span> <span class="nav-text">去除包含眼动的试次</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B9%E6%8D%AE-EMG-%E6%95%B0%E6%8D%AE%E7%A7%BB%E9%99%A4-EEG-%E9%A2%91%E9%81%93%E4%B8%8A%E7%9A%84%E8%AF%95%E6%AC%A1"><span class="nav-number">2.4.</span> <span class="nav-text">根据 EMG 数据移除 EEG 频道上的试次</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B9%E6%8D%AE%E4%BB%BB%E5%8A%A1%E8%A1%A8%E7%8E%B0%E5%8E%BB%E9%99%A4%E8%AF%95%E6%AC%A1"><span class="nav-number">2.5.</span> <span class="nav-text">根据任务表现去除试次</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B9%E6%8D%AE%E6%89%8B%E9%83%A8%E8%82%8C%E8%82%89%E8%82%8C%E7%94%B5%E5%9B%BE%E5%8E%BB%E9%99%A4%E8%AF%95%E6%AC%A1"><span class="nav-number">2.6.</span> <span class="nav-text">根据手部肌肉肌电图去除试次</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8%E6%94%B6%E9%9B%86%E6%95%B0%E6%8D%AE%E7%9A%84%E6%97%B6%E5%80%99%E6%9C%80%E5%B0%8F%E5%8C%96%E4%BC%AA%E8%BF%B9"><span class="nav-number">2.7.</span> <span class="nav-text">在收集数据的时候最小化伪迹</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-Overview-of-Time-Domain-EEG-Analyses"><span class="nav-number">3.</span> <span class="nav-text">9 Overview of Time-Domain EEG Analyses</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E7%9B%B8%E5%85%B3%E7%94%B5%E4%BD%8D-ERP"><span class="nav-number">3.1.</span> <span class="nav-text">事件相关电位 ERP</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%87%E6%BB%A4-ERPs"><span class="nav-number">4.</span> <span class="nav-text">过滤 ERPs</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%9D%B4%E8%9D%B6%E5%9B%BE%E3%80%81%E5%85%A8%E5%B1%80%E5%9C%BA%E8%83%BD%E9%87%8F%E5%92%8C%E5%9C%B0%E5%BD%A2%E5%8F%98%E5%8C%96%E5%9B%BE"><span class="nav-number">4.1.</span> <span class="nav-text">蝴蝶图、全局场能量和地形变化图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AA%E7%83%81%E6%95%88%E5%BA%94%EF%BC%88The-Flicker-Effect%EF%BC%89"><span class="nav-number">4.2.</span> <span class="nav-text">闪烁效应（The Flicker Effect）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%B0%E5%BD%A2%E5%9B%BE%EF%BC%88Topographical-Maps%EF%BC%89"><span class="nav-number">4.3.</span> <span class="nav-text">地形图（Topographical Maps）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AE%E7%8A%B6%E6%80%81%EF%BC%88microstates%EF%BC%89"><span class="nav-number">4.4.</span> <span class="nav-text">微状态（microstates）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ERP-%E5%9B%BE-ERP-Images"><span class="nav-number">4.5.</span> <span class="nav-text">ERP 图 (ERP Images)</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#advantages-and-limitations-of-time--and-time-frequency-domain-analyses"><span class="nav-number">1.</span> <span class="nav-text">2. Advantages and Limitations of Time- and Time-Frequency-Domain Analyses</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#interpreting-and-asking-questions-about-time-frequency-results"><span class="nav-number">2.</span> <span class="nav-text">3. Interpreting and Asking Questions about Time-Frequency Results</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%B6%E5%9F%9F%E7%A9%BA%E5%9F%9F%E9%A2%91%E5%9F%9F%E6%97%B6%E9%A2%91%E5%9F%9F"><span class="nav-number">2.1.</span> <span class="nav-text">时域空域频域时频域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%82%E5%AF%9F%E5%92%8C%E8%A7%A3%E9%87%8A%E6%97%B6%E9%A2%91%E6%95%B0%E6%8D%AE"><span class="nav-number">2.2.</span> <span class="nav-text">观察和解释时频数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E5%80%BC%E5%BE%97%E6%80%80%E7%96%91%E7%9A%84%E7%BB%93%E6%9E%9C%E7%89%B9%E5%BE%81"><span class="nav-number">2.3.</span> <span class="nav-text">一些值得怀疑的结果特征：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#introduction-to-matlab-programming"><span class="nav-number">3.</span> <span class="nav-text">4 Introduction to Matlab Programming</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#script-a-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="nav-number">3.1.</span> <span class="nav-text">Script A 基本语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#script-b-%E7%94%BB%E5%9B%BE"><span class="nav-number">3.2.</span> <span class="nav-text">Script B 画图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#script-c-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%8F%98%E9%87%8F%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">3.3.</span> <span class="nav-text">Script C 文件操作、变量初始化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#introduction-to-the-phtsiological-bases-of-eeg"><span class="nav-number">4.</span> <span class="nav-text">5 Introduction to the Phtsiological Bases of EEG</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E4%BD%8D%E9%94%81%E5%AE%9A%E5%92%8C%E6%97%B6%E9%97%B4%E9%94%81%E5%AE%9A"><span class="nav-number">4.1.</span> <span class="nav-text">相位锁定和时间锁定</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#practicalities-of-eeg-measurement-and-experiment-design"><span class="nav-number">5.</span> <span class="nav-text">6 Practicalities of EEG Measurement and Experiment Design</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E8%AE%BE%E8%AE%A1"><span class="nav-number">5.1.</span> <span class="nav-text">实验设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E6%A0%87%E7%AD%BE"><span class="nav-number">5.2.</span> <span class="nav-text">事件标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E6%97%B6%E9%97%B4%E9%95%BF%E5%BA%A6%E7%9A%84%E9%80%89%E6%8B%A9"><span class="nav-number">5.3.</span> <span class="nav-text">事件时间长度的选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%95%E9%AA%8C%E6%AC%A1%E6%95%B0%E7%9A%84%E9%80%89%E6%8B%A9"><span class="nav-number">5.4.</span> <span class="nav-text">试验次数的选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B5%E6%9E%81%E4%B8%AA%E6%95%B0%E7%9A%84%E9%80%89%E6%8B%A9"><span class="nav-number">5.5.</span> <span class="nav-text">电极个数的选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%87%E6%A0%B7%E7%8E%87%E7%9A%84%E9%80%89%E6%8B%A9"><span class="nav-number">5.6.</span> <span class="nav-text">采样率的选择</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ii-preprocessing-and-time-domain-analyses"><span class="nav-number"></span> <span class="nav-text">II Preprocessing and Time-Domain Analyses</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#preprocessing-steps-necessary-and-useful-for-advanced-data-analysis"><span class="nav-number">1.</span> <span class="nav-text">7 Preprocessing Steps Necessary and Useful for Advanced Data Analysis</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%99%AA%E5%A3%B0"><span class="nav-number">1.1.</span> <span class="nav-text">噪声</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%B6%E6%9C%9F"><span class="nav-number">1.2.</span> <span class="nav-text">时期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%95%E9%AA%8C%E6%AC%A1%E6%95%B0%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="nav-number">1.3.</span> <span class="nav-text">试验次数的影响</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%BB%A4%E6%B3%A2"><span class="nav-number">1.4.</span> <span class="nav-text">滤波</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%92%E7%BB%9D%E8%AF%95%E6%AC%A1"><span class="nav-number">1.5.</span> <span class="nav-text">拒绝试次</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4%E6%BB%A4%E6%B3%A2"><span class="nav-number">1.6.</span> <span class="nav-text">空间滤波</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%94%B5%E6%9E%81"><span class="nav-number">1.7.</span> <span class="nav-text">参考电极</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9D%8F%E7%94%B5%E6%9E%81%E6%8F%92%E5%80%BC"><span class="nav-number">1.8.</span> <span class="nav-text">坏电极插值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%B2%E5%87%80%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="nav-number">1.9.</span> <span class="nav-text">干净的数据</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#eeg-artifacts-their-detection-influence-and-removal"><span class="nav-number">2.</span> <span class="nav-text">8 EEG Artifacts: Their Detection, Influence, and Removal</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8B%AC%E7%AB%8B%E6%88%90%E5%88%86%E5%88%86%E6%9E%90ica"><span class="nav-number">2.1.</span> <span class="nav-text">独立成分分析（ICA）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%BB%E9%99%A4%E7%9C%A8%E7%9C%BC%E5%B9%B2%E6%89%B0%E7%9A%84%E8%AF%95%E6%AC%A1"><span class="nav-number">2.2.</span> <span class="nav-text">去除眨眼干扰的试次</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%BB%E9%99%A4%E5%8C%85%E5%90%AB%E7%9C%BC%E5%8A%A8%E7%9A%84%E8%AF%95%E6%AC%A1"><span class="nav-number">2.3.</span> <span class="nav-text">去除包含眼动的试次</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B9%E6%8D%AE-emg-%E6%95%B0%E6%8D%AE%E7%A7%BB%E9%99%A4-eeg-%E9%A2%91%E9%81%93%E4%B8%8A%E7%9A%84%E8%AF%95%E6%AC%A1"><span class="nav-number">2.4.</span> <span class="nav-text">根据 EMG 数据移除 EEG 频道上的试次</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B9%E6%8D%AE%E4%BB%BB%E5%8A%A1%E8%A1%A8%E7%8E%B0%E5%8E%BB%E9%99%A4%E8%AF%95%E6%AC%A1"><span class="nav-number">2.5.</span> <span class="nav-text">根据任务表现去除试次</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B9%E6%8D%AE%E6%89%8B%E9%83%A8%E8%82%8C%E8%82%89%E8%82%8C%E7%94%B5%E5%9B%BE%E5%8E%BB%E9%99%A4%E8%AF%95%E6%AC%A1"><span class="nav-number">2.6.</span> <span class="nav-text">根据手部肌肉肌电图去除试次</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8%E6%94%B6%E9%9B%86%E6%95%B0%E6%8D%AE%E7%9A%84%E6%97%B6%E5%80%99%E6%9C%80%E5%B0%8F%E5%8C%96%E4%BC%AA%E8%BF%B9"><span class="nav-number">2.7.</span> <span class="nav-text">在收集数据的时候最小化伪迹</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#overview-of-time-domain-eeg-analyses"><span class="nav-number">3.</span> <span class="nav-text">9 Overview of Time-Domain EEG Analyses</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E7%9B%B8%E5%85%B3%E7%94%B5%E4%BD%8D-erp"><span class="nav-number">3.1.</span> <span class="nav-text">事件相关电位 ERP</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%87%E6%BB%A4-erps"><span class="nav-number">4.</span> <span class="nav-text">过滤 ERPs</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%9D%B4%E8%9D%B6%E5%9B%BE%E5%85%A8%E5%B1%80%E5%9C%BA%E8%83%BD%E9%87%8F%E5%92%8C%E5%9C%B0%E5%BD%A2%E5%8F%98%E5%8C%96%E5%9B%BE"><span class="nav-number">4.1.</span> <span class="nav-text">蝴蝶图、全局场能量和地形变化图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AA%E7%83%81%E6%95%88%E5%BA%94the-flicker-effect"><span class="nav-number">4.2.</span> <span class="nav-text">闪烁效应（The Flicker Effect）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%B0%E5%BD%A2%E5%9B%BEtopographical-maps"><span class="nav-number">4.3.</span> <span class="nav-text">地形图（Topographical Maps）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AE%E7%8A%B6%E6%80%81microstates"><span class="nav-number">4.4.</span> <span class="nav-text">微状态（microstates）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#erp-%E5%9B%BE-erp-images"><span class="nav-number">4.5.</span> <span class="nav-text">ERP 图 (ERP Images)</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
