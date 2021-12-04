@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"thirtiseven.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="题意有 n $(1 \le n \le 1000)$ 个人想去旅行。 第 i 个人愿意为自己的旅行付出 $x_i$ 块钱。$(-1,000,000 \le x \le 1,000,000)$ 第 i 个人还有 $k_i$ 个要求，每个要求由一个数对 $(a_{ij}, b_{ij})$ 定义。意思是如果第 i 个人去旅行，那么第 $a_{ij}$ 个人也要去，否则就要给他优惠 $b_{ij}$ 块">
+<meta property="og:type" content="article">
+<meta property="og:title" content="最小割 PA2006 Travel Agency">
+<meta property="og:url" content="http://thirtiseven.github.io/2021/03/27/%E6%9C%80%E5%B0%8F%E5%89%B2-PA2006-Travel-Agency/index.html">
+<meta property="og:site_name" content="语言漩涡">
+<meta property="og:description" content="题意有 n $(1 \le n \le 1000)$ 个人想去旅行。 第 i 个人愿意为自己的旅行付出 $x_i$ 块钱。$(-1,000,000 \le x \le 1,000,000)$ 第 i 个人还有 $k_i$ 个要求，每个要求由一个数对 $(a_{ij}, b_{ij})$ 定义。意思是如果第 i 个人去旅行，那么第 $a_{ij}$ 个人也要去，否则就要给他优惠 $b_{ij}$ 块">
+<meta property="og:locale">
+<meta property="article:published_time" content="2021-03-27T06:23:55.000Z">
+<meta property="article:modified_time" content="2021-12-04T06:25:34.773Z">
+<meta property="article:author" content="Thirtiseven Lee">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://thirtiseven.github.io/2021/03/27/%E6%9C%80%E5%B0%8F%E5%89%B2-PA2006-Travel-Agency/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>最小割 PA2006 Travel Agency | 语言漩涡</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">语言漩涡</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">李三七的博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://thirtiseven.github.io/2021/03/27/%E6%9C%80%E5%B0%8F%E5%89%B2-PA2006-Travel-Agency/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Thirtiseven Lee">
+      <meta itemprop="description" content="和光同尘">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="语言漩涡">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          最小割 PA2006 Travel Agency
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-03-27 14:23:55" itemprop="dateCreated datePublished" datetime="2021-03-27T14:23:55+08:00">2021-03-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-12-04 14:25:34" itemprop="dateModified" datetime="2021-12-04T14:25:34+08:00">2021-12-04</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>有 n $(1 \le n \le 1000)$ 个人想去旅行。</p>
+<p>第 i 个人愿意为自己的旅行付出 $x_i$ 块钱。$(-1,000,000 \le x \le 1,000,000)$</p>
+<p>第 i 个人还有 $k_i$ 个要求，每个要求由一个数对 $(a_{ij}, b_{ij})$ 定义。意思是如果第 i 个人去旅行，那么第 $a_{ij}$ 个人也要去，否则就要给他优惠 $b_{ij}$ 块钱。</p>
+<p>$0\le k \le n-1, 1 \le a_{ij} \le n, a_{ij}\neq i, 1\le b_{ij}\le 1,000,000$</p>
+<p>求使旅行社获得最大利润的一种方案。 </p>
+<span id="more"></span>
+
+<h2 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h2><p>第一行输入一个n</p>
+<p>下面每行输入$x_i,k_i$ 和 $k_i$ 组数   $(a_{ij}, b_{ij})$ </p>
+<p>输出一个数 k ，第二行有 k  个数，表示方案。</p>
+<h2 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">5 0</span><br><span class="line">6 2 1 10 3 1</span><br><span class="line">-10 0</span><br><span class="line">1 2 1 10 2 10</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">1 2 4</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><p>复习一下最大流最小割定理。假设有一个网络，网络中的每条边有一个容量。有一个点叫源点 s，一个点叫汇点 t。一个<strong>流</strong>是指一种流量的分配，其中：每条边的流量不超过容量；汇入每个普通点的流量和流出每个普通点的流量相等；源点流出的流量等于汇点流入的流量。<strong>最大流</strong>是要求从源点流向汇点的流量最大的流。一个<strong>割</strong>是一个边集，使得从原图中删除这个边集s和t就互不连通。<strong>最小割</strong>指的是删掉的边的容量之和最小的割。<strong>最大流最小割定理</strong>告诉我们：对于一个网络，从源点到目标点的最大的流量等于最小割的每一条边的和。</p>
+<p>首先，为了简化，我们假设没有$x_i=0$的顾客。建立一个辅助图G。设每个顾客为一个节点，建立一个源点和汇点，对每个 $x_i &gt; 0$ 的顾客 $v_i$ ，从 s 到 $v_i$ 连一条容量为 $x_i$ 的边，对每个 $x_i &lt; 0$ 的顾客 $v_i$ ，从 $v_i$ 到 t 连一条容量为 $-x_i$ 的边。对于顾客的每个要求  $(a_{ij}, b_{ij})$ ，从 $v_i$ 到 $v_{a_{ij}}$ 连一条容量为 $b_{ij}$ 的边。对样例这样建图的示例如下：</p>
+<p>![Travel Agency](/images/Travel Agency.png)</p>
+<p>考虑旅行社的选择对总利润的贡献，先假设目前选择了所有 $x_i&gt;0$的顾客：</p>
+<ul>
+<li>如果没有选择一个 $x_i &gt; 0$ 的顾客，那旅行社就损失了 $x_i$  块钱。</li>
+<li>如果选择了一个 $x_i &lt; 0$ 的顾客，那旅行社就损失了 $ \  - x_i$  块钱。</li>
+<li>如果某个顾客的要求没有满足，那么旅行社就损失了 $b_{ij}$ 块钱。</li>
+</ul>
+<p>设 W 是获得利润的上限（即所有 大于 0 的 $x_i$ 之和），OPT是能够的最大利润，我们有两条引理。记 $x_i &gt; 0$ 的顾客集合为 $K_+$ ，$x_i &lt; 0$ 的顾客集合为 $K_-$ ，A 为所有顾客条件的集合。</p>
+<p> <strong>引理1</strong> 图 G 的最小割小于等于 W - OPT .</p>
+<p>证明：设 X 为旅行社获得最大利润时顾客的集合。定义集合 S：<br>$$<br>{(s,v_i):v_i\in K_+ \backslash X} \cup \<br>{(v_i,t):v_i \in X \cap K_{-}}\cup \<br>{(v_i,v_j)\in A:v_i \in X, v_j \notin X}<br>$$<br>注意到集合S就是我们上述描述条件的集合，于是这些边的流量和等于 W - OPT。特殊的，样例中的集合 S 只包括 v2 到 v3 一条边。</p>
+<p>让我们先假设 S 不是一个 G 的割集。令 $(s,u_1,…,u_k,t)$ 是一条从 s 到 t 到路径，并且这个路径不包含任何 S 中的边。根据图 G 的定义，所有来自s的边都连着一个 $K_+$ 中的点，所有指向t的点都来自于一个 $K_-$ 中的点。否则边就是一条从 $K_+$ 中的点指向 $K_-$ 中的点的边。于是，我们知道 $u_1$ 被选择了，相似的，$u_k$ 没有被选择。 于是，这条路径中必然存在一条边 $(u_i,u_{i+1})$ ，满足 $u_i$ 被选择了而 $u_{i+1}$ 没有被选择。这条边必然存在于 S 中。所以 S 肯定是 G 的一个割集。所以图 G 的最小割必然小于等于 W-OPT，得证。</p>
+<p><strong>引理2</strong> 图G的最小割大于等于 W-OPT.</p>
+<p>证明：假设 S 是任意一个最小割。设应该被选择顾客的集合为 X（如下图），集合X包含：</p>
+<ul>
+<li>每个满足边 (s, v) 不属于集合 S 的 $v \in K_+$ </li>
+<li>每个满足边 (v, t) 属于集合 S 的 $v \in K_-$</li>
+</ul>
+<p>![Travel Agency2](/Users/lihaoyang/thirtiseven_blog/source/_posts/Travel Agency2.png)</p>
+<p>设 $c(S)$ 为最小割中容量的和。为了证明引理，我们需要证明每一个没有被满足的要求都属于集合 S。</p>
+<p>考虑这个命题的反面，存在一个第 i 个用户的要求没有被满足，并且对应的边不属于 S。假设 $\alpha = v_i$ 和 $\beta = v_{a_{ij}}$ ，考虑在下图中描述的下列情况。 我们发现，对于每一种情况，G 关于 S 的补图中存在一条从 s 到 t 的 路径，这和割集的定义相矛盾：</p>
+<p>![Travel Agency3](/images/Travel Agency3.png)</p>
+<p>(i) $\alpha \in K_-,\beta \in K_-$ 既然 $\alpha \in X$ ，那么有 $(\alpha,t)\in S$ 。因为我们要最小化 S，所以 S 的补图中肯定存在一条从 s 到 $\alpha$ 的路径。又由于  $(\alpha,\beta)\notin S$ 于是 S 的补图中也肯定存在一条从 s 到 $\beta$ 的路径。根据集合 X 的定义和 $\beta \in X$ 的假设，我们推断出 $(\beta,t)\notin S$，于是补图中肯定存在一条从 s 到 t 的路径，产生了矛盾。</p>
+<p>(ii) $\alpha \in K_-,\beta \in K_+$ 相似的，我们推测补图中存在一条从 $s$ 到 $\alpha$ 的路径，相似的，因为要最小化 S 的容量和，所以 S 的补图中肯定存在一条从 $\beta$ 到 t 的路径。于是补图中肯定存在一条从 s 到 t 的路径，产生了矛盾。</p>
+<p>(iii) $\alpha \in K_+,\beta \in K_-$ 在这种情况下 $(s,\alpha)$ 和 $(\beta,t)$  都不属于集合 S，所以在补图中存在一条从 s 到 t 的路径，产生了矛盾。</p>
+<p>(iv) $\alpha \in K_+,\beta \in K_+$ 根据 X 的定义，$(s,\beta)$ 不属于集合 S，考虑到 S 是最小割，我们推测补图中存在一条从 $\beta$ 到 t 的路径。考虑到 $(s,\alpha)$ 不在集合 S 中，所以就存在一条从 s 到 t 的路径，产生了矛盾。</p>
+<p>因此，引理得证。综合这两条引理，我们发现最大利润就是 W-最小割。根据最小割最大流定理，我们可以通过计算图 G 的最大流来求出其最小割。从而解决整个问题。如果使用 Dinic，复杂度是 $O(n^3)$</p>
+<p>但是有一个问题还没有解决。此前我们假设不存在 $x_i=0$。但实际上这个假设是不必要的。不妨认为每个 $x_i=0$ 的 $x_i$ 实际上是一个极小的 $\varepsilon &lt; \frac{1}{2n}$ 。则旅行社选择他们获得的利润也不会超过 0.5 元。不妨把这些顾客全部归入 $k_+$。如果有多个最小割存在，我们选择边数最少的最小割。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span> </span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span> </span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cassert&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> ll = <span class="keyword">long</span> <span class="keyword">long</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> ll maxn = <span class="number">1000</span>+<span class="number">7</span>;</span><br><span class="line"><span class="keyword">const</span> ll inf = <span class="number">1e9</span>+<span class="number">7</span>; </span><br><span class="line"><span class="keyword">const</span> ll mod = <span class="number">2e4</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Edge</span> &#123;</span> </span><br><span class="line">	ll c;</span><br><span class="line">	ll f;</span><br><span class="line">	ll v;</span><br><span class="line">	ll flip;</span><br><span class="line">	<span class="built_in">Edge</span>(ll v, ll c, ll f, ll flip) : <span class="built_in">v</span>(v), <span class="built_in">c</span>(c), <span class="built_in">f</span>(f), <span class="built_in">flip</span>(flip) &#123;&#125; </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dinic</span> &#123;</span> </span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">bool</span> b[maxn];</span><br><span class="line">	ll a[maxn];</span><br><span class="line">	ll p[maxn], cur[maxn], d[maxn];</span><br><span class="line">	std::vector&lt;Edge&gt; G[maxn];</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	ll vis[maxn];</span><br><span class="line">	ll s, t;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">Init</span><span class="params">(ll n)</span> </span>&#123; </span><br><span class="line">		<span class="keyword">for</span>(ll i=<span class="number">0</span>; i&lt;=n; ++i)</span><br><span class="line">			G[i].<span class="built_in">clear</span>();</span><br><span class="line">		std::<span class="built_in">fill</span>(vis, vis+maxn, <span class="number">0</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">AddEdge</span><span class="params">(ll u, ll v, ll c)</span> </span>&#123; </span><br><span class="line">		G[u].<span class="built_in">push_back</span>(<span class="built_in">Edge</span>(v, c, <span class="number">0</span>, G[v].<span class="built_in">size</span>())); </span><br><span class="line">		G[v].<span class="built_in">push_back</span>(<span class="built_in">Edge</span>(u, <span class="number">0</span>, <span class="number">0</span>, G[u].<span class="built_in">size</span>()<span class="number">-1</span>)); <span class="comment">//使用无向图时将0改为c即可</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">BFS</span><span class="params">()</span> </span>&#123; </span><br><span class="line">		ll u, v;</span><br><span class="line">		std::queue&lt;ll&gt; q; </span><br><span class="line">		std::<span class="built_in">fill</span>(b, b+maxn, <span class="number">0</span>); </span><br><span class="line">		q.<span class="built_in">push</span>(s);</span><br><span class="line">		d[s] = <span class="number">0</span>;</span><br><span class="line">		b[s] = <span class="number">1</span>; </span><br><span class="line">		<span class="keyword">while</span> (!q.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">			u = q.<span class="built_in">front</span>();</span><br><span class="line">			q.<span class="built_in">pop</span>();</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">auto</span> it : G[u]) &#123;</span><br><span class="line">				Edge &amp;e = it; </span><br><span class="line">				<span class="keyword">if</span>(!b[e.v] &amp;&amp; e.c &gt; e.f)&#123;</span><br><span class="line">					b[e.v] = <span class="number">1</span>; </span><br><span class="line">					d[e.v] = d[u] + <span class="number">1</span>; </span><br><span class="line">					q.<span class="built_in">push</span>(e.v);</span><br><span class="line">				&#125; </span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> b[t]; </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function">ll <span class="title">DFS</span><span class="params">(ll u, ll a)</span></span>&#123; </span><br><span class="line">		<span class="keyword">if</span>(u==t || a==<span class="number">0</span>)</span><br><span class="line">			<span class="keyword">return</span> a; </span><br><span class="line">		ll flow = <span class="number">0</span>, f;</span><br><span class="line">		<span class="keyword">for</span> (ll i = cur[u]; i&lt;G[u].<span class="built_in">size</span>(); ++i)&#123; </span><br><span class="line">			Edge &amp;e = G[u][i];</span><br><span class="line">			<span class="keyword">if</span> (d[u]+<span class="number">1</span> == d[e.v] &amp;&amp; (f = <span class="built_in">DFS</span>(e.v, std::<span class="built_in">min</span>(a, e.c - e.f))) &gt; <span class="number">0</span>) &#123; </span><br><span class="line">				a -= f;</span><br><span class="line">				e.f += f; </span><br><span class="line">				G[e.v][e.flip].f -= f; </span><br><span class="line">				flow += f;</span><br><span class="line">				<span class="keyword">if</span> (!a) <span class="keyword">break</span>;</span><br><span class="line">			&#125; </span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> flow; </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function">ll <span class="title">MaxFlow</span><span class="params">(ll s, ll t)</span></span>&#123; </span><br><span class="line">		ll flow = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">this</span>-&gt;s = s; </span><br><span class="line">		<span class="keyword">this</span>-&gt;t = t; </span><br><span class="line">		<span class="keyword">while</span> (<span class="built_in">BFS</span>()) &#123;</span><br><span class="line">			std::<span class="built_in">fill</span>(cur, cur+maxn, <span class="number">0</span>);</span><br><span class="line">			flow += <span class="built_in">DFS</span>(s, inf); </span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> flow; </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">gao</span><span class="params">(ll u)</span> </span>&#123;</span><br><span class="line">		vis[u] = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span> (ll i = <span class="number">0</span>; i &lt; G[u].<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">			ll v = G[u][i].v;</span><br><span class="line">			<span class="keyword">if</span> (vis[v] || G[u][i].f &gt; <span class="number">0</span>) &#123;</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="built_in">gao</span>(v);</span><br><span class="line">		&#125;  </span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Dinic flow;</span><br><span class="line">ll n, x[maxn], k, aa, bb;</span><br><span class="line">std::vector&lt;ll&gt; ans;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">	std::ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">	std::cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">	std::cin &gt;&gt; n;	</span><br><span class="line">	flow.<span class="built_in">Init</span>(n+<span class="number">3</span>);</span><br><span class="line">	ll s = <span class="number">0</span>, t = n+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (ll i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		std::cin &gt;&gt; x[i] &gt;&gt; k;</span><br><span class="line">		<span class="keyword">if</span> (x[i] &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">			flow.<span class="built_in">AddEdge</span>(s, i, x[i]*mod+<span class="number">1</span>);</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (x[i] &lt; <span class="number">0</span>) &#123;</span><br><span class="line">			flow.<span class="built_in">AddEdge</span>(i, t, (-x[i])*mod+<span class="number">1</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (ll j = <span class="number">0</span>; j &lt; k; j++) &#123;</span><br><span class="line">			std::cin &gt;&gt; aa &gt;&gt; bb;</span><br><span class="line">			flow.<span class="built_in">AddEdge</span>(i, aa, bb*mod+<span class="number">1</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	flow.<span class="built_in">MaxFlow</span>(s, t);</span><br><span class="line">	flow.<span class="built_in">gao</span>(s);</span><br><span class="line">	ans.<span class="built_in">clear</span>();</span><br><span class="line">	<span class="keyword">for</span> (ll i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (x[i] &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> (!(flow.vis[s]&amp;&amp;!flow.vis[i] || flow.vis[i]&amp;&amp;!flow.vis[s])) &#123;</span><br><span class="line">				ans.<span class="built_in">push_back</span>(i);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">if</span> (flow.vis[t]&amp;&amp;!flow.vis[i] || flow.vis[i]&amp;&amp;!flow.vis[t]) &#123;</span><br><span class="line">				ans.<span class="built_in">push_back</span>(i);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	std::<span class="built_in">sort</span>(ans.<span class="built_in">begin</span>(), ans.<span class="built_in">end</span>());</span><br><span class="line">	std::cout &lt;&lt; ans.<span class="built_in">size</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	<span class="keyword">for</span> (ll i = <span class="number">0</span>; i &lt; ans.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">		std::cout &lt;&lt; ans[i] &lt;&lt; <span class="string">&quot; \n&quot;</span>[i==ans.<span class="built_in">size</span>()<span class="number">-1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="吐槽"><a href="#吐槽" class="headerlink" title="吐槽"></a>吐槽</h2><p>这个代码没过… 放弃了… 不想再看到它了…</p>
+<p>网上找不到题解，在 szkopul 上下到了数据，本地跑得非常逼真，交上去 RE 了一年。去韩国 OJ 交，也 RE，但是这两边的 RE 是本质不同的… 大力assert了一下，感觉两边数据都是错的… 但是szkopul 上过了20个人了，就很离谱，我怀疑是我读入方式有问题，它可能不是标准输入输出，之类的，搞不清楚，在一堆波兰语和韩语里面的东西挣扎… 非常痛苦… 我都已经退役了… 偶尔写写算法题应该是一件快乐的事情… 为什么事情会变成这样…</p>
+<p>关于要怎么输出割集，牛逼网友教了教我，是从 S 出发dfs 一下，没满流的边不走，搞出一个类似联通块一样的东西，然后对每一条边判一下它是不是在两个不同的联通分量里面。很有道理，学到很多…</p>
+<p>关于怎么求边数最小的割集，牛逼网友又教了教我，是把容量全部改成 $c\times 边数 + 1$ ，然后求出来的最小割就自然是边数最小的，然后模一模就能得到各种信息了。听起来非常有道理，奥妙重重，我一辈子想不出来这种操作。</p>
+<p>然后关于这个题，我发现它就是一个复杂版本的最大权闭合子图… 最大权闭合子图是说，每个顾客都钦定了一些朋友，要选一起选，要么就都别选… 做法就是建图的时候要求的容量改成无穷大…</p>
+<p>然后就都大力糊了上去，感觉自己非常对，对着数据本地测了一年，感觉也非常对，但是这你妈的为什么过不了啊？抑郁了啊？感觉自己应该停止做传统算法题啊？有没有牛逼网友带我打打kaggle啊？</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/03/23/%E5%9F%BA%E7%BA%BF%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E7%9B%B8%E4%BD%8D%E9%94%81%E5%AE%9A%E5%88%86%E6%9E%90/" rel="prev" title="基线归一化和相位锁定分析">
+      <i class="fa fa-chevron-left"></i> 基线归一化和相位锁定分析
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/04/30/%E5%B0%8F%E5%B0%8F%E7%9A%84%E6%AD%BB%E4%BA%A1%E4%B9%8B%E6%AD%8C/" rel="next" title="洛尔迦《小小的死亡之歌》">
+      洛尔迦《小小的死亡之歌》 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E6%84%8F"><span class="nav-number">1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA"><span class="nav-number">2.</span> <span class="nav-text">输入输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B"><span class="nav-number">3.</span> <span class="nav-text">样例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%B3%95"><span class="nav-number">4.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">5.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%90%E6%A7%BD"><span class="nav-number">6.</span> <span class="nav-text">吐槽</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Thirtiseven Lee</p>
+  <div class="site-description" itemprop="description">和光同尘</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">58</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Thirtiseven Lee</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

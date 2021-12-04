@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"thirtiseven.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="题意你有一台画图机，它是这么工作的：先从  (0,0) 到 (1,1) 画一条线，然后根据指令左转或右转，然后再画一条 $\sqrt{2}$ 长度的线段，然后再根据下一个指令转弯，直到所有指令都执行完毕。画一条线段的时间是 1 秒。 指令序列是一个 L 或者 R 组成的字符串。设指令序列 $L_1&#x3D;\text{L}, L_2&#x3D;\text{LLR}$，那么更多的指令序列 $L_n$ 可以按如下规则生">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PA2011 Plotter 分形">
+<meta property="og:url" content="http://thirtiseven.github.io/2021/07/25/PA2011-Plotter-%E5%88%86%E5%BD%A2/index.html">
+<meta property="og:site_name" content="语言漩涡">
+<meta property="og:description" content="题意你有一台画图机，它是这么工作的：先从  (0,0) 到 (1,1) 画一条线，然后根据指令左转或右转，然后再画一条 $\sqrt{2}$ 长度的线段，然后再根据下一个指令转弯，直到所有指令都执行完毕。画一条线段的时间是 1 秒。 指令序列是一个 L 或者 R 组成的字符串。设指令序列 $L_1&#x3D;\text{L}, L_2&#x3D;\text{LLR}$，那么更多的指令序列 $L_n$ 可以按如下规则生">
+<meta property="og:locale">
+<meta property="og:image" content="http://thirtiseven.github.io/images/plotter.png">
+<meta property="og:image" content="http://thirtiseven.github.io/images/%E7%9A%AE%E4%BA%9A%E8%AF%BA%E6%9B%B2%E7%BA%BF.png">
+<meta property="article:published_time" content="2021-07-25T06:27:19.000Z">
+<meta property="article:modified_time" content="2021-12-04T06:29:42.560Z">
+<meta property="article:author" content="Thirtiseven Lee">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://thirtiseven.github.io/images/plotter.png">
+
+<link rel="canonical" href="http://thirtiseven.github.io/2021/07/25/PA2011-Plotter-%E5%88%86%E5%BD%A2/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>PA2011 Plotter 分形 | 语言漩涡</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">语言漩涡</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">李三七的博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://thirtiseven.github.io/2021/07/25/PA2011-Plotter-%E5%88%86%E5%BD%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Thirtiseven Lee">
+      <meta itemprop="description" content="和光同尘">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="语言漩涡">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          PA2011 Plotter 分形
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-07-25 14:27:19" itemprop="dateCreated datePublished" datetime="2021-07-25T14:27:19+08:00">2021-07-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-12-04 14:29:42" itemprop="dateModified" datetime="2021-12-04T14:29:42+08:00">2021-12-04</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>你有一台画图机，它是这么工作的：先从  (0,0) 到 (1,1) 画一条线，然后根据指令左转或右转，然后再画一条 $\sqrt{2}$ 长度的线段，然后再根据下一个指令转弯，直到所有指令都执行完毕。画一条线段的时间是 1 秒。</p>
+<p>指令序列是一个 L 或者 R 组成的字符串。设指令序列 $L_1=\text{L}, L_2=\text{LLR}$，那么更多的指令序列 $L_n$ 可以按如下规则生成出来：</p>
+<p>把字符串用空格隔开，并在串前和串后也分别添加一个空格，然后依次用L和R轮流填满这些空格。</p>
+<span id="more"></span>
+
+<p>例如：</p>
+<p>$L_2=\text{LLR}\to\text{_L_L_R_}\to\text{LLRLLRR}=L_3$</p>
+<p>$L_4=\text{LLRLLRRLLLRRLRR}$ 如下图所示：</p>
+<p>![Screen Shot 2021-07-25 at 5.25.33 PM](/images/Screen Shot 2021-07-25 at 5.25.33 PM.png)</p>
+<p>给出n和m，n代表当前执行的指令序列是 $L_n$，m 次询问，给出一个坐标，回答画图机经过这个坐标的次数和每次经过它的时间。</p>
+<h2 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h2><p>第一行给n和m，接下来m行每行询问一个坐标x,y</p>
+<p>对每次询问，输出一个k表示这个坐标被经过了多少次。</p>
+<h2 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">4 3</span><br><span class="line">-3 -1</span><br><span class="line">1 1</span><br><span class="line">-1 0</span><br><span class="line"></span><br><span class="line">2 7 11</span><br><span class="line">1 1 </span><br><span class="line">0</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h2><p>这个玩意儿，aka gragon curve，aka 龙形曲线，是个著名的分形结构。</p>
+<p>分形，我这种不会数学的数学爱好者最爱的玩意儿，很好看。</p>
+<p>首先，拿到这个题，第一感觉就是这个每段在棋盘上走一个对角线的方式让人非常难受，变换一下坐标，让它在棋盘上走直线。这么搞：<br>$$<br>(x’,y’)=(\frac{x+y}{2},\frac{y-x}{2}).<br>$$<br>然后，我们觉得这个生成的规则让人看上去看不出什么规律。打个表看一下这个图长什么样子：</p>
+<p><img src="/images/plotter.png" alt="plotter"></p>
+<p>我们惊喜地发现，这个 $L_n$ 看上去就是两个 $L_{n-1}$ 旋转一下拼在一起，也就是说，递推式可以这么写：<br>$$<br>L_1=\text{L}, L_n=L(n-1)\text{L}r(L_{n-1})<br>$$<br>其中，$r(L_{n-1})$ 的意思是先翻转然后取反，就是说 LLR 会变成 LRR。</p>
+<p>感性证明一下两个递推式等价：考虑把随便一个$L_n$拆开，分解成交替的一个形如LRLRLRLR的序列和一个$L_{n-1}$，显然前面那个序列符合上面那个翻转再取反的性质，后面符合这个性质根据归纳法也是显然的。</p>
+<h3 id="求t时刻画图机的位置"><a href="#求t时刻画图机的位置" class="headerlink" title="求t时刻画图机的位置"></a>求t时刻画图机的位置</h3><p>既然我们发现这个图形可以这样递归地分成本质一样的两截，那么我们就能在$ O(n)$的时间里求 t 时刻画图机的位置。具体是这么搞的：</p>
+<p>首先，所有序列画出来的图像都是一个无限的龙形曲线的一部分，我们可以预处理出每个序列结束的时候画图机所处的位置。因为更大的龙形曲线是两个更小的龙形曲线拼出来的，所以很自然地：<br>$$<br>x_1=y_1=1,x_n=x_{n-1}-y_{n-1},y_n=x_{n-1}+y_{n-1}<br>$$<br>然后，我们发现每条指令序列的长度是 $2^n-1$, 所以第n个曲线，我们叫它 $S_n$，的长度是 $2^n$,所以就有一个递归的算法：如果 t 比 $2^{n-1}$ 小，那它就属于 $S_{n-1}$，否则它就相当于在一个和 $S_{n-1}$ 本质一样的曲线上走了 $2^n-t$ 步，我们可以就当它是 $S_{n-1}$ 来做，再从我们已经预处理出来的 $(x_n,y_n)$ 出发，加上一个右转九十度的这个坐标。</p>
+<p>把这个过程递归下去，就求出来了。</p>
+<h3 id="引导问题：皮亚诺曲线"><a href="#引导问题：皮亚诺曲线" class="headerlink" title="引导问题：皮亚诺曲线"></a>引导问题：皮亚诺曲线</h3><p>那么反过来，给出坐标求经过这个坐标的时刻该怎么做呢？</p>
+<p>先来看个引导问题：ACM-ICPC World Finals 2003 Riding the Bus</p>
+<p>问题是：给个坐标，求从原点沿着皮亚诺曲线，aka希尔伯特第二曲线走到这个坐标的路程。皮亚诺曲线长下面这样，把9个p1这样连起来就是p2，以此类推。</p>
+<p><img src="/images/%E7%9A%AE%E4%BA%9A%E8%AF%BA%E6%9B%B2%E7%BA%BF.png" alt="皮亚诺曲线"></p>
+<p>这个题就是个搜索题。一个n阶的皮亚诺曲线的大小是 $(3^n-1)^2=9^n-1$ ，考虑 $\lfloor x/3^{n-1} \rfloor$ 和 $\lfloor y/3^{n-1} \rfloor$ ，我们就可以得出这个坐标具体属于九块中的哪一块。如果它属于第 i 块，我们就可以把 $i\cdot 9^{n-1}$ 加入答案，然后把 $(x \mod 3^{n-1}, y\mod 3^{n-1})$ 当作新的坐标，递归地在n-1阶的皮亚诺曲线里求解子问题即可。</p>
+<h3 id="剪枝搜索解决原问题"><a href="#剪枝搜索解决原问题" class="headerlink" title="剪枝搜索解决原问题"></a>剪枝搜索解决原问题</h3><p>那么这个题的解法对我们解决原问题有什么帮助吗？好像没有什么帮助，因为我们不能确切地知道哪个点在哪一块，而且每个点可能在多个块里，如果强行递归下去那复杂度就会达到惊人的 $O(2^n)$ ，然后就可以交一个“看起来差不多啊我怎么就超时了呢”的日常。但是实际上，当我们进入一个错误的分支后，我们的位置就会离问题的坐标越来越远，所以实际上可以剪掉很多错误的分支。所以我们先把这个递推方程列出来，再考虑怎么剪枝的事情。</p>
+<p>假设 $d(x,y,n)$ 是一个返回到 $(x,y)$ 需要的时间的集合，可以列出递推方程：<br>$$<br>d(x, y, n)=d(x, y, n-1) \cup\left{2^{n}-k: k \in d\left(y_{n}-y, x-x_{n}, n-1\right)\right}<br>$$<br>当n=1时：<br>$$<br>d(x, y, l)=\left{\begin{array}{ll}<br>{x+y} &amp; \text { for } 0 \leq y \leq x \leq 1 \<br>\varnothing &amp; \text { otherwise }<br>\end{array}\right.<br>$$<br>这个递推方程的意思是，要么 $(x,y)$ 在 $S_{n-1}$ 里面，要么在 $S_n$ 里面，那我们就在 $S_{n-1}$ 里找 $(y_n-y, x-x_n)$ 这个点，然后用 $2^n$ 去减它，如果看懂了上上节，这里还是挺自然的。</p>
+<p>好，考虑剪枝的问题。我们要剪枝的情况是：虽然在 $S_n$ 里面找 $(x,y)$ ，但是$(x,y)$ 根本不在 $S_n$ 的区域。一个理想的剪枝方法是判断这个坐标在不在 $S_n$ 上。但是我们其实不太会做。一个比较经济的方法是给 $S_n$ 区域<del>做一个目标检测</del> 画一个 bounding box，这样就能足以将时间复杂度剪到 $O(n)$. 这个 bounding box 可以通过递推预处理，见下：<br>$$<br>\begin{aligned}<br>r_{1} &amp;=t_{1}=1, \quad l_{1}=b_{1}=0, \<br>r_{n} &amp;=\max \left(r_{n-1}, t_{n-1}+x_{n}\right), \<br>t_{n} &amp;=\max \left(t_{n-1}, l_{n-1}+y_{n}\right), \<br>I_{n} &amp;=\max \left(l_{n-1}, b_{n-1}-x_{n}\right), \<br>b_{n} &amp;=\max \left(b_{n-1}, r_{n-1}-y_{n}\right) .<br>\end{aligned}<br>$$<br>然后，在进行上面那个递归的时候，如果 $(x,y)$ 在这个 bounding box 外面，就可以果断地返回空集。</p>
+<p>然后就做完了。时间复杂度是 $O(n)$ ，至于为什么其实是有证明的，不细说了，大概就是证明在整个图中包含 (x,y) 的点只有常数个，因此每轮递推只有常数次函数调用没有被剪枝剪掉，好像挺有道理的。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> ll = <span class="keyword">long</span> <span class="keyword">long</span>;</span><br><span class="line"></span><br><span class="line">ll n, m;</span><br><span class="line">ll u, v;</span><br><span class="line"></span><br><span class="line">ll xn[<span class="number">73</span>], yn[<span class="number">73</span>];</span><br><span class="line">ll pow2[<span class="number">64</span>];</span><br><span class="line">ll r[<span class="number">73</span>], t[<span class="number">73</span>], l[<span class="number">73</span>], b[<span class="number">73</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">preprocess</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	xn[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">	yn[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">	pow2[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">	pow2[<span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line">	r[<span class="number">1</span>] = t[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">	l[<span class="number">1</span>] = b[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (ll i = <span class="number">2</span>; i &lt;= <span class="number">62</span>; i++) &#123;</span><br><span class="line">		xn[i] = xn[i<span class="number">-1</span>] - yn[i<span class="number">-1</span>];</span><br><span class="line">		yn[i] = xn[i<span class="number">-1</span>] + yn[i<span class="number">-1</span>];</span><br><span class="line">		pow2[i] = pow2[i<span class="number">-1</span>] * <span class="number">2</span>;</span><br><span class="line">		r[i] = std::<span class="built_in">max</span>(r[i<span class="number">-1</span>], t[i<span class="number">-1</span>] + xn[i]);</span><br><span class="line">		t[i] = std::<span class="built_in">max</span>(t[i<span class="number">-1</span>], l[i<span class="number">-1</span>] + yn[i]);</span><br><span class="line">		l[i] = std::<span class="built_in">max</span>(l[i<span class="number">-1</span>], b[i<span class="number">-1</span>] - xn[i]);</span><br><span class="line">		b[i] = std::<span class="built_in">max</span>(b[i<span class="number">-1</span>], r[i<span class="number">-1</span>] - yn[i]);</span><br><span class="line"><span class="comment">//		std::cerr &lt;&lt; r[i] &lt;&lt; &#x27; &#x27;  &lt;&lt; t[i] &lt;&lt; &#x27; &#x27;  &lt;&lt; l[i] &lt;&lt; &#x27; &#x27; &lt;&lt; b[i] &lt;&lt; &#x27;\n&#x27;;</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">std::set&lt;ll&gt; <span class="title">dfs</span><span class="params">(ll x, ll y, ll n)</span> </span>&#123;</span><br><span class="line">	std::set&lt;ll&gt; res;</span><br><span class="line">	<span class="keyword">if</span> (n == <span class="number">1</span>) &#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="number">0</span> &lt;= y &amp;&amp; y &lt;= x &amp;&amp; x &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">			res.<span class="built_in">insert</span>(x+y);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> res;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (x &lt; -l[n] || x &gt; r[n] || y &lt; -b[n] || y &gt; t[n]) &#123;</span><br><span class="line">		<span class="keyword">return</span> res;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">auto</span> st = <span class="built_in">dfs</span>(x, y, n<span class="number">-1</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">auto</span> it: st) &#123;</span><br><span class="line">		res.<span class="built_in">insert</span>(it);</span><br><span class="line">	&#125;</span><br><span class="line">	st.<span class="built_in">clear</span>();</span><br><span class="line">	st = <span class="built_in">dfs</span>(yn[n]-y, x-xn[n], n<span class="number">-1</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">auto</span> it: st) &#123;</span><br><span class="line">		res.<span class="built_in">insert</span>(pow2[n] - it);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>&#123;</span><br><span class="line">	std::ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">	std::cin.<span class="built_in">tie</span>(<span class="number">0</span>); </span><br><span class="line">	<span class="built_in">preprocess</span>();</span><br><span class="line">	std::cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">	n = std::<span class="built_in">min</span>(n, <span class="number">62ll</span>);</span><br><span class="line">	<span class="keyword">for</span> (ll i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">		std::cin &gt;&gt; u &gt;&gt; v;</span><br><span class="line">		<span class="keyword">if</span> ((std::<span class="built_in">abs</span>(u) + std::<span class="built_in">abs</span>(v)) % <span class="number">2</span> == <span class="number">1</span>) &#123;</span><br><span class="line">			std::cout &lt;&lt; <span class="string">&quot;0\n&quot;</span>;</span><br><span class="line">			<span class="keyword">continue</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		ll x = (u + v) / <span class="number">2</span>, y = (v - u) / <span class="number">2</span>;</span><br><span class="line">		<span class="keyword">auto</span> st = <span class="built_in">dfs</span>(x, y, n);</span><br><span class="line">		std::cout &lt;&lt; st.<span class="built_in">size</span>();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">auto</span> it: st) &#123;</span><br><span class="line">			std::cout &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; it;</span><br><span class="line">		&#125;</span><br><span class="line">		std::cout &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="吐槽"><a href="#吐槽" class="headerlink" title="吐槽"></a>吐槽</h2><p>两个半月没做题，对着题解敲出来就直接过了，这题解真不错。</p>
+<p>网上能找到的一句话题解是吉老师写的，吉老师说：</p>
+<p>还看到了cf上有关这个题的讨论。坦克工程师，我的偶像</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/06/23/%E5%AE%A3%E4%BC%A0-%E8%A7%82%E5%BF%B5%E3%80%81%E8%AF%9D%E8%AF%AD%E5%8F%8A%E5%85%B6%E6%AD%A3%E5%BD%93%E5%8C%96/" rel="prev" title="宣传：观念、话语及其正当化">
+      <i class="fa fa-chevron-left"></i> 宣传：观念、话语及其正当化
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/11/05/%E8%84%91%E7%94%B5%E5%9B%BE%E5%88%A4%E8%AF%BB/" rel="next" title="感性理解脑电图判读">
+      感性理解脑电图判读 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E6%84%8F"><span class="nav-number">1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA"><span class="nav-number">2.</span> <span class="nav-text">输入输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B"><span class="nav-number">3.</span> <span class="nav-text">样例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%81%9A%E6%B3%95"><span class="nav-number">4.</span> <span class="nav-text">做法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B1%82t%E6%97%B6%E5%88%BB%E7%94%BB%E5%9B%BE%E6%9C%BA%E7%9A%84%E4%BD%8D%E7%BD%AE"><span class="nav-number">4.1.</span> <span class="nav-text">求t时刻画图机的位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%95%E5%AF%BC%E9%97%AE%E9%A2%98%EF%BC%9A%E7%9A%AE%E4%BA%9A%E8%AF%BA%E6%9B%B2%E7%BA%BF"><span class="nav-number">4.2.</span> <span class="nav-text">引导问题：皮亚诺曲线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%AA%E6%9E%9D%E6%90%9C%E7%B4%A2%E8%A7%A3%E5%86%B3%E5%8E%9F%E9%97%AE%E9%A2%98"><span class="nav-number">4.3.</span> <span class="nav-text">剪枝搜索解决原问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">5.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%90%E6%A7%BD"><span class="nav-number">6.</span> <span class="nav-text">吐槽</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Thirtiseven Lee</p>
+  <div class="site-description" itemprop="description">和光同尘</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">58</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Thirtiseven Lee</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
