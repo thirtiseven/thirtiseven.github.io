@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"thirtiseven.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="今年看了大概一百六十本书吧，有点太疯了，去年我：希望自己少看点书多出去玩，今年看的书更多了，但确实出去玩得更多了（就是好像几乎每一次都是进城和周老师看展...），随便插点图片吧... 简单的科研总结：摸鱼，很开心；搞模糊集，搞不出来；搞强化学习，很开心，最后在组会上作了大概意思是“强化学习为什么不行”的报告；糊一些无监督的东西，糊不出来；开不出来题，导师救了一下；现在正在糊一些图神经网络的东西；感">
+<meta property="og:type" content="website">
+<meta property="og:title" content="语言漩涡">
+<meta property="og:url" content="http://thirtiseven.github.io/images/%E8%AF%BB%E4%B9%A6%E6%80%BB%E7%BB%932021.html">
+<meta property="og:site_name" content="语言漩涡">
+<meta property="og:description" content="今年看了大概一百六十本书吧，有点太疯了，去年我：希望自己少看点书多出去玩，今年看的书更多了，但确实出去玩得更多了（就是好像几乎每一次都是进城和周老师看展...），随便插点图片吧... 简单的科研总结：摸鱼，很开心；搞模糊集，搞不出来；搞强化学习，很开心，最后在组会上作了大概意思是“强化学习为什么不行”的报告；糊一些无监督的东西，糊不出来；开不出来题，导师救了一下；现在正在糊一些图神经网络的东西；感">
+<meta property="og:locale">
+<meta property="og:image" content="http://thirtiseven.github.io/Users/lihaoyang/Desktop/读书总结/读书总结python.png">
+<meta property="og:image" content="http://thirtiseven.github.io/Users/lihaoyang/Desktop/读书总结/3.2.jpg">
+<meta property="og:image" content="http://thirtiseven.github.io/Users/lihaoyang/Desktop/读书总结/3.24.jpg">
+<meta property="og:image" content="http://thirtiseven.github.io/Users/lihaoyang/Desktop/读书总结/5.2.jpg">
+<meta property="og:image" content="http://thirtiseven.github.io/Users/lihaoyang/Desktop/读书总结/5.16.jpg">
+<meta property="og:image" content="http://thirtiseven.github.io/Users/lihaoyang/Desktop/读书总结/5.20.jpg">
+<meta property="og:image" content="http://thirtiseven.github.io/Users/lihaoyang/Desktop/读书总结/6.5.jpg">
+<meta property="og:image" content="http://thirtiseven.github.io/Users/lihaoyang/Desktop/读书总结/6.25.jpg">
+<meta property="og:image" content="http://thirtiseven.github.io/Users/lihaoyang/Desktop/读书总结/6.24.jpg">
+<meta property="og:image" content="http://thirtiseven.github.io/Users/lihaoyang/Desktop/读书总结/7.1.jpg">
+<meta property="og:image" content="http://thirtiseven.github.io/Users/lihaoyang/Desktop/读书总结/7.9.jpg">
+<meta property="og:image" content="http://thirtiseven.github.io/Users/lihaoyang/Desktop/读书总结/8.5.jpg">
+<meta property="og:image" content="http://thirtiseven.github.io/Users/lihaoyang/Desktop/读书总结/10.6.JPG">
+<meta property="og:image" content="http://thirtiseven.github.io/Users/lihaoyang/Desktop/读书总结/10.10.jpg">
+<meta property="og:image" content="http://thirtiseven.github.io/Users/lihaoyang/Desktop/读书总结/10.12.jpg">
+<meta property="og:image" content="http://thirtiseven.github.io/Users/lihaoyang/Desktop/读书总结/10.14.jpg">
+<meta property="og:image" content="http://thirtiseven.github.io/Users/lihaoyang/Desktop/读书总结/10.28.jpg">
+<meta property="og:image" content="http://thirtiseven.github.io/Users/lihaoyang/Desktop/读书总结/11.10.jpg">
+<meta property="og:image" content="http://thirtiseven.github.io/Users/lihaoyang/Desktop/读书总结/11.24.jpg">
+<meta property="og:image" content="http://thirtiseven.github.io/Users/lihaoyang/Desktop/读书总结/12.7.jpg">
+<meta property="og:image" content="http://thirtiseven.github.io/Users/lihaoyang/Desktop/读书总结/现代主义烹调.png">
+<meta property="og:image" content="http://thirtiseven.github.io/Users/lihaoyang/Desktop/读书总结/12.21.jpg">
+<meta property="og:image" content="http://thirtiseven.github.io/Users/lihaoyang/Desktop/读书总结/12.30.jpg">
+<meta property="article:published_time" content="2022-01-15T14:38:19.711Z">
+<meta property="article:modified_time" content="2022-01-15T14:35:15.618Z">
+<meta property="article:author" content="Thirtiseven Lee">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://thirtiseven.github.io/Users/lihaoyang/Desktop/读书总结/读书总结python.png">
+
+<link rel="canonical" href="http://thirtiseven.github.io/images/%E8%AF%BB%E4%B9%A6%E6%80%BB%E7%BB%932021">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : false,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title> | 语言漩涡
+</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">语言漩涡</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">李三七的博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+  
+  
+
+          <div class="content page posts-expand">
+            
+
+    
+    
+    
+    <div class="post-block" lang="zh-Hans">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">
+</h1>
+
+<div class="post-meta">
+  
+
+</div>
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+          <p>今年看了大概一百六十本书吧，有点太疯了，去年我：希望自己少看点书多出去玩，今年看的书更多了，但确实出去玩得更多了（就是好像几乎每一次都是进城和周老师看展...），随便插点图片吧...</p>
+<p>简单的科研总结：摸鱼，很开心；搞模糊集，搞不出来；搞强化学习，很开心，最后在组会上作了大概意思是“强化学习为什么不行”的报告；糊一些无监督的东西，糊不出来；开不出来题，导师救了一下；现在正在糊一些图神经网络的东西；感觉毕业不能了，天天在电信楼二楼的打水房痛哭（不是）meanwhile 项目倒是写得跟真的一样，已经接受现状，打算当一个比较优秀的开发，平静地度过相对失败的人生了（不是</p>
+<p>本来想十二月冲个读书业绩的，但是突然就被迫开始春招了，实验室事情也一堆... 明年要科研写小论文写大论文找工作实习找工作，希望还有时间看书... 我还要写很长时间代码，但是贵校图书馆是看一天少一天了</p>
+<p>写年终总结像上班，所以用豆坟导出的excel生成了一个主体部分，靠一些现代科技敷衍一下... 删掉了一些不推荐的书，其他基本就是贴的豆瓣短评然后看到哪里随便加点... 豆瓣好友就看看照片吧...</p>
+<figure>
+<img src="/Users/lihaoyang/Desktop/读书总结/读书总结python.png" alt="" /><figcaption>读书总结python</figcaption>
+</figure>
+<p>省流版，排个top10：</p>
+<ul>
+<li>现代主义烹调</li>
+<li>宣传</li>
+<li>东方故事集</li>
+<li>萨德侯爵夫人</li>
+<li>Analyzing Neural Time Series Data</li>
+<li>夜神科尔内尔</li>
+<li>厌女</li>
+<li>机器学习实战（第2版）</li>
+<li>宿命论者雅克和他的主人</li>
+<li>Theory of Fun for Game Design</li>
+</ul>
+<p><strong>01-02 Eric R. Kandel《Reductionism in Art and Brain Science》</strong></p>
+<p>从还原论的角度讲脑科学和艺术的关系，很好，打算再读遍中文版，被坎德尔圈粉了。</p>
+<p><strong>01-05 [西]安德烈斯·巴尔瓦 《光明共和国》</strong></p>
+<p>非常好的故事，但是现在忘了讲啥的了（</p>
+<p><strong>01-09 [德]瓦尔特·本雅明 《摄影小史》</strong></p>
+<p>本老师，永远的神</p>
+<p><strong>01-09 斯科特·麦奎尔 《媒体城市》</strong></p>
+<p>好像比较导论 俺来看看他的下一本有什么高论</p>
+<p><strong>01-09 [澳]斯科特·麦夸尔 《地理媒介》</strong></p>
+<p>以小见大，逻辑连贯，有一些自己的观点，比 media city 好很多，我可能检查了有三遍这两本书是不是一个人写的。</p>
+<p>以上三本是为了写传播院那个跨专业选课的小作文看的，还借了另外大概十本相关的书这里抄一点那里抄一点，很快乐，最后写了个类似文献综述一样的东西，可能不太符合老师的要求...</p>
+<p><strong>01-18 扎法拉尼 (Reza Zafarani) 阿巴西 (Mohammad Ali Abbasi) 刘 (Huan Liu) 《社会媒体挖掘》</strong></p>
+<p>上半年和贵校艺传院大佬们花了点时间打了个计算传播小比赛，翻了翻传播人的课本之类的东西，warning of math（图论），很难想象文科生要怎么学这种东西，但是对学计算机的很友好，有兴趣的都可以翻翻看。</p>
+<p><strong>02-11 残雪 《茶园》</strong></p>
+<p>第一次看残雪，还挺好看，我啧啧称奇</p>
+<p><strong>02-17 [美] 侯世达 [美] 丹尼尔·丹尼特 《我是谁，或什么》</strong></p>
+<p>文集，大概是侯世达那帮人，认知科学+还没有深度学习之前的人工智能，太牛逼了... 简直就是魔法</p>
+<p><strong>02-18 [日] 上野千鹤子 《厌女》</strong></p>
+<p>很好读，时常有“明明这么显然我怎么没有想到我是不是哪里有问题”的感觉（</p>
+<p>发了书摘，想看的翻翻公众号</p>
+<p>感谢黄老师推荐，我也推荐（不过这书好像非常火了想读的都已经读了吧</p>
+<p><strong>03-02 [德]海涅 《德国，一个冬天的童话》</strong></p>
+<p>好！吃 在 德 国</p>
+<p><strong>03-02</strong> 去西岸看了蓬皮杜展览的第一期</p>
+<figure>
+<img src="/Users/lihaoyang/Desktop/读书总结/3.2.jpg" alt="" /><figcaption>3.2</figcaption>
+</figure>
+<p><strong>03-04 顾德明 缪进昌 丁誉声 《运动解剖学图谱(第3版)》</strong></p>
+<p>今天在想象中健身了 不错</p>
+<p>很有意思的事情是下半年组里竟然真的开始做肌电，所以虽然说今年基本还是没怎么健身，但是运动解剖学至少没白学，人生很迷幻...</p>
+<p><strong>03-04 袁哲生 《猴子·罗汉池》</strong></p>
+<p>很美！基本不读中国文学，主要是靠袁哲生来想象一些当代简体中文文学应该有的样子</p>
+<p><strong>03-06 [美] Marty Cagan 《启示录》</strong></p>
+<p>“这么常识的东西为啥自己的PM就是不会呢”（</p>
+<p><strong>03-06 [美] 弗朗索瓦•肖莱 《Python深度学习》</strong></p>
+<p>keras真好用... 我又一次觉得自己学会了... 打算开始写点深度学习代码...</p>
+<p>原来我今年三月才学keras... 那我今年进步神速啊？</p>
+<p><strong>03-07 [波兰] 斯塔尼斯瓦夫·莱姆 《索拉里斯星》</strong></p>
+<p>科幻爱情故事！非常好看</p>
+<p><strong>03-10 [美] 薇薇安·迈尔 [美] 约翰·马卢夫 《我是这个世界的间谍》</strong></p>
+<p>强！拍人像好难，今年看了很多图书馆的画册摄影集之类的东西，很快乐啊</p>
+<p><strong>03-10 [法]乔治·巴塔耶 《天空之蓝》</strong></p>
+<p>上政治课 看什么书都觉得特别好（应该是真的特别好吧 这书搁我青春期看巴塔耶就是我的文学偶像（</p>
+<p><strong>03-16 [英]Tony Attwood 《阿斯伯格综合征完全指南》</strong></p>
+<p>出大问题 不过问题不大（</p>
+<p><strong>03-17 [英] 简 ·鲍恩 摄 [英] 卢克·多德 编 《一生的凝视》</strong></p>
+<p><strong>03-22 Martin Kleppmann 《Designing Data-Intensive Applications》</strong></p>
+<p>对着英文版看了开源翻译版本... 非常好的书，搞清楚了很多工业界人整天挂在嘴边的东西是啥... 很多东西没看明白，如果以后干相关工作要重读一遍</p>
+<p>双十一买了纸书中文版，至今没有翻开...</p>
+<p><strong>03-22 纽曼 《网络科学引论》</strong></p>
+<p>这辈子学不会动力系统</p>
+<p><strong>03-24</strong> 看看樱花</p>
+<figure>
+<img src="/Users/lihaoyang/Desktop/读书总结/3.24.jpg" alt="" /><figcaption>3.24</figcaption>
+</figure>
+<p><strong>03-29 Mike X Cohen 《Analyzing Neural Time Series Data》</strong></p>
+<p>读了大半年... 还是挺好读的，基本都是手把手教，还有很多人生经验（</p>
+<p>写了大概两万字的笔记，基本上都扔在公众号上了，很快乐，但是有用吗，没有用（</p>
+<p><strong>04-01 [美] 文卡特·苏帕拉马尼亚姆 《Scala 实用指南》</strong></p>
+<p>还挺好，篇幅很短，无痛入门（磕《scala编程》去了</p>
+<p><strong>04-01 [法] 洛特雷阿蒙 《马尔多罗之歌》</strong></p>
+<p>新版重读。这不比极乐迪斯科带劲多了？</p>
+<p><strong>04-04 [美] 莫里斯·W.赫希 （Morris W.Hirsch） 《微分方程、动力系统与混沌引论：第3版》</strong></p>
+<p>这辈子学不会动力系统</p>
+<p><strong>04-07 [英]安妮·施沃恩 [英]史蒂芬·夏皮罗 《导读福柯《规训与惩罚》》</strong></p>
+<p>我好像学会了！</p>
+<p><strong>04-07 项飙 《跨越边界的社区（修订版）》</strong></p>
+<p>很精彩！这个研究做得也太扎实了，真不容易，我又不想（真的）学文科了（</p>
+<p><strong>04-10 [美] 特德·焦亚 《如何听爵士》</strong></p>
+<p>适合想听爵士但是不知道听啥、看到一堆不同的风格就晕、打开（某些）爵士的书被满脸的乐理知识嗷的一声就吓跑的普通乐迷朋友（比如本人</p>
+<p><strong>04-12 [美] Alexander A. Stepanov [美] Daniel E. Rose 《数学与泛型编程》</strong></p>
+<p>把一些连我都会的数论和抽代，结合到C++模版元编程里面再讲一遍，在很短的篇幅里让人隐隐约约过了一把“因为这个东西是一个这个东西，所以我们可以把这个东西扩展到这个东西上面”的瘾（</p>
+<p><strong>04-14 何海涛 《剑指Offer》</strong></p>
+<p>确实都是经典水题吧... 各种面试官小心思还挺好玩的</p>
+<p>开始找工作之后觉得这本书还真挺好的，难度也很合理，考察的内容也没有太大的偏差，推荐推荐</p>
+<p><strong>04-20 [美] 乔丽·格雷厄姆（Jorie Graham） 《众多未来》</strong></p>
+<p>挺好的，有植物的气息</p>
+<p><strong>04-21 周雪光 《组织社会学十讲》</strong></p>
+<p>精彩，读了很久</p>
+<p><strong>04-26 [美] 埃里克·坎德尔 《追寻记忆的痕迹》</strong></p>
+<p>真好呀真好呀真好呀。感觉基本上是算法课上摸鱼读的，很好看啊，读完之后对认知科学充满了激情啊</p>
+<p><strong>05-02</strong> 去草莓音乐节了，没拍什么照片，看了蛙池梅卡木马五条人痛仰什么的</p>
+<figure>
+<img src="/Users/lihaoyang/Desktop/读书总结/5.2.jpg" alt="" /><figcaption>5.2</figcaption>
+</figure>
+<p><strong>05-07 [美] 马丁·戴维斯 《逻辑的引擎》</strong></p>
+<p>很不错，我的计算机发展史英语课小论文就靠它了</p>
+<p><strong>05-08 [德] 鲍里斯·格洛伊斯 《艺术力》</strong></p>
+<p>是比较好读的论文 题目都起得很好 观点有很多启发（</p>
+<p><strong>05-16</strong> 生日当天，自己跑去西岸看了康定斯基的展，可以说是真爱了。（西岸的展览好贵还没有学生票，建议学学psa）</p>
+<figure>
+<img src="/Users/lihaoyang/Desktop/读书总结/5.16.jpg" alt="" /><figcaption>5.16</figcaption>
+</figure>
+<p><strong>05-18 [美]马修·萨尔加尼克（Matthew J. Salganik） 《计算社会学》</strong></p>
+<p>我开始觉得，学了点计算机就想着入侵人文学科把它卷一卷的心态着实不太健康...</p>
+<p><strong>05-20 [法] Aurélien Géron 《机器学习实战（原书第2版）》</strong></p>
+<p>纸上谈兵地看了一遍 怎么三个月就过去了啊...</p>
+<p>下半年读了一下英文版的后半本，挺好的。</p>
+<p><strong>05-20</strong> 去psa看了双年展，比上次好，没上上次好，比较开心的是有一个地方有很大的鲸鱼可以躺在上面，以及进了psa的烟囱，以及看电影的时候可以钻帘子（小朋友春游</p>
+<figure>
+<img src="/Users/lihaoyang/Desktop/读书总结/5.20.jpg" alt="" /><figcaption>5.20</figcaption>
+</figure>
+<p><strong>05-21 [以] 雅各布•巴力•天舒维 《罗斯科》</strong></p>
+<p><strong>05-23 [德] Martin Odersky（ 马丁·奥德斯基） [美] Lex Spoon（莱斯·彭） [美] Bill Venners （比尔·文纳斯） 《Scala编程（第4版）》</strong></p>
+<p>用这学期不干活的时间把这本看完了... 那么我这学期干了啥活... 怎么感觉啥都没干...</p>
+<p>Scala 太好了，可惜不太能找不到工作，希望能有厂收留我让我写 Scala...</p>
+<p><strong>05-25 詹姆斯·霍夫曼 (James Hoffmann) 《世界咖啡地图》</strong></p>
+<p>学会了学会了</p>
+<p>然后下半年买了个爱乐压然后开始疯狂喝咖啡，买了一堆豆子，很快乐。</p>
+<p><strong>05-26 易彬 汇校 《穆旦诗编年汇校》</strong></p>
+<p><strong>06-03 刘擎 《刘擎西方现代思想讲义》</strong></p>
+<p>有苏菲的世界当代成人流行版内味，极大程度降低装逼门槛，每个初中生都应该阅读。在政治课上看这本书还被坐后面的哥哥搭讪了... 但是我社恐，没聊几句...</p>
+<p><strong>06-05</strong> 买了上海电影节的票，本来打算一个人冲的，没想到后来还有缘和两个旁友分别看了一场。短片后来出了，另外看了《对一个不容怀疑的公民的调查》，看的里面除了主竞赛单元的都不错，我学会了。</p>
+<figure>
+<img src="/Users/lihaoyang/Desktop/读书总结/6.5.jpg" alt="" /><figcaption>6.5</figcaption>
+</figure>
+<p><strong>06-07 [法] 阿尔贝·加缪 《西西弗神话》</strong></p>
+<p>重读，借的室友的书，一天读一篇，然后给室友口胡这篇说了啥，非常快乐，感觉自己的语文水平回到了高中（</p>
+<p><strong>06-08 Douglas Adams 《The Hitchhiker's Guide to the Galaxy》</strong></p>
+<p><strong>06-13 [德] 赫塔·米勒 《心兽》</strong></p>
+<p>好，已经是赫塔米勒粉丝了</p>
+<p><strong>06-14 [美] 里德·哈斯廷斯 [美] 艾琳·迈耶 《不拘一格》</strong></p>
+<p>讲的是 Netflix 的企业文化。好！想去的公司+1</p>
+<p><strong>06-16 赖声川 《如梦之梦》</strong></p>
+<p>太好看了 真的像在做梦 （在人生最后一堂政治课上看完了这本书 加强了这种感觉</p>
+<p><strong>06-22 刘海龙 《宣传》</strong></p>
+<p>太猛了，total mind fuck</p>
+<p>看完之后没几天刘海龙就来传播院开讲座，去学术追星了一波，刘老师线下也很有魅力，圈粉了，看看刘老师：</p>
+<figure>
+<img src="/Users/lihaoyang/Desktop/读书总结/6.25.jpg" alt="" /><figcaption>6.25</figcaption>
+</figure>
+<p><strong>06-24</strong> 明珠美术馆的“从泥土到语言——以陶瓷为媒介”，挺好的，我觉得对于资源有限的场馆来说已经做到很优秀了，美术馆附属书店不错</p>
+<figure>
+<img src="/Users/lihaoyang/Desktop/读书总结/6.24.jpg" alt="" /><figcaption>6.24</figcaption>
+</figure>
+<p><strong>06-27 [美] 简·罗伯森 《当代艺术的主题》</strong></p>
+<p>学吹当代艺术牛逼看这一本就够了（</p>
+<p><strong>07-01</strong> UCCA EDGE 的开幕展，“激浪之城：世纪之交的艺术与上海”，期望很高，不是很行</p>
+<figure>
+<img src="/Users/lihaoyang/Desktop/读书总结/7.1.jpg" alt="" /><figcaption>7.1</figcaption>
+</figure>
+<p><strong>07-04 [德]扬—维尔纳·米勒（Jan-Werner Müller） 《什么是民粹主义？》</strong></p>
+<p>你报他身份证号得了</p>
+<p><strong>07-04 胡理 张治国 等 《脑电信号处理与特征提取》</strong></p>
+<p>前半本不错，比较全面，后半本基本上是文献综述汇编… 但是也还行。不过相比之下感觉还是 Cohen 那本更适合当脑电信号处理的入门教材</p>
+<p><strong>07-09</strong> 一个人去看了左小祖咒的巡演，没想到今年就看了一场live... 挺好的，唱了很多</p>
+<figure>
+<img src="/Users/lihaoyang/Desktop/读书总结/7.9.jpg" alt="" /><figcaption>7.9</figcaption>
+</figure>
+<p><strong>07-11 [日] 斋藤康毅 《深度学习进阶》</strong></p>
+<p>起点很低，学习曲线很平缓，篇幅也很短，挺好</p>
+<p><strong>07-11 斯科特•默里（Scott Murray） 《数据可视化实战》</strong></p>
+<p>没水平评价后面的部分好不好，但是前面讲html+css+js的部分我觉得非常好，可以直接扔给没学过前端的人当科普（D3.js 竟然就是直接操作 SVG 的吗 ...</p>
+<p><strong>07-15 [法] 德尼·狄德罗 《宿命论者雅克和他的主人》</strong></p>
+<p>假如大海开了锅，煎鱼烤鱼多又多！</p>
+<p><strong>07-18 [智利] 罗贝托·波拉尼奥 《重返暗夜》</strong></p>
+<p>写得好，想听波老师骂人</p>
+<p><strong>07-20 [美]丹尼尔希夫曼（Daniel Shiffman） 《Processing编程学习指南（原书第2版）》</strong></p>
+<p>强啊，这个processing咋什么都能搞啊，我要是个艺术生我现在已经昏古七了</p>
+<p><strong>07-20 [美]阿瑟·米勒 《萨勒姆的女巫》</strong></p>
+<p>猎巫故事，很精彩，窒息了</p>
+<p><strong>08-03 TOBY SEGARAN 《集体智慧编程》</strong></p>
+<p>16年买的书，那个时候就已经过时了，今天翻出来看完了，很喜欢这种教学风格，比较工程，但是这也意味着它时效性比较差…</p>
+<p><strong>08-05</strong> 回家了，看看长江。大概是最后一个躺在家里没事做的暑假了，充分浪费了时间，很快乐。</p>
+<figure>
+<img src="/Users/lihaoyang/Desktop/读书总结/8.5.jpg" alt="" /><figcaption>8.5</figcaption>
+</figure>
+<p><strong>08-11 王喆 《深度学习推荐系统》</strong></p>
+<p>挺良心的…</p>
+<p><strong>08-19 [日] 柏叶幸子 著 (日) 杉田比吕美 绘 《雾中的奇妙小镇》</strong></p>
+<p>可爱，和周老师进行了一个读书漂流，这本是她的童年读物，很不错！</p>
+<p><strong>09-07 Thomas，F.，Collura 《神经反馈原理与实践》</strong></p>
+<p>非常好读，介绍了神经反馈的一些基础原理和技术，没有涉及到人工智能，但是很有启发，感觉我对神经反馈的很多认识是错的...</p>
+<p><strong>09-08 列文·比斯 《牛津大学终极昆虫图鉴》</strong></p>
+<p>主要是高清放大照片 文字很少 非常好看 但是活的虫子还是很可怕！</p>
+<p><strong>09-09 查尔斯·布考斯基 《关于写作》</strong></p>
+<p>随便写点东西就喷射才华的感觉…</p>
+<p><strong>09-14 [阿根廷] 里卡多·皮格利亚 《人工呼吸》</strong></p>
+<p>大受震撼… 非常好看的小说...</p>
+<p><strong>09-16 [新加坡] 约西·拉贾 《威权式法治》</strong></p>
+<p>教 科 书</p>
+<p><strong>09-16 [清]车万育 《声律启蒙：吴冠中插图珍藏版》</strong></p>
+<p>后半本是这两天跑代码的时候放电脑下面看的 感觉在念咒语 吴冠中的画好看</p>
+<p><strong>09-19 [美] 史蒂文·J. 米勒 《普林斯顿概率论读本》</strong></p>
+<p>非常适合学计算机并且会很多其他数学的高龄概率论废物复习一下，看了三分之一的时候觉得自己就是这种人，但是很快就发现自己并不是… 硬着头皮每天翻一两章翻完了，感觉自己不会的东西还是不会，数学书不该这么看…</p>
+<p><strong>09-21 [美] Jon Kleinberg [美] Éva Tardos 《算法设计》</strong></p>
+<p>非常喜欢的算法教材，一些经典算法讲得很清楚（点名表扬fft和网络流），pspace 那章很精彩，后四章是一个理想的“解决np问题的奇怪方法”导论。偏重于解决实际问题，和算导那种牛逼数据结构+复杂度证明的风格差异很大，起点还是挺高的，不太适合入门。</p>
+<p><strong>09-25 Nobeko 《世界，就是繞著貓打轉》</strong></p>
+<p>太可爱了太可爱了太可爱了，感谢周老师</p>
+<p><strong>09-27 邓野 《联合政府与一党训政》</strong></p>
+<p>写得很流畅，全程自动脑补央视纪录片播音腔，但本质上其实没有想象中那么精彩。还是不喜欢读历史书，可能中年了是会喜欢的</p>
+<p><strong>09-29 陈年喜 《炸裂志》</strong></p>
+<p>敏感、聪明、转化率很高，陈老师有诗人的天赋。而这种（放别人身上会显得过于）轻盈的天赋和从地底深处传来不断爆裂的生活体悟结合起来的东西，读起来就显得十分平衡。</p>
+<p><strong>10-01 [美] 吉恩·金 《独角兽项目》</strong></p>
+<p>写得比《凤凰项目》更像小说了，好看</p>
+<p><strong>10-03 Hajo Düchting 《KANDINSKY》</strong></p>
+<p>假粉丝 早就买了 现在才看</p>
+<p><strong>10-06</strong> 十一去了几天宁波找周老师，看看雪窦山：</p>
+<figure>
+<img src="/Users/lihaoyang/Desktop/读书总结/10.6.JPG" alt="" /><figcaption>10.6</figcaption>
+</figure>
+<p><strong>10-07 刘鹏 王超 《计算广告 第2版》</strong></p>
+<p>第一部分是介绍在线广告，第二部分是各个问题和算法的简略介绍，方法主要是传统方法，代码主要是c++，内容不是很难。感觉这本书涉及了计算广告的各个方面，看完吹吹牛逼应该够用了</p>
+<p><strong>10-10 [美] 杰茜卡·伊斯托 [美] 安德烈亚斯·威尔霍夫 《手工咖啡：咖啡爱好者的完美指南》</strong></p>
+<p>这个时候已经开始做咖啡了，试图系统学习一下怎么做咖啡，发现如果只是爱好者随便做做比做菜简单多了，主要靠一些味觉天赋</p>
+<figure>
+<img src="/Users/lihaoyang/Desktop/读书总结/10.10.jpg" alt="" /><figcaption>10.10</figcaption>
+</figure>
+<p><strong>10-12</strong> 去 psa 看了 “树，树” 展览，很喜欢，主题扣得很紧，作品也都很好看。</p>
+<figure>
+<img src="/Users/lihaoyang/Desktop/读书总结/10.12.jpg" alt="" /><figcaption>10.12</figcaption>
+</figure>
+<p><strong>10-14 Raph Koster 《Theory of Fun for Game Design》</strong></p>
+<p>视角非常高，非常清晰地讲了游戏的本质，以及应该如何设计游戏，哲学了。是一页字一页图，轻松愉快，看看画风：</p>
+<figure>
+<img src="/Users/lihaoyang/Desktop/读书总结/10.14.jpg" alt="" /><figcaption>10.14</figcaption>
+</figure>
+<p><strong>10-15 [美国] 唐·德里罗 《零K》</strong></p>
+<p>挺好读的意识流，逐渐进入沉重和冰冷的状态，然后突然有一个轻盈和温暖的结尾，好看</p>
+<p><strong>10-15 David Foster 《Generative Deep Learning》</strong></p>
+<p>不是很困难，内容挺新的，适合扫盲，有缘过段时间搭点模型玩一下</p>
+<p><strong>10-16 [美] 路易斯·贾内梯 《认识电影（修订第14版）》</strong></p>
+<p>学到了学到了，立刻去看《公民凯恩》（过两天吧</p>
+<p>updated：没看</p>
+<p><strong>10-18 [日] 三岛由纪夫 《萨德侯爵夫人》</strong></p>
+<p>切入点选得好，充分地在这个题材里体现了三岛的特点，很有张力，非常喜欢了，打算开始高强度看三岛。</p>
+<p><strong>10-18 Daniel Shiffman 《代码本色：用编程模拟自然系统》</strong></p>
+<p>很好看，一个小时翻完了。没有什么本质上很新的东西，但是processing这个语言本身确实…很有魅力吧… 我觉得更适合学计算机但是想搞艺术的看，看了看短评，学艺术的说看不懂，学游戏引擎的说太简单，透着一些诡异…</p>
+<p><strong>10-20 (美) W.S.默温 《天狼星的阴影》</strong></p>
+<p>比较内敛，感觉很难穿过译文传达，而且我有点困了</p>
+<p><strong>10-23 [美] 理查德·布劳提根 《在美国钓鳟鱼》</strong></p>
+<p>疯疯癫癫的！很喜欢。蛋黄酱</p>
+<p><strong>10-23 [瑞士] 拉尔斯·穆勒 《风·落·之·光--ECM唱片的视觉语言》</strong></p>
+<p>之前没听过ECM，但是这本书长得太好看了就借了，一边听一边看，非常惊喜</p>
+<p><strong>10-24 [爱尔兰] 萨缪尔·贝克特 《等待戈多》</strong></p>
+<p>终于读了这本一直假装自己读过的书… 打算和室友择机蹲在马路牙子上演一下（</p>
+<p><strong>10-28</strong> 去浦东美术馆看了“那三个展”，泰特，蔡国庆和胡安米罗，很棒，浦东美术馆，大手笔，乡窝宁大受震撼。</p>
+<figure>
+<img src="/Users/lihaoyang/Desktop/读书总结/10.28.jpg" alt="" /><figcaption>10.28</figcaption>
+</figure>
+<p><strong>10-28 [法] 咪咪·托雷松 著 [冰岛] 奥杜尔·托雷松 摄 《乡间四季厨房》</strong></p>
+<p>挺家常的，完全可以把香料香草葡萄酒换成孜然香菜酱油在家里瞎做（暴论</p>
+<p><strong>10-28 项飙 吴琦 《把自己作为方法》</strong></p>
+<p>是好看的，说的是人话，但还是不太能理解为什么这么火…</p>
+<p><strong>10-31 The Museum of Modern Art,New York 编著 《MoMA亮点》</strong></p>
+<p>开本有点小，希望有生之年能去看真的（</p>
+<p><strong>10-31 [美] 理查德·布劳提根 《在西瓜糖里》</strong></p>
+<p>很好，但是他的书看一本差不多就得了吧…</p>
+<p><strong>11-03 [日] 三岛由纪夫 《仲夏之死》</strong></p>
+<p>太好了太好了太好了</p>
+<p><strong>11-04 美国大都会艺术博物馆 《大都会艺术博物馆指南》</strong></p>
+<p><strong>11-05 the University of Warsaw 《Looking For a Challenge?》</strong></p>
+<p>做了大概前三分之一的题，做不动了，后面挑着看了看题解。题解的质量非常高，严谨，易于理解，逻辑通顺，非常详细，属于让那种入门选手也可以只看题解拍脑袋把无论多难的题目做出来的程度。我觉得在2012年这无疑是一本非常好的进阶算法书，但是在2021年的中国如果现役选手还是花很多时间来做这上面的题目就有些投入产出不成正比了（当然看看学学写题解风格肯定是好的</p>
+<p><strong>11-07 拜伦 《曼弗雷德 该隐：拜伦诗剧两部》</strong></p>
+<p>该隐 太空漫游</p>
+<p><strong>11-07 [美] 布雷特·斯拉特金 《Effective Python》</strong></p>
+<p>better than fluent python</p>
+<p><strong>11-07 [美]约瑟夫·德·阿梅利奥 《透视画法入门》</strong></p>
+<p>好 每个cv人都应该看看（对不起</p>
+<p><strong>11-07 [美]Mondo公司 《Mondo电影海报艺术典藏》</strong></p>
+<p>看上去都好难画（发出质朴的感叹</p>
+<p><strong>11-10 Roger Ballen 《荒诞剧场》</strong></p>
+<p>厉害…</p>
+<figure>
+<img src="/Users/lihaoyang/Desktop/读书总结/11.10.jpg" alt="" /><figcaption>11.10</figcaption>
+</figure>
+<p><strong>11-12 [美]布鲁斯·本沃德 芭芭拉·加维·杰克逊 布鲁斯·R·杰克逊 《认识乐理》</strong></p>
+<p>学会了！练习没答案 我之后拿个MyEarTraining什么的自己练吧（</p>
+<p><strong>11-13 [法] 雷蒙·格诺 《风格练习》</strong></p>
+<p>很喜欢！怎么讲，感觉在嘲讽许多当代文学（</p>
+<p><strong>11-13 [德] 克里斯托弗·尼曼 《周末速写》</strong></p>
+<p><strong>11-17 [美] 威廉·立德威尔（William Lidwell） ［美］克里蒂娜·霍顿（Kritina Holden） ［美］吉尔·巴特勒（Jill Butler） 《设计的125条通用法则（全本）》</strong></p>
+<p>很多东西不会，应该背下来（</p>
+<p><strong>11-18 [俄] 德拉戈莫申科 《同义反复》</strong></p>
+<p>怎么讲，即使我本质上是一个n-gram模型，我也是很好的n-gram模型</p>
+<p><strong>11-18 马腾飞 《图神经网络：基础与前沿》</strong></p>
+<p>还不错 博客风格 轻松愉快 仿佛学会了 但是好像没看到能解决我问题的模型</p>
+<p><strong>11-19 魏宁 《深度强化学习落地指南》</strong></p>
+<p>言辞恳切 干货十足 我正在连夜收拾行李逃跑</p>
+<p><strong>11-21 [美] 理查德·麦奎尔 《这里》</strong></p>
+<p>“没有人真正掌握了生活的艺术，每个人都只是在黑暗中踉跄而已。”</p>
+<p><strong>11-24 [英] 安德鲁·博尔顿 《亚历山大·麦昆：野性之美》</strong></p>
+<p>波德莱尔了</p>
+<p>给图书馆荐购的，很喜欢，有种自己买了的感觉。</p>
+<figure>
+<img src="/Users/lihaoyang/Desktop/读书总结/11.24.jpg" alt="" /><figcaption>11.24</figcaption>
+</figure>
+<p><strong>11-25 [匈牙利] 科斯托拉尼·德若 《夜神科尔内尔》</strong></p>
+<p>在世界的边界上来回穿梭</p>
+<p><strong>11-25 [法] 勒妮·格里莫 《雷诺阿：画中的幸福》</strong></p>
+<p>风景画好看！</p>
+<p><strong>11-26 阿斯顿·张（Aston Zhang） 李沐（Mu Li） [美] 扎卡里·C. 立顿（Zachary C. Lipton） [德] 亚历山大·J. 斯莫拉（Alexander J. Smola） 《动手学深度学习》</strong></p>
+<p>因为是mxnet就一直没读，昨天经学弟提醒有Pytorch版，连续读了十几个小时读完了... 之前看了作者之一李沐在b站上所有讲论文的视频，导致看这本的时候全程脑补他的声音...</p>
+<p><strong>11-27 [美] 卡门•玛丽亚•马查多 《派对恐惧症》</strong></p>
+<p>前几篇挺好的 就是感觉女同性恋气质快溢出来了 容易造成我的刻板印象</p>
+<p><strong>11-28 Xavier Tapies 《Where's Banksy?》</strong></p>
+<p>Banksy的画册，它为什么会出现在学校图书馆里… 翻完了，好</p>
+<p><strong>11-30 休伯 《MIDI手册》</strong></p>
+<p>不错啊 适合我这样啥都不会的选手在啃软件说明书之前翻一翻 建立一个整体概念</p>
+<p><strong>12-05 [德] 保罗·策兰 《暗蚀》</strong></p>
+<p>看不懂，很好，已成为学德语的动力之一（</p>
+<p><strong>12-05 玛格丽特·尤瑟纳尔 《东方故事集》</strong></p>
+<p>文学偶像+1</p>
+<p><strong>12-06 [美]蒂姆·拉夫加登（Tim Roughgarden） 《算法详解（卷1）——算法基础》</strong></p>
+<p>轻松愉快，适合复习（总算看懂主定理的证明了</p>
+<p><strong>12-07 Leng, Bingchuan 《Leng Bingchuan》</strong></p>
+<p>冷冰川的画册</p>
+<figure>
+<img src="/Users/lihaoyang/Desktop/读书总结/12.7.jpg" alt="" /><figcaption>12.7</figcaption>
+</figure>
+<p><strong>12-12 内森•梅尔沃德 克里斯•杨 马克西姆•比莱 《现代主义烹调》</strong></p>
+<p>可能是年度最佳了吧 已经成为人生动力之一 希望明年能找到让我又有钱又有时间的工作（</p>
+<p>是从原理讲起的菜谱，有各种奇怪厨具的使用方法，各种奇怪食材该怎么处理的参数，看完立刻想买一个温度计...</p>
+<figure>
+<img src="/Users/lihaoyang/Desktop/读书总结/现代主义烹调.png" alt="" /><figcaption>现代主义烹调</figcaption>
+</figure>
+<p><strong>12-12 《克利：绝对的创作自由》</strong></p>
+<p>太喜欢了！</p>
+<p><strong>12-15 [法] 弗朗索瓦丝·培尔 《塞尚：用画笔思考》</strong></p>
+<p>喜欢圣维克图瓦山</p>
+<p><strong>12-16 [日] 三岛由纪夫 《近代能乐集》</strong></p>
+<p>太行了，暗黑风格小短剧，建议 Netflix 翻拍（</p>
+<p><strong>12-26 [俄] 布尔加科夫 《狗心》</strong></p>
+<p><strong>12-21</strong> 去看了学校东篱剧社的《六个寻找剧作家的角色》，远超预期，好得吓人，完成度非常高，改编也很自然，可以直接拿去当招生广告的程度</p>
+<figure>
+<img src="/Users/lihaoyang/Desktop/读书总结/12.21.jpg" alt="" /><figcaption>12.21</figcaption>
+</figure>
+<p><strong>12-30</strong> 去西岸看了蓬皮杜展的第二部分“万物的声音”，家具的部分不错</p>
+<figure>
+<img src="/Users/lihaoyang/Desktop/读书总结/12.30.jpg" alt="" /><figcaption>12.30</figcaption>
+</figure>
+<p>对未来提出一些美好期望！尽量还是多看点书，珍惜有图书馆的时候，多看点比较贵的英文书和画册吧（小市民心态）；继续多出去玩一玩，UCCA的马蒂斯展我已经记在小本本上了；要开始有所输出，想做一些各种各样的完成度较高、乱七八糟、十分离谱的垃圾作品，实现一些成本较低的人生尝试；2022 会决定自己以后要做什么工作，还是希望自己能做自己真正喜欢的工作，意思就是希望自己要么变得更强，要么变得更不在乎钱（还是变强好一点）；然后，顺利毕业...</p>
+
+      </div>
+      
+      
+      
+    </div>
+    
+
+    
+    
+    
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Thirtiseven Lee</p>
+  <div class="site-description" itemprop="description">和光同尘</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">57</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Thirtiseven Lee</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
