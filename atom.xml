@@ -1,0 +1,1326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>语言漩涡</title>
+  <icon>http://thirtiseven.github.io/icon.png</icon>
+  <subtitle>thirtiseven 的博客</subtitle>
+  <link href="http://thirtiseven.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://thirtiseven.github.io/"/>
+  <updated>2024-01-01T13:28:41.200Z</updated>
+  <id>http://thirtiseven.github.io/</id>
+  
+  <author>
+    <name>thirtiseven</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2023阅读总结</title>
+    <link href="http://thirtiseven.github.io/2024/01/01/2023-%E9%98%85%E8%AF%BB%E6%80%BB%E7%BB%93/"/>
+    <id>http://thirtiseven.github.io/2024/01/01/2023-%E9%98%85%E8%AF%BB%E6%80%BB%E7%BB%93/</id>
+    <published>2024-01-01T06:18:06.000Z</published>
+    <updated>2024-01-01T13:28:41.200Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;2023 的部分读书记录和一些其他文体活动的照片。经过2022年之后，感觉2023年很平淡，像一个过渡年份。积雨云也许刚刚开始在远处聚集。今年读了 72 本，大部分时间在等毕业、上班和出门玩，没怎么看书。大部分是上半年在学校看的，年末和周老师一起看了几本文学书。去年说要少看社科多看小说，基本实现了。&lt;/p&gt;
+&lt;p&gt;省流，年度十佳（不分先后）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Scott Wlaschin - Domain Modeling Made Functional&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Golan Levin Tega Bra - Code as Creative Medium&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;威廉·凯利 - 另一个鼓手&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;托尼.戈弗雷 - 观念艺术（艺术与观念）&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;林其蔚 - 超越聲音藝術：前衛主義、聲音機器、聽覺現代性&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;阿瑟·米勒 - 代价&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;菲利普·罗斯 - 萨巴斯剧院&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Joe Reis Matt Housley - Fundamentals of Data Engineering&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;高居翰 - 隔江山色：元代绘画&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Dzejla Medjedovic Emin Tahirovic Ines Dedovic - Algorithms and Data Structures for Massive Datasets&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    
+    <category term="年度读书总结" scheme="http://thirtiseven.github.io/tags/%E5%B9%B4%E5%BA%A6%E8%AF%BB%E4%B9%A6%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>延毕故事集</title>
+    <link href="http://thirtiseven.github.io/2023/04/08/%E5%BB%B6%E6%AF%95%E6%95%85%E4%BA%8B%E9%9B%86/"/>
+    <id>http://thirtiseven.github.io/2023/04/08/%E5%BB%B6%E6%AF%95%E6%95%85%E4%BA%8B%E9%9B%86/</id>
+    <published>2023-04-08T15:18:42.000Z</published>
+    <updated>2023-04-08T15:24:26.324Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本学期在等待小论文审稿意见以外的主要工作。还好最后把自己救活了，不然这个东西可能要写一百篇（&lt;/p&gt;
+&lt;h4 id=&quot;葬花吟&quot;&gt;葬花吟&lt;/h4&gt;
+&lt;p&gt;学校的樱花快要开了，理应毕业的日子也快到了。改论文的时候心想，如果能看到樱花，我就能按时毕业吧，但是向窗外看去仍然是秃秃的一片。当然，窗外什么时候都不会有樱花的。偶尔去正门吃饭，才能匆匆一瞥樱花树的状态。&lt;/p&gt;
+&lt;p&gt;但是晚上回宿舍的时候突然听说学校的樱花开了，路边的猫在说，学校公众号也在说。明天绕路去看一眼吧！第二天起床的时候，雨下得很大，咖啡也喝完了，伞在实验室，审稿意见也没有来，被窝温暖舒适，十二个待办日程。但是最重要的还是看看樱花，等吃完了饭。</summary>
+    
+    
+    
+    
+    <category term="生活记录" scheme="http://thirtiseven.github.io/tags/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>寝室坐牢记忆碎片（封校一周年重制版）</title>
+    <link href="http://thirtiseven.github.io/2023/02/10/%E5%AF%9D%E5%AE%A4%E5%9D%90%E7%89%A2%E8%AE%B0%E5%BF%86%E7%A2%8E%E7%89%87/"/>
+    <id>http://thirtiseven.github.io/2023/02/10/%E5%AF%9D%E5%AE%A4%E5%9D%90%E7%89%A2%E8%AE%B0%E5%BF%86%E7%A2%8E%E7%89%87/</id>
+    <published>2023-02-10T15:28:34.000Z</published>
+    <updated>2023-03-10T05:51:11.089Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;em&gt;按：之前整理了一下去年上半年被封在寝室里的经历。很多东西记不得了，根据微博、微信聊天记录和记忆（排名分先后）整理得来。根据我的记录，开始封校的日期是2022年3月10号，一年过去了，身体已经阳了又康复，世界也似乎回到了正常，没什么人再提起疫情前的时候，街上的口罩都少了起来，但我心中某种被囚禁的感觉却从未消失。春天又到了，春天本身是否只是一个静态网格？是否会有不知何处传来的广播响起，而我只能不太情愿地回到房间？我可以走出校门，但校门外是否是更大的牢狱？&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;2月8号，来上海打工，学校因为没有开学不让进，在公司旁边住旅馆。中山公园这里吃的东西很多加上第一次挣钱，每顿平均消费直接拉到八十了，为后来的悲惨经历埋下伏笔。住到16号，兴高采烈地回了学校。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="生活记录" scheme="http://thirtiseven.github.io/tags/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2022秋招实录</title>
+    <link href="http://thirtiseven.github.io/2023/01/17/2022%E7%A7%8B%E6%8B%9B%E5%AE%9E%E5%BD%95/"/>
+    <id>http://thirtiseven.github.io/2023/01/17/2022%E7%A7%8B%E6%8B%9B%E5%AE%9E%E5%BD%95/</id>
+    <published>2023-01-16T17:00:49.000Z</published>
+    <updated>2023-01-28T07:38:58.334Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;精神上缓了很久，来写点 emotional damage 内容。史上最难秋招季，俺投递100+，大约一半进面，最后仅拿到4个offer。经过春招（冬招）的成功之后，我不仅没太认清形势，还有些飘，从八月开始心态基本上处于一个逐渐崩溃的过程，现在看来非常有趣。&lt;/p&gt;
+&lt;p&gt;投的岗位上，外企投普通的后端/全栈SDE，有infra就投infra，私企投大数据底层框架&amp;gt;其他infra&amp;gt;数据开发&amp;gt;C++&amp;gt;Java&amp;gt;算法/DS。私企的投递策略其实非常错误，因为我对于大数据那套东西其实完全不会，对于c++除了会写几个题没有其他经验，现在回头看，比较好的策略应该也是投 java 后端。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="生活记录" scheme="http://thirtiseven.github.io/tags/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>读书总结 2022</title>
+    <link href="http://thirtiseven.github.io/2023/01/12/2022%E9%98%85%E8%AF%BB%E6%80%BB%E7%BB%93/"/>
+    <id>http://thirtiseven.github.io/2023/01/12/2022%E9%98%85%E8%AF%BB%E6%80%BB%E7%BB%93/</id>
+    <published>2023-01-12T15:01:04.000Z</published>
+    <updated>2023-01-13T10:02:52.576Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;22年过去了（好几天了，但是我阳了而且刚写完一大坨论文所以什么都不想写）。&lt;/p&gt;
+&lt;p&gt;当时总是感觉见证了许多，世界的惊涛骇浪，个人的辛酸血泪，以及两者之间的厚重壁垒，很多东西都需要用力记住。如今得以幸存，回头看去，却只觉得疲倦。&lt;/p&gt;
+&lt;p&gt;按照惯例，列一下今年读过的书里值得推荐的。今年读的基本都是为了面试看的技术书，惭愧。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="年度读书总结" scheme="http://thirtiseven.github.io/tags/%E5%B9%B4%E5%BA%A6%E8%AF%BB%E4%B9%A6%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2022春招找实习实录</title>
+    <link href="http://thirtiseven.github.io/2022/01/29/2022%E6%98%A5%E6%8B%9B%E6%89%BE%E5%AE%9E%E4%B9%A0%E5%AE%9E%E5%BD%95/"/>
+    <id>http://thirtiseven.github.io/2022/01/29/2022%E6%98%A5%E6%8B%9B%E6%89%BE%E5%AE%9E%E4%B9%A0%E5%AE%9E%E5%BD%95/</id>
+    <published>2022-01-29T07:56:00.000Z</published>
+    <updated>2022-01-29T10:38:11.515Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;我是预计 23 年毕业，所以一般来说在2022年春招需要找一些暑期的实习。本来迷迷糊糊，打算三月再开始投的，但是21年11月底谷突然发了投简历邀请，搞了几天把简历搞出来，心想如果人生第一个面试就面 google 可能会对我的身心带来严重的伤害，于是就想投点别的企业把实习的事情解决了。最后一共投了12家的简历，日常和暑期提前批混投，3家没有理我（AfterPay、Apple、VMWare），4家面试挂了/面试完没消息（Google、SAP、蔚来、字节跳动），5家获得了offer，分别是 Amazon、MicroSoft、NVIDIA、Unity 和商汤，都是开发岗。分享一下面试的内容和时间线，聊一聊自己的感想。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="生活记录" scheme="http://thirtiseven.github.io/tags/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>读书总结 2021</title>
+    <link href="http://thirtiseven.github.io/2022/01/15/%E8%AF%BB%E4%B9%A6%E6%80%BB%E7%BB%93-2021/"/>
+    <id>http://thirtiseven.github.io/2022/01/15/%E8%AF%BB%E4%B9%A6%E6%80%BB%E7%BB%93-2021/</id>
+    <published>2022-01-15T14:35:00.000Z</published>
+    <updated>2022-01-15T14:38:32.358Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;今年看了大概一百六十本书吧，有点太疯了，去年我：希望自己少看点书多出去玩，今年看的书更多了，但确实出去玩得更多了（就是好像几乎每一次都是进城和周老师看展...），随便插点图片吧...&lt;/p&gt;
+&lt;p&gt;简单的科研总结：摸鱼，很开心；搞模糊集，搞不出来；搞强化学习，很开心，最后在组会上作了大概意思是“强化学习为什么不行”的报告；糊一些无监督的东西，糊不出来；开不出来题，导师救了一下；现在正在糊一些图神经网络的东西；感觉毕业不能了，天天在电信楼二楼的打水房痛哭（不是）meanwhile 项目倒是写得跟真的一样，已经接受现状，打算当一个比较优秀的开发，平静地度过相对失败的人生了（不是&lt;/p&gt;
+&lt;p&gt;本来想十二月冲个读书业绩的，但是突然就被迫开始春招了，实验室事情也一堆... 明年要科研写小论文写大论文找工作实习找工作，希望还有时间看书... 我还要写很长时间代码，但是贵校图书馆是看一天少一天了&lt;/p&gt;
+&lt;p&gt;写年终总结像上班，所以用豆坟导出的excel生成了一个主体部分，靠一些现代科技敷衍一下... 删掉了一些不推荐的书，其他基本就是贴的豆瓣短评然后看到哪里随便加点... 豆瓣好友就看看照片吧...&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="年度读书总结" scheme="http://thirtiseven.github.io/tags/%E5%B9%B4%E5%BA%A6%E8%AF%BB%E4%B9%A6%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>空间滤波器与联通分析</title>
+    <link href="http://thirtiseven.github.io/2021/12/04/%E7%A9%BA%E9%97%B4%E6%BB%A4%E6%B3%A2%E5%99%A8%E4%B8%8E%E8%81%94%E9%80%9A%E5%88%86%E6%9E%90/"/>
+    <id>http://thirtiseven.github.io/2021/12/04/%E7%A9%BA%E9%97%B4%E6%BB%A4%E6%B3%A2%E5%99%A8%E4%B8%8E%E8%81%94%E9%80%9A%E5%88%86%E6%9E%90/</id>
+    <published>2021-12-04T04:17:12.000Z</published>
+    <updated>2021-12-04T07:51:45.427Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;小波卷积和滤波器通过将每个数据点设置为周围数据点的加权和来突出和显示数据的特征。类似地，空间滤波器为每个点击定义权重，以使所有电极上的活动加权总和有助于突出显示在未经空间滤波的数据中难以发现的特征。&lt;/p&gt;
+&lt;p&gt;空间滤波器之间的差异是由构建权重时使用的信息类型产生的。表面拉普拉斯算子根据电极间距离定义权重。 主成分分析根据电极间协方差的模式定义权重。 一些源估计程序（例如波束成形）基于电极活动和物理电极位置来定义权重。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="脑机接口" scheme="http://thirtiseven.github.io/tags/%E8%84%91%E6%9C%BA%E6%8E%A5%E5%8F%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PA2011 Plotter 分形</title>
+    <link href="http://thirtiseven.github.io/2021/07/25/PA2011-Plotter-%E5%88%86%E5%BD%A2/"/>
+    <id>http://thirtiseven.github.io/2021/07/25/PA2011-Plotter-%E5%88%86%E5%BD%A2/</id>
+    <published>2021-07-25T06:27:19.000Z</published>
+    <updated>2021-12-04T07:50:48.641Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;题意&quot;&gt;题意&lt;/h2&gt;
+&lt;p&gt;你有一台画图机，它是这么工作的：先从 (0,0) 到 (1,1) 画一条线，然后根据指令左转或右转，然后再画一条 &lt;span class=&quot;math inline&quot;&gt;&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: -0.225ex&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;3.061ex&quot; height=&quot;2.398ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -960.5 1353 1060&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;msqrt&quot;&gt;&lt;g transform=&quot;translate(853,0)&quot;&gt;&lt;g data-mml-node=&quot;mn&quot;&gt;&lt;path data-c=&quot;32&quot; d=&quot;M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(0,100.5)&quot;&gt;&lt;path data-c=&quot;221A&quot; d=&quot;M95 178Q89 178 81 186T72 200T103 230T169 280T207 309Q209 311 212 311H213Q219 311 227 294T281 177Q300 134 312 108L397 -77Q398 -77 501 136T707 565T814 786Q820 800 834 800Q841 800 846 794T853 782V776L620 293L385 -193Q381 -200 366 -200Q357 -200 354 -197Q352 -195 256 15L160 225L144 214Q129 202 113 190T95 178Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;rect width=&quot;500&quot; height=&quot;60&quot; x=&quot;853&quot; y=&quot;840.5&quot;&gt;&lt;/rect&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt;&lt;/span&gt; 长度的线段，然后再根据下一个指令转弯，直到所有指令都执行完毕。画一条线段的时间是 1 秒。&lt;/p&gt;
+&lt;p&gt;指令序列是一个 L 或者 R 组成的字符串。设指令序列 &lt;span class=&quot;math inline&quot;&gt;&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: -0.439ex&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;18.004ex&quot; height=&quot;1.984ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -683 7957.9 877&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;msub&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D43F&quot; d=&quot;M228 637Q194 637 192 641Q191 643 191 649Q191 673 202 682Q204 683 217 683Q271 680 344 680Q485 680 506 683H518Q524 677 524 674T522 656Q517 641 513 637H475Q406 636 394 628Q387 624 380 600T313 336Q297 271 279 198T252 88L243 52Q243 48 252 48T311 46H328Q360 46 379 47T428 54T478 72T522 106T564 161Q580 191 594 228T611 270Q616 273 628 273H641Q647 264 647 262T627 203T583 83T557 9Q555 4 553 3T537 0T494 -1Q483 -1 418 -1T294 0H116Q32 0 32 10Q32 17 34 24Q39 43 44 45Q48 46 59 46H65Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Q285 635 228 637Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(714,-150) scale(0.707)&quot;&gt;&lt;path data-c=&quot;31&quot; d=&quot;M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(1395.3,0)&quot;&gt;&lt;path data-c=&quot;3D&quot; d=&quot;M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mtext&quot; transform=&quot;translate(2451.1,0)&quot;&gt;&lt;path data-c=&quot;4C&quot; d=&quot;M128 622Q121 629 117 631T101 634T58 637H25V683H36Q48 680 182 680Q324 680 348 683H360V637H333Q273 637 258 635T233 622L232 342V129Q232 57 237 52Q243 47 313 47Q384 47 410 53Q470 70 498 110T536 221Q536 226 537 238T540 261T542 272T562 273H582V268Q580 265 568 137T554 5V0H25V46H58Q100 47 109 49T128 61V622Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(3076.1,0)&quot;&gt;&lt;path data-c=&quot;2C&quot; d=&quot;M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;msub&quot; transform=&quot;translate(3520.8,0)&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D43F&quot; d=&quot;M228 637Q194 637 192 641Q191 643 191 649Q191 673 202 682Q204 683 217 683Q271 680 344 680Q485 680 506 683H518Q524 677 524 674T522 656Q517 641 513 637H475Q406 636 394 628Q387 624 380 600T313 336Q297 271 279 198T252 88L243 52Q243 48 252 48T311 46H328Q360 46 379 47T428 54T478 72T522 106T564 161Q580 191 594 228T611 270Q616 273 628 273H641Q647 264 647 262T627 203T583 83T557 9Q555 4 553 3T537 0T494 -1Q483 -1 418 -1T294 0H116Q32 0 32 10Q32 17 34 24Q39 43 44 45Q48 46 59 46H65Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Q285 635 228 637Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(714,-150) scale(0.707)&quot;&gt;&lt;path data-c=&quot;32&quot; d=&quot;M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(4916.1,0)&quot;&gt;&lt;path data-c=&quot;3D&quot; d=&quot;M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mtext&quot; transform=&quot;translate(5971.9,0)&quot;&gt;&lt;path data-c=&quot;4C&quot; d=&quot;M128 622Q121 629 117 631T101 634T58 637H25V683H36Q48 680 182 680Q324 680 348 683H360V637H333Q273 637 258 635T233 622L232 342V129Q232 57 237 52Q243 47 313 47Q384 47 410 53Q470 70 498 110T536 221Q536 226 537 238T540 261T542 272T562 273H582V268Q580 265 568 137T554 5V0H25V46H58Q100 47 109 49T128 61V622Z&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;4C&quot; d=&quot;M128 622Q121 629 117 631T101 634T58 637H25V683H36Q48 680 182 680Q324 680 348 683H360V637H333Q273 637 258 635T233 622L232 342V129Q232 57 237 52Q243 47 313 47Q384 47 410 53Q470 70 498 110T536 221Q536 226 537 238T540 261T542 272T562 273H582V268Q580 265 568 137T554 5V0H25V46H58Q100 47 109 49T128 61V622Z&quot; transform=&quot;translate(625,0)&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;52&quot; d=&quot;M130 622Q123 629 119 631T103 634T60 637H27V683H202H236H300Q376 683 417 677T500 648Q595 600 609 517Q610 512 610 501Q610 468 594 439T556 392T511 361T472 343L456 338Q459 335 467 332Q497 316 516 298T545 254T559 211T568 155T578 94Q588 46 602 31T640 16H645Q660 16 674 32T692 87Q692 98 696 101T712 105T728 103T732 90Q732 59 716 27T672 -16Q656 -22 630 -22Q481 -16 458 90Q456 101 456 163T449 246Q430 304 373 320L363 322L297 323H231V192L232 61Q238 51 249 49T301 46H334V0H323Q302 3 181 3Q59 3 38 0H27V46H60Q102 47 111 49T130 61V622ZM491 499V509Q491 527 490 539T481 570T462 601T424 623T362 636Q360 636 340 636T304 637H283Q238 637 234 628Q231 624 231 492V360H289Q390 360 434 378T489 456Q491 467 491 499Z&quot; transform=&quot;translate(1250,0)&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt;&lt;/span&gt;，那么更多的指令序列 &lt;span class=&quot;math inline&quot;&gt;&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: -0.357ex&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;2.688ex&quot; height=&quot;1.902ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -683 1188.3 840.8&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;msub&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D43F&quot; d=&quot;M228 637Q194 637 192 641Q191 643 191 649Q191 673 202 682Q204 683 217 683Q271 680 344 680Q485 680 506 683H518Q524 677 524 674T522 656Q517 641 513 637H475Q406 636 394 628Q387 624 380 600T313 336Q297 271 279 198T252 88L243 52Q243 48 252 48T311 46H328Q360 46 379 47T428 54T478 72T522 106T564 161Q580 191 594 228T611 270Q616 273 628 273H641Q647 264 647 262T627 203T583 83T557 9Q555 4 553 3T537 0T494 -1Q483 -1 418 -1T294 0H116Q32 0 32 10Q32 17 34 24Q39 43 44 45Q48 46 59 46H65Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Q285 635 228 637Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(714,-150) scale(0.707)&quot;&gt;&lt;path data-c=&quot;1D45B&quot; d=&quot;M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt;&lt;/span&gt; 可以按如下规则生成出来：&lt;/p&gt;
+&lt;p&gt;把字符串用空格隔开，并在串前和串后也分别添加一个空格，然后依次用L和R轮流填满这些空格。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="算法题解" scheme="http://thirtiseven.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98%E8%A7%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>宣传：观念、话语及其正当化</title>
+    <link href="http://thirtiseven.github.io/2021/06/23/%E5%AE%A3%E4%BC%A0-%E8%A7%82%E5%BF%B5%E3%80%81%E8%AF%9D%E8%AF%AD%E5%8F%8A%E5%85%B6%E6%AD%A3%E5%BD%93%E5%8C%96/"/>
+    <id>http://thirtiseven.github.io/2021/06/23/%E5%AE%A3%E4%BC%A0-%E8%A7%82%E5%BF%B5%E3%80%81%E8%AF%9D%E8%AF%AD%E5%8F%8A%E5%85%B6%E6%AD%A3%E5%BD%93%E5%8C%96/</id>
+    <published>2021-06-23T06:34:08.000Z</published>
+    <updated>2021-12-04T07:20:21.260Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;发公众号被删了...&lt;/p&gt;
+&lt;p&gt;古德温·华生和爱德华·格拉瑟在此基础上提出批判性思维(critical thinking)的概念。华生认为在思考和判断的过程中应当保持开放，这样才能创造一个理想的世界。他提出了一个包含六个方面的测试方法，检验信息中的六种不良倾向。这六种不良倾向分别是:&lt;/p&gt;
+&lt;p&gt;(1)用人们厌恶的概念或名称指称有争议的宗教或经济事务中的不同派别;(2)在有争议的宗教或经济事务中，把那些持不同观点但却真诚的、有能力的人诬蔑为不真诚、缺乏能力的人;(3)选择有利于自己的证据支持某种偏见，有意忽略那些能得出不同结论的证据; (4)谴责自己所厌恶的群体的某种行为，尽管这些行为有可能会得到其他群体的理解和赞同;(5)对于不同论点，不论它们是否具有很强的说服力，如果它们与某种主观偏见相符就都认为它们说服力很强，反之则认为它们的说服力很弱;(6)把群体中部分个体的特征扩展到整个群体。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="书摘" scheme="http://thirtiseven.github.io/tags/%E4%B9%A6%E6%91%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>穆旦诗摘</title>
+    <link href="http://thirtiseven.github.io/2021/05/25/%E7%A9%86%E6%97%A6%E8%AF%97%E6%91%98/"/>
+    <id>http://thirtiseven.github.io/2021/05/25/%E7%A9%86%E6%97%A6%E8%AF%97%E6%91%98/</id>
+    <published>2021-05-25T06:33:01.000Z</published>
+    <updated>2021-12-04T07:20:15.134Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;读了《穆旦诗编年汇校》，挑了十首出来，避开了一些脍炙人口的比如《春》《诗八首》《冥想》。穆旦真的很好，建议都读一读，希望大家不要不识抬举。P.S. 这个书是编年的，然后我发现他58年到75年一首诗都没写，我直接就把那一页翻过去了，感觉什么事都没有发生。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="书摘" scheme="http://thirtiseven.github.io/tags/%E4%B9%A6%E6%91%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>POI3 Rooks 思维</title>
+    <link href="http://thirtiseven.github.io/2021/05/10/POI3-Rooks-%E6%80%9D%E7%BB%B4/"/>
+    <id>http://thirtiseven.github.io/2021/05/10/POI3-Rooks-%E6%80%9D%E7%BB%B4/</id>
+    <published>2021-05-10T06:25:55.000Z</published>
+    <updated>2021-12-04T07:50:55.028Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;题意&quot;&gt;题意&lt;/h2&gt;
+&lt;p&gt;在一个 n*n 的棋盘上放置 n 个象棋中的车（只能横着走或者竖着走），每个车只能放置在棋盘中一个给定的矩形区域内部，求一种放置方案使这n个车互不攻击，或者声明这样的方案并不存在。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="算法题解" scheme="http://thirtiseven.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98%E8%A7%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>洛尔迦《小小的死亡之歌》</title>
+    <link href="http://thirtiseven.github.io/2021/04/30/%E5%B0%8F%E5%B0%8F%E7%9A%84%E6%AD%BB%E4%BA%A1%E4%B9%8B%E6%AD%8C/"/>
+    <id>http://thirtiseven.github.io/2021/04/30/%E5%B0%8F%E5%B0%8F%E7%9A%84%E6%AD%BB%E4%BA%A1%E4%B9%8B%E6%AD%8C/</id>
+    <published>2021-04-30T06:31:41.000Z</published>
+    <updated>2021-12-04T07:20:08.753Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;海水谣&quot;&gt;海水谣&lt;/h3&gt;
+&lt;p&gt;在远方，&lt;/p&gt;
+&lt;p&gt;大海笑盈盈。&lt;/p&gt;
+&lt;p&gt;浪是牙齿，&lt;/p&gt;
+&lt;p&gt;天是嘴唇。&lt;/p&gt;
+&lt;p&gt;不安的少女，你卖的什么，&lt;/p&gt;
+&lt;p&gt;要把你的乳房耸起？&lt;/p&gt;
+&lt;p&gt;——先生，我卖的是&lt;/p&gt;
+&lt;p&gt;大海的水。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="书摘" scheme="http://thirtiseven.github.io/tags/%E4%B9%A6%E6%91%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>最小割 PA2006 Travel Agency</title>
+    <link href="http://thirtiseven.github.io/2021/03/27/%E6%9C%80%E5%B0%8F%E5%89%B2-PA2006-Travel-Agency/"/>
+    <id>http://thirtiseven.github.io/2021/03/27/%E6%9C%80%E5%B0%8F%E5%89%B2-PA2006-Travel-Agency/</id>
+    <published>2021-03-27T06:23:55.000Z</published>
+    <updated>2021-12-04T07:51:14.229Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;题意&quot;&gt;题意&lt;/h2&gt;
+&lt;p&gt;有 n &lt;span class=&quot;math inline&quot;&gt;&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: -0.566ex&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;14.808ex&quot; height=&quot;2.262ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -750 6545.1 1000&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;mo&quot;&gt;&lt;path data-c=&quot;28&quot; d=&quot;M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(389,0)&quot;&gt;&lt;path data-c=&quot;31&quot; d=&quot;M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(1166.8,0)&quot;&gt;&lt;path data-c=&quot;2264&quot; d=&quot;M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(2222.6,0)&quot;&gt;&lt;path data-c=&quot;1D45B&quot; d=&quot;M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(3100.3,0)&quot;&gt;&lt;path data-c=&quot;2264&quot; d=&quot;M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(4156.1,0)&quot;&gt;&lt;path data-c=&quot;31&quot; d=&quot;M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(500,0)&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(1000,0)&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(1500,0)&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(6156.1,0)&quot;&gt;&lt;path data-c=&quot;29&quot; d=&quot;M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt;&lt;/span&gt; 个人想去旅行。&lt;/p&gt;
+&lt;p&gt;第 i 个人愿意为自己的旅行付出 &lt;span class=&quot;math inline&quot;&gt;&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: -0.357ex&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;2.034ex&quot; height=&quot;1.357ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -442 899 599.8&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;msub&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D465&quot; d=&quot;M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(605,-150) scale(0.707)&quot;&gt;&lt;path data-c=&quot;1D456&quot; d=&quot;M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt;&lt;/span&gt; 块钱。&lt;span class=&quot;math inline&quot;&gt;&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: -0.566ex&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;30.71ex&quot; height=&quot;2.262ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -750 13573.8 1000&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;mo&quot;&gt;&lt;path data-c=&quot;28&quot; d=&quot;M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(389,0)&quot;&gt;&lt;path data-c=&quot;2212&quot; d=&quot;M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(1167,0)&quot;&gt;&lt;path data-c=&quot;31&quot; d=&quot;M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(1667,0)&quot;&gt;&lt;path data-c=&quot;2C&quot; d=&quot;M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(2111.7,0)&quot;&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(500,0)&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(1000,0)&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(3611.7,0)&quot;&gt;&lt;path data-c=&quot;2C&quot; d=&quot;M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(4056.3,0)&quot;&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(500,0)&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(1000,0)&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(5834.1,0)&quot;&gt;&lt;path data-c=&quot;2264&quot; d=&quot;M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(6889.9,0)&quot;&gt;&lt;path data-c=&quot;1D465&quot; d=&quot;M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(7739.7,0)&quot;&gt;&lt;path data-c=&quot;2264&quot; d=&quot;M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(8795.4,0)&quot;&gt;&lt;path data-c=&quot;31&quot; d=&quot;M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(9295.4,0)&quot;&gt;&lt;path data-c=&quot;2C&quot; d=&quot;M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(9740.1,0)&quot;&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(500,0)&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(1000,0)&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(11240.1,0)&quot;&gt;&lt;path data-c=&quot;2C&quot; d=&quot;M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(11684.8,0)&quot;&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(500,0)&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(1000,0)&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(13184.8,0)&quot;&gt;&lt;path data-c=&quot;29&quot; d=&quot;M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;第 i 个人还有 &lt;span class=&quot;math inline&quot;&gt;&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: -0.357ex&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1.918ex&quot; height=&quot;1.927ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -694 848 851.8&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;msub&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D458&quot; d=&quot;M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(554,-150) scale(0.707)&quot;&gt;&lt;path data-c=&quot;1D456&quot; d=&quot;M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt;&lt;/span&gt; 个要求，每个要求由一个数对 &lt;span class=&quot;math inline&quot;&gt;&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: -0.666ex&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;7.731ex&quot; height=&quot;2.363ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -750 3417.2 1044.2&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;mo&quot;&gt;&lt;path data-c=&quot;28&quot; d=&quot;M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;msub&quot; transform=&quot;translate(389,0)&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D44E&quot; d=&quot;M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;TeXAtom&quot; transform=&quot;translate(562,-150) scale(0.707)&quot; data-mjx-texclass=&quot;ORD&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D456&quot; d=&quot;M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(345,0)&quot;&gt;&lt;path data-c=&quot;1D457&quot; d=&quot;M297 596Q297 627 318 644T361 661Q378 661 389 651T403 623Q403 595 384 576T340 557Q322 557 310 567T297 596ZM288 376Q288 405 262 405Q240 405 220 393T185 362T161 325T144 293L137 279Q135 278 121 278H107Q101 284 101 286T105 299Q126 348 164 391T252 441Q253 441 260 441T272 442Q296 441 316 432Q341 418 354 401T367 348V332L318 133Q267 -67 264 -75Q246 -125 194 -164T75 -204Q25 -204 7 -183T-12 -137Q-12 -110 7 -91T53 -71Q70 -71 82 -81T95 -112Q95 -148 63 -167Q69 -168 77 -168Q111 -168 139 -140T182 -74L193 -32Q204 11 219 72T251 197T278 308T289 365Q289 372 288 376Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(1536.3,0)&quot;&gt;&lt;path data-c=&quot;2C&quot; d=&quot;M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;msub&quot; transform=&quot;translate(1980.9,0)&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D44F&quot; d=&quot;M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;TeXAtom&quot; transform=&quot;translate(462,-150) scale(0.707)&quot; data-mjx-texclass=&quot;ORD&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D456&quot; d=&quot;M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(345,0)&quot;&gt;&lt;path data-c=&quot;1D457&quot; d=&quot;M297 596Q297 627 318 644T361 661Q378 661 389 651T403 623Q403 595 384 576T340 557Q322 557 310 567T297 596ZM288 376Q288 405 262 405Q240 405 220 393T185 362T161 325T144 293L137 279Q135 278 121 278H107Q101 284 101 286T105 299Q126 348 164 391T252 441Q253 441 260 441T272 442Q296 441 316 432Q341 418 354 401T367 348V332L318 133Q267 -67 264 -75Q246 -125 194 -164T75 -204Q25 -204 7 -183T-12 -137Q-12 -110 7 -91T53 -71Q70 -71 82 -81T95 -112Q95 -148 63 -167Q69 -168 77 -168Q111 -168 139 -140T182 -74L193 -32Q204 11 219 72T251 197T278 308T289 365Q289 372 288 376Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(3028.2,0)&quot;&gt;&lt;path data-c=&quot;29&quot; d=&quot;M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt;&lt;/span&gt; 定义。意思是如果第 i 个人去旅行，那么第 &lt;span class=&quot;math inline&quot;&gt;&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: -0.666ex&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;2.596ex&quot; height=&quot;1.663ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -441 1147.3 735.2&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;msub&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D44E&quot; d=&quot;M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;TeXAtom&quot; transform=&quot;translate(562,-150) scale(0.707)&quot; data-mjx-texclass=&quot;ORD&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D456&quot; d=&quot;M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(345,0)&quot;&gt;&lt;path data-c=&quot;1D457&quot; d=&quot;M297 596Q297 627 318 644T361 661Q378 661 389 651T403 623Q403 595 384 576T340 557Q322 557 310 567T297 596ZM288 376Q288 405 262 405Q240 405 220 393T185 362T161 325T144 293L137 279Q135 278 121 278H107Q101 284 101 286T105 299Q126 348 164 391T252 441Q253 441 260 441T272 442Q296 441 316 432Q341 418 354 401T367 348V332L318 133Q267 -67 264 -75Q246 -125 194 -164T75 -204Q25 -204 7 -183T-12 -137Q-12 -110 7 -91T53 -71Q70 -71 82 -81T95 -112Q95 -148 63 -167Q69 -168 77 -168Q111 -168 139 -140T182 -74L193 -32Q204 11 219 72T251 197T278 308T289 365Q289 372 288 376Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt;&lt;/span&gt; 个人也要去，否则就要给他优惠 &lt;span class=&quot;math inline&quot;&gt;&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: -0.666ex&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;2.369ex&quot; height=&quot;2.236ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -694 1047.3 988.2&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;msub&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D44F&quot; d=&quot;M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;TeXAtom&quot; transform=&quot;translate(462,-150) scale(0.707)&quot; data-mjx-texclass=&quot;ORD&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D456&quot; d=&quot;M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(345,0)&quot;&gt;&lt;path data-c=&quot;1D457&quot; d=&quot;M297 596Q297 627 318 644T361 661Q378 661 389 651T403 623Q403 595 384 576T340 557Q322 557 310 567T297 596ZM288 376Q288 405 262 405Q240 405 220 393T185 362T161 325T144 293L137 279Q135 278 121 278H107Q101 284 101 286T105 299Q126 348 164 391T252 441Q253 441 260 441T272 442Q296 441 316 432Q341 418 354 401T367 348V332L318 133Q267 -67 264 -75Q246 -125 194 -164T75 -204Q25 -204 7 -183T-12 -137Q-12 -110 7 -91T53 -71Q70 -71 82 -81T95 -112Q95 -148 63 -167Q69 -168 77 -168Q111 -168 139 -140T182 -74L193 -32Q204 11 219 72T251 197T278 308T289 365Q289 372 288 376Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt;&lt;/span&gt; 块钱。&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: -0.666ex&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;53.594ex&quot; height=&quot;2.286ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -716 23688.5 1010.2&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;mn&quot;&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(777.8,0)&quot;&gt;&lt;path data-c=&quot;2264&quot; d=&quot;M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(1833.6,0)&quot;&gt;&lt;path data-c=&quot;1D458&quot; d=&quot;M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(2632.3,0)&quot;&gt;&lt;path data-c=&quot;2264&quot; d=&quot;M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(3688.1,0)&quot;&gt;&lt;path data-c=&quot;1D45B&quot; d=&quot;M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(4510.3,0)&quot;&gt;&lt;path data-c=&quot;2212&quot; d=&quot;M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(5510.6,0)&quot;&gt;&lt;path data-c=&quot;31&quot; d=&quot;M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(6010.6,0)&quot;&gt;&lt;path data-c=&quot;2C&quot; d=&quot;M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(6455.2,0)&quot;&gt;&lt;path data-c=&quot;31&quot; d=&quot;M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(7233,0)&quot;&gt;&lt;path data-c=&quot;2264&quot; d=&quot;M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;msub&quot; transform=&quot;translate(8288.8,0)&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D44E&quot; d=&quot;M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;TeXAtom&quot; transform=&quot;translate(562,-150) scale(0.707)&quot; data-mjx-texclass=&quot;ORD&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D456&quot; d=&quot;M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(345,0)&quot;&gt;&lt;path data-c=&quot;1D457&quot; d=&quot;M297 596Q297 627 318 644T361 661Q378 661 389 651T403 623Q403 595 384 576T340 557Q322 557 310 567T297 596ZM288 376Q288 405 262 405Q240 405 220 393T185 362T161 325T144 293L137 279Q135 278 121 278H107Q101 284 101 286T105 299Q126 348 164 391T252 441Q253 441 260 441T272 442Q296 441 316 432Q341 418 354 401T367 348V332L318 133Q267 -67 264 -75Q246 -125 194 -164T75 -204Q25 -204 7 -183T-12 -137Q-12 -110 7 -91T53 -71Q70 -71 82 -81T95 -112Q95 -148 63 -167Q69 -168 77 -168Q111 -168 139 -140T182 -74L193 -32Q204 11 219 72T251 197T278 308T289 365Q289 372 288 376Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(9713.8,0)&quot;&gt;&lt;path data-c=&quot;2264&quot; d=&quot;M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(10769.6,0)&quot;&gt;&lt;path data-c=&quot;1D45B&quot; d=&quot;M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(11369.6,0)&quot;&gt;&lt;path data-c=&quot;2C&quot; d=&quot;M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;msub&quot; transform=&quot;translate(11814.3,0)&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D44E&quot; d=&quot;M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;TeXAtom&quot; transform=&quot;translate(562,-150) scale(0.707)&quot; data-mjx-texclass=&quot;ORD&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D456&quot; d=&quot;M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(345,0)&quot;&gt;&lt;path data-c=&quot;1D457&quot; d=&quot;M297 596Q297 627 318 644T361 661Q378 661 389 651T403 623Q403 595 384 576T340 557Q322 557 310 567T297 596ZM288 376Q288 405 262 405Q240 405 220 393T185 362T161 325T144 293L137 279Q135 278 121 278H107Q101 284 101 286T105 299Q126 348 164 391T252 441Q253 441 260 441T272 442Q296 441 316 432Q341 418 354 401T367 348V332L318 133Q267 -67 264 -75Q246 -125 194 -164T75 -204Q25 -204 7 -183T-12 -137Q-12 -110 7 -91T53 -71Q70 -71 82 -81T95 -112Q95 -148 63 -167Q69 -168 77 -168Q111 -168 139 -140T182 -74L193 -32Q204 11 219 72T251 197T278 308T289 365Q289 372 288 376Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(13239.3,0)&quot;&gt;&lt;path data-c=&quot;2260&quot; d=&quot;M166 -215T159 -215T147 -212T141 -204T139 -197Q139 -190 144 -183L306 133H70Q56 140 56 153Q56 168 72 173H327L406 327H72Q56 332 56 347Q56 360 70 367H426Q597 702 602 707Q605 716 618 716Q625 716 630 712T636 703T638 696Q638 692 471 367H707Q722 359 722 347Q722 336 708 328L451 327L371 173H708Q722 163 722 153Q722 140 707 133H351Q175 -210 170 -212Q166 -215 159 -215Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(14295.1,0)&quot;&gt;&lt;path data-c=&quot;1D456&quot; d=&quot;M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(14640.1,0)&quot;&gt;&lt;path data-c=&quot;2C&quot; d=&quot;M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(15084.8,0)&quot;&gt;&lt;path data-c=&quot;31&quot; d=&quot;M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(15862.6,0)&quot;&gt;&lt;path data-c=&quot;2264&quot; d=&quot;M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;msub&quot; transform=&quot;translate(16918.3,0)&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D44F&quot; d=&quot;M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;TeXAtom&quot; transform=&quot;translate(462,-150) scale(0.707)&quot; data-mjx-texclass=&quot;ORD&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D456&quot; d=&quot;M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(345,0)&quot;&gt;&lt;path data-c=&quot;1D457&quot; d=&quot;M297 596Q297 627 318 644T361 661Q378 661 389 651T403 623Q403 595 384 576T340 557Q322 557 310 567T297 596ZM288 376Q288 405 262 405Q240 405 220 393T185 362T161 325T144 293L137 279Q135 278 121 278H107Q101 284 101 286T105 299Q126 348 164 391T252 441Q253 441 260 441T272 442Q296 441 316 432Q341 418 354 401T367 348V332L318 133Q267 -67 264 -75Q246 -125 194 -164T75 -204Q25 -204 7 -183T-12 -137Q-12 -110 7 -91T53 -71Q70 -71 82 -81T95 -112Q95 -148 63 -167Q69 -168 77 -168Q111 -168 139 -140T182 -74L193 -32Q204 11 219 72T251 197T278 308T289 365Q289 372 288 376Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(18243.4,0)&quot;&gt;&lt;path data-c=&quot;2264&quot; d=&quot;M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(19299.2,0)&quot;&gt;&lt;path data-c=&quot;31&quot; d=&quot;M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(19799.2,0)&quot;&gt;&lt;path data-c=&quot;2C&quot; d=&quot;M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(20243.8,0)&quot;&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(500,0)&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(1000,0)&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(21743.8,0)&quot;&gt;&lt;path data-c=&quot;2C&quot; d=&quot;M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(22188.5,0)&quot;&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(500,0)&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(1000,0)&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;求使旅行社获得最大利润的一种方案。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="算法题解" scheme="http://thirtiseven.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98%E8%A7%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基线归一化和相位锁定分析</title>
+    <link href="http://thirtiseven.github.io/2021/03/23/%E5%9F%BA%E7%BA%BF%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E7%9B%B8%E4%BD%8D%E9%94%81%E5%AE%9A%E5%88%86%E6%9E%90/"/>
+    <id>http://thirtiseven.github.io/2021/03/23/%E5%9F%BA%E7%BA%BF%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E7%9B%B8%E4%BD%8D%E9%94%81%E5%AE%9A%E5%88%86%E6%9E%90/</id>
+    <published>2021-03-23T04:12:49.000Z</published>
+    <updated>2021-12-04T07:51:22.755Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;不太常用的时频分解方法&quot;&gt;17 不太常用的时频分解方法&lt;/h2&gt;
+&lt;h3 id=&quot;自回归模型&quot;&gt;自回归模型&lt;/h3&gt;
+&lt;p&gt;自回归模型是一种根据信号的先前值预测信号值的模型。自回归模型的一个优点是，与FFT不同，其频率分辨率不受时间段中数据点数量的限制。自回归模型很少被使用，常常被小波卷积替代。&lt;/p&gt;
+&lt;h3 id=&quot;hilbert-huang-经验模式分解&quot;&gt;Hilbert-Huang 经验模式分解&lt;/h3&gt;
+&lt;p&gt;Hilbert-Huang 方法被用于检测非稳定数据中的时频事件。它通过使用称为经验模式分解的数据缩减技术将原始EEG信号分解为一系列基本成分而充当自适应滤波器。简而言之，经验模式分解涉及识别时间序列的局部最小值和最大值，通过在局部最小值和最大值之间进行插值并从原始信号中减去均值来创建新的时间序列。减去均值的信号称为本征模式函数。 减去之后，从固有模式函数中识别出局部最小值和最大值，然后重复该过程，直到信号中只剩下几个最小值和最大值为止。本征模式函数可以概念化为基本时间序列，可以对其应用希尔伯特变换，并且可以从中提取相位，功率和频率信息。在认知脑电图分解中不太常用。</summary>
+    
+    
+    
+    
+    <category term="脑机接口" scheme="http://thirtiseven.github.io/tags/%E8%84%91%E6%9C%BA%E6%8E%A5%E5%8F%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>树形DP PA2007 Barricades</title>
+    <link href="http://thirtiseven.github.io/2021/03/19/%E6%A0%91%E5%BD%A2DP-PA2007-Barricades/"/>
+    <id>http://thirtiseven.github.io/2021/03/19/%E6%A0%91%E5%BD%A2DP-PA2007-Barricades/</id>
+    <published>2021-03-19T06:20:26.000Z</published>
+    <updated>2021-12-04T07:51:37.128Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;题意&quot;&gt;题意&lt;/h2&gt;
+&lt;p&gt;给一棵无向树，问最少去掉几条边可以形成一个大小为k的子树，多次询问。n ≤ 3000，m ≤ n&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="算法题解" scheme="http://thirtiseven.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98%E8%A7%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>平面图最小链覆盖 POI2002 Skiers</title>
+    <link href="http://thirtiseven.github.io/2021/03/12/%E5%B9%B3%E9%9D%A2%E5%9B%BE%E6%9C%80%E5%B0%8F%E9%93%BE%E8%A6%86%E7%9B%96-POI2002-Skiers/"/>
+    <id>http://thirtiseven.github.io/2021/03/12/%E5%B9%B3%E9%9D%A2%E5%9B%BE%E6%9C%80%E5%B0%8F%E9%93%BE%E8%A6%86%E7%9B%96-POI2002-Skiers/</id>
+    <published>2021-03-12T04:45:42.000Z</published>
+    <updated>2021-12-04T07:51:29.687Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;题意&quot;&gt;题意&lt;/h2&gt;
+&lt;p&gt;给一个图，它是个DAG（有向无环图），它是个平面图，它有一个起点和一个终点，求最小的从起点到终点的路径数量，使得存在一组这么多路径可以覆盖这个图的每一条边。&lt;/p&gt;
+&lt;h2 id=&quot;输入输出&quot;&gt;输入输出&lt;/h2&gt;
+&lt;p&gt;输入一个图，输出一个数，具体不说了。&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/images/nar.gif&quot; alt=&quot;&quot;&gt;&lt;figcaption&gt;nar&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;样例长这样，它应该输出 8.&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="算法题解" scheme="http://thirtiseven.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98%E8%A7%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FFT、小波卷积和希尔伯特变换</title>
+    <link href="http://thirtiseven.github.io/2021/03/08/FFT%E3%80%81%E5%B0%8F%E6%B3%A2%E5%8D%B7%E7%A7%AF%E5%92%8C%E5%B8%8C%E5%B0%94%E4%BC%AF%E7%89%B9%E5%8F%98%E6%8D%A2/"/>
+    <id>http://thirtiseven.github.io/2021/03/08/FFT%E3%80%81%E5%B0%8F%E6%B3%A2%E5%8D%B7%E7%A7%AF%E5%92%8C%E5%B8%8C%E5%B0%94%E4%BC%AF%E7%89%B9%E5%8F%98%E6%8D%A2/</id>
+    <published>2021-03-08T04:07:29.000Z</published>
+    <updated>2021-12-04T07:50:33.921Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;点积和卷积&quot;&gt;10 点积和卷积&lt;/h2&gt;
+&lt;p&gt;点积：两个等长向量按维度相乘然后加起来。点积是卷积的基本步骤。它可以被认为是一个向量中的元素经另一个向量的元素加权后的总和（一种信号处理的解释），也可以被认为是两个向量之间的协方差或相似性（一种统计学的解释），或者是向量之间的映射（两个向量的大小乘以它们之间角度的余弦，一种几何学的解释）。 &lt;span class=&quot;math display&quot;&gt;&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot; display=&quot;true&quot;&gt;&lt;svg style=&quot;vertical-align: -2.819ex&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;22.641ex&quot; height=&quot;6.354ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -1562.5 10007.5 2808.5&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D451&quot; d=&quot;M366 683Q367 683 438 688T511 694Q523 694 523 686Q523 679 450 384T375 83T374 68Q374 26 402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487H491Q506 153 506 145Q506 140 503 129Q490 79 473 48T445 8T417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157Q33 205 53 255T101 341Q148 398 195 420T280 442Q336 442 364 400Q369 394 369 396Q370 400 396 505T424 616Q424 629 417 632T378 637H357Q351 643 351 645T353 664Q358 683 366 683ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(520,0)&quot;&gt;&lt;path data-c=&quot;1D45C&quot; d=&quot;M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(1005,0)&quot;&gt;&lt;path data-c=&quot;1D461&quot; d=&quot;M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(1366,0)&quot;&gt;&lt;path data-c=&quot;1D45D&quot; d=&quot;M23 287Q24 290 25 295T30 317T40 348T55 381T75 411T101 433T134 442Q209 442 230 378L240 387Q302 442 358 442Q423 442 460 395T497 281Q497 173 421 82T249 -10Q227 -10 210 -4Q199 1 187 11T168 28L161 36Q160 35 139 -51T118 -138Q118 -144 126 -145T163 -148H188Q194 -155 194 -157T191 -175Q188 -187 185 -190T172 -194Q170 -194 161 -194T127 -193T65 -192Q-5 -192 -24 -194H-32Q-39 -187 -39 -183Q-37 -156 -26 -148H-6Q28 -147 33 -136Q36 -130 94 103T155 350Q156 355 156 364Q156 405 131 405Q109 405 94 377T71 316T59 280Q57 278 43 278H29Q23 284 23 287ZM178 102Q200 26 252 26Q282 26 310 49T356 107Q374 141 392 215T411 325V331Q411 405 350 405Q339 405 328 402T306 393T286 380T269 365T254 350T243 336T235 326L232 322Q232 321 229 308T218 264T204 212Q178 106 178 102Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(1869,0)&quot;&gt;&lt;path data-c=&quot;1D45F&quot; d=&quot;M21 287Q22 290 23 295T28 317T38 348T53 381T73 411T99 433T132 442Q161 442 183 430T214 408T225 388Q227 382 228 382T236 389Q284 441 347 441H350Q398 441 422 400Q430 381 430 363Q430 333 417 315T391 292T366 288Q346 288 334 299T322 328Q322 376 378 392Q356 405 342 405Q286 405 239 331Q229 315 224 298T190 165Q156 25 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 114 189T154 366Q154 405 128 405Q107 405 92 377T68 316T57 280Q55 278 41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(2320,0)&quot;&gt;&lt;path data-c=&quot;1D45C&quot; d=&quot;M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(2805,0)&quot;&gt;&lt;path data-c=&quot;1D451&quot; d=&quot;M366 683Q367 683 438 688T511 694Q523 694 523 686Q523 679 450 384T375 83T374 68Q374 26 402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487H491Q506 153 506 145Q506 140 503 129Q490 79 473 48T445 8T417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157Q33 205 53 255T101 341Q148 398 195 420T280 442Q336 442 364 400Q369 394 369 396Q370 400 396 505T424 616Q424 629 417 632T378 637H357Q351 643 351 645T353 664Q358 683 366 683ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(3325,0)&quot;&gt;&lt;path data-c=&quot;1D462&quot; d=&quot;M21 287Q21 295 30 318T55 370T99 420T158 442Q204 442 227 417T250 358Q250 340 216 246T182 105Q182 62 196 45T238 27T291 44T328 78L339 95Q341 99 377 247Q407 367 413 387T427 416Q444 431 463 431Q480 431 488 421T496 402L420 84Q419 79 419 68Q419 43 426 35T447 26Q469 29 482 57T512 145Q514 153 532 153Q551 153 551 144Q550 139 549 130T540 98T523 55T498 17T462 -8Q454 -10 438 -10Q372 -10 347 46Q345 45 336 36T318 21T296 6T267 -6T233 -11Q189 -11 155 7Q103 38 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(3897,0)&quot;&gt;&lt;path data-c=&quot;1D450&quot; d=&quot;M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;msub&quot; transform=&quot;translate(4330,0)&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D461&quot; d=&quot;M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;TeXAtom&quot; transform=&quot;translate(394,-150) scale(0.707)&quot; data-mjx-texclass=&quot;ORD&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D44E&quot; d=&quot;M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(529,0)&quot;&gt;&lt;path data-c=&quot;1D44F&quot; d=&quot;M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(5729.2,0)&quot;&gt;&lt;path data-c=&quot;3D&quot; d=&quot;M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;munderover&quot; transform=&quot;translate(6785,0)&quot;&gt;&lt;g data-mml-node=&quot;mo&quot;&gt;&lt;path data-c=&quot;2211&quot; d=&quot;M60 948Q63 950 665 950H1267L1325 815Q1384 677 1388 669H1348L1341 683Q1320 724 1285 761Q1235 809 1174 838T1033 881T882 898T699 902H574H543H251L259 891Q722 258 724 252Q725 250 724 246Q721 243 460 -56L196 -356Q196 -357 407 -357Q459 -357 548 -357T676 -358Q812 -358 896 -353T1063 -332T1204 -283T1307 -196Q1328 -170 1348 -124H1388Q1388 -125 1381 -145T1356 -210T1325 -294L1267 -449L666 -450Q64 -450 61 -448Q55 -446 55 -439Q55 -437 57 -433L590 177Q590 178 557 222T452 366T322 544L56 909L55 924Q55 945 60 948Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;TeXAtom&quot; transform=&quot;translate(148.2,-1087.9) scale(0.707)&quot; data-mjx-texclass=&quot;ORD&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D456&quot; d=&quot;M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(345,0)&quot;&gt;&lt;path data-c=&quot;2212&quot; d=&quot;M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(1123,0)&quot;&gt;&lt;path data-c=&quot;31&quot; d=&quot;M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(509.9,1150) scale(0.707)&quot;&gt;&lt;path data-c=&quot;1D45B&quot; d=&quot;M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;msub&quot; transform=&quot;translate(8395.6,0)&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D44E&quot; d=&quot;M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(562,-150) scale(0.707)&quot;&gt;&lt;path data-c=&quot;1D456&quot; d=&quot;M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;msub&quot; transform=&quot;translate(9251.6,0)&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D44F&quot; d=&quot;M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(462,-150) scale(0.707)&quot;&gt;&lt;path data-c=&quot;1D456&quot; d=&quot;M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt;&lt;/span&gt;</summary>
+    
+    
+    
+    
+    <category term="脑机接口" scheme="http://thirtiseven.github.io/tags/%E8%84%91%E6%9C%BA%E6%8E%A5%E5%8F%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>POI2010 Pilots 单调队列</title>
+    <link href="http://thirtiseven.github.io/2021/02/21/POI2010-Pilots-%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/"/>
+    <id>http://thirtiseven.github.io/2021/02/21/POI2010-Pilots-%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/</id>
+    <published>2021-02-21T03:56:25.000Z</published>
+    <updated>2021-12-04T07:51:01.588Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;pilots-poi2010&quot;&gt;Pilots POI2010&lt;/h1&gt;
+&lt;h2 id=&quot;题意&quot;&gt;题意&lt;/h2&gt;
+&lt;p&gt;给定 &lt;span class=&quot;math inline&quot;&gt;&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: -0.439ex&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;3.18ex&quot; height=&quot;1.855ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -626 1405.7 820&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D45B&quot; d=&quot;M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(600,0)&quot;&gt;&lt;path data-c=&quot;2C&quot; d=&quot;M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(1044.7,0)&quot;&gt;&lt;path data-c=&quot;1D461&quot; d=&quot;M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt;&lt;/span&gt; 和一个长度为&lt;span class=&quot;math inline&quot;&gt;&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: -0.025ex&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1.357ex&quot; height=&quot;1.025ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -442 600 453&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D45B&quot; d=&quot;M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt;&lt;/span&gt;的序列，求最长的最大值最小值相差不超过 &lt;span class=&quot;math inline&quot;&gt;&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: -0.025ex&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;0.817ex&quot; height=&quot;1.441ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -626 361 637&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D461&quot; d=&quot;M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt;&lt;/span&gt; 的区间长度。&lt;/p&gt;
+&lt;h2 id=&quot;输入&quot;&gt;输入&lt;/h2&gt;
+&lt;p&gt;第一行两个有空格隔开的整数 &lt;span class=&quot;math inline&quot;&gt;&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: -0.566ex&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;23.883ex&quot; height=&quot;2.262ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -750 10556.4 1000&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D461&quot; d=&quot;M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(361,0)&quot;&gt;&lt;path data-c=&quot;28&quot; d=&quot;M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(750,0)&quot;&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(1527.8,0)&quot;&gt;&lt;path data-c=&quot;2264&quot; d=&quot;M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(2583.6,0)&quot;&gt;&lt;path data-c=&quot;1D461&quot; d=&quot;M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(3222.3,0)&quot;&gt;&lt;path data-c=&quot;2264&quot; d=&quot;M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(4278.1,0)&quot;&gt;&lt;path data-c=&quot;32&quot; d=&quot;M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(500,0)&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(1000,0)&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(1500,0)&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(6278.1,0)&quot;&gt;&lt;path data-c=&quot;2C&quot; d=&quot;M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(6722.8,0)&quot;&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(500,0)&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(1000,0)&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(8222.8,0)&quot;&gt;&lt;path data-c=&quot;2C&quot; d=&quot;M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(8667.4,0)&quot;&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(500,0)&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(1000,0)&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(10167.4,0)&quot;&gt;&lt;path data-c=&quot;29&quot; d=&quot;M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt;&lt;/span&gt;，&lt;span class=&quot;math inline&quot;&gt;&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: -0.566ex&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;20.565ex&quot; height=&quot;2.262ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -750 9089.8 1000&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D45B&quot; d=&quot;M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(600,0)&quot;&gt;&lt;path data-c=&quot;28&quot; d=&quot;M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(989,0)&quot;&gt;&lt;path data-c=&quot;31&quot; d=&quot;M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(1766.8,0)&quot;&gt;&lt;path data-c=&quot;2264&quot; d=&quot;M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(2822.6,0)&quot;&gt;&lt;path data-c=&quot;1D45B&quot; d=&quot;M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(3700.3,0)&quot;&gt;&lt;path data-c=&quot;2264&quot; d=&quot;M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(4756.1,0)&quot;&gt;&lt;path data-c=&quot;33&quot; d=&quot;M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(500,0)&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(1000,0)&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(1500,0)&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(6756.1,0)&quot;&gt;&lt;path data-c=&quot;2C&quot; d=&quot;M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(7200.8,0)&quot;&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(500,0)&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(1000,0)&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(8700.8,0)&quot;&gt;&lt;path data-c=&quot;29&quot; d=&quot;M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt;&lt;/span&gt;，$ t &lt;span class=&quot;math inline&quot;&gt;&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: -0.452ex&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;18.326ex&quot; height=&quot;2.149ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -750 8100 950&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;text data-variant=&quot;italic&quot; transform=&quot;scale(1,-1)&quot; font-size=&quot;884px&quot; font-family=&quot;serif&quot; font-style=&quot;italic&quot;&gt;代&lt;/text&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(900,0)&quot;&gt;&lt;text data-variant=&quot;italic&quot; transform=&quot;scale(1,-1)&quot; font-size=&quot;884px&quot; font-family=&quot;serif&quot; font-style=&quot;italic&quot;&gt;表&lt;/text&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(1800,0)&quot;&gt;&lt;text data-variant=&quot;italic&quot; transform=&quot;scale(1,-1)&quot; font-size=&quot;884px&quot; font-family=&quot;serif&quot; font-style=&quot;italic&quot;&gt;设&lt;/text&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(2700,0)&quot;&gt;&lt;text data-variant=&quot;italic&quot; transform=&quot;scale(1,-1)&quot; font-size=&quot;884px&quot; font-family=&quot;serif&quot; font-style=&quot;italic&quot;&gt;定&lt;/text&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(3600,0)&quot;&gt;&lt;text data-variant=&quot;italic&quot; transform=&quot;scale(1,-1)&quot; font-size=&quot;884px&quot; font-family=&quot;serif&quot; font-style=&quot;italic&quot;&gt;的&lt;/text&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(4500,0)&quot;&gt;&lt;text data-variant=&quot;italic&quot; transform=&quot;scale(1,-1)&quot; font-size=&quot;884px&quot; font-family=&quot;serif&quot; font-style=&quot;italic&quot;&gt;最&lt;/text&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(5400,0)&quot;&gt;&lt;text data-variant=&quot;italic&quot; transform=&quot;scale(1,-1)&quot; font-size=&quot;884px&quot; font-family=&quot;serif&quot; font-style=&quot;italic&quot;&gt;大&lt;/text&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(6300,0)&quot;&gt;&lt;text data-variant=&quot;italic&quot; transform=&quot;scale(1,-1)&quot; font-size=&quot;884px&quot; font-family=&quot;serif&quot; font-style=&quot;italic&quot;&gt;值&lt;/text&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(7200,0)&quot;&gt;&lt;text data-variant=&quot;italic&quot; transform=&quot;scale(1,-1)&quot; font-size=&quot;884px&quot; font-family=&quot;serif&quot; font-style=&quot;italic&quot;&gt;，&lt;/text&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt;&lt;/span&gt;n $ 代表序列的长度。第二行为n个由空格隔开的整数 &lt;span class=&quot;math inline&quot;&gt;&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: -0.452ex&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;28.435ex&quot; height=&quot;2.149ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -750 12568.3 950&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;msub&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D44E&quot; d=&quot;M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(562,-150) scale(0.707)&quot;&gt;&lt;path data-c=&quot;1D456&quot; d=&quot;M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(856,0)&quot;&gt;&lt;text data-variant=&quot;italic&quot; transform=&quot;scale(1,-1)&quot; font-size=&quot;884px&quot; font-family=&quot;serif&quot; font-style=&quot;italic&quot;&gt;（&lt;/text&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(1756,0)&quot;&gt;&lt;path data-c=&quot;31&quot; d=&quot;M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(2533.7,0)&quot;&gt;&lt;path data-c=&quot;2264&quot; d=&quot;M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;msub&quot; transform=&quot;translate(3589.5,0)&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D44E&quot; d=&quot;M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(562,-150) scale(0.707)&quot;&gt;&lt;path data-c=&quot;1D456&quot; d=&quot;M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(4723.2,0)&quot;&gt;&lt;path data-c=&quot;2264&quot; d=&quot;M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(5779,0)&quot;&gt;&lt;path data-c=&quot;32&quot; d=&quot;M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(500,0)&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(1000,0)&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(1500,0)&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(7779,0)&quot;&gt;&lt;path data-c=&quot;2C&quot; d=&quot;M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(8223.7,0)&quot;&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(500,0)&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(1000,0)&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(9723.7,0)&quot;&gt;&lt;path data-c=&quot;2C&quot; d=&quot;M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(10168.3,0)&quot;&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(500,0)&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;30&quot; d=&quot;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&quot; transform=&quot;translate(1000,0)&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(11668.3,0)&quot;&gt;&lt;text data-variant=&quot;italic&quot; transform=&quot;scale(1,-1)&quot; font-size=&quot;884px&quot; font-family=&quot;serif&quot; font-style=&quot;italic&quot;&gt;）&lt;/text&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt;&lt;/span&gt;，表示序列。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="算法题解" scheme="http://thirtiseven.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98%E8%A7%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>上野千鹤子《厌女》书摘</title>
+    <link href="http://thirtiseven.github.io/2021/02/18/%E5%8E%8C%E5%A5%B3/"/>
+    <id>http://thirtiseven.github.io/2021/02/18/%E5%8E%8C%E5%A5%B3/</id>
+    <published>2021-02-18T03:53:41.000Z</published>
+    <updated>2021-12-04T07:18:37.357Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;实际上，读了吉行，也不懂女人。读了他的作品，懂得的只是男人的性幻想，关于“女人是什么、应该是什么、希望她是什么”的幻想。这与“东方主义“极为相通。爱德华•萨义德将“东方主义”定义为“支配、重构和压服东方的西方模式”、“关于何为东方的西方知识体系”，所以,无论读了多少西方人写的关于东方的书,懂得的只是西方人头脑中的东方幻想而不是真正的东方——这就是萨义德《东方主义》一书的发现。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="书摘" scheme="http://thirtiseven.github.io/tags/%E4%B9%A6%E6%91%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Algorithmic Engagements 2009 Fishes 拓扑+最小表示法</title>
+    <link href="http://thirtiseven.github.io/2021/02/04/Algorithmic-Engagements-2009-Fishes/"/>
+    <id>http://thirtiseven.github.io/2021/02/04/Algorithmic-Engagements-2009-Fishes/</id>
+    <published>2021-02-04T13:44:06.000Z</published>
+    <updated>2021-12-04T07:49:56.671Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;fishes&quot;&gt;Fishes&lt;/h1&gt;
+&lt;h2 id=&quot;题意&quot;&gt;题意&lt;/h2&gt;
+&lt;p&gt;在遥远的群岛上，生活着一种罕见的食肉鱼。这些鱼的生活节奏非常有规律。每条鱼每天早上在同一时间醒来，然后去打猎。傍晚，它又回到出发的地方 每天同一时间在那里睡觉，但它可能会在不同的地方醒来，因为它可能会被洋流稍微移动。 在一整天中，鱼儿都会坚持以下规则：每时每刻它都要能看到前一天同一时间的位置，也就是说，正好是24小时之前。当然，鱼儿不可能看到任何岛屿对面的一个点。 鱼类学家对群岛中的鱼类进行了相当长时间的观察，每隔几天，他们就会记录一些鱼类所走的一条路线。不幸的是，在收集了大量的数据之后，发生了意外。现在有些数据已经丢失了，剩下的数据也完全乱了套。科学家甚至不知道他们记录的每条路线是哪条鱼走过的。他们向你寻求帮助。他们要给你一些乱七八糟的鱼群路线描述，并请你告诉他们在研究过程中观察到的不同鱼类的最小数量。</summary>
+    
+    
+    
+    
+    <category term="算法题解" scheme="http://thirtiseven.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98%E8%A7%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2020读书总结</title>
+    <link href="http://thirtiseven.github.io/2021/01/01/2020%E8%AF%BB%E4%B9%A6%E6%80%BB%E7%BB%93/"/>
+    <id>http://thirtiseven.github.io/2021/01/01/2020%E8%AF%BB%E4%B9%A6%E6%80%BB%E7%BB%93/</id>
+    <published>2021-01-01T12:44:22.000Z</published>
+    <updated>2021-12-04T07:18:15.830Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;作业要写不完了，用零散摸鱼的时间随便扯一点。&lt;/p&gt;
+&lt;p&gt;（怎么随便扯了这么多，可能是期末季俺的写报告水平显著提升了）&lt;/p&gt;
+&lt;p&gt;2020上半年的时候，每天没有什么事情干，主要时间用于躺在床上盯着天花板和躺在床上一遍一遍地刷疫情的新闻。在做这些事情之余，我好像读了挺多书的。一部分是因为我觉得需要读，另一部分是因为无聊。上半年的读书基本是在微信读书和电脑上读的，半夜睡不着觉的时候，在家里的过道和客厅来回散步的时候，早上不想起床的时候，白天不知道做什么事情的时候。下半年来到同济读研，发现图书馆非常好。然后因为疫情起伏，交通不便，补充科研背景知识，实验室工作需要调剂，再加上我是个死宅，这个学期几乎没有出过学校，在晚上睡觉之前，政治课和讲座的时候，以及周末，花了大量的时间看书。另一方面，从死掉的垃圾平台 Lofter 转到了这个微信公众号来发书摘，逐步试着从碎片化的读书摘抄转向更完整一点的形式。暂时没被审核或者删除过（也没有人看），那 Lofter 是真的不行。反正就是种种原因，今年读了一百来本书吧，终于回归到了高中水平。想介绍一些我觉得大家都值得去看一看的书，以及一些比较偏门但是又可能有人会感兴趣的书，再稍微定个来年的计划。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="年度读书总结" scheme="http://thirtiseven.github.io/tags/%E5%B9%B4%E5%BA%A6%E8%AF%BB%E4%B9%A6%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>张枣《春秋来信》</title>
+    <link href="http://thirtiseven.github.io/2020/12/27/%E5%BC%A0%E6%9E%A3%E3%80%8A%E6%98%A5%E7%A7%8B%E6%9D%A5%E4%BF%A1%E3%80%8B/"/>
+    <id>http://thirtiseven.github.io/2020/12/27/%E5%BC%A0%E6%9E%A3%E3%80%8A%E6%98%A5%E7%A7%8B%E6%9D%A5%E4%BF%A1%E3%80%8B/</id>
+    <published>2020-12-27T04:00:46.000Z</published>
+    <updated>2021-12-04T07:18:53.199Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;天鹅&quot;&gt;天鹅&lt;/h3&gt;
+&lt;p&gt;尚未抵达形式之前&lt;/p&gt;
+&lt;p&gt;你是怎样厌倦自己&lt;/p&gt;
+&lt;p&gt;逆着暗流，顶着冷雨&lt;/p&gt;
+&lt;p&gt;惩罚自己，一遍又一遍&lt;/p&gt;
+&lt;p&gt;你是怎样&lt;/p&gt;
+&lt;p&gt;飘零在你自身之外&lt;/p&gt;
+&lt;p&gt;什么都可以伤害你&lt;/p&gt;
+&lt;p&gt;甚至最温柔的情侣</summary>
+    
+    
+    
+    
+    <category term="书摘" scheme="http://thirtiseven.github.io/tags/%E4%B9%A6%E6%91%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ONTAK 2007 Hyperclock</title>
+    <link href="http://thirtiseven.github.io/2020/12/24/ONTAK-2007-Hyperclock/"/>
+    <id>http://thirtiseven.github.io/2020/12/24/ONTAK-2007-Hyperclock/</id>
+    <published>2020-12-24T13:42:09.000Z</published>
+    <updated>2021-12-04T07:50:42.296Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;hyperclock&quot;&gt;Hyperclock&lt;/h1&gt;
+&lt;h2 id=&quot;题意&quot;&gt;题意&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: -0.025ex&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1.357ex&quot; height=&quot;1.025ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -442 600 453&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D45B&quot; d=&quot;M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt;&lt;/span&gt; 个时钟构成了一个超时钟，其中第 &lt;span class=&quot;math inline&quot;&gt;&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: -0.025ex&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;0.781ex&quot; height=&quot;1.52ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -661 345 672&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D456&quot; d=&quot;M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt;&lt;/span&gt; 个时钟的钟面上写着 从 1 到 &lt;span class=&quot;math inline&quot;&gt;&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: -0.357ex&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1.918ex&quot; height=&quot;1.927ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -694 848 851.8&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;msub&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D458&quot; d=&quot;M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(554,-150) scale(0.707)&quot;&gt;&lt;path data-c=&quot;1D456&quot; d=&quot;M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt;&lt;/span&gt; 共计 &lt;span class=&quot;math inline&quot;&gt;&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: -0.357ex&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1.918ex&quot; height=&quot;1.927ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -694 848 851.8&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;msub&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D458&quot; d=&quot;M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(554,-150) scale(0.707)&quot;&gt;&lt;path data-c=&quot;1D456&quot; d=&quot;M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt;&lt;/span&gt; 个数字，每个时钟有一个指针，一开始，所有的指针都指向数字 1。你可以进行若干次操作，每次操作你可以选择一个时钟将它的指针往顺时针或逆时针移动一格。在执行完最后一次操作后，超时钟的每一种外形都应当被显示正好一次，并且每个指针回到初始位置。求一种合法的操作方案。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="算法题解" scheme="http://thirtiseven.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98%E8%A7%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AMPPZ 2011 Ants</title>
+    <link href="http://thirtiseven.github.io/2020/12/15/AMPPZ-2011-Ants/"/>
+    <id>http://thirtiseven.github.io/2020/12/15/AMPPZ-2011-Ants/</id>
+    <published>2020-12-15T13:40:36.000Z</published>
+    <updated>2021-12-04T07:49:49.214Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;ants&quot;&gt;Ants&lt;/h1&gt;
+&lt;h2 id=&quot;题意&quot;&gt;题意&lt;/h2&gt;
+&lt;p&gt;有一棵树，从0时刻开始，有两只蚂蚁分别从树的左右两侧出发遍历这棵树。左蚂蚁从一条边的下方爬到上方需要2秒，从上方爬到下方需要1秒，右蚂蚁的爬行速度是左蚂蚁的两倍。蚂蚁如果碰到对方就会立刻调头继续爬行，蚂蚁如果返回地面也会调头继续爬行。计算两只蚂蚁第二次相遇的时间。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="算法题解" scheme="http://thirtiseven.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98%E8%A7%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Analyzing Neural Time Series Data Part I&amp;II 笔记</title>
+    <link href="http://thirtiseven.github.io/2020/11/23/ANTS-part1/"/>
+    <id>http://thirtiseven.github.io/2020/11/23/ANTS-part1/</id>
+    <published>2020-11-23T13:17:38.000Z</published>
+    <updated>2021-12-04T07:50:24.152Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;advantages-and-limitations-of-time--and-time-frequency-domain-analyses&quot;&gt;2. Advantages and Limitations of Time- and Time-Frequency-Domain Analyses&lt;/h2&gt;
+&lt;p&gt;为啥要用脑电图（EEG）？因为它可以捕获认知活动发生时段的认知动态，因为它直接测量了神经的活动，还因为它是多维度的。这里的维度指的是时间、空间、频率、能量和相位等等。当然脑电图也有局限，它不能精确定位，也不能深入大脑深处。有一些大脑活动的时间特征因人而异，也有一些的认知过程比较缓慢，这使得脑电图异常精确的时间分辨率反而成了一种劣势。&lt;/p&gt;
+&lt;p&gt;脑电图的计量单位是伏特（一般是微伏），脑磁图（MEG）的计量单位则是特斯拉（一般是飞特斯拉）。对于脑电图，它显示的实际上是电极和参考电极之间的差值。一些脑电研究会给出实验的电压值，但是要参考这些值往往很困难，首先因为它会根据数据处理和分析的方法而变化，比如参考值的选择和用于基线减法的时间段，此外，时间和空间滤波器也会改变微伏值。另一个原因是，微伏值对不同的被试有很大的个体差异，还可能收到脑电图电极和放大器以及内置的硬件滤波器的影响。所以，可以别太在意原始数据中的电压数据。当然，上述的原因对于所有的被试和实验条件都存在，所以同一被试的纵向比较显然是有意义的。</summary>
+    
+    
+    
+    
+    <category term="脑机接口" scheme="http://thirtiseven.github.io/tags/%E8%84%91%E6%9C%BA%E6%8E%A5%E5%8F%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《时间管理——给系统管理员》笔记</title>
+    <link href="http://thirtiseven.github.io/2020/11/09/%E3%80%8A%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86%E2%80%94%E2%80%94%E7%BB%99%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E5%91%98%E3%80%8B%E7%AC%94%E8%AE%B0/"/>
+    <id>http://thirtiseven.github.io/2020/11/09/%E3%80%8A%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86%E2%80%94%E2%80%94%E7%BB%99%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E5%91%98%E3%80%8B%E7%AC%94%E8%AE%B0/</id>
+    <published>2020-11-09T04:03:16.000Z</published>
+    <updated>2021-12-04T07:19:00.439Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;这是《时间管理——给系统管理员》的笔记。O&#39;REILLY 的动物系列四舍五入都是专业书！&lt;/p&gt;
+&lt;p&gt;有一些高论，但是大部分是融合在各种时间管理软件中的逻辑和自然流淌在学过软件工程的人的血液里的东西。&lt;/p&gt;
+&lt;p&gt;学计算机的人好像特别喜欢把计算机知识延伸到生活里来，这不 work life balance。但是我还是觉得再科学的体系都阻止不了我摸鱼。&lt;/p&gt;
+&lt;p&gt;双十一又到了，买手帐本子去了（不是）。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="书摘" scheme="http://thirtiseven.github.io/tags/%E4%B9%A6%E6%91%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>感性理解脑电图判读</title>
+    <link href="http://thirtiseven.github.io/2020/11/05/%E6%84%9F%E6%80%A7%E7%90%86%E8%A7%A3%E8%84%91%E7%94%B5%E5%9B%BE%E5%88%A4%E8%AF%BB/"/>
+    <id>http://thirtiseven.github.io/2020/11/05/%E6%84%9F%E6%80%A7%E7%90%86%E8%A7%A3%E8%84%91%E7%94%B5%E5%9B%BE%E5%88%A4%E8%AF%BB/</id>
+    <published>2020-11-05T02:42:01.000Z</published>
+    <updated>2021-12-04T07:16:33.520Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在实验室的书橱里发现一本《脑电图判读 step by step》（还发现了一堆看上去异常牛逼的书），稍微读了一会儿，学到很多，记录一下。 （不是 这个公众号贴含公式的markdown怎么这么痛苦的啊？）​&lt;/p&gt;
+&lt;h2 id=&quot;脑电图基础知识&quot;&gt;脑电图基础知识&lt;/h2&gt;
+&lt;p&gt;脑电图是一堆脑子上贴的电极采集到的波形图，它主要由频率和波幅构成。（一些名词解释：频率是1秒钟内包含的重复波的数量；周期，aka持续时间，是两个波峰和波谷之间的垂线之间的距离；基线，是沿着上下波动的波的中点设想出来的一条水平线。）&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="脑机接口" scheme="http://thirtiseven.github.io/tags/%E8%84%91%E6%9C%BA%E6%8E%A5%E5%8F%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>赫塔米勒《国王鞠躬，国王杀人》书摘</title>
+    <link href="http://thirtiseven.github.io/2020/10/23/%E8%B5%AB%E5%A1%94%E7%B1%B3%E5%8B%92%E3%80%8A%E5%9B%BD%E7%8E%8B%E9%9E%A0%E8%BA%AC%EF%BC%8C%E5%9B%BD%E7%8E%8B%E6%9D%80%E4%BA%BA%E3%80%8B%E4%B9%A6%E6%91%98/"/>
+    <id>http://thirtiseven.github.io/2020/10/23/%E8%B5%AB%E5%A1%94%E7%B1%B3%E5%8B%92%E3%80%8A%E5%9B%BD%E7%8E%8B%E9%9E%A0%E8%BA%AC%EF%BC%8C%E5%9B%BD%E7%8E%8B%E6%9D%80%E4%BA%BA%E3%80%8B%E4%B9%A6%E6%91%98/</id>
+    <published>2020-10-23T03:59:40.000Z</published>
+    <updated>2021-12-04T07:18:47.031Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;遗憾的是，对母语本能的信任有时会遭受彻底的破坏。纳粹灭绝犹太人的行动之后，保罗•策兰 (Paul Celan) 必须面对一个现实，即他的母语也是杀害他母亲的刽子手的语言。策兰无法抖落身上这冰冷的套索。他人生学说的第一句话就是德语，这种语言在他大脑中根深蒂固，无法剔除。即时散发着集中营烟囱的气味，策兰也必须将它当做隐秘的言语障碍保留与心。虽然他是在依第语、罗马尼亚语和俄语环境中长大，日后法语成为他日常生活的语言，也无法撼动德语在他心中的地位。乔治•阿瑟•歌德施密特在犹太人大屠杀之后拒绝再将德语，几十年只用法语写作。但他没有将德语遗忘，他最后的几部德语作品水平之高，令许多德国作家都无法超越。我可以说，歌德施密特的 母语被长期剥夺了。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="书摘" scheme="http://thirtiseven.github.io/tags/%E4%B9%A6%E6%91%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>系统学习了一下python</title>
+    <link href="http://thirtiseven.github.io/2020/01/20/%E5%AD%A6%E4%B9%A0python/"/>
+    <id>http://thirtiseven.github.io/2020/01/20/%E5%AD%A6%E4%B9%A0python/</id>
+    <published>2020-01-20T07:14:42.000Z</published>
+    <updated>2021-12-04T07:15:58.351Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;花三天时间系统学习了一下python语法... 奥妙重重&lt;/p&gt;
+&lt;h2 id=&quot;输入输出&quot;&gt;输入输出&lt;/h2&gt;
+&lt;h3 id=&quot;在一行输入多个值&quot;&gt;在一行输入多个值&lt;/h3&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;a, b, c = &lt;span class=&quot;built_in&quot;&gt;map&lt;/span&gt;(&lt;span class=&quot;built_in&quot;&gt;int&lt;/span&gt;,&lt;span class=&quot;built_in&quot;&gt;input&lt;/span&gt;().split(&lt;span class=&quot;string&quot;&gt;&amp;#x27; &amp;#x27;&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;列表和元组&quot;&gt;列表和元组&lt;/h2&gt;
+&lt;h3 id=&quot;声明列表&quot;&gt;声明列表&lt;/h3&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;a = [&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;列表切片&quot;&gt;列表切片&lt;/h3&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;numbers[&lt;span class=&quot;number&quot;&gt;7&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;] &lt;span class=&quot;comment&quot;&gt;#左开右闭&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;numbers[&lt;span class=&quot;number&quot;&gt;7&lt;/span&gt;:-&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;] &lt;span class=&quot;comment&quot;&gt;#切到倒数第二个&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;numbers[-&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;:] &lt;span class=&quot;comment&quot;&gt;#切到最后&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;numbers[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;] &lt;span class=&quot;comment&quot;&gt;#指定步长&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;numbers[&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;:-&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;] &lt;span class=&quot;comment&quot;&gt;#反向&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;numbers[::&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;] &lt;span class=&quot;comment&quot;&gt;#每四个取一个&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;numbers[:&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;:-&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;] &lt;span class=&quot;comment&quot;&gt;#步长为负数时，从终点移到起点&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    
+    <category term="笔记" scheme="http://thirtiseven.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>amppz 2011 部分题解</title>
+    <link href="http://thirtiseven.github.io/2020/01/13/amppz-2011-%E9%83%A8%E5%88%86%E9%A2%98%E8%A7%A3/"/>
+    <id>http://thirtiseven.github.io/2020/01/13/amppz-2011-%E9%83%A8%E5%88%86%E9%A2%98%E8%A7%A3/</id>
+    <published>2020-01-13T13:10:54.000Z</published>
+    <updated>2021-12-04T07:50:17.660Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Looking for a challenge! 2 开坑... 网上好像只能找到 http://ruchiose.is-programmer.com/2014/6/18/main_amppz_2011_solution.48903.html 这个大佬写的一句话题解... 我太菜了，波兰题真的恐怖，我调这个东西调了三个半小时... 退役选手好像做这种稍微长一点的题就不行了 题解基本上是意译自 Looking for a challenge 2 遇到的非傻逼错误好像也就没滚动数组导致RE了... 我不知道我为啥写了这么久啊？&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="算法题解" scheme="http://thirtiseven.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98%E8%A7%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>退役选手丢人计划</title>
+    <link href="http://thirtiseven.github.io/2019/11/25/%E9%80%80%E5%BD%B9%E9%80%89%E6%89%8B%E4%B8%A2%E4%BA%BA%E8%AE%A1%E5%88%92/"/>
+    <id>http://thirtiseven.github.io/2019/11/25/%E9%80%80%E5%BD%B9%E9%80%89%E6%89%8B%E4%B8%A2%E4%BA%BA%E8%AE%A1%E5%88%92/</id>
+    <published>2019-11-25T00:40:41.000Z</published>
+    <updated>2021-12-04T07:16:06.820Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;[2019-2020] Bad Ending&lt;/p&gt;
+&lt;p&gt;当你凝视猫咪&lt;/p&gt;
+&lt;p&gt;猫咪也在想&lt;/p&gt;
+&lt;p&gt;晚饭吃什么&lt;/p&gt;
+&lt;h2 id=&quot;待办&quot;&gt;待办&lt;/h2&gt;
+&lt;ul class=&quot;task-list&quot;&gt;
+&lt;li&gt;&lt;input type=&quot;checkbox&quot; disabled=&quot;&quot; checked=&quot;&quot; /&gt;
+关心一下名额下来了没&lt;/li&gt;
+&lt;li&gt;&lt;input type=&quot;checkbox&quot; disabled=&quot;&quot; checked=&quot;&quot; /&gt;
+定个个人训练计划&lt;/li&gt;
+&lt;li&gt;&lt;input type=&quot;checkbox&quot; disabled=&quot;&quot; /&gt;
+补NCPC 2018&lt;/li&gt;
+&lt;li&gt;&lt;input type=&quot;checkbox&quot; disabled=&quot;&quot; /&gt;
+补CCPC 秦皇岛 2019&lt;/li&gt;
+&lt;li&gt;&lt;input type=&quot;checkbox&quot; disabled=&quot;&quot; /&gt;
+补NCPC 2019&lt;/li&gt;
+&lt;li&gt;&lt;input type=&quot;checkbox&quot; disabled=&quot;&quot; /&gt;
+补CCPC Final 2018&lt;/li&gt;
+&lt;li&gt;&lt;input type=&quot;checkbox&quot; disabled=&quot;&quot; /&gt;
+补NERC 2019&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;队伍情况分析&quot;&gt;队伍情况分析&lt;/h2&gt;
+&lt;p&gt;limbo_wg: 淦哥退役很久没做题了 不知道现在行不行啊？ 有待观察（update: 很行&lt;/p&gt;
+&lt;p&gt;nuchenghao：好像会很多算法，但是签到签不上，当后期摸彩票了 有待提高和队友的交流 （update: 交流有问题，但是实力比想象中强很多&lt;/p&gt;
+&lt;p&gt;thirtiseven：退役选手在超低强度偶尔打cf的情况下状态越来越好，但是很多算法不会，而且按照以往情况一学算法就开始演（update：已经演起来了&lt;/p&gt;
+&lt;h2 id=&quot;现阶段需要学习的算法队列&quot;&gt;现阶段需要学习的算法队列&lt;/h2&gt;
+&lt;h3 id=&quot;图论&quot;&gt;图论&lt;/h3&gt;
+&lt;ul class=&quot;task-list&quot;&gt;
+&lt;li&gt;&lt;input type=&quot;checkbox&quot; disabled=&quot;&quot; /&gt;
+tarjan强连通分量 （做板子题&lt;/li&gt;
+&lt;li&gt;&lt;input type=&quot;checkbox&quot; disabled=&quot;&quot; /&gt;
+tarjan双联通分量（点、边）（做板子题&lt;/li&gt;
+&lt;li&gt;&lt;input type=&quot;checkbox&quot; disabled=&quot;&quot; /&gt;
+2-SAT （做板子题&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    
+    <category term="生活记录" scheme="http://thirtiseven.github.io/tags/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>I&#39;m back.</title>
+    <link href="http://thirtiseven.github.io/2019/08/18/I-m-back/"/>
+    <id>http://thirtiseven.github.io/2019/08/18/I-m-back/</id>
+    <published>2019-08-18T08:13:26.000Z</published>
+    <updated>2021-12-04T07:13:51.404Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;嗨！我打算重新启用这个博客，并开始写一些东西。&lt;/p&gt;
+&lt;p&gt;马上我会将这几年写的东西整理上来。&lt;/p&gt;
+&lt;p&gt;我的域名忘记续费了，不过没关系。&lt;/p&gt;
+&lt;p&gt;希望我能多写一些东西！&lt;/p&gt;
+&lt;p&gt;thirtiseven&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    
+    <category term="博客" scheme="http://thirtiseven.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>考研摸鱼实录</title>
+    <link href="http://thirtiseven.github.io/2019/05/16/%E8%80%83%E7%A0%94%E6%91%B8%E9%B1%BC%E5%AE%9E%E5%BD%95/"/>
+    <id>http://thirtiseven.github.io/2019/05/16/%E8%80%83%E7%A0%94%E6%91%B8%E9%B1%BC%E5%AE%9E%E5%BD%95/</id>
+    <published>2019-05-16T08:30:56.000Z</published>
+    <updated>2021-12-04T07:14:29.005Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;2019上半年准备考研。开了一个github repo记录下每天做了什么，和定期反思自己的学习状态。&lt;/p&gt;
+&lt;p&gt;选取一些有趣的考研时期记录。纪念一下那段不知道有没有过去的复习备考时光。这段时间我开始注意学习方法，努力学习，并认识到自己的优点和局限。希望这段时间没什么别的用了，我数学是真忘了。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="生活记录" scheme="http://thirtiseven.github.io/tags/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2018阅读总结</title>
+    <link href="http://thirtiseven.github.io/2019/01/01/2018%E9%98%85%E8%AF%BB%E6%80%BB%E7%BB%93/"/>
+    <id>http://thirtiseven.github.io/2019/01/01/2018%E9%98%85%E8%AF%BB%E6%80%BB%E7%BB%93/</id>
+    <published>2019-01-01T08:20:16.000Z</published>
+    <updated>2021-12-04T07:47:13.260Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;今天考试告一段落了想了一下还是应该糊个年终总结，往年我的画风是：“今年我沉闷而无聊，啥都没干，仍然是个垃圾，唯一值得一提的就是读了不少书，分享给大家。“ 今年就不同了，我的生活精彩、刺激、非常狂野，充满了形形色色的失败，如同太平洋上聚集在一起的五颜六色的垃圾，平静的海面上，突然一大坨一大坨地向你涌来。于是就几乎没读书，等我反应过来的时候已经十月了，虽然垂死挣扎了一下，但是最后我一年读的书是可怜而悲惨的二十八本。又不是没有时间对吧，2016年我上高三，读的书大概是今年的五倍。</summary>
+    
+    
+    
+    
+    <category term="年度读书总结" scheme="http://thirtiseven.github.io/tags/%E5%B9%B4%E5%BA%A6%E8%AF%BB%E4%B9%A6%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>归来影评</title>
+    <link href="http://thirtiseven.github.io/2018/12/12/%E5%BD%92%E6%9D%A5%E5%BD%B1%E8%AF%84/"/>
+    <id>http://thirtiseven.github.io/2018/12/12/%E5%BD%92%E6%9D%A5%E5%BD%B1%E8%AF%84/</id>
+    <published>2018-12-12T08:25:11.000Z</published>
+    <updated>2021-12-04T07:14:14.235Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;语文作业，量产垃圾。（然而语文老师觉得我是抄的，当代大学生太垃圾了&lt;/p&gt;
+&lt;p&gt;整个故事很简单，有一对相爱的夫妻二十年没有见面，终于再次相见时，妻子已经失忆了，丈夫用了各种方法都没有恢复妻子的记忆，于是作为一个念信人的身份陪伴妻子，每月陪她去火车站等待自己。&lt;/p&gt;
+&lt;p&gt;一开始的那场陆焉识回来找妻子女儿，但是没说上一句话就被抓了的戏，是对电影里时代背景和人物关系很好的描述。观众很容易就能看出，文革的时候，精神遭到束缚，生活遭到意识形态的塑造，家人的亲情被扭曲和异化，政治上持有异见的人成为人民的敌人。同时观众也可以看出陆焉识和冯婉喻之间非比寻常的爱情。</summary>
+    
+    
+    
+    
+    <category term="评论" scheme="http://thirtiseven.github.io/tags/%E8%AF%84%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>社会福利</title>
+    <link href="http://thirtiseven.github.io/2018/11/26/%E7%A4%BE%E4%BC%9A%E7%A6%8F%E5%88%A9/"/>
+    <id>http://thirtiseven.github.io/2018/11/26/%E7%A4%BE%E4%BC%9A%E7%A6%8F%E5%88%A9/</id>
+    <published>2018-11-26T08:27:21.000Z</published>
+    <updated>2021-12-04T07:14:21.582Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;小小搜索了一下什么是社会福利，做了笔记。&lt;/p&gt;
+&lt;h4 id=&quot;从哪来&quot;&gt;从哪来&lt;/h4&gt;
+&lt;p&gt;早期的社會福利觀念，主要是源於慈善助人的精神。&lt;/p&gt;
+&lt;p&gt;西方社会福利制度往往要溯源至英国的《济贫法》(160l)。16世纪下半期，在伊丽莎白女王治下的英国，大批农民因失去土地和家园而破产和流浪，导致了城市贫民和流民的激增，酿成了十分严峻的社会问题。这项社会保障措施。一般认为，《济贫法》规定了国家以税收转移支付的方式实施社会救助，在西方社会福利发展史上有着重要地位。&lt;/p&gt;
+&lt;p&gt;“福利国家”这个词来源于19世纪的德国，当时俾斯麦实行的警察国家政策，1870年德国的历史学家描述俾斯麦的“国家社会主义”政策是在创造一个“福利国家”。面对经济衰退、社会主义思想传播、工人运动兴起，俾斯麦政府以国家立法的形式通过了社会保障的三部法律——《疾病保险法》(1883)、《工人赔偿法》(1884)和《伤残、死亡和养老保险法》(1889)。这三部法律被视为西方社会保障制度体系建立的标志性文献。</summary>
+    
+    
+    
+    
+    <category term="笔记" scheme="http://thirtiseven.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>非法参赛</title>
+    <link href="http://thirtiseven.github.io/2018/11/18/%E9%9D%9E%E6%B3%95%E5%8F%82%E8%B5%9B/"/>
+    <id>http://thirtiseven.github.io/2018/11/18/%E9%9D%9E%E6%B3%95%E5%8F%82%E8%B5%9B/</id>
+    <published>2018-11-18T08:22:11.000Z</published>
+    <updated>2021-12-04T07:14:44.412Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;一些比赛的赛后复盘。&lt;/p&gt;
+&lt;p&gt;thirtiseven &amp;amp; limbo_wg &amp;amp; Simon&lt;/p&gt;
+&lt;p&gt;2018 Season&lt;/p&gt;
+&lt;p&gt;Bad End.&lt;/p&gt;
+&lt;h3 id=&quot;the-2018-acm-icpc-china-shanghai-metropolitan-invitational-contest&quot;&gt;The 2018 ACM ICPC China Shanghai Metropolitan Invitational Contest&lt;/h3&gt;
+&lt;p&gt;这次自费去上海大学，还是我、wanggann 带了一个学弟 &lt;em&gt;Simon&lt;/em&gt;. 非常迷，赛前三天教练群才出通知，急匆匆的决定就报名了。也是带一下可能可以进一队的 &lt;em&gt;Simon&lt;/em&gt; 体验一下现场赛的感觉。队名叫做 学姐带我躺，wanggann 起的，也非常迷。开幕式得知是 kuangbin 出题！见到了 kuangbin 真是太棒了。&lt;/p&gt;
+&lt;h2 id=&quot;热身赛&quot;&gt;热身赛&lt;/h2&gt;
+&lt;p&gt;比赛是在机房，进去的时候题目已经摆在桌上了，thirtiseven 看了一下发现 B 是水题，翻转数组就可以，然后 wanggann 开场就把 B 过了。然后发现三题都不会，A 是个线段树，区间乘法膜2018，区间求和，C 是求A^K!%2018 ，D 是个 DP. 然后一个人看一题卡到结束，打铁了。旁边华东理工的队伍就来了个妹子，然后把我们吊打233 好帅啊。后面是山东大学捧杯队和热身赛没出现的“我一定来”队。队名还是很有特色。热身赛打铁之后吃了个饭摸摸鱼就正式赛了，由于正式赛在下午，所以并没有发吃的qwq</summary>
+    
+    
+    
+    
+    <category term="生活记录" scheme="http://thirtiseven.github.io/tags/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2017 ACM Hong Kong onsite</title>
+    <link href="http://thirtiseven.github.io/2018/01/29/2017-ACM-Hong-Kong-onsite/"/>
+    <id>http://thirtiseven.github.io/2018/01/29/2017-ACM-Hong-Kong-onsite/</id>
+    <published>2018-01-29T13:08:04.000Z</published>
+    <updated>2021-12-04T07:16:41.494Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;题目链接 https://www.jisuanke.com/contest/967&lt;/p&gt;
+&lt;p&gt;自己打的...没有java队友...高精度题看到就扔...结果有三个高精度题 喵喵喵？ 吃吃喝喝水水群，最后E题还没做完...只出了三题 还是要提高自己的姿势水平，不要再依赖队友了（现在并没有队友了哭哭），提高切水题的速度，以及继续学习那些大家都会但是我好菜啊并不会的算法。 应该要继续补题...但是今天做B感觉人生毫无希望啊？&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="算法题解" scheme="http://thirtiseven.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98%E8%A7%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2017阅读总结</title>
+    <link href="http://thirtiseven.github.io/2018/01/11/2017%E9%98%85%E8%AF%BB%E6%80%BB%E7%BB%93/"/>
+    <id>http://thirtiseven.github.io/2018/01/11/2017%E9%98%85%E8%AF%BB%E6%80%BB%E7%BB%93/</id>
+    <published>2018-01-10T16:00:37.000Z</published>
+    <updated>2021-12-04T07:14:02.085Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;我的2017年感觉就是，做了一年算法题，做着做着就一年过去了。算法，时间黑洞。书没看几本，歌没好好听，电影也基本不看，排练以外的时间从不练琴，上课以外的时间从不学习，属于自己的时间全部在摸鱼中度过。我已然是一个废人。&lt;/p&gt;
+&lt;p&gt;回首过去，我仍然没有什么幸福和快乐的日常想和你们分享，人生也没有发生什么大事件，按照惯例记录一下今年读过的给我留下深刻印象的书。今年一共读了50本书，是去年前年的腰斩，其中大概有一半读得还非常潦草，仿佛在为了年终总结的时候好看一点而读书。</summary>
+    
+    
+    
+    
+    <category term="年度读书总结" scheme="http://thirtiseven.github.io/tags/%E5%B9%B4%E5%BA%A6%E8%AF%BB%E4%B9%A6%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>POJ 很好很有层次感 题单 部分题解</title>
+    <link href="http://thirtiseven.github.io/2017/07/23/POJ-%E5%BE%88%E5%A5%BD%E5%BE%88%E6%9C%89%E5%B1%82%E6%AC%A1%E6%84%9F-%E9%A2%98%E5%8D%95-%E9%83%A8%E5%88%86%E9%A2%98%E8%A7%A3/"/>
+    <id>http://thirtiseven.github.io/2017/07/23/POJ-%E5%BE%88%E5%A5%BD%E5%BE%88%E6%9C%89%E5%B1%82%E6%AC%A1%E6%84%9F-%E9%A2%98%E5%8D%95-%E9%83%A8%E5%88%86%E9%A2%98%E8%A7%A3/</id>
+    <published>2017-07-23T13:03:16.000Z</published>
+    <updated>2021-12-04T07:22:20.990Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;poj-1753-flip-game&quot;&gt;POJ 1753 Flip Game&lt;/h2&gt;
+&lt;p&gt;“很好很有层次感”题单的第一题。 题意是黑白翻转棋，每次翻转一个，必须同时翻转上下左右的一个棋子，求最小的翻转个数。&lt;/p&gt;
+&lt;p&gt;枚举翻转次数，dfs，找到就输出。 数组设成6*6的，只处理中心的4*4，不需要判断越界也避免了越界问题。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="算法题解" scheme="http://thirtiseven.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98%E8%A7%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>acm 香港网络赛 2016 部分题解</title>
+    <link href="http://thirtiseven.github.io/2017/05/16/%E9%A6%99%E6%B8%AF%E7%BD%91%E7%BB%9C%E8%B5%9B2016A-A-B-Problem/"/>
+    <id>http://thirtiseven.github.io/2017/05/16/%E9%A6%99%E6%B8%AF%E7%BD%91%E7%BB%9C%E8%B5%9B2016A-A-B-Problem/</id>
+    <published>2017-05-16T12:58:02.000Z</published>
+    <updated>2021-12-04T07:22:09.027Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;a-ab-problem&quot;&gt;A A+B Problem&lt;/h2&gt;
+&lt;p&gt;Given N integers in the range [−50000,50000], how many ways are there to pick three integers ai, aj, ak, such that i, j, k are pairwise distinct and ai+aj=ak? Two ways are different if their ordered triple (i,j,k) of indices are different.&lt;/p&gt;
+&lt;h3 id=&quot;input&quot;&gt;Input&lt;/h3&gt;
+&lt;p&gt;The first line of input consists of a single integer N (1≤N≤200000). The next line consists of N space-separated integers a1,a2,…,aN.&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="算法题解" scheme="http://thirtiseven.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98%E8%A7%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2016阅读总结</title>
+    <link href="http://thirtiseven.github.io/2017/03/25/2016read/"/>
+    <id>http://thirtiseven.github.io/2017/03/25/2016read/</id>
+    <published>2017-03-25T04:00:13.000Z</published>
+    <updated>2021-12-04T07:13:44.976Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;从大多数方面来看，今年我过得糟糕透了。今年没总结，好的方面我不想和你们讲，坏的方面我也不想和你们讲。你看我现在多久才发一次微博。我整个人都到生活里去了，那里人口众多，我基本都不喜欢。所以就和你们交待一下今年读的好书。我完了，今年读的书变少了好多，还基本是上半年和暑假读的。当然去年我整天读书这没法比，但是最近我的状态就是不在状态，一是不想读书，二是懒得思考，所以读的书的质量也跳水一样的降，我连迈克尔康奈利都不怎么读得下去我读个屁罗兰巴特啊。而且你看，今年写的全是小说小说小说，而且都是越来越有烂大街倾向的特别有名的作家的小说。今年选书都懒，只翻以前标记的想读，没找着特别厉害而冷门的书。所以我说这篇东西你看到这儿也就行了，我只是再不写东西就要废了。是自己感觉自己废了，而不是真的废了，我早就真的废了，但是仍然自我感觉良好。</summary>
+    
+    
+    
+    
+    <category term="年度读书总结" scheme="http://thirtiseven.github.io/tags/%E5%B9%B4%E5%BA%A6%E8%AF%BB%E4%B9%A6%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在动车上</title>
+    <link href="http://thirtiseven.github.io/2016/08/03/zaidongcheshang/"/>
+    <id>http://thirtiseven.github.io/2016/08/03/zaidongcheshang/</id>
+    <published>2016-08-03T14:10:41.000Z</published>
+    <updated>2021-12-04T07:13:11.810Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;     连绵的城市，每一个都是一样的。&lt;br /&gt;
+     所有的城市连成一片，航线、公路和铁轨互相交织，其他的城市以外的东西都没有意义。我的窗子外面，是一样的绿色的什么东西，和一样的灰色的什么东西。航线是虚幻的，公路是徒劳的，而铁轨是必需的，只有它是真实的，我只能抓住它，牢牢地抓住，直到我们抵达城市，在故乡生儿育女。&lt;br /&gt;
+     既然所有城市都是一样的，那么城市也失去了意义。我生活在我的故乡，一座毫无意义的城市，我度过的时间中，所有的事都是为它赋予一个意义。我的床是有意义的，我野蛮粗暴的对待她，而她始终回报我以温柔。这让我感到绝望，我只能好好对她，或者离开她，去寻找别的地方，在那里我可以粗暴的对待另一张床。&lt;br /&gt;</summary>
+    
+    
+    
+    
+    <category term="随笔" scheme="http://thirtiseven.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>毕业迷茫消除指南</title>
+    <link href="http://thirtiseven.github.io/2016/06/16/biye/"/>
+    <id>http://thirtiseven.github.io/2016/06/16/biye/</id>
+    <published>2016-06-16T10:54:19.000Z</published>
+    <updated>2021-12-04T07:13:24.553Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;  漫长的学业结束后，首先要做的事情是躺在沙发上嚎叫。嚎叫的时间约为三分半钟至五分钟，音量视嗓子的情况而定。然后以不至于头晕的速度迅速站起来，拥抱你看到的可以拥抱的东西，冰箱是很好的选择，高大的盆栽也可以考虑。接着睁开眼睛再闭上然后再睁开眼睛，小心翼翼地走进房间，然后确认床的位置。如果这时突然发现已经躺在了床上，请起身重新校正床的位置。大约二十分钟到一个小时后你会感到轻微的颓废，此时应继续平躺，匀速呼吸，直到你精神振作，从床上跳起来。&lt;br /&gt;</summary>
+    
+    
+    
+    
+    <category term="随笔" scheme="http://thirtiseven.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>凝视默尔索过久，默尔索会回以凝视</title>
+    <link href="http://thirtiseven.github.io/2016/05/02/moersuo/"/>
+    <id>http://thirtiseven.github.io/2016/05/02/moersuo/</id>
+    <published>2016-05-02T12:51:31.000Z</published>
+    <updated>2021-12-04T07:13:36.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;    在我们在阅读加缪的《局外人》时，不可避免会做的一件事就是评判默尔索。我读的时候也不断思考：默尔索是个好人么？默尔索是否该被判处死刑？默尔索的行为合理么？默尔索这么说这么想反映了他的一种怎样的性格？&lt;/p&gt;
+&lt;p&gt;    但是，昨天我突然想到，这种思维的方式本身就是一种错误。&lt;/p&gt;
+&lt;p&gt;    我感觉，默尔索是这部小说的基石，我们需要通过默尔索，来评判司法的制度，甚至是评判社会评判人性。但是唯独不能评判的是默尔索，一旦对他有任何观点，我们也就成了具有人性的和具有社会的荒诞的”群众“或是”司法制度“类似的东西。荒诞的主体，正如加缪想要揭示的那样，不是一个坏的审判，而是审判本身。无论我们如何客观如何科学地审视默尔索的事件，一种强烈的荒诞的感觉都会出现。只有从他的角度，我们才能更好的感到世界巨大的荒诞，进而反思人在其中应该如何生活。&lt;br /&gt;</summary>
+    
+    
+    
+    
+    <category term="评论" scheme="http://thirtiseven.github.io/tags/%E8%AF%84%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>作文训练：王守仁格竹子</title>
+    <link href="http://thirtiseven.github.io/2016/02/06/wangshouren/"/>
+    <id>http://thirtiseven.github.io/2016/02/06/wangshouren/</id>
+    <published>2016-02-06T05:48:15.000Z</published>
+    <updated>2021-12-04T07:12:48.223Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;  今天下午向一个作文大神学场景描写，获得了悲惨的失败。下面是对“王守仁对翠竹穷格七天一无所获后来创立了心学”的材料改写训练。&lt;/p&gt;
+&lt;p&gt;  武侠小说式的第一版：&lt;/p&gt;
+&lt;p&gt;  瞪着竹子，一动不动。他凝视竹子过久，竹子却没有回以凝视。这是第七天。风吹过，但是竹子和王守仁都没有动。&lt;/p&gt;
+&lt;p&gt;  竹子突然出手，非常地快。&lt;/p&gt;
+&lt;p&gt;  王守仁倒在地上，死了。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="随笔" scheme="http://thirtiseven.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test the hexo</title>
+    <link href="http://thirtiseven.github.io/2016/02/05/test-the-hexo/"/>
+    <id>http://thirtiseven.github.io/2016/02/05/test-the-hexo/</id>
+    <published>2016-02-05T09:26:08.000Z</published>
+    <updated>2021-12-04T07:11:25.265Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;测试&lt;br /&gt;
+ 测试&lt;br /&gt;
+&lt;em&gt;测试&lt;/em&gt;&lt;br /&gt;
+&lt;strong&gt;&lt;em&gt;测试&lt;/em&gt;&lt;/strong&gt;&lt;br /&gt;
+# 测试&lt;br /&gt;
+######</summary>
+        
+      
+    
+    
+    
+    
+    <category term="博客" scheme="http://thirtiseven.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2015读书总结</title>
+    <link href="http://thirtiseven.github.io/2016/01/01/2015dushu/"/>
+    <id>http://thirtiseven.github.io/2016/01/01/2015dushu/</id>
+    <published>2016-01-01T05:46:00.000Z</published>
+    <updated>2021-12-04T07:13:04.293Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;#2015读书总结 ###长篇小说&lt;/p&gt;
+&lt;p&gt;#####《失明症漫记 》&lt;br /&gt;
+&lt;img src=&quot;http://img3.doubanio.com/lpic/s27217828.jpg&quot; alt=&quot;shimingzheng&quot; /&gt;&lt;br /&gt;
+  长篇小说，年初的时候看的。可以点击&lt;a href=&quot;http://book.douban.com/review/7448654/&quot;&gt;这里&lt;/a&gt;来看我写的书评。这个故事讲的是一种使人失明的传染病蔓延，但是有一个人仍然看得见。她默默的观察着一切可怕的事情。人们失明，人们犯罪，而人们复明之后，这段集体失明的可怕经历会给他们带来什么？通过这本书，萨拉马戈愤怒的说，什么也没有。&lt;br /&gt;</summary>
+    
+    
+    
+    
+    <category term="年度读书总结" scheme="http://thirtiseven.github.io/tags/%E5%B9%B4%E5%BA%A6%E8%AF%BB%E4%B9%A6%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>戏剧、后摇和编程语言</title>
+    <link href="http://thirtiseven.github.io/2015/10/25/%E6%88%8F%E5%89%A7%E5%90%8E%E6%91%87%E7%BC%96%E7%A8%8B/"/>
+    <id>http://thirtiseven.github.io/2015/10/25/%E6%88%8F%E5%89%A7%E5%90%8E%E6%91%87%E7%BC%96%E7%A8%8B/</id>
+    <published>2015-10-25T09:16:18.000Z</published>
+    <updated>2021-12-04T07:12:54.960Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;  有些事情，对于初学者非常不友好，但是一旦入门，豁然开朗，例如跳绳，骑自行车，吉他的大横按；还有些事情，第一眼不会喜欢，做久了之后便觉得很舒服，例如我这几个月的一些新爱好：听后摇，读戏剧，以及写代码。&lt;/p&gt;
+&lt;p&gt;  休学之前，我就跟着橘子的lofter听了这么几首后摇，我当时的感觉是：不好听。再之前，我在上海听Explosions in the Sky的现场，我觉得耳朵受到了伤害，但是同行的人曰：哇，天空大爆炸耶！再再之前，我固执地以为Joy Division是世界上最好的后摇乐队。这大概是我之前听后摇的全部故事。</summary>
+    
+    
+    
+    
+    <category term="随笔" scheme="http://thirtiseven.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于几种品质</title>
+    <link href="http://thirtiseven.github.io/2015/09/28/%E5%85%B3%E4%BA%8E%E5%87%A0%E7%A7%8D%E5%93%81%E8%B4%A8/"/>
+    <id>http://thirtiseven.github.io/2015/09/28/%E5%85%B3%E4%BA%8E%E5%87%A0%E7%A7%8D%E5%93%81%E8%B4%A8/</id>
+    <published>2015-09-28T02:05:59.000Z</published>
+    <updated>2021-12-04T07:18:22.894Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;  家父是个基督徒。作为一个年轻而虚无的不可知论者，昨天我冒着与教徒圣战的风险和他聊了聊诚实的问题，结果一聊就偏了，最后我们讨论了品质这个词语的意思，然后什么结论也没有得出来。他一直在扯基督教，我一直在扯语言，聊得十分爽。于是我写这篇文章以记之。目的是重新整理一下思路 ，兼以展示我们平时聊天的水平（捂脸）。&lt;/p&gt;
+&lt;p&gt;  首先我们观察到这样一个现象：在《圣经》中，提到的要求大致可以分为两种，即“如何对待他人”和“如何对待神”。前面一种，比方说要爱你的邻人，要给别人另一边脸去打等等许多，后一种，说的是要追随上帝，无条件的相信他，不要追求钱财而去侍奉神，等等。前者大致形成了一种尘世间的道德体系，他们可以归纳成一些美好的&lt;strong&gt;品质&lt;/strong&gt;。但很奇怪的一点是，整本圣经提到了多处大意是“你要对神诚实”的句子，但没有一处要求我们对别人也要诚实。诚实并没有被归为某种道德品质，而是被归为对神的态度。于是问题来了：对于圣经的作者来说，诚实到底意味着什么？&lt;br /&gt;</summary>
+    
+    
+    
+    
+    <category term="随笔" scheme="http://thirtiseven.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>永生之罚</title>
+    <link href="http://thirtiseven.github.io/2015/09/08/%E6%B0%B8%E7%94%9F%E4%B9%8B%E7%BD%9A/"/>
+    <id>http://thirtiseven.github.io/2015/09/08/%E6%B0%B8%E7%94%9F%E4%B9%8B%E7%BD%9A/</id>
+    <published>2015-09-08T13:12:14.000Z</published>
+    <updated>2021-12-04T07:12:40.758Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;  这篇文章是波伏瓦《人都是要死的》的书评。先说个题外话，在读前几页的时候，我感觉翻译不好，但是一看，发现这本书是马振骋翻译的，于是便十分地放心，十分顺畅地看完了全书。如果这是马振骋的翻译，那么我一切读的不顺的地方一定都是我自己的问题。这是脑残粉的一点自我修养。&lt;/p&gt;
+&lt;p&gt;  剧情梗概：雷蒙·福斯卡是一个中世纪意大利某城邦的贵族，因为一次意外而获得了永生不死的能力，他从十三世纪开始一直生活到现在 ，经历了欧洲乃至世界几百年来的变革，从一个决心依靠自己不朽的生命力量来造福大众的强人最终变得心如槁木，了无生趣 。&lt;br /&gt;</summary>
+    
+    
+    
+    
+    <category term="评论" scheme="http://thirtiseven.github.io/tags/%E8%AF%84%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一些关于青春的笔记</title>
+    <link href="http://thirtiseven.github.io/2015/07/06/%E9%9D%92%E6%98%A5/"/>
+    <id>http://thirtiseven.github.io/2015/07/06/%E9%9D%92%E6%98%A5/</id>
+    <published>2015-07-06T13:11:01.000Z</published>
+    <updated>2021-12-04T07:12:33.745Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;  我要做远方的忠诚的儿子&lt;br /&gt;
+  和物质的短暂情人&lt;br /&gt;
+  和所有以梦为马的诗人一样&lt;br /&gt;
+  我不得不和烈士和小丑走在同一道路上&lt;/p&gt;
+&lt;p&gt;  海子的这一段诗可以很好的表述J•M•库切的这本&lt;青春&gt;的大致内容:文中的&quot;他&quot;长大成人,漂泊异乡,被残酷的社会所迫,与人情淡漠的民族为伍,但他的心中始终有一个诗人.如果说有什么其他的,那也许是迷茫.他怀疑自己,他试图麻痹自己敏感的内心,他试图早日成熟,又抗拒着成长的代价,他不断努力想要成长,却感到什么不断地在消逝. 上面那段诗歌是明确的,而&quot;他&quot;却是矛盾的.不同于别的青春小说,这种矛盾并没有走向颓废与反抗,而是走向诗与自省.这就为这本小说提供了一个独特的视角.</summary>
+    
+    
+    
+    
+    <category term="评论" scheme="http://thirtiseven.github.io/tags/%E8%AF%84%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>无关紧要</title>
+    <link href="http://thirtiseven.github.io/2015/06/17/%E6%97%A0%E5%85%B3%E7%B4%A7%E8%A6%81/"/>
+    <id>http://thirtiseven.github.io/2015/06/17/%E6%97%A0%E5%85%B3%E7%B4%A7%E8%A6%81/</id>
+    <published>2015-06-17T11:34:38.000Z</published>
+    <updated>2021-12-04T07:12:22.669Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;  永远不要禁止什么东西，因为你禁止不了。要用更为重要的事情取代它。无关紧要的东西自然不会去做，无关紧要的事情自然会被忘记。把人生当做一场排序而把自己当做一个笨拙的队列。&lt;br /&gt;
+  这是我处理无聊与忙碌的一个小小技巧。&lt;/p&gt;
+&lt;p&gt;  我有很多不成文的规矩，那些无关紧要的麻烦总是被纳入在这个体系之内。只有我真正热爱的才能打破它。而我也常常莫名其妙地爱上那些打破我规则的人。</summary>
+    
+    
+    
+    
+    <category term="随笔" scheme="http://thirtiseven.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>octopress博客搭建全程吐槽</title>
+    <link href="http://thirtiseven.github.io/2015/06/03/octopress/"/>
+    <id>http://thirtiseven.github.io/2015/06/03/octopress/</id>
+    <published>2015-06-03T06:07:14.000Z</published>
+    <updated>2021-12-04T07:12:07.428Z</updated>
+    
+    
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;搭建本站的工具链是这样的:Mac OS X + Github PagesRuby + Gem + Bundle + Git + Homebrew + iTerm2 + Rake + Github(app) + DNSpod + 万网 + Macdown + vim + Markdown + HTML + CSS + Xcode.搭这样一个网站真的会让人盲目自信.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;然而这并没有什么卵用我还是什么都不会.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;出现错误的原因往往是自己作死.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;总是有人问编程第一门语言学什么.我觉得很显然,我们应该学英语.网上的教程 简直不靠谱.</summary>
+    
+    
+    
+    
+    <category term="博客" scheme="http://thirtiseven.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>五月总结</title>
+    <link href="http://thirtiseven.github.io/2015/05/30/%E4%BA%94%E6%9C%88%E6%80%BB%E7%BB%93/"/>
+    <id>http://thirtiseven.github.io/2015/05/30/%E4%BA%94%E6%9C%88%E6%80%BB%E7%BB%93/</id>
+    <published>2015-05-30T06:58:23.000Z</published>
+    <updated>2021-12-04T07:11:10.815Z</updated>
+    
+    
+    <summary type="html">&lt;h4 id=&quot;学习&quot;&gt;学习：&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;在Towords上背完了四级核心词，开始在“易呗背单词”上背六级大纲词汇，进程过半。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;看完了《托马斯微积分》前15章后看不下去了，二刷已经开始，二刷时会做单数题号的习题。目前已进行到第2章。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;从5月24号开始练字。正在抄写《古文观止》，兼以学习文言文。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;上数学补习班4次，并做了整理。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;数学填空题5套。&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&quot;学习小结&quot;&gt;学习小结&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;学习接近停滞。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&quot;六月学习展望&quot;&gt;六月学习展望&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;突破数学填空题7~10题，保持96.875%以上正确率。&lt;/li&gt;
+&lt;li&gt;突破数学圆锥曲线题，正确率须达到90%。&lt;/li&gt;
+&lt;li&gt;巩固数学三角大题。&lt;/li&gt;
+&lt;li&gt;背完六级词汇。开始背雅思词汇.</summary>
+    
+    
+    
+    
+    <category term="生活记录" scheme="http://thirtiseven.github.io/tags/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于高三九班的最后记忆</title>
+    <link href="http://thirtiseven.github.io/2015/05/17/%E6%9C%80%E5%90%8E%E4%B8%89%E4%B8%AA%E8%AE%B0%E5%BF%86/"/>
+    <id>http://thirtiseven.github.io/2015/05/17/%E6%9C%80%E5%90%8E%E4%B8%89%E4%B8%AA%E8%AE%B0%E5%BF%86/</id>
+    <published>2015-05-17T13:36:09.000Z</published>
+    <updated>2021-12-04T07:11:35.476Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;  关于高三九班的倒数第三个记忆，是在龙王桥东路上，张钱鑫等我去体检。我们一起去找小胖子。小胖子家楼下没有人，我们一起去招办。他把他没做完的物理作业放在书包里，我把我没做完的化学作业留在家里。到了那边，我问每一个人为什么他们带了书包。小胖子一个人骑车来，我假装没看见，转而和沈超聊天。&lt;br /&gt;
+  我至今没有做完那张化学卷子，因为没有对手可供竞争，没有组长来收取，没有老师评讲试卷，也没有台下昏昏欲睡的同学强忍着哈欠。&lt;br /&gt;
+  不，那些都是有的。少的只是我而已。</summary>
+    
+    
+    
+    
+    <category term="随笔" scheme="http://thirtiseven.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>疾病的隐喻——读《失明症漫记》</title>
+    <link href="http://thirtiseven.github.io/2015/04/28/%E5%A4%B1%E6%98%8E%E7%97%87/"/>
+    <id>http://thirtiseven.github.io/2015/04/28/%E5%A4%B1%E6%98%8E%E7%97%87/</id>
+    <published>2015-04-28T07:37:23.000Z</published>
+    <updated>2021-12-04T07:11:45.568Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;  你们也许看到过这个梗：在听说若泽•萨拉马戈获得诺贝尔奖后，和萨拉马戈所在党派互相敌视的葡萄牙执政党宣布：“我们要放下政治上的分歧，共同来庆祝葡萄牙语的胜利。”咦谁来告诉我【梗】这个字能不能在这里这么用。。。&lt;br /&gt;
+  Anyway，今天我在家里读完了他的杰作《失明症漫记》。这本书的设置对于一篇科幻小说来讲是老套的:失明疾病传染，（在故事中）只有一个人看得见。但这本书是一部杰出的艺术作品。我们不会意识到，《罪与罚》是一部侦探小说，《蝇王》是一部反乌托邦小说，《冷血》是一本犯罪小说。真正杰出的作品是拒绝被归类的。关于疾病，这本书很容易让人联想到加缪的《鼠疫》。不同之处在于，加缪想要通过意外的灾难揭示世界的荒诞，而萨拉马戈想要揭示的，是读者回到自己的内心：我会如何选择？</summary>
+    
+    
+    
+    
+    <category term="评论" scheme="http://thirtiseven.github.io/tags/%E8%AF%84%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>空气二十行</title>
+    <link href="http://thirtiseven.github.io/2015/03/16/%E7%A9%BA%E6%B0%94%E4%BA%8C%E5%8D%81%E8%A1%8C/"/>
+    <id>http://thirtiseven.github.io/2015/03/16/%E7%A9%BA%E6%B0%94%E4%BA%8C%E5%8D%81%E8%A1%8C/</id>
+    <published>2015-03-16T12:53:05.000Z</published>
+    <updated>2021-12-04T07:15:04.412Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;上午，我去体检 去的路上 我感到了空气的存在 并为它欣喜 世界上的确有许多 美好而不易发现的事物&lt;/p&gt;
+&lt;p&gt;然后 我可能得了肺结核 回来的路上 我看着这街上的空气 不断地诅咒它 我看到了空气中的病菌与尘埃 和许许多多残酷的可能&lt;/p&gt;
+&lt;p&gt;下午 我去拍CT 去的路上</summary>
+        
+      
+    
+    
+    
+    
+    <category term="随笔" scheme="http://thirtiseven.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>认真的生活</title>
+    <link href="http://thirtiseven.github.io/2015/02/22/%E8%AE%A4%E7%9C%9F%E7%9A%84%E7%94%9F%E6%B4%BB/"/>
+    <id>http://thirtiseven.github.io/2015/02/22/%E8%AE%A4%E7%9C%9F%E7%9A%84%E7%94%9F%E6%B4%BB/</id>
+    <published>2015-02-22T04:22:59.000Z</published>
+    <updated>2021-12-04T07:15:10.967Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;蘭波有詩：沒有人在十七歲的時候認真。   回首過去，我所有那一點點的辛勞和耕耘，幾乎沒有一件是從頭到尾認認真真做完的。生活仿佛是一串爆竹，痛苦的燃燒，然後華麗的綻放，留下煙灰和碎紙。   我拼命的趕時間，用所謂『quick and dirty』的方式做事，讓自己在混混沉沉的倦怠和死線之前爆發出來的效率之間搖擺，抑或按部就班地完成安排、命令和指示，（基本上）按著時間表來行事。有時我為這感到某種無來由的自豪，感到某種智力、生活方式、甚至時間利用上的優越。</summary>
+    
+    
+    
+    
+    <category term="随笔" scheme="http://thirtiseven.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>吃鱼十五行</title>
+    <link href="http://thirtiseven.github.io/2015/02/07/%E5%90%83%E9%B1%BC%E5%8D%81%E4%BA%94%E8%A1%8C/"/>
+    <id>http://thirtiseven.github.io/2015/02/07/%E5%90%83%E9%B1%BC%E5%8D%81%E4%BA%94%E8%A1%8C/</id>
+    <published>2015-02-07T04:31:30.000Z</published>
+    <updated>2021-12-04T07:15:51.565Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;鱼啊，鱼啊&lt;/p&gt;
+&lt;p&gt;我喝了你的汤&lt;/p&gt;
+&lt;p&gt;却把你的身体在碗里遗弃&lt;/p&gt;
+&lt;p&gt;鱼汤漂白了我的心肠&lt;/p&gt;
+&lt;p&gt;你却收集那致命的毒气&lt;/p&gt;
+&lt;p&gt;鱼啊，鱼啊&lt;/p&gt;
+&lt;p&gt;你的刺戳进了我的咽喉&lt;/p&gt;
+&lt;p&gt;我尝到痛苦、鲜美和血的温暖&lt;/p&gt;
+&lt;p&gt;这根尖利</summary>
+        
+      
+    
+    
+    
+    
+    <category term="随笔" scheme="http://thirtiseven.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>普鲁斯特问卷</title>
+    <link href="http://thirtiseven.github.io/2014/12/18/%E6%99%AE%E9%B2%81%E6%96%AF%E7%89%B9%E9%97%AE%E5%8D%B7/"/>
+    <id>http://thirtiseven.github.io/2014/12/18/%E6%99%AE%E9%B2%81%E6%96%AF%E7%89%B9%E9%97%AE%E5%8D%B7/</id>
+    <published>2014-12-18T04:24:41.000Z</published>
+    <updated>2021-12-04T07:15:25.086Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;1.你认为最完美的快乐是怎样的？ 孤獨。 2.你最希望拥有哪种才华？ 準確表達自己。 3.你最恐惧的是什么？ 恐懼本身。 4.你目前的心境怎样？ 憂鬱。</summary>
+    
+    
+    
+    
+    <category term="随笔" scheme="http://thirtiseven.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>轻与重 星际穿越影评</title>
+    <link href="http://thirtiseven.github.io/2014/11/30/%E8%BD%BB%E4%B8%8E%E9%87%8D/"/>
+    <id>http://thirtiseven.github.io/2014/11/30/%E8%BD%BB%E4%B8%8E%E9%87%8D/</id>
+    <published>2014-11-30T04:26:17.000Z</published>
+    <updated>2021-12-04T07:15:45.357Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;（鈤我中二的时候怎么怎么如此中二啊 2019.9.23）&lt;/p&gt;
+&lt;h6 id=&quot;题记&quot;&gt;题记：&lt;/h6&gt;
+&lt;p&gt;  昨天和一个通中人去看了星际穿越的倒数第二场。对我来说，这是一件非常奇怪的事。三七从来不会想着去电影院看电影，也很少有人请我去看电影。你也许知道三七我是什么人。我自诩从不上电影院看电影，我甚至很少看本世纪的电影，所以如果你和三七聊起电影（这样的人不多），你会感到一种豆瓣伪文青特有的酸气，我最近也在反省，也许他们只是想随便和我聊聊有趣的事，而非引发一场圣战。   不过我是来写影评的而不是来写检查的——我倒是擅长写检查。   全文以《不能承受的生命之轻》为结构的引导，和我一起看电影的那位最近在抄写这本小说的英文版——以增强词汇量。了不起。昆德拉说他小说的名字都可以互换，那我借来一用也应当值得原谅。一切都可以解释，只要你的解释器足够强。   废话说的太多，我们这就开始。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="评论" scheme="http://thirtiseven.github.io/tags/%E8%AF%84%E8%AE%BA/"/>
+    
+  </entry>
+  
+</feed>
